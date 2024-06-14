@@ -85,8 +85,11 @@ Log_In_page As screen:
             ZIndex: =7
 
     Label3 As label:
-        Text: ="Dayaasaagar"
-        X: =84
-        Y: =543
+        Height: =90
+        Size: =30
+        Text: ="Anusha"
+        Width: =243
+        X: =60
+        Y: =60
         ZIndex: =3
 
