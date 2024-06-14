@@ -84,3 +84,12 @@ Log_In_page As screen:
             Y: =394
             ZIndex: =7
 
+    Label3 As label:
+        Height: =90
+        Size: =30
+        Text: ="Anusha"
+        Width: =243
+        X: =60
+        Y: =60
+        ZIndex: =3
+
