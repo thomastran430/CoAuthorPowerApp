@@ -84,3 +84,9 @@ Log_In_page As screen:
             Y: =394
             ZIndex: =7
 
+    Label3 As label:
+        Text: ="Dayaasaagar"
+        X: =84
+        Y: =543
+        ZIndex: =3
+
