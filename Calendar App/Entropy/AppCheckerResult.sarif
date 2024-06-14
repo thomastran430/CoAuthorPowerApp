@@ -134,19 +134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendar_Show.iconPrevMonth1_2.AccessibleLabel"
+                  "fullyQualifiedName": "Book_a_Slot.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendar_Show.iconPrevMonth1_2.AccessibleLabel",
+                  "fullyQualifiedName": "Book_a_Slot.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Calendar_Show",
-                "type": "Calendar_Show.iconPrevMonth1_2"
+                "module": "Book_a_Slot",
+                "type": "Book_a_Slot.Gallery1"
               }
             }
           ],
@@ -164,19 +164,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendar_Show.iconNextMonth1_2.AccessibleLabel"
+                  "fullyQualifiedName": "Book_a_Slot.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendar_Show.iconNextMonth1_2.AccessibleLabel",
+                  "fullyQualifiedName": "Book_a_Slot.Gallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Book_a_Slot",
+                "type": "Book_a_Slot.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Input_Name.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Input_Name.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Calendar_Show",
-                "type": "Calendar_Show.iconNextMonth1_2"
+                "module": "Book_a_Slot",
+                "type": "Book_a_Slot.Book_a_slot_form.Input_Name"
               }
             }
           ],
@@ -194,79 +224,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendar_Show.WeekdayGallery1_2.TabIndex"
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Date.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendar_Show.WeekdayGallery1_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Calendar_Show",
-                "type": "Calendar_Show.WeekdayGallery1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Calendar_Show",
-                "type": "Calendar_Show.MonthDayGallery1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.AccessibleLabel",
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Date.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Calendar_Show",
-                "type": "Calendar_Show.MonthDayGallery1_2.Gallery5"
+                "module": "Book_a_Slot",
+                "type": "Book_a_Slot.Book_a_slot_form.Pick_Date"
               }
             }
           ],
@@ -284,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.TabIndex"
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Start_Time.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.TabIndex",
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Start_Time.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
-                "module": "Calendar_Show",
-                "type": "Calendar_Show.MonthDayGallery1_2.Gallery5"
+                "member": "AccessibleLabel",
+                "module": "Book_a_Slot",
+                "type": "Book_a_Slot.Book_a_slot_form.Pick_Start_Time"
               }
             }
           ],
@@ -306,8 +276,38 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_End_Time.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_End_Time.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Book_a_Slot",
+                "type": "Book_a_Slot.Book_a_slot_form.Pick_End_Time"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -674,19 +674,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Book_a_Slot.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "Calendar_Show.iconPrevMonth1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Book_a_Slot.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "Calendar_Show.iconPrevMonth1_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Book_a_Slot",
-                "type": "Book_a_Slot.Gallery1"
+                "module": "Calendar_Show",
+                "type": "Calendar_Show.iconPrevMonth1_2"
               }
             }
           ],
@@ -704,19 +704,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Book_a_Slot.Gallery1.TabIndex"
+                  "fullyQualifiedName": "Calendar_Show.iconNextMonth1_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Book_a_Slot.Gallery1.TabIndex",
+                  "fullyQualifiedName": "Calendar_Show.iconNextMonth1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Calendar_Show",
+                "type": "Calendar_Show.iconNextMonth1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Calendar_Show.WeekdayGallery1_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendar_Show.WeekdayGallery1_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Book_a_Slot",
-                "type": "Book_a_Slot.Gallery1"
+                "module": "Calendar_Show",
+                "type": "Calendar_Show.WeekdayGallery1_2"
               }
             }
           ],
@@ -734,19 +764,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Input_Name.AccessibleLabel"
+                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Input_Name.AccessibleLabel",
+                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Calendar_Show",
+                "type": "Calendar_Show.MonthDayGallery1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Book_a_Slot",
-                "type": "Book_a_Slot.Book_a_slot_form.Input_Name"
+                "module": "Calendar_Show",
+                "type": "Calendar_Show.MonthDayGallery1_2.Gallery5"
               }
             }
           ],
@@ -764,19 +824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Date.AccessibleLabel"
+                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Date.AccessibleLabel",
+                  "fullyQualifiedName": "Calendar_Show.MonthDayGallery1_2.Gallery5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "Book_a_Slot",
-                "type": "Book_a_Slot.Book_a_slot_form.Pick_Date"
+                "member": "TabIndex",
+                "module": "Calendar_Show",
+                "type": "Calendar_Show.MonthDayGallery1_2.Gallery5"
               }
             }
           ],
@@ -786,68 +846,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Start_Time.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_Start_Time.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Book_a_Slot",
-                "type": "Book_a_Slot.Book_a_slot_form.Pick_Start_Time"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_End_Time.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Book_a_Slot.Book_a_slot_form.Pick_End_Time.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Book_a_Slot",
-                "type": "Book_a_Slot.Book_a_slot_form.Pick_End_Time"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
         },
         {
           "locations": [
