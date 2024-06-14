@@ -1,0 +1,124 @@
+{
+  "2cdaad84-fee1-4fee-b8dc-b46c9d471f25": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1693/1.0.1693.3738/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://vmivsp.sharepoint.com/sites/BD.ALL.HootDynamics": {
+        "dataSources": {
+          "Admin_Login_Cred": {
+            "tableName": "ad48a514-a3f4-4e1c-a108-5bb9687d6645"
+          },
+          "Nurse_Appointments": {
+            "tableName": "9d6fecb4-8c89-425f-88f8-ff9b214cab33"
+          },
+          "Patient_Data": {
+            "tableName": "9d6fecb4-8c89-425f-88f8-ff9b214cab33"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Patient_Data",
+      "Admin_Login_Cred",
+      "Nurse_Appointments"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "2cdaad84-fee1-4fee-b8dc-b46c9d471f25"
+  },
+  "5ee17419-3749-4059-b6b4-de6d95d750f3": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "62296064-00ab-43ab-b3eb-0af8d79baa5c": {
+          "value": "shared_office365"
+        },
+        "workflowDisplayName": {
+          "value": "Email_confirmation"
+        },
+        "workflowEntityId": {
+          "value": "f83fd19c-582a-ef11-840b-000d3a5b85ca"
+        },
+        "workflowName": {
+          "value": "3d4b3226-ff50-452c-91cf-b78149439b4b"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
+        },
+        "workflowDisplayName": {
+          "value": "Email_confirmation"
+        },
+        "workflowEntityId": {
+          "value": "f83fd19c-582a-ef11-840b-000d3a5b85ca"
+        },
+        "workflowName": {
+          "value": "3d4b3226-ff50-452c-91cf-b78149439b4b"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Email_confirmation"
+    ],
+    "dependencies": {
+      "shared_office365": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
+    },
+    "dependents": [],
+    "id": "5ee17419-3749-4059-b6b4-de6d95d750f3"
+  },
+  "62296064-00ab-43ab-b3eb-0af8d79baa5c": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3706/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "5ee17419-3749-4059-b6b4-de6d95d750f3"
+    ],
+    "id": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
+  },
+  "e6a09269-f91c-466b-a383-a4cce2e4f8ae": {
+    "appActions": [
+      "CalendarGetTables",
+      "GetEventsCalendarViewV2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3706/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
+  }
+}

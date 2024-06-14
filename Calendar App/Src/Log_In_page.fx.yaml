@@ -1,0 +1,86 @@
+Log_In_page As screen:
+    Fill: =RGBA(39, 113, 194, 1)
+    OnVisible: =Set(labeltxt,false)
+
+    form_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =688
+        RadiusBottomLeft: =65
+        RadiusBottomRight: =65
+        RadiusTopLeft: =65
+        RadiusTopRight: =65
+        Width: =520
+        X: =428
+        Y: =40
+        ZIndex: =2
+
+        Input_Password_1 As text:
+            Default: =
+            Height: =51
+            HintText: ="Enter Your Password"
+            Width: =479
+            X: =21
+            Y: =Parent.Height/2 - Self.Height/2
+            ZIndex: =1
+
+        Input_UserName_1 As text:
+            Default: =
+            Height: =52
+            HintText: ="Enter Your Username"
+            OnSelect: =Set(labeltxt,false)
+            Width: =479
+            X: =21
+            Y: =224
+            ZIndex: =2
+
+        Sign_In_1 As button:
+            Height: =52
+            OnSelect: |-
+                =Set(userrolevalue,LookUp(Admin_Login_Cred,UserName=Input_UserName_1.Text And Password=Input_Password_1.Text).Role);
+                If(IsBlankOrError(userrolevalue),
+                Notify("Incorrect User Name and Password"); Set(labeltxt,true),
+                Switch(
+                    userrolevalue,"Admin",
+                    Navigate(Calendar_Show),
+                    "User",
+                    Navigate(Calendar_Show)
+                    
+                    )
+                );
+                Reset(Input_UserName_1);
+                Reset(Input_Password_1);
+                Set(UserName,Input_UserName_1.Text);
+            Text: ="Sign In"
+            Width: =284
+            X: =118
+            Y: =460
+            ZIndex: =3
+
+        Label3_1 As label:
+            Height: =90
+            Size: =50
+            Text: ="Sign In"
+            Width: =255
+            X: =147
+            Y: =41
+            ZIndex: =5
+
+        Icon2_1 As icon.View:
+            Height: =42
+            Icon: =Icon.View
+            PaddingRight: =5
+            Width: =28
+            X: =472
+            Y: =323
+            ZIndex: =6
+
+        Label6 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 0, 0, 1)
+            Text: ="Incorrect User Name and Password"
+            Visible: =labeltxt
+            Width: =412
+            X: =60
+            Y: =394
+            ZIndex: =7
+

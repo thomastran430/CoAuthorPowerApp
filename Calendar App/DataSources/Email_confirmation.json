@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "c1b6511e-e8f4-4933-8063-34e0130bfc60",
+    "Name": "Email_confirmation",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "f83fd19c-582a-ef11-840b-000d3a5b85ca"
+  }
+]
