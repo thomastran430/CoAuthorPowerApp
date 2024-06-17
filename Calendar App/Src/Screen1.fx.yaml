@@ -303,7 +303,7 @@ Screen1 As screen:
             Height: =35
             OnSelect: |-
                 =Set(
-                    Date(
+                    varCurrentDate
                         Year(Today()),
                         Month(Today()),
                         1
