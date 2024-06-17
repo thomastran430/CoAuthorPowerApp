@@ -2,7 +2,7 @@ App As appinfo:
     BackEnabled: =true
     Formulas: =
     OnStart: |
-        =Set(varCurrentDate,Today());
+        =Set(varCurrentDate,Date(Year(Today()),Month(Today()),1));
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
