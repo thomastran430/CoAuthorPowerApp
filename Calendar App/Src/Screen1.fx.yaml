@@ -230,7 +230,7 @@ Screen1 As screen:
         "DatesGallary As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
             Height: =478
-            Items: =ForAll(Sequence(42),Value+varCurrentDate-Weekday(Date(Year(Today()),Month(Today()),1)))
+            Items: =ForAll(Sequence(42),Value+varCurrentDate-Weekday(varCurrentDate))
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
@@ -296,7 +296,7 @@ Screen1 As screen:
             Align: =Align.Center
             Height: =51
             Size: =24
-            Text: =Text(Date(Year(Today()),Month(Today()),1),"mmmm yyyy")
+            Text: =Text(varCurrentDate,"mmmm yyyy")
             Width: =258
             X: =284
             Y: =8
@@ -304,7 +304,15 @@ Screen1 As screen:
 
         PreviousButton As button:
             Height: =35
-            OnSelect: =
+            OnSelect: |-
+                =Set(
+                    varCurrentDate,
+                    Date( 
+                        Year(Today()),
+                        Month(Today())-1,
+                        1
+                    )
+                )
             Text: ="Prev"
             Width: =104
             X: =24
@@ -313,6 +321,15 @@ Screen1 As screen:
 
         NextButton As button:
             Height: =35
+            OnSelect: |-
+                =Set(
+                    varCurrentDate,
+                    Date( 
+                        Year(Today()),
+                        Month(Today())+1,
+                        1
+                    )
+                )
             Text: ="Next"
             Width: =101
             X: =690
@@ -321,19 +338,16 @@ Screen1 As screen:
 
         TodayButton As button:
             Height: =35
-            OnSelect: |-
+            OnSelect: |+
                 =Set(
-                    varCurrentDate
-                        Year(Today()),
-                        Month(Today()),
-                        1
-                    ),
-                    Date(
+                    varCurrentDate,
+                    Date( 
                         Year(Today()),
                         Month(Today()),
                         1
                     )
                 )
+                
             Text: ="Today"
             Width: =108
             X: =140
