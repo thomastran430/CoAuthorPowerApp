@@ -1,7 +1,8 @@
 App As appinfo:
     BackEnabled: =true
     Formulas: =
-    OnStart: =
+    OnStart: |
+        =Set(varCurrentDate,Today());
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
