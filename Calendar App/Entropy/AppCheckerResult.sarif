@@ -184,7 +184,7 @@
                 },
                 "region": {
                   "charLength": 7,
-                  "charOffset": 275,
+                  "charOffset": 283,
                   "snippet": {
                     "text": ".Result"
                   }
@@ -224,7 +224,7 @@
                 },
                 "region": {
                   "charLength": 7,
-                  "charOffset": 348,
+                  "charOffset": 359,
                   "snippet": {
                     "text": ".Result"
                   }
@@ -264,7 +264,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 381,
+                  "charOffset": 395,
                   "snippet": {
                     "text": "AppointmentCounts"
                   }
@@ -304,7 +304,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 374,
+                  "charOffset": 388,
                   "snippet": {
                     "text": "LookUp"
                   }
@@ -344,7 +344,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 408,
+                  "charOffset": 422,
                   "snippet": {
                     "text": "="
                   }
@@ -385,7 +385,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 419,
+                  "charOffset": 433,
                   "snippet": {
                     "text": "Count"
                   }
@@ -425,7 +425,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 489,
+                  "charOffset": 507,
                   "snippet": {
                     "text": "AppointmentCounts"
                   }
@@ -465,7 +465,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 482,
+                  "charOffset": 500,
                   "snippet": {
                     "text": "LookUp"
                   }
@@ -505,7 +505,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 515,
+                  "charOffset": 533,
                   "snippet": {
                     "text": "="
                   }
@@ -546,7 +546,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 528,
+                  "charOffset": 546,
                   "snippet": {
                     "text": "Count"
                   }
@@ -586,7 +586,7 @@
                 },
                 "region": {
                   "charLength": 37,
-                  "charOffset": 246,
+                  "charOffset": 254,
                   "snippet": {
                     "text": "Set(StartTime, First(colTime).Result)"
                   }
@@ -623,7 +623,7 @@
                 },
                 "region": {
                   "charLength": 34,
-                  "charOffset": 322,
+                  "charOffset": 333,
                   "snippet": {
                     "text": "Set(EndTime, Last(colTime).Result)"
                   }

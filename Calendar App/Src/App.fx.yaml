@@ -1,5 +1,6 @@
 App As appinfo:
     BackEnabled: =true
+    Formulas: =
     OnStart: =
     Theme: =PowerAppsTheme
 

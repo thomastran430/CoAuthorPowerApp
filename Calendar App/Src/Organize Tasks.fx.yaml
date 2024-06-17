@@ -1,15 +1,5 @@
 "'Organize Tasks' As screen":
 
-    Copilot1 As Copilot.pcfdataset:
-        DisplayMode: =DisplayMode.Edit
-        Height: =767
-        Items: =MyCalendarEvents
-        UserName: =User().FullName
-        Width: =360
-        X: =0
-        Y: =0
-        ZIndex: =1
-
     "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =719
