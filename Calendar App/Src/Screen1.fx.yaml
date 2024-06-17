@@ -173,7 +173,7 @@ Screen1 As screen:
         Y: =156
         ZIndex: =5
 
-        "Gallery4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+        "WeekdaysGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
             Fill: =RGBA(39, 113, 194, 1)
             Height: =41
@@ -206,7 +206,7 @@ Screen1 As screen:
                 Y: =10
                 ZIndex: =1
 
-        "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+        "DatesGallary As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
             Height: =478
             Items: =ForAll(Sequence(42),Value+Date(Year(Today()),Month(Today()),1)-Weekday(Date(Year(Today()),Month(Today()),1)))
@@ -239,7 +239,25 @@ Screen1 As screen:
                             1 
                         )
                     )
-                Fill: =RGBA(255, 255, 255, 1)
+                Fill: |-
+                    =If(
+                        ThisItem.Value = Today(),
+                        ColorFade(
+                            RGBA(
+                                58,
+                                150,
+                                221,
+                                1
+                            ),
+                            80%
+                        ),
+                        RGBA(
+                            255,
+                            255,
+                            255,
+                            255
+                        )
+                    )
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =Parent.TemplateHeight
                 LineHeight: =2
@@ -253,7 +271,7 @@ Screen1 As screen:
                 Width: =Parent.TemplateWidth
                 ZIndex: =1
 
-        Label8 As label:
+        MonthYearLabel As label:
             Align: =Align.Center
             Height: =51
             Size: =24
@@ -262,4 +280,41 @@ Screen1 As screen:
             X: =284
             Y: =8
             ZIndex: =2
+
+        PreviousButton As button:
+            Height: =35
+            Text: ="Prev"
+            Width: =104
+            X: =24
+            Y: =24
+            ZIndex: =3
+
+        NextButton As button:
+            Height: =35
+            Text: ="Next"
+            Width: =101
+            X: =690
+            Y: =24
+            ZIndex: =4
+
+        TodayButton As button:
+            Height: =35
+            OnSelect: |-
+                =Set(
+                    Date(
+                        Year(Today()),
+                        Month(Today()),
+                        1
+                    ),
+                    Date(
+                        Year(Today()),
+                        Month(Today()),
+                        1
+                    )
+                )
+            Text: ="Today"
+            Width: =108
+            X: =140
+            Y: =24
+            ZIndex: =5
 
