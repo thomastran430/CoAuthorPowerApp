@@ -1,0 +1,175 @@
+Screen1 As screen:
+
+    Container3 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =99
+        Width: =1366
+        Y: =40
+        ZIndex: =1
+
+        Label10 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Size: =20
+            Text: ="Calendar"
+            X: =546
+            Y: =29
+            ZIndex: =1
+
+        Label10_1 As label:
+            Align: =Align.Right
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =61
+            Size: =20
+            Text: ="Doe, Jane (Valuemomentum,IT Consultant)"
+            Width: =647
+            X: =719
+            Y: =3
+            ZIndex: =2
+
+        Label12 As label:
+            Align: =Align.Right
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =48
+            Size: =18
+            Text: ="Rochester, New York"
+            Width: =286
+            X: =1080
+            Y: =51
+            ZIndex: =3
+
+        Image1 As image:
+            Height: =99
+            Image: =dp
+            Width: =88
+            X: =719
+            ZIndex: =4
+
+    Email_Label As label:
+        Text: ="Email Address"
+        X: =18
+        Y: =156
+        ZIndex: =2
+
+    Input_Email As text:
+        Default: ="Text input"
+        X: =184
+        Y: =156
+        ZIndex: =3
+
+    Form_Container As groupContainer.manualLayoutContainer:
+        Height: =553
+        Width: =526
+        X: =18
+        Y: =215
+        ZIndex: =4
+
+        Date_Label_1 As label:
+            Text: ="Date"
+            X: =12
+            Y: =186
+            ZIndex: =1
+
+        Department_Label As label:
+            Text: ="Department"
+            X: =1
+            Y: =105
+            ZIndex: =2
+
+        Slots_Label As label:
+            Text: ="Available Slots"
+            X: =12
+            Y: =298
+            ZIndex: =5
+
+        Input_Slots As dropdown:
+            Items: |-
+                =    ["12:00 AM - 1:00 AM", "1:00 AM - 2:00 AM", "2:00 AM - 3:00 AM", "3:00 AM - 4:00 AM", "4:00 AM - 5:00 AM", "5:00 AM - 6:00 AM", 
+                     "6:00 AM - 7:00 AM", "7:00 AM - 8:00 AM", "8:00 AM - 9:00 AM", "9:00 AM - 10:00 AM", "10:00 AM - 11:00 AM", "11:00 AM - 12:00 PM", 
+                     "12:00 PM - 1:00 PM", "1:00 PM - 2:00 PM", "2:00 PM - 3:00 PM", "3:00 PM - 4:00 PM", "4:00 PM - 5:00 PM", "5:00 PM - 6:00 PM", 
+                     "6:00 PM - 7:00 PM", "7:00 PM - 8:00 PM", "8:00 PM - 9:00 PM", "9:00 PM - 10:00 PM", "10:00 PM - 11:00 PM", "11:00 PM - 12:00 AM"]
+            OnChange: |-
+                =
+                
+                Set(MaxAppointments, 5);
+                // Assuming the selected value is in the format "12:00 AM - 1:00 AM"
+                // Split the string into a start and end time
+                ClearCollect(colTime, Split(Input_Slots.Selected.Value, " - "));
+                
+                // Store the start time in a variable
+                Set(StartTime, First(colTime).Result);
+                
+                // Store the end time in a variable
+                Set(EndTime, Last(colTime).Result);
+                
+                
+                Set(slot_full,LookUp(AppointmentCounts,StartTime=StartTime,Count) >=MaxAppointments);
+                
+                Set(
+                    AppointmentsLeft,
+                    5 - LookUp(AppointmentCounts,EndTime = StartTime, Count)
+                );
+            X: =162
+            Y: =298
+            ZIndex: =6
+
+        Input_Location As dropdown:
+            Items: =["New Jersey","Colarado","Texas"]
+            X: =162
+            Y: =25
+            ZIndex: =7
+
+        Input_Date As datepicker:
+            X: =154
+            Y: =186
+            ZIndex: =8
+
+        Slots_Left_Label As label:
+            Height: =41
+            Text: ="Total Bookings the slot"
+            Width: =129
+            X: =12
+            Y: =373
+            ZIndex: =9
+
+        Output_Slots As label:
+            Height: =41
+            Text: |-
+                =If(
+                    !IsBlank(AppointmentsLeft),
+                    Text(AppointmentsLeft),
+                    Text(5)
+                )
+            Width: =332
+            X: =158
+            Y: =373
+            ZIndex: =10
+
+        Input_Department As dropdown:
+            Items: =["Cardiology","Pathology","Surgery"]
+            X: =162
+            Y: =105
+            ZIndex: =11
+
+        Location_Label As label:
+            Text: ="Location"
+            X: =12
+            Y: =25
+            ZIndex: =12
+
+        Submit_Button As button:
+            Height: =51
+            OnSelect: |-
+                =Patch(New_AppointmentsX,{Appointment_Date:Input_Date.SelectedDate,Email:Input_Email.Text,Department_Name:Input_Department.SelectedText,Start_Time:StartTime,End_Time:EndTime,Location:Input_Location.SelectedText})
+            Text: ="Submit"
+            Width: =309
+            X: =93
+            Y: =471
+            ZIndex: =13
+
+    Calendar_Container As groupContainer.manualLayoutContainer:
+        Height: =585
+        Width: =825
+        X: =541
+        Y: =156
+        ZIndex: =5
+
