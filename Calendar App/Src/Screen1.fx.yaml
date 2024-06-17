@@ -93,21 +93,21 @@ Screen1 As screen:
                 Set(MaxAppointments, 5);
                 // Assuming the selected value is in the format "12:00 AM - 1:00 AM"
                 // Split the string into a start and end time
-                ClearCollect(colTime, Split(Input_Slots.Selected.Value, " - "));
+                // Assuming the dropdown's name is DropdownAvailableSlots
+                //If(
+                //    !IsBlank(Input_Slots.Selected.Value),
+                //    Set(varStartTime, Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1))),
+                 //   Set(varEndTime, Trim(Mid(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) + 3)))
+                //)
                 
-                // Store the start time in a variable
-                Set(StartTime, First(colTime).Result);
-                
-                // Store the end time in a variable
-                Set(EndTime, Last(colTime).Result);
                 
                 
-                Set(slot_full,LookUp(AppointmentCounts,StartTime=StartTime,Count) >=MaxAppointments);
+                //Set(slots,If(New_AppointmentsX,StartTime=StartTime,Count) >=MaxAppointments);
                 
-                Set(
-                    AppointmentsLeft,
-                    5 - LookUp(AppointmentCounts,EndTime = StartTime, Count)
-                );
+                //Set(
+                 //   AppointmentsLeft,
+                   // 5 - LookUp(AppointmentCounts,EndTime = StartTime, Count)
+                //);
             X: =162
             Y: =298
             ZIndex: =6
@@ -134,11 +134,11 @@ Screen1 As screen:
         Output_Slots As label:
             Height: =41
             Text: |-
-                =If(
-                    !IsBlank(AppointmentsLeft),
-                    Text(AppointmentsLeft),
+                =//If(
+                //    !IsBlank(AppointmentsLeft),
+                 //   Text(AppointmentsLeft),
                     Text(5)
-                )
+                //)
             Width: =332
             X: =158
             Y: =373
@@ -159,7 +159,12 @@ Screen1 As screen:
         Submit_Button As button:
             Height: =51
             OnSelect: |-
-                =Patch(New_AppointmentsX,{Appointment_Date:Input_Date.SelectedDate,Email:Input_Email.Text,Department_Name:Input_Department.SelectedText,Start_Time:StartTime,End_Time:EndTime,Location:Input_Location.SelectedText})
+                = Set(varStartTime, Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1)));
+                Set(varEndTime, Trim(Mid(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) + 3)));
+                
+                
+                
+                Patch(New_AppointmentsX,{Appointment_Date:Input_Date.SelectedDate,Email:Input_Email.Text,Department_Name:Input_Department.SelectedText,Start_Time:varStartTime,End_Time:varEndTime,Location:Input_Location.SelectedText})
             Text: ="Submit"
             Width: =309
             X: =93
