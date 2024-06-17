@@ -100,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 2,
+    "BindingErrorCount": 17,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -137,6 +137,7 @@
     "Calendar_Show",
     "Calendar",
     "Book_a_Slot",
-    "Organize Tasks"
+    "Organize Tasks",
+    "Screen1"
   ]
 }
