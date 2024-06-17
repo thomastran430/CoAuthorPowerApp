@@ -1,4 +1,5 @@
 Screen1 As screen:
+    OnVisible: =
 
     Container3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(39, 113, 194, 1)
@@ -214,7 +215,7 @@ Screen1 As screen:
         "DatesGallary As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
             Height: =478
-            Items: =ForAll(Sequence(42),Value+Date(Year(Today()),Month(Today()),1)-Weekday(Date(Year(Today()),Month(Today()),1)))
+            Items: =ForAll(Sequence(42),Value+varCurrentDate-Weekday(Date(Year(Today()),Month(Today()),1)))
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
@@ -232,7 +233,7 @@ Screen1 As screen:
                 BorderThickness: =0.5
                 Color: |-
                     =If(
-                        Month(ThisItem.Value) <> Month(Date(Year(Today()),Month(Today()),1)),
+                        Month(ThisItem.Value) <> Month(varCurrentDate),
                         ColorFade(
                             Self.Fill, 
                             -15% 
@@ -288,6 +289,7 @@ Screen1 As screen:
 
         PreviousButton As button:
             Height: =35
+            OnSelect: =
             Text: ="Prev"
             Width: =104
             X: =24
@@ -306,7 +308,7 @@ Screen1 As screen:
             Height: =35
             OnSelect: |-
                 =Set(
-                    Date(
+                    varCurrentDate
                         Year(Today()),
                         Month(Today()),
                         1

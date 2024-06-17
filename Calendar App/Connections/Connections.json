@@ -18,9 +18,6 @@
           "Admin_Login_Cred": {
             "tableName": "ad48a514-a3f4-4e1c-a108-5bb9687d6645"
           },
-          "New_AppointmentsX": {
-            "tableName": "31031914-8ff3-443f-b3c9-26f739763169"
-          },
           "Nurse_Appointments": {
             "tableName": "9d6fecb4-8c89-425f-88f8-ff9b214cab33"
           },
@@ -33,8 +30,7 @@
     "dataSources": [
       "Patient_Data",
       "Admin_Login_Cred",
-      "Nurse_Appointments",
-      "New_AppointmentsX"
+      "Nurse_Appointments"
     ],
     "dependencies": {},
     "dependents": [],
