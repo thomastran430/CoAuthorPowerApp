@@ -5,7 +5,6 @@ Screen1 As screen:
         Fill: =RGBA(39, 113, 194, 1)
         Height: =99
         Width: =1366
-        Y: =40
         ZIndex: =1
 
         Label10 As label:
@@ -129,9 +128,10 @@ Screen1 As screen:
             ZIndex: =8
 
         Slots_Left_Label As label:
+            Height: =57
             Text: ="Total Bookings on the slot"
-            Width: =122
-            X: =22
+            Width: =143
+            X: =1
             Y: =373
             ZIndex: =9
 
@@ -171,10 +171,11 @@ Screen1 As screen:
             ZIndex: =14
 
         Slots_Left_Label_1 As label:
+            Height: =57
             Text: ="Remaining_Slots"
-            Width: =122
-            X: =256
-            Y: =373
+            Width: =146
+            X: =226
+            Y: =365
             ZIndex: =15
 
         Label8_1 As label:
