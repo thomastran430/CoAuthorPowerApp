@@ -173,21 +173,25 @@ Screen1 As screen:
         Y: =156
         ZIndex: =5
 
-        "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+        "Gallery4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
-            Height: =585
-            Items: =ForAll(Sequence(42),Value+Today())
+            Fill: =RGBA(39, 113, 194, 1)
+            Height: =61
+            Items: =Calendar.WeekdaysShort()
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
-            TemplateSize: =80
-            Width: =820
+            TemplateSize: =61
+            Width: =823
             WrapCount: =7
+            X: =2
+            Y: =45
             ZIndex: =1
 
-            Title7 As label:
+            Title8 As label:
+                Color: =RGBA(255, 255, 255, 1)
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-                Height: =32
+                Height: =19
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -195,8 +199,37 @@ Screen1 As screen:
                 PaddingTop: =0
                 Text: =ThisItem.Value
                 VerticalAlign: =VerticalAlign.Top
-                Width: =98
+                Width: =60
                 X: =16
                 Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+        "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+            DelayItemLoading: =true
+            Height: =479
+            Items: =ForAll(Sequence(42),Value+Date(Year(Today()),Month(Today()),1)-Weekday(Date(Year(Today()),Month(Today()),1)))
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =80
+            Width: =820
+            WrapCount: =7
+            X: =2
+            Y: =106
+            ZIndex: =1
+
+            Title7 As label:
+                Align: =Align.Center
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =23
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Day(ThisItem.Value)
+                VerticalAlign: =VerticalAlign.Top
+                Width: =117.14285714285714
+                Y: =11
                 ZIndex: =1
 
