@@ -29,6 +29,7 @@
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
       "Department_Name": "Department_Name",
+      "Department_Name#Id": "Department_Name Id",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
       "Email": "Email",

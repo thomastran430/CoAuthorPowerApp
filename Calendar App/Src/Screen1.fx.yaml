@@ -242,27 +242,6 @@ Screen1 As screen:
             Y: =130
             ZIndex: =1
 
-            "AppointmentsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                DelayItemLoading: =true
-                Height: =80
-                Items: =Filter(New_AppointmentsX,Email=Input_Email.Text,Appointment_Date=ThisItem.Value)
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =15
-                Width: =117.57142857142856
-                ZIndex: =1
-
-                Button2 As button:
-                    DisplayMode: =DisplayMode.View
-                    Height: =16
-                    OnSelect: =Select(Parent)
-                    Size: =10
-                    Text: =ThisItem.Department_Name
-                    Width: =117.57142857142856
-                    Y: =30
-                    ZIndex: =2
-
             Title7 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(237, 237, 237, 1)
@@ -312,6 +291,27 @@ Screen1 As screen:
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth
                 ZIndex: =1
+
+            "AppointmentsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                DelayItemLoading: =true
+                Height: =80
+                Items: =Filter(New_AppointmentsX,Email=Input_Email.Text,Appointment_Date=ThisItem.Value)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =15
+                Width: =117.57142857142856
+                ZIndex: =1
+
+                Button2 As button:
+                    DisplayMode: =DisplayMode.View
+                    Height: =16
+                    OnSelect: =Input_Department.SelectedText=ThisItem.Department_Name
+                    Size: =10
+                    Text: =ThisItem.Department_Name.Value
+                    Width: =117.57142857142856
+                    Y: =30
+                    ZIndex: =2
 
         MonthYearLabel As label:
             Align: =Align.Center
