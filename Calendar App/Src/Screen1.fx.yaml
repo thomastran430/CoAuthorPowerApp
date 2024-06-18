@@ -136,6 +136,7 @@ Screen1 As screen:
             ZIndex: =9
 
         Input_Department As dropdown:
+            Default: =First(colAppointmentDetails).Department_Name.Value
             Items: =["Cardiology","Pathology","Surgery"]
             X: =162
             Y: =105
@@ -242,7 +243,7 @@ Screen1 As screen:
             Y: =130
             ZIndex: =1
 
-            Title7 As label:
+            Date_Display As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(237, 237, 237, 1)
                 BorderThickness: =0.5
@@ -307,22 +308,41 @@ Screen1 As screen:
                 Button2 As button:
                     DisplayMode: =DisplayMode.View
                     Height: =16
-                    OnSelect: =Input_Department.SelectedText=ThisItem.Department_Name
+                    OnSelect: |-
+                        =//Input_Department.SelectedText=ThisItem.Department_Name;
+                        
+                        Set(varSelectedDate, ThisItem.Value);
+                        Collect(
+                            colAppointmentDetails,
+                            LookUp(New_AppointmentsX, Appointment_Date=varSelectedDate)
+                        );
                     Size: =10
                     Text: =ThisItem.Department_Name.Value
                     Width: =117.57142857142856
                     Y: =30
                     ZIndex: =2
 
-            Label9 As label:
+            Date As label:
                 Align: =Align.Center
                 Fill: =RGBA(39,113 , 194, 0)
                 Height: =80
                 HoverColor: =RGBA(153, 207, 236, 1)
                 HoverFill: =RGBA(39,113,194,0.5)
-                OnSelect: |-
-                    =Notify("Touch");
-                    Set(Date_click,ThisItem.Value)
+                OnSelect: |+
+                    =//Notify("Touch");
+                    //Set(Date_click,ThisItem.Value);
+                    
+                    Set(varSelectedDate,Date_Display.Text);  //Date_Display.Text
+                    Set(varclick_date,ThisItem.Value);
+                    Collect(
+                        colAppointmentDetails,
+                        LookUp(New_AppointmentsX, Appointment_Date=varclick_date).Appointment_Date //Appointment_Date=Date(varSelectedDate)
+                    );
+                    //Notify(ThisItem.Value);
+                    Notify(LookUp(New_AppointmentsX, Appointment_Date=varclick_date & Email=Text("rdayasaagar@gmail.com")).Email);
+                    //Notify(DateValue(varSelectedDate));
+                    //Notify(First(colAppointmentDetails).Appointment_Date)
+                    
                 Text: =
                 Width: =117
                 ZIndex: =2
