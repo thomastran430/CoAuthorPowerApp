@@ -245,7 +245,7 @@ Screen1 As screen:
             "AppointmentsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
                 DelayItemLoading: =true
                 Height: =80
-                Items: =Filter(New_AppointmentsX,Appointment_Date=ThisItem.Value)
+                Items: =Filter(New_AppointmentsX,Email=Input_Email.Text,Appointment_Date=ThisItem.Value)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -258,7 +258,7 @@ Screen1 As screen:
                     Height: =16
                     OnSelect: =Select(Parent)
                     Size: =10
-                    Text: =
+                    Text: =ThisItem.Department_Name
                     Width: =117.57142857142856
                     Y: =30
                     ZIndex: =2
