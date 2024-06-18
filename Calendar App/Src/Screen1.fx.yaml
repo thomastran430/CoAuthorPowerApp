@@ -281,6 +281,7 @@ Screen1 As screen:
                     )
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =Parent.TemplateHeight
+                HoverColor: = ColorValue("Black")
                 LineHeight: =2
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
@@ -291,6 +292,19 @@ Screen1 As screen:
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth
                 ZIndex: =1
+
+            Label9 As label:
+                Align: =Align.Center
+                Fill: =RGBA(39,113 , 194, 0)
+                Height: =80
+                HoverColor: =RGBA(153, 207, 236, 1)
+                HoverFill: =RGBA(39,113,194,0.5)
+                OnSelect: |-
+                    =Notify("Touch");
+                    Set(Date_click,ThisItem.Value)
+                Text: =
+                Width: =117
+                ZIndex: =2
 
         MonthYearLabel As label:
             Align: =Align.Center
