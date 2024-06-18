@@ -294,34 +294,6 @@ Screen1 As screen:
                 Width: =Parent.TemplateWidth
                 ZIndex: =1
 
-            "AppointmentsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                DelayItemLoading: =true
-                Height: =80
-                Items: =Filter(New_AppointmentsX,Email=Input_Email.Text,Appointment_Date=ThisItem.Value)
-                Layout: =Layout.Vertical
-                LoadingSpinner: =LoadingSpinner.Data
-                TemplatePadding: =0
-                TemplateSize: =15
-                Width: =117.57142857142856
-                ZIndex: =1
-
-                Button2 As button:
-                    DisplayMode: =DisplayMode.View
-                    Height: =16
-                    OnSelect: |-
-                        =//Input_Department.SelectedText=ThisItem.Department_Name;
-                        
-                        Set(varSelectedDate, ThisItem.Value);
-                        Collect(
-                            colAppointmentDetails,
-                            LookUp(New_AppointmentsX, Appointment_Date=varSelectedDate)
-                        );
-                    Size: =10
-                    Text: =ThisItem.Department_Name.Value
-                    Width: =117.57142857142856
-                    Y: =30
-                    ZIndex: =2
-
             Date As label:
                 Align: =Align.Center
                 Fill: =RGBA(39,113 , 194, 0)
@@ -346,6 +318,33 @@ Screen1 As screen:
                 Text: =
                 Width: =117
                 ZIndex: =2
+
+            "AppointmentsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                DelayItemLoading: =true
+                Height: =80
+                Items: =Filter(New_AppointmentsX,Email=Input_Email.Text,Appointment_Date=ThisItem.Value)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =15
+                Width: =117.57142857142856
+                ZIndex: =3
+
+                Button2 As button:
+                    Height: =16
+                    OnSelect: |-
+                        =//Input_Department.SelectedText=ThisItem.Department_Name;
+                        
+                        Set(varSelectedDate, ThisItem.Value);
+                        Collect(
+                            colAppointmentDetails,
+                            LookUp(New_AppointmentsX, Appointment_Date=varSelectedDate)
+                        );
+                    Size: =10
+                    Text: =ThisItem.Department_Name.Value
+                    Width: =117.57142857142856
+                    Y: =30
+                    ZIndex: =2
 
         MonthYearLabel As label:
             Align: =Align.Center
