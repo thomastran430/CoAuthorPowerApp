@@ -1353,19 +1353,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.AppointmentsGallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.AppointmentsGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Screen1",
-                "type": "Screen1.Calendar_Container.DatesGallary.Gallery2"
+                "type": "Screen1.Calendar_Container.DatesGallary.AppointmentsGallery"
               }
             }
           ],
@@ -1383,19 +1383,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.Gallery2.TabIndex"
+                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.AppointmentsGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.Gallery2.TabIndex",
+                  "fullyQualifiedName": "Screen1.Calendar_Container.DatesGallary.AppointmentsGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Screen1",
-                "type": "Screen1.Calendar_Container.DatesGallary.Gallery2"
+                "type": "Screen1.Calendar_Container.DatesGallary.AppointmentsGallery"
               }
             }
           ],
