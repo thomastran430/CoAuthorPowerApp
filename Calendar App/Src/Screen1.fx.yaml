@@ -136,6 +136,7 @@ Screen1 As screen:
             ZIndex: =9
 
         Input_Department As dropdown:
+            Default: =SelectedText
             Items: =["Cardiology","Pathology","Surgery"]
             X: =162
             Y: =105
@@ -304,9 +305,8 @@ Screen1 As screen:
                 ZIndex: =1
 
                 Button2 As button:
-                    DisplayMode: =DisplayMode.View
                     Height: =16
-                    OnSelect: =Input_Department.SelectedText=ThisItem.Department_Name
+                    OnSelect: =Set(SelectedText,Input_Department.Selected.Value); Reset(Input_Department)
                     Size: =10
                     Text: =ThisItem.Department_Name.Value
                     Width: =117.57142857142856
