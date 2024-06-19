@@ -2,7 +2,7 @@ Screen1 As screen:
     OnVisible: =
 
     Container3 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(39, 113, 194, 1)
+        Fill: =RGBA(50, 86, 160, 1)
         Height: =99
         Width: =1366
         ZIndex: =1
@@ -47,41 +47,44 @@ Screen1 As screen:
     Email_Label As label:
         Text: ="Email Address"
         X: =18
-        Y: =156
+        Y: =116
         ZIndex: =2
 
     Input_Email As text:
         Default: ="Text input"
-        X: =184
+        Height: =36
+        Width: =492
+        X: =18
         Y: =156
         ZIndex: =3
 
     Form_Container As groupContainer.manualLayoutContainer:
         Height: =553
-        Width: =526
+        Width: =492
         X: =18
         Y: =215
         ZIndex: =4
 
         Date_Label_1 As label:
             Text: ="Date"
-            X: =12
-            Y: =186
+            X: =1
+            Y: =173
             ZIndex: =1
 
         Department_Label As label:
             Text: ="Department"
             X: =1
-            Y: =105
+            Y: =83
             ZIndex: =2
 
         Slots_Label As label:
             Text: ="Available Slots"
-            X: =12
-            Y: =298
+            X: =1
+            Y: =264
             ZIndex: =5
 
         Input_Slots As dropdown:
+            Height: =44
             Items: |-
                 =    ["12:00 AM - 1:00 AM", "1:00 AM - 2:00 AM", "2:00 AM - 3:00 AM", "3:00 AM - 4:00 AM", "4:00 AM - 5:00 AM", "5:00 AM - 6:00 AM", 
                      "6:00 AM - 7:00 AM", "7:00 AM - 8:00 AM", "8:00 AM - 9:00 AM", "9:00 AM - 10:00 AM", "10:00 AM - 11:00 AM", "11:00 AM - 12:00 PM", 
@@ -112,19 +115,22 @@ Screen1 As screen:
                 Set(varCurrentBookings, CountRows(Filter(New_AppointmentsX, Start_Time = Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1)))));
             OnSelect: |
                 =
-            X: =162
-            Y: =298
+            Width: =489
+            X: =1
+            Y: =304
             ZIndex: =6
 
         Input_Location As dropdown:
             Items: =["New Jersey","Colarado","Texas"]
-            X: =162
-            Y: =25
+            Width: =489
+            X: =1
+            Y: =43
             ZIndex: =7
 
         Input_Date As datepicker:
-            X: =162
-            Y: =186
+            Width: =489
+            X: =1
+            Y: =213
             ZIndex: =8
 
         Slots_Left_Label As label:
@@ -138,14 +144,15 @@ Screen1 As screen:
         Input_Department As dropdown:
             Default: =First(colAppointmentDetails).Department_Name.Value
             Items: =["Cardiology","Pathology","Surgery"]
-            X: =162
-            Y: =105
+            Width: =489
+            X: =1
+            Y: =133
             ZIndex: =11
 
         Location_Label As label:
             Text: ="Location"
-            X: =12
-            Y: =25
+            X: =1
+            Y: =3
             ZIndex: =12
 
         Submit_Button As button:
@@ -167,7 +174,7 @@ Screen1 As screen:
             Height: =39
             Text: =varCurrentBookings
             Width: =84
-            X: =172
+            X: =151
             Y: =374
             ZIndex: =14
 
@@ -189,15 +196,20 @@ Screen1 As screen:
             ZIndex: =16
 
     Calendar_Container As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(175, 191, 224, 1)
         Height: =612
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Width: =825
-        X: =541
+        X: =531
         Y: =156
         ZIndex: =5
 
         "WeekdaysGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
-            Fill: =RGBA(39, 113, 194, 1)
+            Fill: =RGBA(50, 86, 160, 1)
             Height: =41
             Items: =Calendar.WeekdaysShort()
             Layout: =Layout.Vertical
@@ -207,7 +219,7 @@ Screen1 As screen:
             TemplateSize: =61
             Width: =823
             WrapCount: =7
-            X: =1
+            X: =2
             Y: =89
             ZIndex: =1
 
@@ -230,8 +242,9 @@ Screen1 As screen:
 
         "DatesGallary As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
-            Height: =478
-            Items: =ForAll(Sequence(42),Value+varCurrentDate-Weekday(varCurrentDate))
+            Height: =484
+            Items: |
+                =ForAll(Sequence(42),Value+varCurrentDate-Weekday(varCurrentDate))
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
@@ -239,8 +252,8 @@ Screen1 As screen:
             TemplateSize: =80
             Width: =823
             WrapCount: =7
-            X: =2
-            Y: =130
+            X: =1
+            Y: =128
             ZIndex: =1
 
             Date_Display As label:
@@ -280,6 +293,17 @@ Screen1 As screen:
                             255
                         )
                     )
+                    //If(
+                        //CountRows(Filter(New_AppointmentsX,Appointment_Date=ThisItem.Value)) > 5,
+                       // RGBA(0,255,0,1)
+                        //),
+                        //)RGBA(
+                          //  255,
+                            //255,
+                            //255,
+                            //255
+                        //)
+                        //)
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =Parent.TemplateHeight
                 HoverColor: = ColorValue("Black")
@@ -348,16 +372,23 @@ Screen1 As screen:
 
         MonthYearLabel As label:
             Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
             Height: =51
-            Size: =24
+            Size: =30
             Text: =Text(varCurrentDate,"mmmm yyyy")
-            Width: =258
-            X: =284
-            Y: =8
+            Width: =270
+            X: =278
+            Y: =18
             ZIndex: =2
 
         PreviousButton As button:
-            Height: =35
+            BorderColor: =ColorFade(Self.Fill, +10%)
+            BorderThickness: =0
+            Fill: =RGBA(175, 191, 224, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Normal
+            Height: =89
             OnSelect: |-
                 =Set(
                     varCurrentDate,
@@ -367,14 +398,23 @@ Screen1 As screen:
                         1
                     )
                 )
-            Text: ="Prev"
-            Width: =104
-            X: =24
-            Y: =24
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =45
+            Text: ="<"
+            Width: =82
+            X: =661
             ZIndex: =3
 
         NextButton As button:
-            Height: =35
+            BorderColor: =ColorFade(Self.Fill, +10%)
+            BorderThickness: =0
+            Fill: =RGBA(175, 191, 224, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Normal
+            Height: =89
             OnSelect: |-
                 =Set(
                     varCurrentDate,
@@ -384,14 +424,19 @@ Screen1 As screen:
                         1
                     )
                 )
-            Text: ="Next"
-            Width: =101
-            X: =690
-            Y: =24
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =45
+            Text: =">"
+            Width: =82
+            X: =743
             ZIndex: =4
 
         TodayButton As button:
-            Height: =35
+            Fill: =RGBA(50, 86, 160, 1)
+            Height: =42
             OnSelect: |+
                 =Set(
                     varCurrentDate,
@@ -402,9 +447,14 @@ Screen1 As screen:
                     )
                 )
                 
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =20
             Text: ="Today"
-            Width: =108
-            X: =140
-            Y: =24
+            Width: =114
+            X: =61
+            Y: =27
             ZIndex: =5
 

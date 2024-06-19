@@ -100,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 5,
+    "BindingErrorCount": 11,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -118,7 +118,7 @@
     "ManualOfflineProfileId": "",
     "Name": "Calendar",
     "OriginatingVersion": "1.341",
-    "ParserErrorCount": 0,
+    "ParserErrorCount": 6,
     "ShowStatusBar": false
   },
   "PublishInfo": {
