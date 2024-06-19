@@ -3,84 +3,89 @@ Screen1 As screen:
 
     Container3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(50, 86, 160, 1)
-        Height: =99
+        Height: =87
         Width: =1366
         ZIndex: =1
 
-        Label10 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Size: =20
-            Text: ="Calendar"
-            X: =546
-            Y: =29
-            ZIndex: =1
-
         Label10_1 As label:
-            Align: =Align.Right
             Color: =RGBA(255, 255, 255, 1)
-            Height: =61
-            Size: =20
+            Height: =45
+            Size: =25
             Text: ="Doe, Jane (Valuemomentum,IT Consultant)"
-            Width: =647
-            X: =719
-            Y: =3
+            Width: =755
+            X: =94
+            Y: =17
             ZIndex: =2
 
         Label12 As label:
             Align: =Align.Right
             Color: =RGBA(255, 255, 255, 1)
-            Height: =48
-            Size: =18
+            Height: =45
+            Size: =25
             Text: ="Rochester, New York"
-            Width: =286
-            X: =1080
-            Y: =51
+            Width: =346
+            X: =1018
+            Y: =17
             ZIndex: =3
 
         Image1 As image:
             Height: =99
-            Image: =dp
+            Image: ='924291258'
+            ImagePosition: =ImagePosition.Fill
             Width: =88
-            X: =719
             ZIndex: =4
 
     Email_Label As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Size: =20
         Text: ="Email Address"
-        X: =18
-        Y: =116
+        Width: =240
+        X: =323
+        Y: =103
         ZIndex: =2
 
     Input_Email As text:
         Default: ="Text input"
         Height: =36
-        Width: =492
-        X: =18
-        Y: =156
+        Width: =548
+        X: =543
+        Y: =103
         ZIndex: =3
 
     Form_Container As groupContainer.manualLayoutContainer:
-        Height: =553
-        Width: =492
-        X: =18
-        Y: =215
+        Fill: =RGBA(175, 191, 224, 1)
+        Height: =612
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =541
+        Y: =156
         ZIndex: =4
 
         Date_Label_1 As label:
+            FontWeight: =FontWeight.Semibold
+            Size: =15
             Text: ="Date"
-            X: =1
-            Y: =173
+            X: =24
+            Y: =194
             ZIndex: =1
 
         Department_Label As label:
+            FontWeight: =FontWeight.Semibold
+            Size: =15
             Text: ="Department"
-            X: =1
-            Y: =83
+            X: =24
+            Y: =103
             ZIndex: =2
 
         Slots_Label As label:
+            FontWeight: =FontWeight.Semibold
+            Size: =15
             Text: ="Available Slots"
-            X: =1
-            Y: =264
+            X: =24
+            Y: =284
             ZIndex: =5
 
         Input_Slots As dropdown:
@@ -116,43 +121,48 @@ Screen1 As screen:
             OnSelect: |
                 =
             Width: =489
-            X: =1
-            Y: =304
+            X: =24
+            Y: =324
             ZIndex: =6
 
         Input_Location As dropdown:
             Items: =["New Jersey","Colarado","Texas"]
             Width: =489
-            X: =1
-            Y: =43
+            X: =24
+            Y: =53
             ZIndex: =7
 
         Input_Date As datepicker:
             Width: =489
-            X: =1
-            Y: =213
+            X: =24
+            Y: =234
             ZIndex: =8
 
         Slots_Left_Label As label:
-            Height: =57
-            Text: ="Total Bookings on the slot"
-            Width: =143
-            X: =1
-            Y: =373
+            FontWeight: =FontWeight.Semibold
+            Height: =49
+            Size: =15
+            Text: |-
+                ="Total Bookings:"
+            Width: =171
+            X: =44
+            Y: =403
             ZIndex: =9
 
         Input_Department As dropdown:
             Default: =First(colAppointmentDetails).Department_Name.Value
             Items: =["Cardiology","Pathology","Surgery"]
             Width: =489
-            X: =1
-            Y: =133
+            X: =24
+            Y: =143
             ZIndex: =11
 
         Location_Label As label:
+            FontWeight: =FontWeight.Semibold
+            Size: =15
             Text: ="Location"
-            X: =1
-            Y: =3
+            X: =24
+            Y: =13
             ZIndex: =12
 
         Submit_Button As button:
@@ -165,34 +175,39 @@ Screen1 As screen:
                 
             Text: ="Submit"
             Width: =309
-            X: =93
-            Y: =471
+            X: =91
+            Y: =501
             ZIndex: =13
 
         Label8 As label:
             DisplayMode: =DisplayMode.View
             Height: =39
+            Size: =15
             Text: =varCurrentBookings
-            Width: =84
-            X: =151
-            Y: =374
+            Width: =42
+            X: =198
+            Y: =408
             ZIndex: =14
 
         Slots_Left_Label_1 As label:
-            Height: =57
-            Text: ="Remaining_Slots"
-            Width: =146
-            X: =226
-            Y: =365
+            FontWeight: =FontWeight.Semibold
+            Height: =49
+            Size: =15
+            Text: |-
+                ="Remaining Bookings:"
+            Width: =214
+            X: =240
+            Y: =403
             ZIndex: =15
 
         Label8_1 As label:
             DisplayMode: =DisplayMode.View
             Height: =39
+            Size: =15
             Text: =5-varCurrentBookings
-            Width: =84
-            X: =406
-            Y: =374
+            Width: =36
+            X: =448
+            Y: =408
             ZIndex: =16
 
     Calendar_Container As groupContainer.manualLayoutContainer:
@@ -202,8 +217,8 @@ Screen1 As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Width: =825
-        X: =531
+        Width: =823
+        X: =541
         Y: =156
         ZIndex: =5
 
