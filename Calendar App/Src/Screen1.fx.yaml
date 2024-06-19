@@ -383,8 +383,8 @@ Screen1 As screen:
                         
                         Set(varShowPopUptwo,true);
                         Set(date_dp,ThisItem.Appointment_Date)
-                    Size: =10
-                    Text: =ThisItem.Department_Name.Value
+                    Size: =9
+                    Text: =ThisItem.Start_Time & "-" & ThisItem.End_Time
                     Width: =117.57142857142856
                     Y: =30
                     ZIndex: =2
