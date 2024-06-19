@@ -643,24 +643,24 @@ Screen1 As screen:
             FontWeight: =FontWeight.Bold
             Text: ="User Name"
             Visible: =varShowPopUptwo
-            X: =437
-            Y: =251
+            X: =465
+            Y: =231
             ZIndex: =22
 
         Label9_1 As label:
             Text: =Input_Email.Text
             Visible: =varShowPopUptwo
             Width: =245
-            X: =548
-            Y: =252
+            X: =628
+            Y: =232
             ZIndex: =23
 
         Label9_2 As label:
             FontWeight: =FontWeight.Bold
             Text: ="Slot Booked"
             Visible: =varShowPopUptwo
-            X: =437
-            Y: =415
+            X: =465
+            Y: =399
             ZIndex: =24
 
         Label9_3 As label:
@@ -668,31 +668,31 @@ Screen1 As screen:
                 =//First(colAppointmentDetails).Start_Time 
                 slot_dp
             Visible: =varShowPopUptwo
-            X: =554
-            Y: =415
+            X: =628
+            Y: =399
             ZIndex: =25
 
         Label9_4 As label:
             Text: =date_dp
             Visible: =varShowPopUptwo
-            X: =554
-            Y: =375
+            X: =628
+            Y: =361
             ZIndex: =26
 
         Label9_5 As label:
             FontWeight: =FontWeight.Bold
             Text: ="Date"
             Visible: =varShowPopUptwo
-            X: =437
-            Y: =375
+            X: =465
+            Y: =360
             ZIndex: =27
 
         Label9_6 As label:
             FontWeight: =FontWeight.Bold
-            Text: ="Locaiton"
+            Text: ="Location"
             Visible: =varShowPopUptwo
-            X: =437
-            Y: =292
+            X: =465
+            Y: =274
             ZIndex: =28
 
         Label9_7 As label:
@@ -700,8 +700,8 @@ Screen1 As screen:
                 =//First(colAppointmentDetails).Start_Time 
                 location_dp
             Visible: =varShowPopUptwo
-            X: =548
-            Y: =292
+            X: =628
+            Y: =276
             ZIndex: =29
 
         Label9_8 As label:
@@ -709,15 +709,15 @@ Screen1 As screen:
                 =//First(colAppointmentDetails).Start_Time 
                 department_dp
             Visible: =varShowPopUptwo
-            X: =554
-            Y: =332
+            X: =628
+            Y: =320
             ZIndex: =30
 
         Label9_9 As label:
             FontWeight: =FontWeight.Bold
             Text: ="Department"
             Visible: =varShowPopUptwo
-            X: =437
-            Y: =333
+            X: =465
+            Y: =316
             ZIndex: =31
 
