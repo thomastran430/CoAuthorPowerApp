@@ -648,9 +648,10 @@ Screen1 As screen:
             ZIndex: =22
 
         Label9_1 As label:
+            Height: =39
             Text: =Input_Email.Text
             Visible: =varShowPopUptwo
-            Width: =245
+            Width: =281
             X: =628
             Y: =232
             ZIndex: =23
@@ -668,6 +669,7 @@ Screen1 As screen:
                 =//First(colAppointmentDetails).Start_Time 
                 slot_dp
             Visible: =varShowPopUptwo
+            Width: =220
             X: =628
             Y: =399
             ZIndex: =25
