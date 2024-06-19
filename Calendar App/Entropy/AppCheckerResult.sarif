@@ -134,46 +134,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Container3.Image1.Image"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Container3.Image1.Image",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "dp"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Image",
-                "module": "Screen1",
-                "type": "Screen1.Container3.Image1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "dp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Screen1.Calendar_Container.PreviousButton.BorderColor"
                 }
               ],
