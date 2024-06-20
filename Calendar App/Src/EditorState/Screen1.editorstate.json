@@ -6704,7 +6704,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12317,7 +12317,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_Transition",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12992,7 +12992,7 @@
       "MetaDataIDKey": "",
       "Name": "Radio2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13240,7 +13240,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14396,7 +14396,7 @@
       "MetaDataIDKey": "",
       "Name": "Submit_Button",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14653,7 +14653,7 @@
       "MetaDataIDKey": "",
       "Name": "Submit_Button_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
