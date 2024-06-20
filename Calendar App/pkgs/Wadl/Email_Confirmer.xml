@@ -32,12 +32,16 @@
               <doc title="Input_Email" />
             </param>
             <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
-              <doc title="Input 1" />
-              <option value="First option" />
+              <doc title="Input_Location" />
+              <option value="New Jersey" />
+              <option value="Colarado" />
+              <option value="Texas" />
             </param>
             <param style="plain" name="text_2" path="/text_2" type="xs:string" required="true">
-              <doc title="Input 2" />
-              <option value="First option" />
+              <doc title="Input_Department" />
+              <option value="Cardiology" />
+              <option value="Pathology" />
+              <option value="Surgery" />
             </param>
             <param style="plain" name="text_3" path="/text_3" type="xs:string" required="true">
               <doc title="Start_Time" />

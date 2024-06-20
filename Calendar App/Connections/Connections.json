@@ -46,9 +46,6 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "e6a09269-f91c-466b-a383-a4cce2e4f8ae": {
-          "value": "shared_office365"
-        },
         "workflowDisplayName": {
           "value": "Email_Confirmer"
         },
@@ -60,9 +57,6 @@
         }
       },
       "parameterHintsV2": {
-        "shared_office365": {
-          "value": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
-        },
         "workflowDisplayName": {
           "value": "Email_Confirmer"
         },
@@ -162,8 +156,8 @@
     ],
     "dependencies": {},
     "dependents": [
-      "7939d0dc-70f6-4f83-bf64-885d4eb4da95",
-      "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee"
+      "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee",
+      "7939d0dc-70f6-4f83-bf64-885d4eb4da95"
     ],
     "id": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
   }

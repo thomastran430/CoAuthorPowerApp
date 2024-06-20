@@ -250,7 +250,7 @@ Screen1 As screen:
                             ComboBox1.Selected.Mail,
                             Input_Location.Selected.Value,
                             Input_Department.Selected.Value,
-                            Text(Input_Date.SelectedDate, "MM-dd-yyyy"),
+                            Text(Input_Date.SelectedDate),
                             varStartTime,
                             varEndTime
                         );
