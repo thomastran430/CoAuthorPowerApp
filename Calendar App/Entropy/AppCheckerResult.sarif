@@ -143,10 +143,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 133,
+                  "charLength": 162,
                   "charOffset": 716,
                   "snippet": {
-                    "text": "CountRows(Filter(New_AppointmentsX, Start_Time = Trim(Left(Input_Slots.Selected.Value, Find(\" -\", Input_Slots.Selected.Value) - 1))))"
+                    "text": "CountRows(Filter(New_AppointmentsX,Email=ComboBox1.Selected.Mail,Start_Time = Trim(Left(Input_Slots.Selected.Value, Find(\" -\", Input_Slots.Selected.Value) - 1))))"
                   }
                 }
               },
