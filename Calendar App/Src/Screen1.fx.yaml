@@ -557,7 +557,7 @@ Screen1 As screen:
               Office365Users.MyProfile(),
               Blank()
             )
-        DisplayFields: =["Mail","DisplayName"]
+        DisplayFields: =["DisplayName","Mail"]
         DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
         Height: =36
         Items: |-
@@ -572,7 +572,7 @@ Screen1 As screen:
             Filter(
                 Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
                  "@valuemomentum.com" in Mail 
-            ),ComboBox1.SearchText,DisplayName,Mail)
+            ),ComboBox1.SearchText,DisplayName)
         SelectMultiple: =false
         Template: =ListItemTemplate.Double
         Width: =434
