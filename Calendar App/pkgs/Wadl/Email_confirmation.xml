@@ -2,17 +2,15 @@
   <doc title="Email_confirmation" />
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="ManualTriggerInput_email_def" />
+      <string name="ManualTriggerInput_date_def" />
       <string name="ManualTriggerInput_text_def" />
       <string name="ManualTriggerInput_text_1_def" />
-      <string name="ManualTriggerInput_text_2_def" />
-      <string name="ManualTriggerInput_date_def" />
-      <string name="ManualTriggerInput_text_3_def" />
       <object name="ManualTriggerInput">
+        <property name="email" type="string" />
+        <property name="date" type="string" />
         <property name="text" type="string" />
         <property name="text_1" type="string" />
-        <property name="text_2" type="string" />
-        <property name="date" type="string" />
-        <property name="text_3" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -26,24 +24,17 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="text" path="/text" type="xs:string" required="true">
-              <doc title="Location" />
-              <option value="First option" />
-            </param>
-            <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
-              <doc title="Input 1" />
-              <option value="First option" />
-            </param>
-            <param style="plain" name="text_2" path="/text_2" type="xs:string" required="true">
-              <doc title="Input 2" />
-              <option value="First option" />
+            <param style="plain" name="email" path="/email" type="xs:string" required="true">
+              <doc title="Email" />
             </param>
             <param style="plain" name="date" path="/date" type="xs:string" required="true">
-              <doc title="Input_Date" />
+              <doc title="Pick_Date" />
             </param>
-            <param style="plain" name="text_3" path="/text_3" type="xs:string" required="true">
-              <doc title="Input 3" />
-              <option value="First option" />
+            <param style="plain" name="text" path="/text" type="xs:string" required="true">
+              <doc title="Pick_Start_Time" />
+            </param>
+            <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
+              <doc title="Pick_End_Time" />
             </param>
           </representation>
         </request>

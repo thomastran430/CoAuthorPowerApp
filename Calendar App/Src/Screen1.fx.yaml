@@ -415,6 +415,8 @@ Screen1 As screen:
                 ZIndex: =3
 
                 Button2 As button:
+                    Fill: =RGBA(RandBetween(1, 255), RandBetween(1, 255), RandBetween(1, 255), 1)
+                    FontWeight: =FontWeight.Bold
                     Height: =16
                     OnSelect: |-
                         =//Input_Department.SelectedText=ThisItem.Department_Name;
@@ -503,7 +505,7 @@ Screen1 As screen:
 
         TodayButton As button:
             Fill: =RGBA(50, 86, 160, 1)
-            Height: =28
+            Height: =30
             OnSelect: |+
                 =Set(
                     varCurrentDate,
@@ -518,11 +520,10 @@ Screen1 As screen:
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Size: =20
             Text: ="Today"
-            Width: =106
-            X: =61
-            Y: =27
+            Width: =87
+            X: =20
+            Y: =33
             ZIndex: =5
 
     Button4 As button:
@@ -811,7 +812,7 @@ Screen1 As screen:
             ZIndex: =32
 
     Label10 As label:
-        Text: ="Whose apoointment are you editing?"
+        Text: ="Whose appointment are you editing?"
         Width: =321
         X: =17
         Y: =103
