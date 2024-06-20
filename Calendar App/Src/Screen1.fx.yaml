@@ -172,7 +172,8 @@ Screen1 As screen:
                 Set(varEndTime, Trim(Mid(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) + 3)));
                 
                 Patch(New_AppointmentsX,{Appointment_Date:Input_Date.SelectedDate,Email:ComboBox1.Selected.Mail,Department_Name:Input_Department.SelectedText,Start_Time:varStartTime,End_Time:varEndTime,Location:Input_Location.SelectedText});
-                Email_confirmation.Run(ComboBox1.Selected.Mail,Input_Location.Selected.Value,Input_Department.Selected.Value,Text(Input_Date.SelectedDate, "yyyy-MM-dd"),Input_Slots.Selected.Value)
+                //Email_confirmation.Run(ComboBox1.Selected.Mail,Input_Location.Selected.Value,Input_Department.Selected.Value,Text(Input_Date.SelectedDate, "MM-dd-yyyy"),Input_Slots.Selected.Value)
+                Email_Confirmer.Run(ComboBox1.Selected.Mail,Input_Location.Selected.Value,Input_Department.Selected.Value,Text(Input_Date.SelectedDate,"MM-dd-yyyy"),varStartTime,varEndTime)
                 
                 
             Text: ="Submit"
@@ -214,7 +215,7 @@ Screen1 As screen:
 
         Submit_Button_1 As button:
             Height: =43
-            OnSelect: |
+            OnSelect: |-
                 =// Set start and end times from the selected slot
                 Set(varStartTime, Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1)));
                 Set(varEndTime, Trim(Mid(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) + 3)));
@@ -244,9 +245,10 @@ Screen1 As screen:
                     ),
                     // Optional: Notify user of the conflict
                     Notify("This time slot is already booked.", NotificationType.Error)
-                )
+                );
+                Email_Confirmer.Run(ComboBox1.Selected.Mail,Input_Location.Selected.Value,Input_Department.Selected.Value,Text(Input_Date.SelectedDate,"MM-dd-yyyy"),varStartTime,varEndTime)
             Text: ="Submit"
-            Width: =135
+            Width: =176
             X: =39
             Y: =554
             ZIndex: =17

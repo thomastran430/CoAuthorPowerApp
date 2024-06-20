@@ -1,18 +1,20 @@
-<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="Email_confirmation" xmlns="http://wadl.dev.java.net/2009/02">
-  <doc title="Email_confirmation" />
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="Email_Confirmer" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Email_Confirmer" />
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput_text_def" />
       <string name="ManualTriggerInput_text_1_def" />
       <string name="ManualTriggerInput_text_2_def" />
-      <string name="ManualTriggerInput_date_def" />
       <string name="ManualTriggerInput_text_3_def" />
+      <string name="ManualTriggerInput_text_4_def" />
+      <string name="ManualTriggerInput_text_5_def" />
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
         <property name="text_1" type="string" />
         <property name="text_2" type="string" />
-        <property name="date" type="string" />
         <property name="text_3" type="string" />
+        <property name="text_4" type="string" />
+        <property name="text_5" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -27,8 +29,7 @@
           </param>
           <representation mediaType="application/json">
             <param style="plain" name="text" path="/text" type="xs:string" required="true">
-              <doc title="Location" />
-              <option value="First option" />
+              <doc title="Input_Email" />
             </param>
             <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
               <doc title="Input 1" />
@@ -38,12 +39,14 @@
               <doc title="Input 2" />
               <option value="First option" />
             </param>
-            <param style="plain" name="date" path="/date" type="xs:string" required="true">
-              <doc title="Input_Date" />
-            </param>
             <param style="plain" name="text_3" path="/text_3" type="xs:string" required="true">
-              <doc title="Input 3" />
-              <option value="First option" />
+              <doc title="Start_Time" />
+            </param>
+            <param style="plain" name="text_4" path="/text_4" type="xs:string" required="true">
+              <doc title="End_Time" />
+            </param>
+            <param style="plain" name="text_5" path="/text_5" type="xs:string" required="true">
+              <doc title="Input_Date" />
             </param>
           </representation>
         </request>

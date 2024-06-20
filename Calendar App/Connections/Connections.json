@@ -40,15 +40,51 @@
     "dependents": [],
     "id": "2cdaad84-fee1-4fee-b8dc-b46c9d471f25"
   },
-  "5ee17419-3749-4059-b6b4-de6d95d750f3": {
-    "appActions": [],
+  "7939d0dc-70f6-4f83-bf64-885d4eb4da95": {
     "connectionRef": {
-      "apiTier": "Standard",
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "62296064-00ab-43ab-b3eb-0af8d79baa5c": {
+        "workflowDisplayName": {
+          "value": "Email_Confirmer"
+        },
+        "workflowEntityId": {
+          "value": "569f3fb0-1a2f-ef11-840a-002248043648"
+        },
+        "workflowName": {
+          "value": "c19f6962-0655-2b2e-b338-aef21b37f20d"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowDisplayName": {
+          "value": "Email_Confirmer"
+        },
+        "workflowEntityId": {
+          "value": "569f3fb0-1a2f-ef11-840a-002248043648"
+        },
+        "workflowName": {
+          "value": "c19f6962-0655-2b2e-b338-aef21b37f20d"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Email_Confirmer"
+    ],
+    "dependencies": {
+      "shared_office365": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
+    },
+    "dependents": [],
+    "id": "7939d0dc-70f6-4f83-bf64-885d4eb4da95"
+  },
+  "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "e6a09269-f91c-466b-a383-a4cce2e4f8ae": {
           "value": "shared_office365"
         },
         "workflowDisplayName": {
@@ -63,7 +99,7 @@
       },
       "parameterHintsV2": {
         "shared_office365": {
-          "value": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
+          "value": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
         },
         "workflowDisplayName": {
           "value": "Email_confirmation"
@@ -81,10 +117,10 @@
       "Email_confirmation"
     ],
     "dependencies": {
-      "shared_office365": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
+      "shared_office365": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
     },
     "dependents": [],
-    "id": "5ee17419-3749-4059-b6b4-de6d95d750f3"
+    "id": "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee"
   },
   "e4144395-70e0-4413-822b-a24f708b7215": {
     "connectionRef": {
@@ -119,7 +155,10 @@
       "Office365Outlook"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee",
+      "7939d0dc-70f6-4f83-bf64-885d4eb4da95"
+    ],
     "id": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
   }
 }
