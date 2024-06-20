@@ -118,6 +118,10 @@ Screen1 As screen:
                 //);
                 // Counts bookings for the selected slot
                 Set(varCurrentBookings, CountRows(Filter(New_AppointmentsX, Start_Time = Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1)))));
+                If(
+                    varCurrentBookings > 5,
+                    Set(varCurrentBookings,5)
+                )
             OnSelect: |
                 =
             Width: =489
