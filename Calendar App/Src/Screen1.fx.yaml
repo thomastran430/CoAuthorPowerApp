@@ -177,6 +177,7 @@ Screen1 As screen:
                 
                 
             Text: ="Submit"
+            Visible: =false
             Width: =135
             X: =349
             Y: =495
@@ -249,8 +250,8 @@ Screen1 As screen:
                 Email_Confirmer.Run(ComboBox1.Selected.Mail,Input_Location.Selected.Value,Input_Department.Selected.Value,Text(Input_Date.SelectedDate,"MM-dd-yyyy"),varStartTime,varEndTime)
             Text: ="Submit"
             Width: =176
-            X: =39
-            Y: =554
+            X: =308
+            Y: =495
             ZIndex: =17
 
     Calendar_Container As groupContainer.manualLayoutContainer:
