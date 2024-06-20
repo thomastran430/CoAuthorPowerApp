@@ -11,6 +11,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cdm_worker",
+    "MaxGetRowsCount": 500,
     "Name": "Workers",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
