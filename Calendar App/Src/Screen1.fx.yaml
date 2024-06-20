@@ -220,6 +220,7 @@ Screen1 As screen:
                 =// Set start and end times from the selected slot
                 Set(varStartTime, Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1)));
                 Set(varEndTime, Trim(Mid(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) + 3)));
+                
                 // Collect all bookings for the selected date and time slot
                 ClearCollect(
                     ColDateBookings,
@@ -231,39 +232,44 @@ Screen1 As screen:
                     )
                 );
                 
-                // Check for existing bookings
+                // Check for existing bookings by the same user for the same slot
                 If(
                     IsEmpty(
                         Filter(
                             New_AppointmentsX,
                             Appointment_Date = Input_Date.SelectedDate,
                             Start_Time = varStartTime,
-                            End_Time = varEndTime
-                        ) 
+                            End_Time = varEndTime,
+                            Email = ComboBox1.Selected.Mail
+                        )
                     ),
-                    If(CountRows(ColDateBookings) < 5,
-                         // If no conflicts, patch a new appointment
-                        Email_Confirmer.Run(ComboBox1.Selected.Mail,Input_Location.Selected.Value,Input_Department.Selected.Value,Text(Input_Date.SelectedDate,"MM-dd-yyyy"),varStartTime,varEndTime);
-                        Patch(
-                            New_AppointmentsX,
-                            Defaults(New_AppointmentsX),
-                            {
-                                Appointment_Date: Input_Date.SelectedDate,
-                                Email: ComboBox1.Selected.Mail,
-                                Department_Name: Input_Department.SelectedText,
-                                Start_Time: varStartTime,
-                                End_Time: varEndTime,
-                                Location: Input_Location.SelectedText
+                    If(
+                        CountRows(ColDateBookings) < 2,
+                        // If no conflicts, patch a new appointment
+                        Email_Confirmer.Run(
+                            ComboBox1.Selected.Mail,
+                            Input_Location.Selected.Value,
+                            Input_Department.Selected.Value,
+                            Text(Input_Date.SelectedDate, "MM-dd-yyyy"),
+                            varStartTime,
+                            varEndTime
+                        );
+                           Patch(
+                        New_AppointmentsX,
+                        Defaults(New_AppointmentsX),
+                        {
+                            Appointment_Date: Input_Date.SelectedDate,
+                            Email: ComboBox1.Selected.Mail,
+                            Department_Name: Input_Department.SelectedText,
+                            Start_Time: varStartTime,
+                            End_Time: varEndTime,
+                            Location: Input_Location.SelectedText
                             
                         }
                     ),
-                   
-                    // Optional: Notify user of the conflict
-                    Notify("This time slot is already booked.", NotificationType.Error)
-                );
-                If(
-                    CountRows(ColDateBookings) = 5,
-                    Notify("Max Bookings for the slot reached",NotificationType.Error)
+                        Notify("Max Bookings for the slot reached", NotificationType.Error)
+                    ),
+                    Notify("Slot already booked", NotificationType.Error)
                 )
             Text: ="Submit"
             Width: =176
