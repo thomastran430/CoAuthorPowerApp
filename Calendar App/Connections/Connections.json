@@ -41,12 +41,14 @@
     "id": "2cdaad84-fee1-4fee-b8dc-b46c9d471f25"
   },
   "5ee17419-3749-4059-b6b4-de6d95d750f3": {
+    "appActions": [],
     "connectionRef": {
+      "apiTier": "Standard",
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "e6a09269-f91c-466b-a383-a4cce2e4f8ae": {
+        "62296064-00ab-43ab-b3eb-0af8d79baa5c": {
           "value": "shared_office365"
         },
         "workflowDisplayName": {
@@ -61,7 +63,7 @@
       },
       "parameterHintsV2": {
         "shared_office365": {
-          "value": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
+          "value": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
         },
         "workflowDisplayName": {
           "value": "Email_confirmation"
@@ -79,7 +81,7 @@
       "Email_confirmation"
     ],
     "dependencies": {
-      "shared_office365": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
+      "shared_office365": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
     },
     "dependents": [],
     "id": "5ee17419-3749-4059-b6b4-de6d95d750f3"
@@ -117,9 +119,7 @@
       "Office365Outlook"
     ],
     "dependencies": {},
-    "dependents": [
-      "5ee17419-3749-4059-b6b4-de6d95d750f3"
-    ],
+    "dependents": [],
     "id": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
   }
 }
