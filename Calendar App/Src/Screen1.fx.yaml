@@ -32,8 +32,8 @@ Screen1 As screen:
                     "City",
                     ComboBox1.Selected.City & " (" & ComboBox1.Selected.CompanyName & ")"
                 )
-            Width: =481
-            X: =885
+            Width: =392
+            X: =973
             ZIndex: =3
 
         Image1 As image:
@@ -49,17 +49,9 @@ Screen1 As screen:
         Size: =20
         Text: ="Email Address"
         Width: =240
-        X: =323
+        X: =617
         Y: =103
         ZIndex: =2
-
-    Input_Email As text:
-        Default: =
-        Height: =36
-        Width: =235
-        X: =543
-        Y: =103
-        ZIndex: =3
 
     Form_Container As groupContainer.manualLayoutContainer:
         Fill: =RGBA(175, 191, 224, 1)
@@ -397,7 +389,7 @@ Screen1 As screen:
                         LookUp(New_AppointmentsX, Appointment_Date=varclick_date).Appointment_Date //Appointment_Date=Date(varSelectedDate)
                     );
                     //Notify(ThisItem.Value);
-                    Notify(LookUp(New_AppointmentsX, Appointment_Date=varclick_date & Email=Text("rdayasaagar@gmail.com")).Email);
+                    Notify(LookUp(New_AppointmentsX, Appointment_Date=varclick_date && Email=Text("rdayasaagar@gmail.com")).Email);
                     //Notify(DateValue(varSelectedDate));
                     //Notify(First(colAppointmentDetails).Appointment_Date)
                     
@@ -426,7 +418,7 @@ Screen1 As screen:
                         //Set(varSelectedDate, ThisItem.Value);
                         Collect(
                             colAppointmentDetails,
-                            LookUp(New_AppointmentsX, Appointment_Date=ThisItem.Appointment_Date && Email=Input_Email.Text)
+                            LookUp(New_AppointmentsX, Appointment_Date=ThisItem.Appointment_Date)
                         );
                         
                         
@@ -671,7 +663,7 @@ Screen1 As screen:
         SelectMultiple: =false
         Template: =ListItemTemplate.Double
         Width: =434
-        X: =812
+        X: =851
         Y: =103
         ZIndex: =32
 
@@ -728,7 +720,7 @@ Screen1 As screen:
 
         Label9_1 As label:
             Height: =39
-            Text: =Input_Email.Text
+            Text: =ComboBox1.Selected.DisplayName
             Visible: =varShowPopUptwo
             Width: =281
             X: =628
@@ -804,12 +796,20 @@ Screen1 As screen:
 
     Radio2 As radio:
         Default: ="Others"
-        Height: =52
+        Height: =66
         Items: =["Yours","Others"]
         Layout: =Layout.Horizontal
         OnChange: =Reset(ComboBox1)
-        Width: =281
-        X: =34
-        Y: =95
+        RadioSize: =30
+        Width: =264
+        X: =324
+        Y: =98
         ZIndex: =33
+
+    Label10 As label:
+        Text: ="Whose apoointment are you editing?"
+        Width: =321
+        X: =17
+        Y: =103
+        ZIndex: =34
 
