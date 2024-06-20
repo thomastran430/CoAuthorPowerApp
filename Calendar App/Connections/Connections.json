@@ -41,14 +41,12 @@
     "id": "2cdaad84-fee1-4fee-b8dc-b46c9d471f25"
   },
   "5ee17419-3749-4059-b6b4-de6d95d750f3": {
-    "appActions": [],
     "connectionRef": {
-      "apiTier": "Standard",
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "62296064-00ab-43ab-b3eb-0af8d79baa5c": {
+        "e6a09269-f91c-466b-a383-a4cce2e4f8ae": {
           "value": "shared_office365"
         },
         "workflowDisplayName": {
@@ -63,7 +61,7 @@
       },
       "parameterHintsV2": {
         "shared_office365": {
-          "value": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
+          "value": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
         },
         "workflowDisplayName": {
           "value": "Email_confirmation"
@@ -81,28 +79,10 @@
       "Email_confirmation"
     ],
     "dependencies": {
-      "shared_office365": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
+      "shared_office365": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
     },
     "dependents": [],
     "id": "5ee17419-3749-4059-b6b4-de6d95d750f3"
-  },
-  "62296064-00ab-43ab-b3eb-0af8d79baa5c": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Office 365 Outlook",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1686/1.0.1686.3706/office365/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "5ee17419-3749-4059-b6b4-de6d95d750f3"
-    ],
-    "id": "62296064-00ab-43ab-b3eb-0af8d79baa5c"
   },
   "e4144395-70e0-4413-822b-a24f708b7215": {
     "connectionRef": {
@@ -137,7 +117,9 @@
       "Office365Outlook"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "5ee17419-3749-4059-b6b4-de6d95d750f3"
+    ],
     "id": "e6a09269-f91c-466b-a383-a4cce2e4f8ae"
   }
 }
