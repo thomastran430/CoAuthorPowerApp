@@ -163,7 +163,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/20/2024 17:39:18",
+  "HeaderLastSavedDateTimeUTC": "06/20/2024 19:23:04",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "2cdaad84-fee1-4fee-b8dc-b46c9d471f25": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-1f450b58-ffe9-457f-9b48-016b11382611\"",
@@ -184,6 +184,7 @@
   "OrderDataSource": {
     "Admin_Login_Cred": 18,
     "colAppointmentDetails": 27,
+    "ColDateBookings": 30,
     "ComboBoxSample": 19,
     "CustomGallerySample": 20,
     "DropDownSample": 21,
