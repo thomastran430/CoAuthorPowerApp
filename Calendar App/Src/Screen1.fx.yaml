@@ -46,9 +46,9 @@ Screen1 As screen:
         ZIndex: =2
 
     Input_Email As text:
-        Default: ="Text input"
+        Default: =
         Height: =36
-        Width: =548
+        Width: =235
         X: =543
         Y: =103
         ZIndex: =3
@@ -595,6 +595,21 @@ Screen1 As screen:
             X: =469
             Y: =224
             ZIndex: =17
+
+    ComboBox1 As combobox:
+        DisplayFields: =["DisplayName","Mail"]
+        Height: =36
+        Items: |-
+            =Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
+        SearchFields: =["DisplayName","Mail"]
+        SearchItems: |-
+            =Search(Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),ComboBox1.SearchText,DisplayName,Mail)
+        SelectMultiple: =false
+        Template: =ListItemTemplate.Double
+        Width: =434
+        X: =812
+        Y: =103
+        ZIndex: =32
 
     PopUpGroup As group:
         Height: =5
