@@ -560,11 +560,13 @@ Screen1 As screen:
         ZIndex: =6
 
     Radio2 As radio:
-        Default: ="Others"
+        Default: ="Yours"
         Height: =66
         Items: =["Yours","Others"]
         Layout: =Layout.Horizontal
-        OnChange: =Reset(ComboBox1)
+        OnChange: |
+            =//Reset(ComboBox1)
+            If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
         RadioSize: =30
         Width: =264
         X: =324
@@ -841,4 +843,96 @@ Screen1 As screen:
         X: =17
         Y: =103
         ZIndex: =34
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
+        Rectangle6 As rectangle:
+            Fill: =RGBA(56, 96, 178, 0.5)
+            Height: =768
+            Visible: =varShowPopUpThree
+            Width: =1364
+            ZIndex: =35
+
+        Rectangle7 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =483
+            Visible: =varShowPopUpThree
+            Width: =524
+            X: =427
+            Y: =177
+            ZIndex: =36
+
+        Label11 As label:
+            Align: =Align.Center
+            Fill: =RGBA(255, 191, 0, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            Text: ="Admin Sign In "
+            Visible: =varShowPopUpThree
+            Width: =524
+            X: =427
+            Y: =134
+            ZIndex: =37
+
+        Label14 As label:
+            Align: =Align.Center
+            Height: =52
+            Text: ="Enter Admin Credentials"
+            Visible: =varShowPopUpThree
+            Width: =346
+            X: =530
+            Y: =226
+            ZIndex: =38
+
+        TextInput1 As text:
+            Default: =
+            Height: =51
+            HintText: ="Enter User Name"
+            Visible: =varShowPopUpThree
+            Width: =346
+            X: =517
+            Y: =309
+            ZIndex: =39
+
+        TextInput2 As text:
+            Default: =
+            Height: =47
+            HintText: ="Enter Password"
+            Visible: =varShowPopUpThree
+            Width: =346
+            X: =517
+            Y: =410
+            ZIndex: =40
+
+        Button3 As button:
+            Height: =56
+            OnSelect: |-
+                =If(
+                    IsBlank(LookUp(Admin_Login_Cred, UserName = TextInput1.Text && Password = TextInput2.Text)),
+                    Notify("Invalid Credentials"),
+                    Set(varShowPopUpThree,false)
+                )
+            Text: ="Sign In"
+            Visible: =varShowPopUpThree
+            Width: =356
+            X: =517
+            Y: =518
+            ZIndex: =41
+
+        Label16 As label:
+            Height: =39
+            OnSelect: |-
+                =Set(varShowPopUpThree,false);
+                Reset(Radio2)
+            Text: ="Close"
+            Visible: =varShowPopUpThree
+            Width: =76
+            X: =876
+            Y: =135
+            ZIndex: =42
 
