@@ -1031,7 +1031,7 @@
             DataCardKey9 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: ="Appointment Date"
                 Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
