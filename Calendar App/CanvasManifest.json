@@ -100,7 +100,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 6,
+    "BindingErrorCount": 4,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -134,6 +134,7 @@
   },
   "ScreenOrder": [
     "Booking Screen",
-    "Log_In_page"
+    "Log_In_page",
+    "Edit Appointment Screen"
   ]
 }

@@ -20,7 +20,7 @@
       "MetaDataIDKey": "",
       "Name": "adminsignin(delete)",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 42,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -339,8 +339,22 @@
         "FocusedBorderColor",
         "Color",
         "DisabledColor",
-        "PressedColor",
-        "HoverColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PressedColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "HoverColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisplayMode",
         {
           "AFDDataSourceName": "",
@@ -351,8 +365,22 @@
           "NameMapSourceSchema": "?"
         },
         "DisabledFill",
-        "PressedFill",
-        "HoverFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PressedFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "HoverFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Font",
         "FontWeight",
         "Align",
@@ -400,7 +428,7 @@
       "MetaDataIDKey": "",
       "Name": "Button1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 37,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -937,7 +965,7 @@
       "MetaDataIDKey": "",
       "Name": "Button4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 39,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1196,7 +1224,7 @@
       "MetaDataIDKey": "",
       "Name": "Calendar_Container",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1393,7 +1421,7 @@
       "MetaDataIDKey": "",
       "Name": "Cancel_Btn_PopUp",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 35,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1695,7 +1723,7 @@
       "MetaDataIDKey": "",
       "Name": "ComboBox1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2173,7 +2201,7 @@
       "MetaDataIDKey": "",
       "Name": "Continue_Btn_PopUp",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 36,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3779,7 +3807,7 @@
       "MetaDataIDKey": "",
       "Name": "Dropdown_PopUp",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 26,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4065,7 +4093,7 @@
       "MetaDataIDKey": "",
       "Name": "Email_Label",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4304,7 +4332,7 @@
       "MetaDataIDKey": "",
       "Name": "Form_Container",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4561,7 +4589,7 @@
       "MetaDataIDKey": "",
       "Name": "Group3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 40,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6011,7 +6039,7 @@
       "MetaDataIDKey": "",
       "Name": "Label_Dropdown_PopUp",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 25,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6287,7 +6315,7 @@
       "MetaDataIDKey": "",
       "Name": "Label_Email_PopUp_Label",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 19,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6570,7 +6598,7 @@
       "MetaDataIDKey": "",
       "Name": "Label_You_Info",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6838,7 +6866,7 @@
       "MetaDataIDKey": "",
       "Name": "Label10",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7642,7 +7670,14 @@
         },
         "DisabledFill",
         "PressedFill",
-        "HoverFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "HoverFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Font",
         "FontWeight",
         {
@@ -7691,7 +7726,7 @@
       "MetaDataIDKey": "",
       "Name": "Label3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8514,7 +8549,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 21,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8790,7 +8825,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 22,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9073,7 +9108,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 32,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9349,7 +9384,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 33,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9625,7 +9660,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 31,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9908,7 +9943,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 30,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10191,7 +10226,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 23,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10467,7 +10502,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 24,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10743,7 +10778,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 29,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11026,7 +11061,7 @@
       "MetaDataIDKey": "",
       "Name": "Label9_9",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 28,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12199,7 +12234,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_Title_Bar",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12590,7 +12625,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_Window",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12697,7 +12732,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUpGroup",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 41,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13133,7 +13168,7 @@
       "MetaDataIDKey": "",
       "Name": "Radio2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13513,7 +13548,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 17,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14975,7 +15010,7 @@
       "MetaDataIDKey": "",
       "Name": "TextInput3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 18,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
