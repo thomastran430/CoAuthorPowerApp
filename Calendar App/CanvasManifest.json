@@ -134,6 +134,7 @@
   },
   "ScreenOrder": [
     "Booking Screen",
-    "Log_In_page"
+    "Log_In_page",
+    "Edit Appointment Screen"
   ]
 }
