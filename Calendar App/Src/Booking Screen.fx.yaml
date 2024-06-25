@@ -585,18 +585,23 @@
               Office365Users.MyProfile(),
               Blank()
             )
-        DisplayFields: =[""]
+        DisplayFields: =["DisplayName","Mail"]
         DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
         Height: =36
-        IsSearchable: =false
+        IsSearchable: =
         Items: |-
             =//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
             Filter(
                 Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
                  "@valuemomentum.com" in Mail 
             )
-        SearchFields: =[""]
-        SearchItems: =[]
+        SearchFields: =["DisplayName"]
+        SearchItems: |-
+            =Search(//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
+            Filter(
+                Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
+                 "@valuemomentum.com" in Mail 
+            ),ComboBox1.SearchText,DisplayName)
         SelectMultiple: =false
         Template: =ListItemTemplate.Double
         Width: =434
