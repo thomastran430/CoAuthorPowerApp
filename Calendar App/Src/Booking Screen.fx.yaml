@@ -560,9 +560,9 @@
 
     Radio2 As radio:
         Default: ="Yours"
-        DisplayMode: |-
+        DisplayMode: |
             =If(
-                IsBlank(LookUp(Admin_Login_Cred, UserName =ComboBox1.Selected.Mail && Role = "User")), 
+                IsBlank(LookUp(Admin_Login_Cred, UserName = Office365Users.MyProfile().Mail && Role = "Admin")), 
                 DisplayMode.Disabled,
                 DisplayMode.Edit
             )
@@ -570,7 +570,7 @@
         Items: =["Yours","Others"]
         Layout: =Layout.Horizontal
         OnChange: |
-            =//Reset(ComboBox1)
+            =Reset(ComboBox1)
             //If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
         RadioSize: =30
         Width: =264
@@ -585,22 +585,18 @@
               Office365Users.MyProfile(),
               Blank()
             )
-        DisplayFields: =["DisplayName","Mail"]
+        DisplayFields: =[""]
         DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
         Height: =36
+        IsSearchable: =false
         Items: |-
             =//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
             Filter(
                 Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
                  "@valuemomentum.com" in Mail 
             )
-        SearchFields: =["DisplayName","Mail"]
-        SearchItems: |-
-            =Search(//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
-            Filter(
-                Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
-                 "@valuemomentum.com" in Mail 
-            ),ComboBox1.SearchText,DisplayName,Mail)
+        SearchFields: =[""]
+        SearchItems: =[]
         SelectMultiple: =false
         Template: =ListItemTemplate.Double
         Width: =434
