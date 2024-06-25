@@ -588,7 +588,6 @@
         DisplayFields: =["DisplayName","Mail"]
         DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
         Height: =36
-        IsSearchable: =
         Items: |-
             =//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
             Filter(
