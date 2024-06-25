@@ -46,7 +46,6 @@
     Email_Label As label:
         FontWeight: =FontWeight.Semibold
         Height: =36
-        Size: =20
         Text: ="Email Address"
         Width: =240
         X: =617
@@ -561,12 +560,18 @@
 
     Radio2 As radio:
         Default: ="Yours"
+        DisplayMode: |-
+            =If(
+                IsBlank(LookUp(Admin_Login_Cred, UserName =ComboBox1.Selected.Mail && Role = "User")), 
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
         Height: =66
         Items: =["Yours","Others"]
         Layout: =Layout.Horizontal
         OnChange: |
             =//Reset(ComboBox1)
-            If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
+            //If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
         RadioSize: =30
         Width: =264
         X: =324
@@ -844,7 +849,7 @@
         Y: =103
         ZIndex: =34
 
-    Group2 As group:
+    "'adminsignin(delete)' As group":
         Height: =5
         Width: =5
         X: =40
