@@ -746,12 +746,21 @@
             ZIndex: =21
 
         Button1 As button:
-            Fill: =RGBA(255, 0, 0, 1)
+            BorderThickness: =0
+            Color: =
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =42
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -70%)
             OnSelect: =Set(varShowPopUptwo,false)
-            Text: ="Close"
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="X"
             Visible: =varShowPopUptwo
-            X: =584
-            Y: =467
+            Width: =46
+            X: =873
+            Y: =168
             ZIndex: =22
 
         Label9 As label:
