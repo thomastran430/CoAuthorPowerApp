@@ -594,13 +594,13 @@
                 Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
                  "@valuemomentum.com" in Mail 
             )
-        SearchFields: =["DisplayName"]
+        SearchFields: =["DisplayName","Mail"]
         SearchItems: |-
             =Search(//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
             Filter(
                 Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
                  "@valuemomentum.com" in Mail 
-            ),ComboBox1.SearchText,DisplayName)
+            ),ComboBox1.SearchText,DisplayName,Mail)
         SelectMultiple: =false
         Template: =ListItemTemplate.Double
         Width: =434

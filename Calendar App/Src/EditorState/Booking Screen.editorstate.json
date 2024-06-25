@@ -1600,7 +1600,14 @@
         },
         "MoreItemsButtonColor",
         "DisplayFields",
-        "SearchFields",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "[\"DisplayName\"]",
+          "InvariantPropertyName": "SearchFields",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
