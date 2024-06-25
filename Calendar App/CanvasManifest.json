@@ -134,10 +134,6 @@
   },
   "ScreenOrder": [
     "Log_In_page",
-    "Calendar_Show",
-    "Calendar",
-    "Book_a_Slot",
-    "Organize Tasks",
-    "Screen1"
+    "Booking Screen"
   ]
 }
