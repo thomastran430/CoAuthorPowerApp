@@ -32,6 +32,7 @@
       "ID": "ID",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
+      "Password": "Password",
       "Role": "Role",
       "Title": "Title",
       "UserName": "UserName"
