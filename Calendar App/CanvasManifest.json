@@ -133,7 +133,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Log_In_page",
-    "Booking Screen"
+    "Booking Screen",
+    "Log_In_page"
   ]
 }
