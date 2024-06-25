@@ -39,6 +39,7 @@
       "Location#Id": "Location Id",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",
+      "Role": "Role",
       "Start_Time": "Start_Time",
       "Title": "Title"
     },
