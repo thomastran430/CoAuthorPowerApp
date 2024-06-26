@@ -299,7 +299,7 @@
             DataField: ="Location"
             Default: =ThisItem.Location
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,'Location')
+            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,Location)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
