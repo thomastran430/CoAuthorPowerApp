@@ -954,7 +954,8 @@
 
                 DataCardValue10 As combobox:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DefaultSelectedItems: =department_dp
+                    DefaultSelectedItems: |
+                        =department_dp
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
                     Items: =Choices([@New_AppointmentsX].Department_Name)
@@ -1208,7 +1209,12 @@
 
     SaveButton As button:
         Height: =42
-        OnSelect: =SubmitForm(Form2)
+        OnSelect: |+
+            =//Patch(New_AppointmentsX, LookUp(New_AppointmentsX, Appointment_Date = DataCardValue9.SelectedDate, Email= DataCardValue8.Text), Form2.Updates)
+            
+            //Department_Name = DateCardValue10, Start_Time = DataCardValue12, End_Time = DataCardValue13, Location = DataCardValue11
+            Patch(New_AppointmentsX, LookUp(New_AppointmentsX, Appointment_Date = DataCardValue9.SelectedDate && Email= DataCardValue8.Text && Department_Name = DataCardValue10.SelectedItems), Form2.Updates)
+            
         Size: =20
         Text: ="Save"
         Visible: =varShowPopUptwo
@@ -1234,4 +1240,61 @@
         X: =40
         Y: =40
         ZIndex: =43
+
+    DeletePopUp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =45
+
+        Rectangle2_1 As rectangle:
+            Fill: =RGBA(56, 96, 178, 0.5)
+            Height: =768
+            Visible: =varShowPopUpthree
+            Width: =1364
+            X: =2
+            ZIndex: =40
+
+        Rectangle5_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =145
+            Visible: =varShowPopUpthree
+            Width: =324
+            X: =489
+            Y: =243
+            ZIndex: =41
+
+        Label1 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =34
+            Size: =25
+            Text: ="Are you sure?"
+            Visible: =varShowPopUpthree
+            Width: =237
+            X: =532
+            Y: =265
+            ZIndex: =42
+
+        CancelButton As button:
+            Fill: =RGBA(116, 116, 116, 1)
+            Height: =42
+            OnSelect: =Set(varShowPopUpthree,false)
+            Text: ="Cancel"
+            Visible: =varShowPopUpthree
+            Width: =108
+            X: =519
+            Y: =325
+            ZIndex: =43
+
+        Delete_2Button As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =42
+            Text: ="Delete"
+            Visible: =varShowPopUpthree
+            Width: =108
+            X: =671
+            Y: =325
+            ZIndex: =44
 
