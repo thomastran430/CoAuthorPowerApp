@@ -266,9 +266,13 @@
                             
                         }
                     ),
-                        Notify("Max Bookings for the slot reached", NotificationType.Error)
+                        //Notify("Max Bookings for the slot reached", NotificationType.Error)
+                        Set(ShowPfour,true)
+                        
                     ),
-                    Notify("Slot already booked", NotificationType.Error)
+                    //Notify("Slot already booked", NotificationType.Error)
+                            Set(ShowPfive,true)
+                
                 )
             Text: ="Submit"
             Width: =176
@@ -1346,10 +1350,92 @@
                 Y: =DataCardKey13.Y
                 ZIndex: =4
 
+    Rectangle1 As rectangle:
+        Fill: =RGBA(56, 96, 178, 0.3)
+        Height: =768
+        Visible: =ShowPfour
+        Width: =1364
+        ZIndex: =36
+
+    Rectangle3 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =379
+        Visible: =ShowPfour
+        Width: =692
+        X: =351
+        Y: =183
+        ZIndex: =37
+
+    Icon1 As icon.CancelBadge:
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =146
+        Icon: =Icon.CancelBadge
+        Visible: =ShowPfour
+        Width: =214
+        X: =579
+        Y: =264
+        ZIndex: =38
+
+    Label1 As label:
+        Align: =Align.Center
+        Height: =76
+        Size: =20
+        Text: ="Maximum of 2 Slots Reached!"
+        Visible: =ShowPfour
+        Width: =612
+        X: =402
+        Y: =437
+        ZIndex: =39
+
+    Rectangle4 As rectangle:
+        Fill: =RGBA(56, 96, 178, 0.3)
+        Height: =768
+        Visible: =ShowPfive
+        Width: =1366
+        ZIndex: =40
+
+    Rectangle6 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =380
+        Visible: =ShowPfive
+        Width: =635
+        X: =365
+        Y: =233
+        ZIndex: =41
+
+    Icon3 As icon.CancelBadge:
+        Color: =RGBA(255, 0, 0, 1)
+        Height: =110
+        Icon: =Icon.CancelBadge
+        Visible: =ShowPfive
+        Width: =191
+        X: =568
+        Y: =336
+        ZIndex: =42
+
+    Label2 As label:
+        Align: =Align.Center
+        Height: =65
+        Size: =20
+        Text: ="You have already booked this slot!"
+        Visible: =ShowPfive
+        Width: =592
+        X: =390
+        Y: =467
+        ZIndex: =43
+
     "'adminsignin(delete)' As group":
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =43
+
+    Icon4 As icon.Cancel:
+        Color: =RGBA(166, 166, 166, 1)
+        Icon: =Icon.Cancel
+        OnSelect: =Set(ShowPfive,false)
+        X: =936
+        Y: =235
+        ZIndex: =44
 
