@@ -159,21 +159,21 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/26/2024 13:58:51",
+  "HeaderLastSavedDateTimeUTC": "06/26/2024 13:59:35",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "2cdaad84-fee1-4fee-b8dc-b46c9d471f25": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-1f450b58-ffe9-457f-9b48-016b11382611\"",
-    "7939d0dc-70f6-4f83-bf64-885d4eb4da95": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c19f696206552b2eb338aef21b37f20d-082b0733cdeffb9d\"",
-    "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/3d4b3226ff50452c91cfb78149439b4b-082b0733cdeffb9d\"",
-    "e4144395-70e0-4413-822b-a24f708b7215": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/2a95f98a7c15417183f2644f7d02c51e\"",
-    "e6a09269-f91c-466b-a383-a4cce2e4f8ae": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/shared-office365-985e3c47-f017-4c47-bd9d-5d93a23dd5b1\""
+    "2cdaad84-fee1-4fee-b8dc-b46c9d471f25": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/7626d11575004911b2e3bb9e23930619\"",
+    "7939d0dc-70f6-4f83-bf64-885d4eb4da95": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c19f696206552b2eb338aef21b37f20d-8e5376ffba00dc06\"",
+    "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/3d4b3226ff50452c91cfb78149439b4b-8e5376ffba00dc06\"",
+    "e4144395-70e0-4413-822b-a24f708b7215": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/940a08eb9e4542f4a28b1d3ccaf3c3fa\"",
+    "e6a09269-f91c-466b-a383-a4cce2e4f8ae": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/3239497b4f2844979a6cef551617a1ab\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
     "924291258": "0001.jpg"
   },
   "LocalResourceRootPaths": {
-    "924291258": "https://docserverpwaprodeus.blob.core.windows.net/9b8e4063-f876-486b-b9a4-9db0d90618bd-1/resource/Assets0Images00001.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-06-26T10%3A26%3A33Z&ske=2024-06-27T10%3A41%3A33Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-06-27T10%3A41%3A33Z&sr=b&sp=r&sig=xNSj3Lnd6nf3qvgDjVrERkA12RTIptWpDnFwzEZ9PbU%3D"
+    "924291258": "https://docserverpwaprodeus.blob.core.windows.net/5e9b413a-8c56-4320-8fcf-7dbab1af364e-1/resource/Assets0Images00001.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-06-26T13%3A59%3A07Z&ske=2024-06-27T14%3A14%3A07Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-06-27T14%3A14%3A07Z&sr=b&sp=r&sig=0uf46imWTOsvHG0XJd0K%2Ffv0T%2BmuIXeXORGmsK8IXMo%3D"
   },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
@@ -578,7 +578,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.9892526,
+    "AnalysisLoadTime": 1.0843702,
     "ControlCount": {
       "button": 11,
       "combobox": 5,
@@ -598,7 +598,7 @@
       "text": 10,
       "typedDataCard": 13
     },
-    "DeserializationLoadTime": 13.5504377
+    "DeserializationLoadTime": 3.9378631
   },
   "WasLocalDatabaseReferencesEmpty": false
 }
