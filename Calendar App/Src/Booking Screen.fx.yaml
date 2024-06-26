@@ -792,6 +792,9 @@
         Y: =40
         ZIndex: =43
 
+    Component1_1 As Component1:
+        ZIndex: =45
+
     Group1 As group:
         Height: =5
         Width: =5
