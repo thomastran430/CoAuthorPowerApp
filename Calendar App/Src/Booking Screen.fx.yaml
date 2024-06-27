@@ -464,7 +464,7 @@
                         Set(end_time_dp,ThisItem.End_Time);
                         Set(slot_dp,ThisItem.Start_Time & "-" & ThisItem.End_Time);
                         Set(department_dp,ThisItem.Department_Name)
-                    Size: =9
+                    Size: =8
                     Text: =ThisItem.Start_Time & "-" & ThisItem.End_Time
                     Width: =117.57142857142856
                     Y: =30
@@ -844,7 +844,7 @@
         Form2 As form:
             DataSource: =New_AppointmentsX
             Height: =416
-            Item: =First(New_AppointmentsX)
+            Item: =LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp)
             NumberOfColumns: =1
             Visible: =varShowPopUpFour
             Width: =636
