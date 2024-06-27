@@ -15,6 +15,7 @@ CRUD As CanvasComponent:
     Email_Text: ="Text"
     Fill: =RGBA(237, 237, 237, 1)
     Height: =640
+    Size_box: =100
     Slot_Booked: ="Text"
     Slot_Booked_Text: ="Text"
     Timing: ="Text"
@@ -144,8 +145,8 @@ CRUD As CanvasComponent:
         Align: =Align.Center
         Height: =54
         Size: =21
-        Text: =CRUD.TImingText
-        Width: =407
+        Text: =
+        Width: =CRUD.Size_box
         X: =190
         Y: =363
         ZIndex: =13

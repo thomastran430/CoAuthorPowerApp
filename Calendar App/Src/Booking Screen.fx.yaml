@@ -867,6 +867,13 @@
         Y: =57
         ZIndex: =31
 
+    Button4 As button:
+        OnSelect: =Set(popup_select_all,true)
+        Text: ="View All"
+        X: =1194
+        Y: =100
+        ZIndex: =42
+
     EditAppointmentPopup As group:
         Height: =5
         Width: =5
@@ -953,13 +960,6 @@
             X: =924
             Y: =44
             ZIndex: =37
-
-    Button4 As button:
-        OnSelect: =Set(popup_select_all,true)
-        Text: ="View All"
-        X: =1194
-        Y: =100
-        ZIndex: =42
 
     "'adminsignin(delete)' As group":
         Height: =5
@@ -1171,6 +1171,8 @@
                 DelayItemLoading: =true
                 Items: =New_AppointmentsX
                 Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =116
