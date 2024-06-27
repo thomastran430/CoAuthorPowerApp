@@ -1,0 +1,161 @@
+CRUD As CanvasComponent:
+    CRUD_Cancel():
+        ThisProperty:
+            Default: ="Text"
+    D_Btn_Onclick():
+        ThisProperty:
+            Default: ="Text"
+    Ebtn_Click():
+        ThisProperty:
+            Default: ="Text"
+    D_Btn_Visibility: =true
+    Department: ="Text"
+    Department_Name: ="Text"
+    E_Btn_Visibility: =true
+    Email_Text: ="Text"
+    Fill: =RGBA(237, 237, 237, 1)
+    Height: =640
+    Slot_Booked: ="Text"
+    Slot_Booked_Text: ="Text"
+    Timing: ="Text"
+    TImingText: ="Text"
+    Username: ="Text"
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Bold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =549
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Width: =567
+        X: =36
+        Y: =60
+        ZIndex: =2
+
+    D_btn As button:
+        Height: =54
+        OnSelect: =CRUD.D_Btn_Onclick()
+        Size: =24
+        Text: ="Delete"
+        Width: =188
+        X: =60
+        Y: =480
+        ZIndex: =3
+
+    E_Btn As button:
+        Height: =54
+        OnSelect: =CRUD.Ebtn_Click()
+        Size: =24
+        Text: ="Edit"
+        Width: =188
+        X: =387
+        Y: =480
+        ZIndex: =4
+
+    Label2_2 As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =21
+        Text: ="Your Appointment Information"
+        Width: =560
+        X: =39
+        Y: =76
+        ZIndex: =5
+
+    Label1_1 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.Email_Text
+        Width: =209
+        X: =39
+        Y: =178
+        ZIndex: =6
+
+    Label1_2 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.Username
+        Width: =209
+        X: =271
+        Y: =178
+        ZIndex: =7
+
+    Label1_3 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.Department_Name
+        Width: =209
+        X: =39
+        Y: =246
+        ZIndex: =8
+
+    Label1_4 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.Department
+        Width: =209
+        X: =271
+        Y: =246
+        ZIndex: =9
+
+    Label1_5 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.Slot_Booked
+        Width: =209
+        X: =39
+        Y: =307
+        ZIndex: =10
+
+    Label1_6 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.Slot_Booked_Text
+        Width: =209
+        X: =271
+        Y: =307
+        ZIndex: =11
+
+    Label1_7 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.Timing
+        Width: =209
+        X: =39
+        Y: =363
+        ZIndex: =12
+
+    Label1_8 As label:
+        Align: =Align.Center
+        Height: =54
+        Size: =21
+        Text: =CRUD.TImingText
+        Width: =209
+        X: =271
+        Y: =363
+        ZIndex: =13
+
+    Icon3_1 As icon.Cancel:
+        Height: =51
+        Icon: =Icon.Cancel
+        OnSelect: =CRUD.CRUD_Cancel()
+        Width: =41
+        X: =562
+        Y: =60
+        ZIndex: =14
+

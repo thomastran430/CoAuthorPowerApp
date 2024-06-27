@@ -1,0 +1,63 @@
+PopUP As CanvasComponent:
+    LB_On_Select():
+        ThisProperty:
+            Default: ="Text"
+    PopUp_Cancel():
+        ThisProperty:
+            Default: ="Text"
+    Fill: =RGBA(237, 237, 237, 1)
+    Height: =640
+    LB_Fill: =Color.LightGray
+    LB_Text: ="Text"
+    LB_Text_Size: =15
+    Message_Text: ="Text"
+    Message_txt_size: =15
+    PopUpFill: =RGBA(255, 255, 255, 1)
+    PopUpHeight: =300
+    PopupWidth: =500
+    RB_Fill: =Color.DarkSlateGray
+    RB_Text: ="Text"
+    RB_Text_Size: =15
+    showpopupsix: =
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle2 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =342
+        Width: =590
+        X: =27
+        Y: =117
+        ZIndex: =1
+
+    Icon1_1 As icon.CancelBadge:
+        Height: =102
+        Icon: =Icon.CancelBadge
+        Width: =170
+        X: =240
+        Y: =201
+        ZIndex: =2
+
+    Icon2_2 As icon.Cancel:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =52
+        Icon: =Icon.Cancel
+        OnSelect: =PopUP.PopUp_Cancel()
+        Width: =48
+        X: =567
+        Y: =117
+        ZIndex: =3
+
+    Label2_1 As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =21
+        Text: =PopUP.Message_Text
+        Width: =560
+        X: =42
+        Y: =348
+        ZIndex: =4
+

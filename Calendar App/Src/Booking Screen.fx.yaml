@@ -267,11 +267,13 @@
                         }
                     ),
                         //Notify("Max Bookings for the slot reached", NotificationType.Error)
-                        Set(ShowPfour,true)
+                        //Set(ShowPfour,true)
+                        UpdateContext({lcl_popup:true})
                         
                     ),
                     //Notify("Slot already booked", NotificationType.Error)
-                            Set(ShowPfive,true)
+                           // Set(ShowPfive,true)
+                           UpdateContext({lcl_popuptwo:true})
                 
                 )
             Text: ="Submit"
@@ -728,63 +730,6 @@
             Y: =224
             ZIndex: =17
 
-    SaveButton As button:
-        Height: =42
-        OnSelect: |+
-            =//Patch(New_AppointmentsX, LookUp(New_AppointmentsX, Appointment_Date = DataCardValue9.SelectedDate, Email= DataCardValue8.Text), Form2.Updates)
-            
-            //Department_Name = DateCardValue10, Start_Time = DataCardValue12, End_Time = DataCardValue13, Location = DataCardValue11
-            Patch(New_AppointmentsX, LookUp(New_AppointmentsX, Appointment_Date = DataCardValue9.SelectedDate && Email= DataCardValue8.Text && Department_Name = DataCardValue10.SelectedItems), Form2.Updates)
-            
-        Size: =20
-        Text: ="Save"
-        Visible: =varShowPopUptwo
-        Width: =109
-        X: =627
-        Y: =553
-        ZIndex: =22
-
-    DeleteButton As button:
-        Height: =42
-        OnSelect: =Set(varShowPopUpthree,true);
-        Size: =20
-        Text: ="Delete"
-        Visible: =varShowPopUptwo
-        Width: =109
-        X: =764
-        Y: =553
-        ZIndex: =24
-
-    AppointmentPopup As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =37
-
-        EditButton As button:
-            Height: =42
-            OnSelect: =EditForm(Form2)
-            Size: =20
-            Text: ="Edit"
-            Visible: =varShowPopUptwo
-            Width: =109
-            X: =479
-            Y: =555
-            ZIndex: =19
-
-        Form2 As form:
-            DataSource: =New_AppointmentsX
-            DefaultMode: =FormMode.View
-            Height: =420
-            Item: =Defaults(New_AppointmentsX)
-            NumberOfColumns: =1
-            Visible: =varShowPopUptwo
-            Width: =512
-            X: =407
-            Y: =142
-            ZIndex: =32
-
     "'adminsignin(delete)' As group":
         Height: =5
         Width: =5
@@ -792,7 +737,15 @@
         Y: =40
         ZIndex: =43
 
-    Component1_1 As Component1:
+    PopUP_1 As PopUP:
+        Fill: =RGBA(237, 237, 237, 0)
+        LB_On_Select: ="Text"
+        Message_Text: ="Max bookings for the Slot reached!"
+        PopUp_Cancel: |-
+            =UpdateContext({lcl_popup:false})
+        Visible: =lcl_popup
+        X: =343
+        Y: =71
         ZIndex: =45
 
     Group1 As group:
@@ -893,6 +846,20 @@
             Y: =325
             ZIndex: =44
 
+    PopUP_2 As PopUP:
+        Fill: =RGBA(237, 237, 237, 0)
+        Height: =610
+        LB_On_Select: ="Text"
+        Message_Text: ="Slot already booked!"
+        PopUp_Cancel: |-
+            =UpdateContext({lcl_popuptwo:false})
+        PopUpFill: =RGBA(0, 13, 75, 1)
+        Visible: =lcl_popuptwo
+        Width: =636
+        X: =407
+        Y: =143
+        ZIndex: =46
+
     Group2 As group:
         Height: =5
         Width: =5
@@ -947,4 +914,21 @@
             X: =1000
             Y: =182
             ZIndex: =31
+
+    CRUD_1 As CRUD:
+        CRUD_Cancel: ="Text"
+        D_Btn_Onclick: ="Text"
+        Department: =
+        Department_Name: ="Department"
+        Ebtn_Click: ="Text"
+        Email_Text: ="Username"
+        Slot_Booked: ="Date"
+        Slot_Booked_Text: =date_dp
+        Timing: ="Timings"
+        TImingText: =slot_dp
+        Username: =
+        Visible: =true
+        X: =374
+        Y: =43
+        ZIndex: =47
 
