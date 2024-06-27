@@ -764,15 +764,16 @@
         Department_Name: ="Department"
         Ebtn_Click: ="Text"
         Email_Text: ="Email"
-        Height: =652
+        Height: =359
         Slot_Booked: ="Date"
         Slot_Booked_Text: =date_dp
         Timing: ="Time"
         TImingText: =slot_dp
         Username: =ComboBox1.Selected.Mail
         Visible: =varShowPopUptwo
-        X: =374
-        Y: =43
+        Width: =541
+        X: =473
+        Y: =336
         ZIndex: =31
 
     Rectangle2_2 As rectangle:
