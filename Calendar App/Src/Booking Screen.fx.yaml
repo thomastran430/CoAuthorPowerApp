@@ -10,12 +10,12 @@
         Label10_1 As label:
             Color: =RGBA(255, 255, 255, 1)
             Height: =87
-            Size: =25
+            Size: =20
             Text: |
                 =If(
                     IsBlank(ComboBox1.Selected),
                     "Select a user...",
-                    ComboBox1.Selected.DisplayName & " (" & ComboBox1.Selected.JobTitle & ")"
+                    ComboBox1.Selected.DisplayName  
                 )
             Width: =773
             X: =88
@@ -43,6 +43,14 @@
             Width: =88
             ZIndex: =4
 
+    Image2 As image:
+        Height: =71
+        Image: =VMLOGO
+        Width: =253
+        X: =563
+        Y: =8
+        ZIndex: =2
+
     Email_Label As label:
         FontWeight: =FontWeight.Semibold
         Height: =36
@@ -50,7 +58,7 @@
         Width: =240
         X: =617
         Y: =103
-        ZIndex: =2
+        ZIndex: =3
 
     Form_Container As groupContainer.manualLayoutContainer:
         Fill: =RGBA(175, 191, 224, 1)
@@ -61,30 +69,30 @@
         RadiusTopRight: =0
         Width: =541
         Y: =156
-        ZIndex: =3
+        ZIndex: =4
 
         Date_Label_1 As label:
             FontWeight: =FontWeight.Semibold
             Size: =15
             Text: ="Date"
-            X: =24
-            Y: =194
+            X: =20
+            Y: =242
             ZIndex: =1
 
         Department_Label As label:
             FontWeight: =FontWeight.Semibold
             Size: =15
             Text: ="Department"
-            X: =24
-            Y: =103
+            X: =20
+            Y: =133
             ZIndex: =2
 
         Slots_Label As label:
             FontWeight: =FontWeight.Semibold
             Size: =15
             Text: ="Available Slots"
-            X: =24
-            Y: =284
+            X: =20
+            Y: =355
             ZIndex: =5
 
         Input_Slots As dropdown:
@@ -120,21 +128,21 @@
             OnSelect: |
                 =
             Width: =489
-            X: =24
-            Y: =324
+            X: =20
+            Y: =403
             ZIndex: =6
 
         Input_Location As dropdown:
             Items: =["New Jersey","Colarado","Texas"]
             Width: =489
-            X: =24
-            Y: =53
+            X: =20
+            Y: =74
             ZIndex: =7
 
         Input_Date As datepicker:
             Width: =489
-            X: =24
-            Y: =234
+            X: =20
+            Y: =288
             ZIndex: =8
 
         Slots_Left_Label As label:
@@ -143,6 +151,7 @@
             Size: =15
             Text: |-
                 ="Total Bookings:"
+            Visible: =false
             Width: =171
             X: =44
             Y: =403
@@ -152,16 +161,16 @@
             Default: =First(colAppointmentDetails).Department_Name.Value
             Items: =["Cardiology","Pathology","Surgery"]
             Width: =489
-            X: =24
-            Y: =143
+            X: =20
+            Y: =182
             ZIndex: =11
 
         Location_Label As label:
             FontWeight: =FontWeight.Semibold
             Size: =15
             Text: ="Location"
-            X: =24
-            Y: =13
+            X: =20
+            Y: =34
             ZIndex: =12
 
         Submit_Button As button:
@@ -187,6 +196,7 @@
             Height: =39
             Size: =15
             Text: =varCurrentBookings
+            Visible: =false
             Width: =42
             X: =198
             Y: =408
@@ -198,6 +208,7 @@
             Size: =15
             Text: |-
                 ="Remaining Bookings:"
+            Visible: =false
             Width: =214
             X: =240
             Y: =403
@@ -208,6 +219,7 @@
             Height: =39
             Size: =15
             Text: =5-varCurrentBookings
+            Visible: =false
             Width: =36
             X: =448
             Y: =408
@@ -278,7 +290,7 @@
                 )
             Text: ="Submit"
             Width: =176
-            X: =308
+            X: =150
             Y: =495
             ZIndex: =17
 
@@ -292,7 +304,7 @@
         Width: =823
         X: =541
         Y: =156
-        ZIndex: =4
+        ZIndex: =5
 
         "WeekdaysGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
@@ -456,7 +468,7 @@
                             LookUp(New_AppointmentsX, Appointment_Date=ThisItem.Appointment_Date)
                         );
                         
-                        
+                        Set(ThisAppointment, ThisItem);
                         Set(varShowPopUptwo,true);
                         Set(date_dp,ThisItem.Appointment_Date);
                         Set(location_dp,ThisItem.Location);
@@ -464,7 +476,7 @@
                         Set(end_time_dp,ThisItem.End_Time);
                         Set(slot_dp,ThisItem.Start_Time & "-" & ThisItem.End_Time);
                         Set(department_dp,ThisItem.Department_Name)
-                    Size: =9
+                    Size: =8
                     Text: =ThisItem.Start_Time & "-" & ThisItem.End_Time
                     Width: =117.57142857142856
                     Y: =30
@@ -557,16 +569,8 @@
             Y: =33
             ZIndex: =5
 
-    Button4 As button:
-        Height: =44
-        OnSelect: =Set(varShowPopUp,true)
-        Text: ="Change department"
-        Width: =212
-        X: =42
-        Y: =651
-        ZIndex: =5
-
     Radio2 As radio:
+        BorderColor: =RGBA(0, 0, 0, 0)
         Default: ="Yours"
         DisplayMode: |
             =If(
@@ -575,6 +579,7 @@
                 DisplayMode.Edit
             )
         Height: =66
+        HoverColor: =RGBA(0, 0, 0, 1)
         Items: =["Yours","Others"]
         Layout: =Layout.Horizontal
         OnChange: |
@@ -612,7 +617,7 @@
         SelectMultiple: =false
         Template: =ListItemTemplate.Double
         Width: =434
-        X: =851
+        X: =760
         Y: =103
         ZIndex: =7
 
@@ -760,487 +765,106 @@
         D_Btn_Onclick: =Set(varShowPopUpthree,true)
         Department: =department_dp.Value
         Department_Name: ="Department"
-        Ebtn_Click: ="Text"
+        Ebtn_Click: =Set(varShowPopUpFour, true)
         Email_Text: ="Email"
-        Height: =359
+        Height: =667
         Slot_Booked: ="Date"
         Slot_Booked_Text: =date_dp
         Timing: ="Time"
         TImingText: =slot_dp
-        Username: =ComboBox1.Selected.Mail
+        Username: =ComboBox1.Selected.DisplayName
         Visible: =varShowPopUptwo
-        Width: =541
-        X: =473
-        Y: =336
+        Width: =649
+        X: =365
+        Y: =57
         ZIndex: =31
 
-    Rectangle2_2 As rectangle:
-        Fill: =RGBA(56, 96, 178, 0.5)
-        Height: =768
-        Visible: =false
-        Width: =1364
-        X: =2
-        ZIndex: =37
-
-    "'Delete Button Popup' As group":
+    EditAppointmentPopup As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =37
+        ZIndex: =42
 
-        Label3 As label:
+        Rectangle2_2 As rectangle:
+            Fill: =RGBA(56, 96, 178, 0.5)
+            Height: =768
+            Visible: =varShowPopUpFour
+            Width: =1364
+            X: =2
+            ZIndex: =32
+
+        Rectangle5 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =547
+            Visible: =varShowPopUpFour
+            Width: =640
+            X: =374
+            Y: =44
+            ZIndex: =33
+
+        Form2 As form:
+            DataSource: =New_AppointmentsX
+            Height: =416
+            Item: =LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp)
+            NumberOfColumns: =1
+            Visible: =varShowPopUpFour
+            Width: =636
+            X: =376
+            Y: =107
+            ZIndex: =34
+
+        Label4 As label:
             Align: =Align.Center
-            FontWeight: =FontWeight.Semibold
+            Fill: =RGBA(255, 191, 0, 1)
             Height: =43
-            Size: =25
-            Text: ="Are you sure?"
-            Visible: =varShowPopUpthree
-            Width: =291
-            X: =505
-            Y: =256
+            Size: =20
+            Text: ="Edit Appointment"
+            Visible: =varShowPopUpFour
+            Width: =640
+            X: =374
+            Y: =44
+            ZIndex: =35
+
+        Button1 As button:
+            Height: =48
+            OnSelect: |-
+                =SubmitForm(Form2);
+                Patch(
+                    LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp),Form2.Updates, 
+                     {
+                        Appointment_Date: DataCardValue9.SelectedDate,
+                        Email: DataCardValue8.Text,
+                        Department_Name: DataCardValue10.Selected,
+                        Location: DataCardValue11.Selected, 
+                        Start_Time:DataCardValue12.Text, 
+                        End_Time:DataCardValue13.Text
+                     });
+                Set(varShowPopUpFour,false);
+                Set(varShowPopUptwo,false)
+            Text: ="Submit Changes"
+            Visible: =varShowPopUpFour
+            Width: =183
+            X: =606
+            Y: =510
             ZIndex: =36
 
-    Rectangle5 As rectangle:
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =547
-        Visible: =false
-        Width: =640
-        X: =374
-        Y: =44
-        ZIndex: =38
-
-    Form2 As form:
-        DataSource: =New_AppointmentsX
-        Height: =416
-        NumberOfColumns: =1
-        Visible: =false
-        Width: =636
-        X: =376
-        Y: =107
-        ZIndex: =39
-
-        Email_DataCard2 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Email"
-            Default: =ThisItem.Email
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,Email)
+        Button5 As button:
+            Color: =RGBA(0, 0, 0, 1)
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.MaxLength, Email)
-            Required: =false
-            Update: =DataCardValue8.Text
-            Width: =636
-            X: =0
-            Y: =0
-            ZIndex: =40
-
-            DataCardKey8 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue8 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey8.X + DataCardKey8.Width
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue8.Y + DataCardValue8.Height
-                ZIndex: =3
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Height: =DataCardKey8.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey8.Y
-                ZIndex: =4
-
-        Appointment_Date_DataCard2 As typedDataCard.dateEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Appointment_Date"
-            Default: =ThisItem.Appointment_Date
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,Appointment_Date)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue9.SelectedDate
-            Width: =636
-            X: =0
-            Y: =1
-            ZIndex: =40
-
-            DataCardKey9 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue9 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultDate: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
-                EndYear: =Year(Today())+100
-                IsEditable: =true
-                PaddingBottom: =0
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                StartYear: =1899
-                Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey9.X + DataCardKey9.Width
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage9 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue9.Y + DataCardValue9.Height
-                ZIndex: =3
-
-            StarVisible9 As label:
-                Align: =Align.Center
-                Height: =DataCardKey9.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey9.Y
-                ZIndex: =4
-
-        Department_Name_DataCard2 As typedDataCard.comboBoxEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Department_Name"
-            Default: =ThisItem.Department_Name
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,Department_Name)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue10.Selected
-            Width: =636
-            X: =0
-            Y: =2
-            ZIndex: =40
-
-            DataCardKey10 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue10.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue10 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@New_AppointmentsX].Department_Name)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices(New_AppointmentsX.Department_Name,DataCardValue10.SearchText)
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey10.X + DataCardKey10.Width
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage10 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue10.Y + DataCardValue10.Height
-                ZIndex: =3
-
-            StarVisible10 As label:
-                Align: =Align.Center
-                Height: =DataCardKey10.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey10.Y
-                ZIndex: =4
-
-        Location_DataCard2 As typedDataCard.comboBoxEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Location"
-            Default: =ThisItem.Location
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,'Location')
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue11.Selected
-            Width: =636
-            X: =0
-            Y: =3
-            ZIndex: =40
-
-            DataCardKey11 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue11.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue11 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@New_AppointmentsX].Location)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices(New_AppointmentsX.Location,DataCardValue11.SearchText)
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey11.X + DataCardKey11.Width
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage11 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue11.Y + DataCardValue11.Height
-                ZIndex: =3
-
-            StarVisible11 As label:
-                Align: =Align.Center
-                Height: =DataCardKey11.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey11.Y
-                ZIndex: =4
-
-        Start_Time_DataCard2 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Start_Time"
-            Default: =ThisItem.Start_Time
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,Start_Time)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.MaxLength, Start_Time)
-            Required: =false
-            Update: =DataCardValue12.Text
-            Width: =636
-            X: =0
-            Y: =4
-            ZIndex: =40
-
-            DataCardKey12 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue12.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue12 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey12.X + DataCardKey12.Width
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage12 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue12.Y + DataCardValue12.Height
-                ZIndex: =3
-
-            StarVisible12 As label:
-                Align: =Align.Center
-                Height: =DataCardKey12.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey12.Y
-                ZIndex: =4
-
-        End_Time_DataCard2 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="End_Time"
-            Default: =ThisItem.End_Time
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,End_Time)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.MaxLength, End_Time)
-            Required: =false
-            Update: =DataCardValue13.Text
-            Width: =636
-            X: =0
-            Y: =5
-            ZIndex: =40
-
-            DataCardKey13 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.4
-                Wrap: =false
-                X: =30
-                Y: =10 + (DataCardValue13.Height / 2) - (Self.Height / 2)
-                ZIndex: =1
-
-            DataCardValue13 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Tooltip: =Parent.DisplayName
-                Width: =(Parent.Width - 60) * 0.6
-                X: =DataCardKey13.X + DataCardKey13.Width
-                Y: =10
-                ZIndex: =2
-
-            ErrorMessage13 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue13.Y + DataCardValue13.Height
-                ZIndex: =3
-
-            StarVisible13 As label:
-                Align: =Align.Center
-                Height: =DataCardKey13.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey13.Y
-                ZIndex: =4
-
-    Label4 As label:
-        Align: =Align.Center
-        Fill: =RGBA(255, 191, 0, 1)
-        Height: =43
-        Size: =20
-        Text: ="Edit Appointment"
-        Visible: =false
-        Width: =640
-        X: =374
-        Y: =44
-        ZIndex: =40
-
-    Button1 As button:
-        Height: =48
-        Text: ="Submit Changes"
-        Visible: =false
-        Width: =183
-        X: =606
-        Y: =510
-        ZIndex: =41
+            FontWeight: =FontWeight.Bold
+            Height: =43
+            OnSelect: =Set(varShowPopUpFour,false)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="X"
+            Visible: =varShowPopUpFour
+            Width: =89
+            X: =924
+            Y: =44
+            ZIndex: =37
 
     "'adminsignin(delete)' As group":
         Height: =5
@@ -1248,6 +872,53 @@
         X: =40
         Y: =40
         ZIndex: =43
+
+    DeletePopup As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
+        Rectangle2_3 As rectangle:
+            Fill: =RGBA(56, 96, 178, 0.5)
+            Height: =768
+            Visible: =varShowPopUpthree
+            Width: =1364
+            X: =2
+            ZIndex: =38
+
+        Rectangle8 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =125
+            Visible: =varShowPopUpthree
+            Width: =269
+            X: =521
+            Y: =246
+            ZIndex: =39
+
+        Button3 As button:
+            Fill: =RGBA(149, 149, 149, 1)
+            OnSelect: =Set(varShowPopUpthree,false)
+            Text: ="Cancel"
+            Visible: =varShowPopUpthree
+            Width: =106
+            X: =536
+            Y: =309
+            ZIndex: =40
+
+        Button3_1 As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            OnSelect: |-
+                =Remove(New_AppointmentsX,LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp));
+                Set(varShowPopUpthree,false);
+                Set(varShowPopUptwo,false)
+            Text: ="Confirm"
+            Visible: =varShowPopUpthree
+            Width: =106
+            X: =666
+            Y: =309
+            ZIndex: =41
 
     Group1 As group:
         Height: =5
