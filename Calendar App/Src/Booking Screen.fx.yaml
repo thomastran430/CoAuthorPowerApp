@@ -844,6 +844,7 @@
         Form2 As form:
             DataSource: =New_AppointmentsX
             Height: =416
+            Item: =AppointmentsGallery.Selected
             NumberOfColumns: =1
             Visible: =varShowPopUpFour
             Width: =636
@@ -1279,6 +1280,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             FontWeight: =FontWeight.Bold
             Height: =43
+            OnSelect: =Set(varShowPopUpFour,false)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
