@@ -1268,7 +1268,8 @@
         Button1 As button:
             Height: =48
             OnSelect: |-
-                =Patch(
+                =SubmitForm(Form2);
+                Patch(
                     LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp),Form2.Updates, 
                      {
                         Appointment_Date: DataCardValue9.SelectedDate,
