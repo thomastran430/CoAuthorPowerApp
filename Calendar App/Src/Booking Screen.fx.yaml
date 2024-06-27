@@ -919,7 +919,7 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
                 Required: =false
-                Update: =DataCardValue8.Selected.Value
+                Update: =DataCardValue8.SelectedText.Value
                 Width: =636
                 X: =0
                 Y: =0
@@ -937,7 +937,7 @@
 
                 DataCardValue8 As dropdown:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =ComboBox1.Selected.Mail
+                    Default: =Parent.Default
                     DisplayMode: =Parent.DisplayMode
                     Items: |-
                         =//Filter(
@@ -1003,7 +1003,7 @@
 
                 DataCardValue9 As datepicker:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DefaultDate: =date_dp
+                    DefaultDate: =Parent.Default
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
                     IsEditable: =true
@@ -1204,7 +1204,10 @@
                     Default: =Parent.Default
                     DisplayMode: =Parent.DisplayMode
                     Items: |-
-                        =["1:00 AM","2:00 AM"]
+                        =["12:00 AM", "1:00 AM", "2:00 AM", "3:00 AM", "4:00 AM", "5:00 AM", 
+                             "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", 
+                             "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", 
+                             "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM", "11:00 PM"]
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
                     X: =DataCardKey13.X + DataCardKey13.Width
@@ -1266,7 +1269,11 @@
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     Default: =Parent.Default
                     DisplayMode: =Parent.DisplayMode
-                    Items: =Parent.AllowedValues
+                    Items: |-
+                        =["12:00 AM", "1:00 AM", "2:00 AM", "3:00 AM", "4:00 AM", "5:00 AM", 
+                             "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", 
+                             "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", 
+                             "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM", "10:00 PM", "11:00 PM"]
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
                     X: =DataCardKey15.X + DataCardKey15.Width
@@ -1313,16 +1320,16 @@
         Button1 As button:
             Height: =48
             OnSelect: |-
-                =SubmitForm(Form2);
+                =//SubmitForm(Form2);
                 Patch(
                     LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp),Form2.Updates, 
                      {
                         Appointment_Date: DataCardValue9.SelectedDate,
-                        Email: DataCardValue8.Text,
+                        Email: DataCardValue8.SelectedText.Value,
                         Department_Name: DataCardValue10.Selected,
                         Location: DataCardValue11.Selected, 
-                        Start_Time:DataCardValue12.Text, 
-                        End_Time:DataCardValue13.Text
+                        Start_Time:DataCardValue13.SelectedText.Value, 
+                        End_Time:DataCardValue15.SelectedText.Value
                      });
                 Set(varShowPopUpFour,false);
                 Set(varShowPopUptwo,false)
