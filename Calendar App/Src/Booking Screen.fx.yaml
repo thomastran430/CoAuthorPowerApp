@@ -879,7 +879,7 @@
 
                 DataCardValue8 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
+                    Default: =ComboBox1.Selected.Mail
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     MaxLength: =Parent.MaxLength
@@ -946,7 +946,7 @@
 
                 DataCardValue9 As datepicker:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DefaultDate: =Parent.Default
+                    DefaultDate: =date_dp
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
                     IsEditable: =true
@@ -1011,7 +1011,7 @@
 
                 DataCardValue10 As combobox:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DefaultSelectedItems: =Parent.Default
+                    DefaultSelectedItems: =department_dp
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
                     Items: =Choices([@New_AppointmentsX].Department_Name)
@@ -1077,7 +1077,7 @@
 
                 DataCardValue11 As combobox:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    DefaultSelectedItems: =Parent.Default
+                    DefaultSelectedItems: =location_dp
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
                     Items: =Choices([@New_AppointmentsX].Location)
@@ -1144,7 +1144,7 @@
 
                 DataCardValue12 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
+                    Default: =start_time_dp
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     MaxLength: =Parent.MaxLength
@@ -1212,7 +1212,7 @@
 
                 DataCardValue13 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
+                    Default: =end_time_dp
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
                     MaxLength: =Parent.MaxLength
@@ -1266,6 +1266,7 @@
 
         Button1 As button:
             Height: =48
+            OnSelect: =Patch(LookUp(New_AppointmentsX,Email=DataCardValue8.Text &&Appointment_Date=DataCardValue9.SelectedDate && Start_Time=DataCardValue12.Text && End_Time=DataCardValue13.Text), Form2.Updates)
             Text: ="Submit Changes"
             Visible: =varShowPopUpFour
             Width: =183
