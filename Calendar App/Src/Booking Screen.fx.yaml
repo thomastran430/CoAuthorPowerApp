@@ -43,6 +43,14 @@
             Width: =88
             ZIndex: =4
 
+    Image2 As image:
+        Height: =71
+        Image: =VMLOGO
+        Width: =253
+        X: =563
+        Y: =8
+        ZIndex: =2
+
     Email_Label As label:
         FontWeight: =FontWeight.Semibold
         Height: =36
@@ -50,7 +58,7 @@
         Width: =240
         X: =617
         Y: =103
-        ZIndex: =2
+        ZIndex: =3
 
     Form_Container As groupContainer.manualLayoutContainer:
         Fill: =RGBA(175, 191, 224, 1)
@@ -61,7 +69,7 @@
         RadiusTopRight: =0
         Width: =541
         Y: =156
-        ZIndex: =3
+        ZIndex: =4
 
         Date_Label_1 As label:
             FontWeight: =FontWeight.Semibold
@@ -296,7 +304,7 @@
         Width: =823
         X: =541
         Y: =156
-        ZIndex: =4
+        ZIndex: =5
 
         "WeekdaysGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             DelayItemLoading: =true
@@ -1258,14 +1266,6 @@
             X: =924
             Y: =44
             ZIndex: =37
-
-    Image2 As image:
-        Height: =71
-        Image: =VMLOGO
-        Width: =253
-        X: =563
-        Y: =8
-        ZIndex: =43
 
     DeletePopup As group:
         Height: =5
