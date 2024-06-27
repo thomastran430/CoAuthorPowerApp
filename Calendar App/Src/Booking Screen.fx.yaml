@@ -961,13 +961,6 @@
             Y: =44
             ZIndex: =37
 
-    "'adminsignin(delete)' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =43
-
     DeletePopup As group:
         Height: =5
         Width: =5
@@ -1014,6 +1007,13 @@
             X: =666
             Y: =309
             ZIndex: =41
+
+    "'adminsignin(delete)' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
 
     Group1 As group:
         Height: =5
