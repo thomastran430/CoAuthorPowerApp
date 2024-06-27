@@ -762,15 +762,16 @@
         Department_Name: ="Department"
         Ebtn_Click: ="Text"
         Email_Text: ="Email"
-        Height: =652
+        Height: =359
         Slot_Booked: ="Date"
         Slot_Booked_Text: =date_dp
         Timing: ="Time"
         TImingText: =slot_dp
         Username: =ComboBox1.Selected.Mail
         Visible: =varShowPopUptwo
-        X: =374
-        Y: =43
+        Width: =541
+        X: =473
+        Y: =336
         ZIndex: =31
 
     Rectangle2_2 As rectangle:
@@ -1245,18 +1246,6 @@
             X: =521
             Y: =246
             ZIndex: =38
-
-        Label3 As label:
-            Align: =Align.Center
-            FontWeight: =FontWeight.Semibold
-            Height: =43
-            Size: =25
-            Text: ="Are you sure?"
-            Visible: =varShowPopUpthree
-            Width: =291
-            X: =505
-            Y: =256
-            ZIndex: =39
 
         Button3 As button:
             Fill: =RGBA(149, 149, 149, 1)
