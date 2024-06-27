@@ -1,0 +1,29 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Component1",
+    "TemplateGuid": "685dd7a5670342bfb0ff4a3824742289"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": true,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638551017587759229",
+  "Name": "685dd7a5670342bfb0ff4a3824742289",
+  "OverridableProperties": {},
+  "SourceLibraryId": "a9c72686-4a32-42df-a3e6-c5b47fb82267",
+  "SourceLibraryLogicalName": "creda_popup_83b0d",
+  "TemplateOriginalName": "b7b1e8c1d86349139c23a0e60d40c51f",
+  "Version": "1.0"
+}

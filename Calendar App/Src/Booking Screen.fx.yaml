@@ -43,6 +43,94 @@
             Width: =88
             ZIndex: =4
 
+    "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =579
+        Items: =New_AppointmentsX
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =116
+        Width: =609
+        X: =374
+        Y: =174
+        ZIndex: =1
+
+        Title3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Start_Time
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =16
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle3.Size*1.8 + 2 + Body1.Size*1.8)) / 2
+            ZIndex: =1
+
+        Subtitle3 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Appointment_Date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Title3.Y + Title3.Height
+            ZIndex: =2
+
+        Body1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Email
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Subtitle3.Y + Subtitle3.Height
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator3 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle11 As rectangle:
+            Height: =Parent.TemplateHeight - Separator3.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
     Image2 As image:
         Height: =71
         Image: =VMLOGO
@@ -779,6 +867,13 @@
         Y: =57
         ZIndex: =31
 
+    Button4 As button:
+        OnSelect: =Set(popup_select_all,true)
+        Text: ="View All"
+        X: =1194
+        Y: =100
+        ZIndex: =42
+
     EditAppointmentPopup As group:
         Height: =5
         Width: =5
@@ -866,13 +961,6 @@
             Y: =44
             ZIndex: =37
 
-    "'adminsignin(delete)' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =43
-
     DeletePopup As group:
         Height: =5
         Width: =5
@@ -919,6 +1007,13 @@
             X: =666
             Y: =309
             ZIndex: =41
+
+    "'adminsignin(delete)' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
 
     Group1 As group:
         Height: =5
@@ -1027,4 +1122,142 @@
             X: =1000
             Y: =182
             ZIndex: =28
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =47
+
+        Rectangle12 As rectangle:
+            Fill: =RGBA(166, 166, 166, 0.3)
+            Height: =768
+            Visible: =popup_select_all
+            Width: =1364
+            ZIndex: =43
+
+        Rectangle13 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =544
+            Visible: =popup_select_all
+            Width: =644
+            X: =427
+            Y: =91
+            ZIndex: =44
+
+        Container4 As groupContainer.verticalAutoLayoutContainer:
+            Height: =543
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Visible: =popup_select_all
+            Width: =644
+            X: =427
+            Y: =92
+            ZIndex: =45
+
+            Label11 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(56, 96, 178, 1)
+                Height: =80
+                Text: ="View All Appointments "
+                Width: =Container4.Width
+                ZIndex: =1
+
+            "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DelayItemLoading: =true
+                Items: =New_AppointmentsX
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =116
+                ZIndex: =1
+
+                Title9 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.Appointment_Date
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 86
+                    X: =16
+                    Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle8.Size*1.8 + 2 + Body4.Size*1.8)) / 2
+                    ZIndex: =1
+
+                Subtitle8 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.Department_Name.Value
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Title9.Width
+                    X: =Title9.X
+                    Y: =Title9.Y + Title9.Height
+                    ZIndex: =2
+
+                Body4 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.Email
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Title9.Width
+                    X: =Title9.X
+                    Y: =Subtitle8.Y + Subtitle8.Height
+                    ZIndex: =3
+
+                NextArrow8 As icon.ChevronRight:
+                    AccessibleLabel: =Self.Tooltip
+                    Color: =RGBA(166, 166, 166, 1)
+                    Height: =50
+                    Icon: =Icon.ChevronRight
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Tooltip: ="View item details"
+                    Width: =50
+                    X: =Parent.TemplateWidth - Self.Width - 12
+                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    ZIndex: =4
+
+                Separator8 As rectangle:
+                    Height: =8
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =5
+
+                Rectangle17 As rectangle:
+                    Height: =Parent.TemplateHeight - Separator8.Height
+                    OnSelect: =Select(Parent)
+                    Visible: =ThisItem.IsSelected
+                    Width: =4
+                    ZIndex: =6
+
+        Icon5 As icon.Cancel:
+            Height: =48
+            Icon: =Icon.Cancel
+            OnSelect: =Set(popup_select_all,false)
+            Visible: =popup_select_all
+            Width: =51
+            X: =1008
+            Y: =111
+            ZIndex: =46
 

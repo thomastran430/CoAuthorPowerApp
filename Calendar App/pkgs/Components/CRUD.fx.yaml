@@ -135,7 +135,7 @@ CRUD As CanvasComponent:
         Height: =54
         Size: =21
         Text: =CRUD.Timing
-        Width: =209
+        Width: =170
         X: =39
         Y: =363
         ZIndex: =12
@@ -145,8 +145,8 @@ CRUD As CanvasComponent:
         Height: =54
         Size: =21
         Text: =CRUD.TImingText
-        Width: =209
-        X: =271
+        Width: =407
+        X: =190
         Y: =363
         ZIndex: =13
 
