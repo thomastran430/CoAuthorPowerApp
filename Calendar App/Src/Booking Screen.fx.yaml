@@ -1259,6 +1259,14 @@
             Y: =44
             ZIndex: =37
 
+    Image2 As image:
+        Height: =71
+        Image: =VMLOGO
+        Width: =253
+        X: =563
+        Y: =8
+        ZIndex: =43
+
     DeletePopup As group:
         Height: =5
         Width: =5

@@ -101,6 +101,7 @@
     "Icon3_1": 6,
     "Icon4": 113,
     "Image1": 25,
+    "Image2": 183,
     "Input_Date": 81,
     "Input_Department": 79,
     "Input_Location": 77,
@@ -187,7 +188,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/27/2024 15:53:30",
+  "HeaderLastSavedDateTimeUTC": "06/27/2024 15:57:44",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "2cdaad84-fee1-4fee-b8dc-b46c9d471f25": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/7626d11575004911b2e3bb9e23930619\"",
@@ -198,10 +199,12 @@
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
-    "924291258": "0001.jpg"
+    "924291258": "0001.jpg",
+    "VMLOGO": "30b608dd-87a9-4897-83ca-307d30743ac3.png"
   },
   "LocalResourceRootPaths": {
-    "924291258": "https://docserverpwaprodeus.blob.core.windows.net/d203ca4c-602b-4b3c-8e7e-ea00d23f0608-1/resource/Assets0Images00001.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-06-27T13%3A49%3A34Z&ske=2024-06-28T14%3A04%3A34Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-06-28T14%3A04%3A34Z&sr=b&sp=r&sig=gEhvvuaJXCnvm7wgwl%2FmbUxOpt5PcnSPMO4f97ShSsM%3D"
+    "924291258": "https://docserverpwaprodeus.blob.core.windows.net/d203ca4c-602b-4b3c-8e7e-ea00d23f0608-1/resource/Assets0Images00001.jpg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-06-27T13%3A49%3A34Z&ske=2024-06-28T14%3A04%3A34Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-06-28T14%3A04%3A34Z&sr=b&sp=r&sig=gEhvvuaJXCnvm7wgwl%2FmbUxOpt5PcnSPMO4f97ShSsM%3D",
+    "VMLOGO": "https://docserverpwaprodeus.blob.core.windows.net/d203ca4c-602b-4b3c-8e7e-ea00d23f0608-1/resource/9a3a42b5-e9d6-4bda-93d6-5c404d0c3cbb.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-06-27T15%3A56%3A43Z&ske=2024-06-28T16%3A11%3A43Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-06-28T16%3A11%3A43Z&sr=b&sp=r&sig=05jGsR%2Bi0yGEtGfkhyLsugjLH7ex1PvXiUHbGSrP2O4%3D"
   },
   "OrderComponentMetadata": {
     "52a7f14b9e1b4f609bc7614b5e1e5394": 1,
@@ -401,6 +404,7 @@
     "Icon3_1": {},
     "Icon4": {},
     "Image1": {},
+    "Image2": {},
     "Input_Date": {},
     "Input_Department": {},
     "Input_Location": {},
@@ -584,6 +588,7 @@
     "Icon3_1": 156,
     "Icon4": 94,
     "Image1": 1,
+    "Image2": 0,
     "Input_Date": 63,
     "Input_Department": 61,
     "Input_Location": 59,
@@ -670,7 +675,8 @@
   },
   "ResourcesJsonIndices": {
     "Image-924291258": 1,
-    "Image-SampleImage": 0
+    "Image-SampleImage": 0,
+    "Image-VMLOGO": 2
   },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
