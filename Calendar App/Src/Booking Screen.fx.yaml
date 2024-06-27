@@ -767,7 +767,7 @@
         Slot_Booked_Text: =date_dp
         Timing: ="Time"
         TImingText: =slot_dp
-        Username: =ComboBox1.Selected.Mail
+        Username: =ComboBox1.Selected.DisplayName
         Visible: =varShowPopUptwo
         Width: =649
         X: =365
@@ -1296,6 +1296,7 @@
 
         Button3_1 As button:
             Fill: =RGBA(255, 0, 0, 1)
+            OnSelect: =Remove(New_AppointmentsX,LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp))
             Text: ="Confirm"
             Visible: =varShowPopUpthree
             Width: =106
