@@ -1235,7 +1235,8 @@
                         Location: DataCardValue11.Selected, 
                         Start_Time:DataCardValue12.Text, 
                         End_Time:DataCardValue13.Text
-                     })
+                     });
+                Set(varShowPopUpFour,false)
             Text: ="Submit Changes"
             Visible: =varShowPopUpFour
             Width: =183
@@ -1296,7 +1297,10 @@
 
         Button3_1 As button:
             Fill: =RGBA(255, 0, 0, 1)
-            OnSelect: =Remove(New_AppointmentsX,LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp))
+            OnSelect: |-
+                =Remove(New_AppointmentsX,LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp));
+                Set(varShowPopUpthree,false);
+                Set(varShowPopUptwo,false)
             Text: ="Confirm"
             Visible: =varShowPopUpthree
             Width: =106
