@@ -562,6 +562,7 @@
             ZIndex: =5
 
     Radio2 As radio:
+        BorderColor: =RGBA(0, 0, 0, 0)
         Default: ="Yours"
         DisplayMode: |
             =If(
@@ -570,6 +571,7 @@
                 DisplayMode.Edit
             )
         Height: =66
+        HoverColor: =RGBA(0, 0, 0, 1)
         Items: =["Yours","Others"]
         Layout: =Layout.Horizontal
         OnChange: |
