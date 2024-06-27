@@ -749,9 +749,7 @@
         PopUp_Cancel: |-
             =UpdateContext({lcl_popuptwo:false})
         PopUpFill: =RGBA(0, 13, 75, 1)
-        Visible: |-
-            =//lcl_popuptwo
-            true
+        Visible: =lcl_popuptwo
         Width: =636
         X: =407
         Y: =143
@@ -1229,6 +1227,7 @@
         Height: =43
         Size: =20
         Text: ="Edit Appointment"
+        Visible: =false
         Width: =640
         X: =374
         Y: =44
