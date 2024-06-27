@@ -867,13 +867,6 @@
         Y: =57
         ZIndex: =31
 
-    Button4 As button:
-        OnSelect: =Set(popup_select_all,true)
-        Text: ="View All"
-        X: =1194
-        Y: =100
-        ZIndex: =42
-
     EditAppointmentPopup As group:
         Height: =5
         Width: =5
@@ -961,6 +954,20 @@
             Y: =44
             ZIndex: =37
 
+    Button4 As button:
+        OnSelect: =Set(popup_select_all,true)
+        Text: ="View All"
+        X: =1194
+        Y: =100
+        ZIndex: =42
+
+    "'adminsignin(delete)' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =43
+
     DeletePopup As group:
         Height: =5
         Width: =5
@@ -1007,13 +1014,6 @@
             X: =666
             Y: =309
             ZIndex: =41
-
-    "'adminsignin(delete)' As group":
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =43
 
     Group1 As group:
         Height: =5
