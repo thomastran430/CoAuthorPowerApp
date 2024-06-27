@@ -937,14 +937,13 @@
 
                 DataCardValue8 As dropdown:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    Default: =Parent.Default
+                    Default: =ComboBox1.Selected.Mail
                     DisplayMode: =Parent.DisplayMode
-                    Items: |-
-                        =//Filter(
-                          //  Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
-                            //"@valuemomentum.com" in Mail 
-                        //)
-                        //try to collect emails from appointments and show those in drop down"
+                    Items: |
+                        =Filter(
+                             Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
+                            "@valuemomentum.com" in Mail 
+                        ).Mail
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
                     X: =DataCardKey8.X + DataCardKey8.Width
