@@ -1237,7 +1237,7 @@
                         End_Time:DataCardValue13.Text
                      });
                 Set(varShowPopUpFour,false);
-                Set(varShowPopUpthree,false)
+                Set(varShowPopUptwo,false)
             Text: ="Submit Changes"
             Visible: =varShowPopUpFour
             Width: =183
