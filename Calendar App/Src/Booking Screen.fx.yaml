@@ -68,7 +68,7 @@
             Size: =15
             Text: ="Date"
             X: =20
-            Y: =215
+            Y: =242
             ZIndex: =1
 
         Department_Label As label:
@@ -76,7 +76,7 @@
             Size: =15
             Text: ="Department"
             X: =20
-            Y: =124
+            Y: =133
             ZIndex: =2
 
         Slots_Label As label:
@@ -84,7 +84,7 @@
             Size: =15
             Text: ="Available Slots"
             X: =20
-            Y: =305
+            Y: =355
             ZIndex: =5
 
         Input_Slots As dropdown:
@@ -121,7 +121,7 @@
                 =
             Width: =489
             X: =20
-            Y: =345
+            Y: =403
             ZIndex: =6
 
         Input_Location As dropdown:
@@ -134,7 +134,7 @@
         Input_Date As datepicker:
             Width: =489
             X: =20
-            Y: =255
+            Y: =288
             ZIndex: =8
 
         Slots_Left_Label As label:
@@ -154,7 +154,7 @@
             Items: =["Cardiology","Pathology","Surgery"]
             Width: =489
             X: =20
-            Y: =164
+            Y: =182
             ZIndex: =11
 
         Location_Label As label:
