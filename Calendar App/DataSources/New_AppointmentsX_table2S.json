@@ -106,7 +106,7 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status (New_AppointmentsX_table2S)_1",
+    "DisplayName": "Status (New_AppointmentsX_table2S)",
     "Name": "creda_new_appointmentsx_table2_statecode",
     "OptionSetInfoNameMapping": {
       "0": "Active",
@@ -126,48 +126,8 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status Reason (New_AppointmentsX_table2S)_1",
-    "Name": "creda_new_appointmentsx_table2_statuscode",
-    "OptionSetInfoNameMapping": {
-      "1": "Active",
-      "2": "Inactive"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "statuscode",
-        "OptionSetReferenceEntityName": "New_AppointmentsX_table2S"
-      }
-    },
-    "OptionSetTypeKey": "StatusType",
-    "RelatedColumnInvariantName": "statuscode",
-    "RelatedEntityName": "New_AppointmentsX_table2S",
-    "Type": "OptionSetInfo"
-  },
-  {
-    "DisplayName": "Status (New_AppointmentsX_table2S)",
-    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_3d357f9ec6_statecode",
-    "OptionSetInfoNameMapping": {
-      "0": "Active",
-      "1": "Inactive"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "statecode",
-        "OptionSetReferenceEntityName": "New_AppointmentsX_table2S"
-      }
-    },
-    "OptionSetTypeKey": "StateType",
-    "RelatedColumnInvariantName": "statecode",
-    "RelatedEntityName": "New_AppointmentsX_table2S",
-    "Type": "OptionSetInfo"
-  },
-  {
     "DisplayName": "Status Reason (New_AppointmentsX_table2S)",
-    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_3d357f9ec6_statuscode",
+    "Name": "creda_new_appointmentsx_table2_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
       "2": "Inactive"
