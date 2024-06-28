@@ -2625,7 +2625,7 @@
             Height: =768
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =popup_select_all
+            Visible: =false
             Width: =1364
             ZIndex: =47
 
@@ -2639,7 +2639,7 @@
             Height: =544
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =popup_select_all
+            Visible: =false
             Width: =644
             X: =427
             Y: =91
@@ -2654,7 +2654,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Visible: =popup_select_all
+            Visible: =false
             Width: =644
             X: =427
             Y: =92
@@ -2808,7 +2808,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =popup_select_all
+            Visible: =false
             Width: =51
             X: =1008
             Y: =111
@@ -3033,7 +3033,24 @@
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(16, 110, 190, 1)
-            OnSelect: =excel_connecter.Run()
+            OnSelect: |
+                =Set(exportResult, excel_connecter.Run());
+                If(
+                    Not(IsBlank(exportResult.csvfilelink)),
+                    Download(
+                        "data:text/csv;base64," & 
+                        JSON(
+                            Mid(
+                                Substitute(exportResult.csvContent, """", ""),
+                                2,
+                                Len(Substitute(exportResult.csvContent, """", "")) - 2
+                            ),
+                            JSONFormat.IncludeBinaryData
+                        ),
+                        "ExportedData.csv"
+                    ),
+                    Notify("Failed to export data", NotificationType.Error)
+                )
             PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(16, 110, 190, 1)
@@ -3051,14 +3068,14 @@
 
         Icon6 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(0, 120, 212, 1)
+            Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(245, 245, 245, 1)
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =53
+            Height: =43
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             OnSelect: |-
@@ -3067,9 +3084,9 @@
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
-            Width: =50
-            X: =191
-            Y: =79
+            Width: =34
+            X: =186
+            Y: =162
             ZIndex: =55
 
         Icon7 As icon.Cancel:

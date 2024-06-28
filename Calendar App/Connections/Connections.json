@@ -40,11 +40,11 @@
     "dependents": [],
     "id": "2cdaad84-fee1-4fee-b8dc-b46c9d471f25"
   },
-  "6ea3a00c-69cf-43cb-ae90-b5bbe9f038d8": {
+  "58661a8b-1e00-4432-b846-2b04aca54799": {
     "connectionRef": {
-      "displayName": "Excel Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1680/1.0.1680.3652/excelonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1693/1.0.1693.3738/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {},
     "dataSources": [],
@@ -52,7 +52,21 @@
     "dependents": [
       "d571e04f-9fa6-434b-8e3f-2227d16a83d4"
     ],
-    "id": "6ea3a00c-69cf-43cb-ae90-b5bbe9f038d8"
+    "id": "58661a8b-1e00-4432-b846-2b04aca54799"
+  },
+  "59c6b7e9-6929-477d-ac0f-6ac194491bf3": {
+    "connectionRef": {
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "d571e04f-9fa6-434b-8e3f-2227d16a83d4"
+    ],
+    "id": "59c6b7e9-6929-477d-ac0f-6ac194491bf3"
   },
   "7939d0dc-70f6-4f83-bf64-885d4eb4da95": {
     "connectionRef": {
@@ -142,31 +156,17 @@
     "dependents": [],
     "id": "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee"
   },
-  "a5d72f91-8664-4c32-b72e-0fa523f9fef4": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1693/1.0.1693.3738/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "d571e04f-9fa6-434b-8e3f-2227d16a83d4"
-    ],
-    "id": "a5d72f91-8664-4c32-b72e-0fa523f9fef4"
-  },
   "d571e04f-9fa6-434b-8e3f-2227d16a83d4": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "6ea3a00c-69cf-43cb-ae90-b5bbe9f038d8": {
-          "value": "shared_excelonlinebusiness"
-        },
-        "a5d72f91-8664-4c32-b72e-0fa523f9fef4": {
+        "58661a8b-1e00-4432-b846-2b04aca54799": {
           "value": "shared_sharepointonline"
+        },
+        "59c6b7e9-6929-477d-ac0f-6ac194491bf3": {
+          "value": "shared_onedriveforbusiness"
         },
         "workflowDisplayName": {
           "value": "excel_connecter"
@@ -179,11 +179,11 @@
         }
       },
       "parameterHintsV2": {
-        "shared_excelonlinebusiness": {
-          "value": "6ea3a00c-69cf-43cb-ae90-b5bbe9f038d8"
+        "shared_onedriveforbusiness": {
+          "value": "59c6b7e9-6929-477d-ac0f-6ac194491bf3"
         },
         "shared_sharepointonline": {
-          "value": "a5d72f91-8664-4c32-b72e-0fa523f9fef4"
+          "value": "58661a8b-1e00-4432-b846-2b04aca54799"
         },
         "workflowDisplayName": {
           "value": "excel_connecter"
@@ -201,8 +201,8 @@
       "excel_connecter"
     ],
     "dependencies": {
-      "shared_excelonlinebusiness": "6ea3a00c-69cf-43cb-ae90-b5bbe9f038d8",
-      "shared_sharepointonline": "a5d72f91-8664-4c32-b72e-0fa523f9fef4"
+      "shared_onedriveforbusiness": "59c6b7e9-6929-477d-ac0f-6ac194491bf3",
+      "shared_sharepointonline": "58661a8b-1e00-4432-b846-2b04aca54799"
     },
     "dependents": [],
     "id": "d571e04f-9fa6-434b-8e3f-2227d16a83d4"

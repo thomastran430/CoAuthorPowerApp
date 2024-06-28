@@ -3,6 +3,11 @@
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <object name="ManualTriggerInput" />
+      <string name="ResponseActionOutput_csvfilelink_def" />
+      <object name="ResponseActionOutput">
+        <property name="csvfilelink" type="string" />
+      </object>
+      <object name="Run_responses_default_def" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/logicflows">
@@ -16,6 +21,9 @@
           </param>
           <representation mediaType="application/json" />
         </request>
+        <response>
+          <representation mediaType="application/json" element="service:ResponseActionOutput" />
+        </response>
       </method>
     </resource>
   </resources>
