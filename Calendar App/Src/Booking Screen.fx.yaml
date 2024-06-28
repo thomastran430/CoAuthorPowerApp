@@ -1504,27 +1504,30 @@
 
     CRUD_1 As CRUD:
         CRUD_Cancel: =Set(varShowPopUptwo, false)
-        D_Btn_Onclick: =Set(varShowPopUpthree,true)
+        D_Btn_Onclick: |-
+            =Set(varShowPopUpthree,true);
+            Set(varShowPopUptwo,false)
         Department: =department_dp.Value
         Department_Name: |-
             ="Department:"
-        Ebtn_Click: =Set(varShowPopUpFour, true)
+        Ebtn_Click: |-
+            =Set(varShowPopUpFour, true);
+            Set(varShowPopUptwo,false)
         Email_Text: |-
-            ="   Email:"
+            ="Email:"
         Fill: =RGBA(255, 255, 255, 0)
-        Height: =691
+        Height: =635
         Size_box: =150
         Slot_Booked: |-
-            ="   Date:"
+            ="Date:"
         Slot_Booked_Text: =date_dp
         Timing: |-
-            ="   Time:"
+            ="Time:"
         TImingText: =slot_dp
         Username: =ComboBox1.Selected.DisplayName
         Visible: =varShowPopUptwo
-        Width: =820
-        X: =288
-        Y: =33
+        Width: =610
+        X: =390
         ZIndex: =34
 
     EditAppointmentPopup As group:
@@ -2611,7 +2614,7 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =popup_select_all
             Width: =1364
-            ZIndex: =45
+            ZIndex: =46
 
         Rectangle13 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2627,7 +2630,7 @@
             Width: =644
             X: =427
             Y: =91
-            ZIndex: =46
+            ZIndex: =47
 
         Container4 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2642,7 +2645,7 @@
             Width: =644
             X: =427
             Y: =92
-            ZIndex: =47
+            ZIndex: =48
 
             Label11 As label:
                 Align: =Align.Center
@@ -2796,7 +2799,22 @@
             Width: =51
             X: =1008
             Y: =111
-            ZIndex: =48
+            ZIndex: =49
+
+    Rectangle2_4 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(11, 77, 133, 70%)
+        FocusedBorderThickness: =4
+        Height: =768
+        HoverFill: =RGBA(11, 77, 133, 70%)
+        PressedFill: =RGBA(11, 77, 133, 70%)
+        Visible: =varShowPopUpthree
+        Width: =1364
+        X: =2
+        ZIndex: =51
 
     Group5 As group:
         Height: =5
@@ -2817,7 +2835,7 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =popup_select_all
             Width: =1366
-            ZIndex: =49
+            ZIndex: =45
 
         Container6 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2874,7 +2892,7 @@
             Width: =1364
             X: =0
             Y: =159
-            ZIndex: =51
+            ZIndex: =52
 
             Appointment_Date_Column3 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
@@ -2985,7 +3003,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1366
-            ZIndex: =52
+            ZIndex: =53
 
             Label9 As label:
                 Align: =Align.Center
@@ -3031,7 +3049,7 @@
             Width: =172
             X: =1108
             Y: =88
-            ZIndex: =53
+            ZIndex: =54
 
         Icon6 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3054,7 +3072,7 @@
             Width: =50
             X: =191
             Y: =79
-            ZIndex: =54
+            ZIndex: =55
 
         Icon7 As icon.Cancel:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3073,7 +3091,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
             X: =1302
-            ZIndex: =55
+            ZIndex: =56
 
     DeletePopUp As group:
         Height: =5
@@ -3103,13 +3121,13 @@
             DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
-            Height: =227
+            Height: =160
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =varShowPopUpthree
-            Width: =585
-            X: =407
-            Y: =224
+            Width: =321
+            X: =536
+            Y: =265
             ZIndex: =42
 
         Button3 As button:
@@ -3189,7 +3207,7 @@
             Text: ="Confirm Delete?"
             Visible: =varShowPopUpthree
             Width: =316
-            X: =515
+            X: =536
             Y: =274
-            ZIndex: =56
+            ZIndex: =57
 

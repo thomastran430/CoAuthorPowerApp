@@ -27,16 +27,11 @@ CRUD As CanvasComponent:
     ZIndex: =1
 
     Container1 As groupContainer.verticalAutoLayoutContainer:
-        BorderThickness: =4
         DropShadow: =DropShadow.Bold
         Fill: =RGBA(255, 255, 255, 1)
         Height: =549
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        RadiusBottomLeft: =30
-        RadiusBottomRight: =30
-        RadiusTopLeft: =30
-        RadiusTopRight: =30
         Width: =567
         X: =36
         Y: =60
@@ -45,14 +40,15 @@ CRUD As CanvasComponent:
         Label5_1 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(56, 96, 178, 1)
-            Height: =70
+            Fill: =RGBA(255, 191, 0, 1)
+            Font: =Font.'Segoe UI'
+            Height: =60
             LayoutMinHeight: =70
             LayoutMinWidth: =560
             Size: =21
-            Text: ="Your Appointment Information"
+            Text: ="Appointment Information"
             Width: =Container1.Width
             ZIndex: =1
 
@@ -61,6 +57,7 @@ CRUD As CanvasComponent:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(56, 96, 178, 1)
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =54
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -69,7 +66,7 @@ CRUD As CanvasComponent:
         Size: =24
         Text: ="Delete"
         Width: =188
-        X: =60
+        X: =87
         Y: =480
         ZIndex: =3
 
@@ -78,6 +75,7 @@ CRUD As CanvasComponent:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(56, 96, 178, 1)
+        Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =54
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -86,7 +84,7 @@ CRUD As CanvasComponent:
         Size: =24
         Text: ="Edit"
         Width: =188
-        X: =387
+        X: =360
         Y: =480
         ZIndex: =4
 
@@ -94,113 +92,115 @@ CRUD As CanvasComponent:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =54
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.Email_Text
         Width: =209
-        X: =39
-        Y: =178
+        X: =69
+        Y: =168
         ZIndex: =6
 
     Label1_2 As label:
-        Align: =Align.Center
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =90
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.Username
-        Width: =409
-        X: =190
-        Y: =178
+        Width: =302
+        X: =281
+        Y: =168
         ZIndex: =7
 
     Label1_3 As label:
-        Align: =Align.Center
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =54
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.Department_Name
         Width: =209
-        X: =39
-        Y: =246
+        X: =69
+        Y: =238
         ZIndex: =8
 
     Label1_4 As label:
-        Align: =Align.Center
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =54
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.Department
-        Width: =209
-        X: =271
-        Y: =246
+        Width: =302
+        X: =281
+        Y: =238
         ZIndex: =9
 
     Label1_5 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =54
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.Slot_Booked
         Width: =209
-        X: =39
-        Y: =307
+        X: =69
+        Y: =305
         ZIndex: =10
 
     Label1_6 As label:
-        Align: =Align.Center
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =54
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.Slot_Booked_Text
-        Width: =209
-        X: =271
-        Y: =307
+        Width: =302
+        X: =281
+        Y: =305
         ZIndex: =11
 
     Label1_7 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =54
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.Timing
-        Width: =170
-        X: =39
-        Y: =363
+        Width: =209
+        X: =69
+        Y: =373
         ZIndex: =12
 
     Label1_8 As label:
-        Align: =Align.Center
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =54
-        Size: =21
+        Font: =Font.'Segoe UI'
+        Height: =44
+        Size: =15
         Text: =CRUD.TImingText
-        Width: =385
-        X: =190
-        Y: =363
+        Width: =302
+        X: =281
+        Y: =373
         ZIndex: =13
 
     Icon3_1 As icon.Cancel:
         BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =51
         Icon: =Icon.Cancel
         OnSelect: =CRUD.CRUD_Cancel()
         Width: =41
-        X: =548
-        Y: =72
+        X: =558
+        Y: =63
         ZIndex: =14
 

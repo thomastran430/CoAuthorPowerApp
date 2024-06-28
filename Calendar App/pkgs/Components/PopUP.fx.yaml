@@ -26,11 +26,12 @@ PopUP As CanvasComponent:
 
     Rectangle2 As rectangle:
         BorderColor: =RGBA(0, 18, 107, 1)
+        BorderThickness: =3
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =342
-        Width: =590
-        X: =27
-        Y: =117
+        Height: =315
+        Width: =396
+        X: =127
+        Y: =160
         ZIndex: =1
 
     Icon1_1 As icon.CancelBadge:
@@ -49,13 +50,12 @@ PopUP As CanvasComponent:
         BorderColor: =RGBA(0, 18, 107, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(237, 237, 237, 1)
         Height: =52
         Icon: =Icon.Cancel
         OnSelect: =PopUP.PopUp_Cancel()
         Width: =48
-        X: =567
-        Y: =117
+        X: =475
+        Y: =160
         ZIndex: =3
 
     Label2_1 As label:
@@ -63,11 +63,12 @@ PopUP As CanvasComponent:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
         Height: =70
-        Size: =21
+        Size: =20
         Text: =PopUP.Message_Text
-        Width: =560
-        X: =42
-        Y: =348
+        Width: =396
+        X: =127
+        Y: =353
         ZIndex: =4
 
