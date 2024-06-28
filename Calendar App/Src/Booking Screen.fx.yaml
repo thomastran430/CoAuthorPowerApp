@@ -3087,11 +3087,11 @@
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             DisabledFill: =RGBA(161, 159, 157, 1)
-            Fill: =RGBA(56, 96, 178, 0)
+            Fill: =RGBA(11, 77, 133, 70%)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(11, 77, 133, 70%)
+            PressedFill: =RGBA(11, 77, 133, 70%)
             Visible: =varShowPopUpthree
             Width: =1364
             X: =2
@@ -3104,8 +3104,8 @@
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =227
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =varShowPopUpthree
             Width: =585
             X: =407
