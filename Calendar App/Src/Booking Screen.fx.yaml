@@ -2,191 +2,32 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: =
 
-    Container3 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Fill: =RGBA(50, 86, 160, 1)
-        Height: =87
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Width: =1366
+    Button4 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(16, 110, 190, 1)
+        OnSelect: =Set(popup_select_all,true)
+        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(16, 110, 190, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="View All"
+        X: =1194
+        Y: =100
         ZIndex: =1
-
-        Label10_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =87
-            Size: =20
-            Text: |
-                =If(
-                    IsBlank(ComboBox1.Selected),
-                    "Select a user...",
-                    ComboBox1.Selected.DisplayName  
-                )
-            Width: =773
-            X: =88
-            ZIndex: =2
-
-        Label12 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =87
-            Size: =18
-            Text: |
-                =If(
-                    IsBlank(ComboBox1.Selected),
-                    "City",
-                    ComboBox1.Selected.OfficeLocation & " (" & ComboBox1.Selected.Department & ")"
-                )
-            Width: =392
-            X: =973
-            ZIndex: =3
-
-        Image1 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =99
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: ='924291258'
-            ImagePosition: =ImagePosition.Fill
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =88
-            ZIndex: =4
-
-    "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
-        BorderColor: =RGBA(245, 245, 245, 1)
-        DelayItemLoading: =true
-        Height: =579
-        Items: =New_AppointmentsX
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =116
-        Width: =609
-        X: =374
-        Y: =174
-        ZIndex: =1
-
-        Title3 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =12
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Start_Time
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 86
-            X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle3.Size*1.8 + 2 + Body1.Size*1.8)) / 2
-            ZIndex: =1
-
-        Subtitle3 As label:
-            Color: =RGBA(96, 94, 92, 1)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =12
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =ThisItem.Appointment_Date
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height
-            ZIndex: =2
-
-        Body1 As label:
-            Color: =RGBA(96, 94, 92, 1)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =12
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =ThisItem.Email
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Subtitle3.Y + Subtitle3.Height
-            ZIndex: =3
-
-        NextArrow3 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =50
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =16
-            PaddingLeft: =16
-            PaddingRight: =16
-            PaddingTop: =16
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Tooltip: ="View item details"
-            Width: =50
-            X: =Parent.TemplateWidth - Self.Width - 12
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
-
-        Separator3 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
-
-        Rectangle11 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(0, 120, 212, 1)
-            Height: =Parent.TemplateHeight - Separator3.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =6
 
     "Gallery6 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         BorderColor: =RGBA(245, 245, 245, 1)
@@ -199,7 +40,7 @@
         TemplateSize: =116
         Width: =1366
         Y: =246
-        ZIndex: =1
+        ZIndex: =2
 
         Title10 As label:
             Color: =RGBA(50, 49, 48, 1)
@@ -302,6 +143,192 @@
             Width: =4
             ZIndex: =6
 
+    "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        BorderColor: =RGBA(245, 245, 245, 1)
+        DelayItemLoading: =true
+        Height: =579
+        Items: =New_AppointmentsX
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =116
+        Width: =609
+        X: =374
+        Y: =174
+        ZIndex: =3
+
+        Title3 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =12
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Start_Time
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =16
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle3.Size*1.8 + 2 + Body1.Size*1.8)) / 2
+            ZIndex: =1
+
+        Subtitle3 As label:
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =12
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Appointment_Date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Title3.Y + Title3.Height
+            ZIndex: =2
+
+        Body1 As label:
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =12
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Email
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title3.Width
+            X: =Title3.X
+            Y: =Subtitle3.Y + Subtitle3.Height
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle11 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 120, 212, 1)
+            Height: =Parent.TemplateHeight - Separator3.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+    Container3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(50, 86, 160, 1)
+        Height: =87
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        ZIndex: =4
+
+        Label10_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =87
+            Size: =20
+            Text: |
+                =If(
+                    IsBlank(ComboBox1.Selected),
+                    "Select a user...",
+                    ComboBox1.Selected.DisplayName  
+                )
+            Width: =773
+            X: =88
+            ZIndex: =2
+
+        Label12 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =87
+            Size: =18
+            Text: |
+                =If(
+                    IsBlank(ComboBox1.Selected),
+                    "City",
+                    ComboBox1.Selected.OfficeLocation & " (" & ComboBox1.Selected.Department & ")"
+                )
+            Width: =392
+            X: =973
+            ZIndex: =3
+
+        Image1 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =99
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='924291258'
+            ImagePosition: =ImagePosition.Fill
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =88
+            ZIndex: =4
+
     Image2 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -318,7 +345,7 @@
         Width: =253
         X: =642
         Y: =8
-        ZIndex: =2
+        ZIndex: =5
 
     Email_Label As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -335,7 +362,7 @@
         Width: =240
         X: =617
         Y: =103
-        ZIndex: =3
+        ZIndex: =6
 
     Form_Container As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -347,7 +374,7 @@
         RadiusTopRight: =4
         Width: =541
         Y: =156
-        ZIndex: =4
+        ZIndex: =7
 
         Date_Label_1 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -768,7 +795,7 @@
         Width: =823
         X: =541
         Y: =156
-        ZIndex: =5
+        ZIndex: =8
 
         "WeekdaysGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -1142,7 +1169,7 @@
         Width: =264
         X: =324
         Y: =98
-        ZIndex: =6
+        ZIndex: =9
 
     ComboBox1 As combobox:
         BorderColor: =RGBA(245, 245, 245, 1)
@@ -1193,23 +1220,7 @@
         Width: =434
         X: =760
         Y: =103
-        ZIndex: =7
-
-    Label10 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(50, 49, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =13
-        Text: ="Whose appointment are you editing?"
-        Width: =321
-        X: =17
-        Y: =103
-        ZIndex: =18
+        ZIndex: =10
 
     Group3 As group:
         Height: =5
@@ -1230,7 +1241,7 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =varShowPopUp
             Width: =1366
-            ZIndex: =8
+            ZIndex: =11
 
         PopUp_Window As rectangle:
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -1246,7 +1257,7 @@
             Width: =726
             X: =288
             Y: =168
-            ZIndex: =9
+            ZIndex: =12
 
         PopUp_Title_Bar As label:
             Align: =Align.Center
@@ -1265,7 +1276,7 @@
             Width: =726
             X: =288
             Y: =128
-            ZIndex: =10
+            ZIndex: =13
 
         Label_You_Info As label:
             Align: =Align.Center
@@ -1284,7 +1295,7 @@
             Width: =474
             X: =386
             Y: =174
-            ZIndex: =11
+            ZIndex: =14
 
         Label_Email_PopUp_Label As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1300,7 +1311,7 @@
             Visible: =varShowPopUp
             X: =323
             Y: =225
-            ZIndex: =12
+            ZIndex: =15
 
         Label_Dropdown_PopUp As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1316,7 +1327,7 @@
             Visible: =varShowPopUp
             X: =315
             Y: =309
-            ZIndex: =13
+            ZIndex: =16
 
         Dropdown_PopUp As dropdown:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -1349,7 +1360,7 @@
             Visible: =varShowPopUp
             X: =465
             Y: =309
-            ZIndex: =14
+            ZIndex: =17
 
         Continue_Btn_PopUp As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1388,7 +1399,7 @@
             Visible: =varShowPopUp
             X: =713
             Y: =457
-            ZIndex: =15
+            ZIndex: =18
 
         Cancel_Btn_PopUp As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1416,7 +1427,7 @@
             Visible: =varShowPopUp
             X: =427
             Y: =457
-            ZIndex: =16
+            ZIndex: =19
 
         TextInput3 As text:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -1448,7 +1459,23 @@
             Visible: =varShowPopUp
             X: =469
             Y: =224
-            ZIndex: =17
+            ZIndex: =20
+
+    Label10 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="Whose appointment are you editing?"
+        Width: =321
+        X: =17
+        Y: =103
+        ZIndex: =21
 
     PopUP_1 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
@@ -1459,7 +1486,7 @@
         Visible: =lcl_popup
         X: =343
         Y: =71
-        ZIndex: =29
+        ZIndex: =32
 
     PopUP_2 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
@@ -1473,7 +1500,7 @@
         Width: =636
         X: =407
         Y: =143
-        ZIndex: =30
+        ZIndex: =33
 
     CRUD_1 As CRUD:
         CRUD_Cancel: =Set(varShowPopUptwo, false)
@@ -1498,34 +1525,7 @@
         Width: =820
         X: =288
         Y: =33
-        ZIndex: =31
-
-    Button4 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(0, 120, 212, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(16, 110, 190, 1)
-        OnSelect: =Set(popup_select_all,true)
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="View All"
-        X: =1194
-        Y: =100
-        ZIndex: =42
+        ZIndex: =34
 
     EditAppointmentPopup As group:
         Height: =5
@@ -1539,15 +1539,14 @@
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
             DisabledFill: =RGBA(161, 159, 157, 1)
-            Fill: =RGBA(56, 96, 178, 0)
+            Fill: =RGBA(11, 77, 133, 70%)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(11, 77, 133, 70%)
+            PressedFill: =RGBA(11, 77, 133, 70%)
             Visible: =varShowPopUpFour
-            Width: =1364
-            X: =2
-            ZIndex: =32
+            Width: =1366
+            ZIndex: =35
 
         Rectangle5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1557,13 +1556,13 @@
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =547
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =varShowPopUpFour
-            Width: =640
-            X: =374
+            Width: =641
+            X: =373
             Y: =44
-            ZIndex: =33
+            ZIndex: =36
 
         Form2 As form:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -1572,10 +1571,10 @@
             Item: =LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp)
             NumberOfColumns: =1
             Visible: =varShowPopUpFour
-            Width: =636
-            X: =376
+            Width: =637
+            X: =375
             Y: =107
-            ZIndex: =34
+            ZIndex: =37
 
             Email_DataCard3 As typedDataCard.allowedValuesStringEditCard:
                 AllowedValues: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.AllowedValues, Email)
@@ -2311,10 +2310,10 @@
             Size: =20
             Text: ="Edit Appointment"
             Visible: =varShowPopUpFour
-            Width: =640
-            X: =374
+            Width: =641
+            X: =373
             Y: =44
-            ZIndex: =35
+            ZIndex: =38
 
         Button1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2355,9 +2354,9 @@
             Text: ="Submit Changes"
             Visible: =varShowPopUpFour
             Width: =183
-            X: =606
+            X: =605
             Y: =510
-            ZIndex: =36
+            ZIndex: =39
 
         Button5 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2386,9 +2385,9 @@
             Text: ="X"
             Visible: =varShowPopUpFour
             Width: =89
-            X: =924
+            X: =923
             Y: =44
-            ZIndex: =37
+            ZIndex: =40
 
     "'adminsignin(delete)' As group":
         Height: =5
@@ -2416,7 +2415,7 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =ShowPfive
             Width: =1366
-            ZIndex: =23
+            ZIndex: =26
 
         Rectangle6 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2432,7 +2431,7 @@
             Width: =635
             X: =365
             Y: =233
-            ZIndex: =24
+            ZIndex: =27
 
         Icon3 As icon.CancelBadge:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2453,7 +2452,7 @@
             Width: =191
             X: =568
             Y: =336
-            ZIndex: =25
+            ZIndex: =28
 
         Label2 As label:
             Align: =Align.Center
@@ -2472,7 +2471,7 @@
             Width: =592
             X: =390
             Y: =467
-            ZIndex: =26
+            ZIndex: =29
 
         Icon4 As icon.Cancel:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2492,7 +2491,7 @@
             Visible: =ShowPfive
             X: =936
             Y: =235
-            ZIndex: =27
+            ZIndex: =30
 
     Group2 As group:
         Height: =5
@@ -2513,7 +2512,7 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =ShowPfour
             Width: =1364
-            ZIndex: =19
+            ZIndex: =22
 
         Rectangle3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2529,7 +2528,7 @@
             Width: =692
             X: =351
             Y: =183
-            ZIndex: =20
+            ZIndex: =23
 
         Icon1 As icon.CancelBadge:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2550,7 +2549,7 @@
             Width: =214
             X: =579
             Y: =264
-            ZIndex: =21
+            ZIndex: =24
 
         Label1 As label:
             Align: =Align.Center
@@ -2569,7 +2568,7 @@
             Width: =612
             X: =402
             Y: =437
-            ZIndex: =22
+            ZIndex: =25
 
         Icon2 As icon.Cancel:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2591,7 +2590,7 @@
             Width: =43
             X: =1000
             Y: =182
-            ZIndex: =28
+            ZIndex: =31
 
     Group4 As group:
         Height: =5
@@ -2612,7 +2611,7 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =popup_select_all
             Width: =1364
-            ZIndex: =43
+            ZIndex: =45
 
         Rectangle13 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2628,7 +2627,7 @@
             Width: =644
             X: =427
             Y: =91
-            ZIndex: =44
+            ZIndex: =46
 
         Container4 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2643,7 +2642,7 @@
             Width: =644
             X: =427
             Y: =92
-            ZIndex: =45
+            ZIndex: =47
 
             Label11 As label:
                 Align: =Align.Center
@@ -2797,7 +2796,7 @@
             Width: =51
             X: =1008
             Y: =111
-            ZIndex: =46
+            ZIndex: =48
 
     Group5 As group:
         Height: =5
@@ -2818,7 +2817,7 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =popup_select_all
             Width: =1366
-            ZIndex: =47
+            ZIndex: =49
 
         Container6 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2829,7 +2828,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1364
-            ZIndex: =48
+            ZIndex: =50
 
             Container9 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -2875,7 +2874,7 @@
             Width: =1364
             X: =0
             Y: =159
-            ZIndex: =49
+            ZIndex: =51
 
             Appointment_Date_Column3 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
@@ -2986,7 +2985,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1366
-            ZIndex: =50
+            ZIndex: =52
 
             Label9 As label:
                 Align: =Align.Center
@@ -3032,7 +3031,7 @@
             Width: =172
             X: =1108
             Y: =88
-            ZIndex: =51
+            ZIndex: =53
 
         Icon6 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3055,7 +3054,7 @@
             Width: =50
             X: =191
             Y: =79
-            ZIndex: =52
+            ZIndex: =54
 
         Icon7 As icon.Cancel:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3074,7 +3073,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
             X: =1302
-            ZIndex: =53
+            ZIndex: =55
 
     DeletePopUp As group:
         Height: =5
@@ -3096,7 +3095,7 @@
             Visible: =varShowPopUpthree
             Width: =1364
             X: =2
-            ZIndex: =38
+            ZIndex: =41
 
         Rectangle8 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -3111,7 +3110,7 @@
             Width: =585
             X: =407
             Y: =224
-            ZIndex: =39
+            ZIndex: =42
 
         Button3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3140,7 +3139,7 @@
             Width: =106
             X: =571
             Y: =351
-            ZIndex: =40
+            ZIndex: =43
 
         Button3_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3172,7 +3171,7 @@
             Width: =106
             X: =701
             Y: =351
-            ZIndex: =41
+            ZIndex: =44
 
         Label13 As label:
             Align: =Align.Center
@@ -3192,5 +3191,5 @@
             Width: =316
             X: =515
             Y: =274
-            ZIndex: =54
+            ZIndex: =56
 
