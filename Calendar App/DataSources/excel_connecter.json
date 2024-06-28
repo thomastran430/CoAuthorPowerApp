@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "6e0dfb83-4b27-4825-b275-aacb823cae49",
+    "Name": "excel_connecter",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "3c33b635-5135-ef11-8409-002248043648"
+  }
+]

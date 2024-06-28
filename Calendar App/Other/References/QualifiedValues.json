@@ -10,7 +10,9 @@
     {
       "Kind": "default.cds_creda_new_appointmentsx_forms",
       "Namespace": "New_AppointmentsXs (Forms)",
-      "Values": {}
+      "Values": {
+        "Information": "24525ea9-3ef6-4793-83a6-f4b0060ce569"
+      }
     },
     {
       "Kind": "default.cds_creda_new_appointmentsx_table_forms",
@@ -22,7 +24,9 @@
     {
       "Kind": "default.cds_creda_new_appointmentsx_table2_forms",
       "Namespace": "New_AppointmentsX_table2S (Forms)",
-      "Values": {}
+      "Values": {
+        "Information": "e3073e57-a82c-41cc-991d-dea4ab56d4e8"
+      }
     }
   ]
 }

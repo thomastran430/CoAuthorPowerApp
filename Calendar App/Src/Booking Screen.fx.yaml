@@ -1,5 +1,5 @@
 "'Booking Screen' As screen":
-    LoadingSpinnerColor: =RGBA(202, 80, 16, 1)
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: =
 
     Container3 As groupContainer.manualLayoutContainer:
@@ -19,7 +19,7 @@
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =87
@@ -41,7 +41,7 @@
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =87
@@ -74,7 +74,7 @@
             ZIndex: =4
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Height: =579
         Items: =New_AppointmentsX
@@ -89,13 +89,13 @@
 
         Title3 As label:
             Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Text: =ThisItem.Start_Time
@@ -106,14 +106,14 @@
             ZIndex: =1
 
         Subtitle3 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
@@ -125,14 +125,14 @@
             ZIndex: =2
 
         Body1 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
@@ -145,15 +145,15 @@
 
         NextArrow3 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =50
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
@@ -162,7 +162,7 @@
             PaddingRight: =16
             PaddingTop: =16
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="View item details"
             Width: =50
@@ -181,7 +181,7 @@
 
         Rectangle11 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            Fill: =RGBA(0, 120, 212, 1)
             Height: =Parent.TemplateHeight - Separator3.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
@@ -189,7 +189,7 @@
             ZIndex: =6
 
     "Gallery6 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderColor: =RGBA(245, 245, 245, 1)
         DelayItemLoading: =true
         Height: =522
         Items: =New_AppointmentsX
@@ -203,13 +203,13 @@
 
         Title10 As label:
             Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Text: =ThisItem.Appointment_Date
@@ -220,14 +220,14 @@
             ZIndex: =1
 
         Subtitle7 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
@@ -239,14 +239,14 @@
             ZIndex: =2
 
         Body5 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(96, 94, 92, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
-            PaddingLeft: =0
+            PaddingLeft: =12
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
@@ -259,15 +259,15 @@
 
         NextArrow7 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =50
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
@@ -276,7 +276,7 @@
             PaddingRight: =16
             PaddingTop: =16
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="View item details"
             Width: =50
@@ -295,7 +295,7 @@
 
         Rectangle19 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            Fill: =RGBA(0, 120, 212, 1)
             Height: =Parent.TemplateHeight - Separator7.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
@@ -324,9 +324,9 @@
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
+        Color: =RGBA(50, 49, 48, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =36
@@ -353,9 +353,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
@@ -368,9 +368,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
@@ -383,9 +383,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
@@ -395,22 +395,23 @@
             ZIndex: =5
 
         Input_Slots As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
+            ChevronBackground: =RGBA(245, 245, 245, 1)
+            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+            ChevronFill: =RGBA(50, 49, 48, 1)
+            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(245, 245, 245, 1)
             Font: =Font.'Segoe UI'
             Height: =44
-            HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(245, 245, 245, 1)
             Items: |-
                 =    ["12:00 AM - 1:00 AM", "1:00 AM - 2:00 AM", "2:00 AM - 3:00 AM", "3:00 AM - 4:00 AM", "4:00 AM - 5:00 AM", "5:00 AM - 6:00 AM", 
                      "6:00 AM - 7:00 AM", "7:00 AM - 8:00 AM", "8:00 AM - 9:00 AM", "9:00 AM - 10:00 AM", "10:00 AM - 11:00 AM", "11:00 AM - 12:00 PM", 
@@ -445,10 +446,11 @@
             PaddingLeft: =12
             PaddingRight: =5
             PaddingTop: =5
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
-            SelectionFill: =RGBA(202, 80, 16, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(50, 49, 48, 1)
+            SelectionFill: =RGBA(0, 120, 212, 1)
             Size: =13
             Width: =489
             X: =20
@@ -456,30 +458,32 @@
             ZIndex: =6
 
         Input_Location As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
+            ChevronBackground: =RGBA(245, 245, 245, 1)
+            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+            ChevronFill: =RGBA(50, 49, 48, 1)
+            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(245, 245, 245, 1)
             Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(245, 245, 245, 1)
             Items: =["New Jersey","Colarado","Texas"]
             PaddingBottom: =5
             PaddingLeft: =12
             PaddingRight: =5
             PaddingTop: =5
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
-            SelectionFill: =RGBA(202, 80, 16, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(50, 49, 48, 1)
+            SelectionFill: =RGBA(0, 120, 212, 1)
             Size: =13
             Width: =489
             X: =20
@@ -487,17 +491,18 @@
             ZIndex: =7
 
         Input_Date As datepicker:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            CalendarHeaderFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-            Color: =RGBA(51, 51, 51, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
+            CalendarHeaderFill: =RGBA(16, 110, 190, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(245, 245, 245, 1)
             Font: =Font.'Segoe UI'
-            HoverDateFill: =RGBA(200, 200, 200, 1)
-            IconBackground: =RGBA(202, 80, 16, 1)
+            HoverDateFill: =RGBA(184, 187, 184, 1)
+            IconBackground: =RGBA(0, 120, 212, 1)
             PaddingTop: =5
-            SelectedDateFill: =RGBA(202, 80, 16, 1)
+            SelectedDateFill: =RGBA(0, 120, 212, 1)
             Size: =13
             Width: =489
             X: =20
@@ -508,9 +513,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =49
@@ -524,31 +529,33 @@
             ZIndex: =9
 
         Input_Department As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
+            ChevronBackground: =RGBA(245, 245, 245, 1)
+            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+            ChevronFill: =RGBA(50, 49, 48, 1)
+            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(50, 49, 48, 1)
             Default: =First(colAppointmentDetails).Department_Name.Value
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(245, 245, 245, 1)
             Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(245, 245, 245, 1)
             Items: =["Cardiology","Pathology","Surgery"]
             PaddingBottom: =5
             PaddingLeft: =12
             PaddingRight: =5
             PaddingTop: =5
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
-            SelectionFill: =RGBA(202, 80, 16, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(50, 49, 48, 1)
+            SelectionFill: =RGBA(0, 120, 212, 1)
             Size: =13
             Width: =489
             X: =20
@@ -559,9 +566,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
@@ -572,17 +579,18 @@
 
         Submit_Button As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(202, 80, 16, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(0, 120, 212, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =43
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |+
                 = Set(varStartTime, Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1)));
                 Set(varEndTime, Trim(Mid(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) + 3)));
@@ -592,9 +600,9 @@
                 Email_Confirmer.Run(ComboBox1.Selected.Mail,Input_Location.Selected.Value,Input_Department.Selected.Value,Text(Input_Date.SelectedDate,"MM-dd-yyyy"),varStartTime,varEndTime)
                 
                 
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -611,9 +619,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             DisplayMode: =DisplayMode.View
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
@@ -630,9 +638,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =49
@@ -649,9 +657,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             DisplayMode: =DisplayMode.View
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
@@ -666,17 +674,18 @@
 
         Submit_Button_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(202, 80, 16, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(0, 120, 212, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =43
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |
                 =// Set start and end times from the selected slot
                 Set(varStartTime, Trim(Left(Input_Slots.Selected.Value, Find(" -", Input_Slots.Selected.Value) - 1)));
@@ -738,9 +747,9 @@
                            UpdateContext({lcl_popuptwo:true})
                 
                 )
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -762,7 +771,7 @@
         ZIndex: =5
 
         "WeekdaysGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
             DelayItemLoading: =true
             Fill: =RGBA(50, 86, 160, 1)
             Height: =41
@@ -781,13 +790,13 @@
             Title8 As label:
                 Align: =Align.Center
                 Color: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                 Height: =19
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
-                PaddingLeft: =0
+                PaddingLeft: =12
                 PaddingRight: =0
                 PaddingTop: =0
                 Text: =ThisItem.Value
@@ -798,7 +807,7 @@
                 ZIndex: =1
 
         "DatesGallary As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
             DelayItemLoading: =true
             Height: =484
             Items: |
@@ -832,7 +841,7 @@
                             1 
                         )
                     )
-                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 Fill: |-
                     =If(
                         ThisItem.Value = Today(),
@@ -870,7 +879,7 @@
                 LineHeight: =2
                 OnSelect: =Select(Parent)
                 PaddingBottom: =0
-                PaddingLeft: =0
+                PaddingLeft: =12
                 PaddingRight: =0
                 PaddingTop: =0
                 Text: =Day(ThisItem.Value)
@@ -883,9 +892,9 @@
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
+                Color: =RGBA(50, 49, 48, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 Fill: =RGBA(39,113 , 194, 0)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
@@ -913,7 +922,7 @@
                 ZIndex: =2
 
             "AppointmentsGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =80
                 Items: |-
@@ -928,17 +937,18 @@
 
                 Button2 As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(202, 80, 16, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(0, 120, 212, 1)
                     FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
                     Height: =16
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+                    HoverFill: =RGBA(16, 110, 190, 1)
                     OnSelect: |-
                         =//Input_Department.SelectedText=ThisItem.Department_Name;
                         
@@ -956,9 +966,9 @@
                         Set(end_time_dp,ThisItem.End_Time);
                         Set(slot_dp,ThisItem.Start_Time & "-" & ThisItem.End_Time);
                         Set(department_dp,ThisItem.Department_Name)
-                    PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+                    PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    PressedFill: =RGBA(16, 110, 190, 1)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -976,7 +986,7 @@
             BorderThickness: =2
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
@@ -990,17 +1000,18 @@
 
         PreviousButton As button:
             BorderColor: =
+            BorderStyle: =BorderStyle.None
             BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(175, 191, 224, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.Arial
             Height: =89
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |-
                 =Set(
                     varCurrentDate,
@@ -1010,9 +1021,9 @@
                         1
                     )
                 )
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -1025,17 +1036,18 @@
 
         NextButton As button:
             BorderColor: =
+            BorderStyle: =BorderStyle.None
             BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(175, 191, 224, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.Arial
             Height: =89
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |-
                 =Set(
                     varCurrentDate,
@@ -1045,9 +1057,9 @@
                         1
                     )
                 )
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -1060,16 +1072,17 @@
 
         TodayButton As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(50, 86, 160, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             FontWeight: =FontWeight.Semibold
             Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |+
                 =Set(
                     varCurrentDate,
@@ -1080,9 +1093,9 @@
                     )
                 )
                 
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -1095,13 +1108,13 @@
             ZIndex: =5
 
     Radio2 As radio:
-        BorderColor: =RGBA(51, 51, 51, 1)
+        BorderColor: =RGBA(50, 49, 48, 1)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
+        Color: =RGBA(50, 49, 48, 1)
         Default: ="Yours"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(161, 159, 157, 1)
         DisplayMode: |
             =If(
                 IsBlank(LookUp(Admin_Login_Cred, UserName = Office365Users.MyProfile().Mail && Role = "Admin")), 
@@ -1111,7 +1124,7 @@
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =66
-        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Items: =["Yours","Others"]
         Layout: =Layout.Horizontal
@@ -1120,10 +1133,10 @@
             //If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
         PaddingBottom: =5
         PaddingTop: =5
-        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedColor: =RGBA(50, 49, 48, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
-        RadioBorderColor: =RGBA(51, 51, 51, 1)
-        RadioSelectionFill: =RGBA(202, 80, 16, 1)
+        RadioBorderColor: =RGBA(50, 49, 48, 1)
+        RadioSelectionFill: =RGBA(0, 120, 212, 1)
         RadioSize: =30
         Size: =13
         Width: =264
@@ -1132,14 +1145,14 @@
         ZIndex: =6
 
     ComboBox1 As combobox:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
+        BorderColor: =RGBA(245, 245, 245, 1)
+        ChevronBackground: =RGBA(245, 245, 245, 1)
+        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+        ChevronFill: =RGBA(50, 49, 48, 1)
+        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+        Color: =RGBA(50, 49, 48, 1)
         DefaultSelectedItems: |-
             =If(
               Radio2.Selected.Value = "Yours",
@@ -1147,24 +1160,25 @@
               Blank()
             )
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
         DisplayFields: =["DisplayName","Mail"]
         DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
+        Fill: =RGBA(245, 245, 245, 1)
         Font: =Font.'Segoe UI'
         Height: =36
-        HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverBorderColor: =RGBA(16, 110, 190, 1)
+        HoverColor: =RGBA(50, 49, 48, 1)
+        HoverFill: =RGBA(245, 245, 245, 1)
         Items: |-
             =//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
             Filter(
                 Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
                  "@valuemomentum.com" in Mail 
             )
-        PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+        PressedBorderColor: =RGBA(16, 110, 190, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(202, 80, 16, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["DisplayName","Mail"]
         SearchItems: |-
             =Search(//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
@@ -1172,7 +1186,7 @@
                 Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
                  "@valuemomentum.com" in Mail 
             ),ComboBox1.SearchText,DisplayName,Mail)
-        SelectionFill: =RGBA(202, 80, 16, 1)
+        SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =13
         Template: =ListItemTemplate.Double
@@ -1185,9 +1199,9 @@
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
+        Color: =RGBA(50, 49, 48, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =13
@@ -1208,12 +1222,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(56, 96, 178, 0.5)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =varShowPopUp
             Width: =1366
             ZIndex: =8
@@ -1222,12 +1236,12 @@
             BorderColor: =RGBA(255, 255, 255, 1)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =390
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =varShowPopUp
             Width: =726
             X: =288
@@ -1239,9 +1253,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 191, 0, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
@@ -1258,9 +1272,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =36
@@ -1276,9 +1290,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
@@ -1292,9 +1306,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
@@ -1305,30 +1319,32 @@
             ZIndex: =13
 
         Dropdown_PopUp As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
+            ChevronBackground: =RGBA(245, 245, 245, 1)
+            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+            ChevronFill: =RGBA(50, 49, 48, 1)
+            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(245, 245, 245, 1)
             Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(245, 245, 245, 1)
             Items: =["Cardiology","Pathology","Surgery"]
             PaddingBottom: =5
             PaddingLeft: =12
             PaddingRight: =5
             PaddingTop: =5
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
-            SelectionFill: =RGBA(202, 80, 16, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(50, 49, 48, 1)
+            SelectionFill: =RGBA(0, 120, 212, 1)
             Size: =13
             Visible: =varShowPopUp
             X: =465
@@ -1337,16 +1353,17 @@
 
         Continue_Btn_PopUp As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(152, 208, 70, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |
                 =// Update the record in the SharePoint list
                 Patch(
@@ -1359,9 +1376,9 @@
                 
                 // Optional: Notify the user about the update
                 Notify("Record updated successfully!", NotificationType.Success);
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -1375,20 +1392,21 @@
 
         Cancel_Btn_PopUp As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: =Set(varShowPopUp,false);
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -1401,17 +1419,17 @@
             ZIndex: =16
 
         TextInput3 As text:
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             Default: =
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnChange: |-
                 =Set(Email,TextInput3.Text);
@@ -1419,8 +1437,8 @@
                     FilteredAppointments,
                     LookUp(New_AppointmentsX, Email=Email)
                 );
-            PressedBorderColor: =RGBA(202, 80, 16, 1)
-            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(50, 49, 48, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
@@ -1464,34 +1482,37 @@
         Department_Name: ="Department"
         Ebtn_Click: =Set(varShowPopUpFour, true)
         Email_Text: ="Email"
-        Height: =667
+        Fill: =RGBA(255, 255, 255, 0)
+        Height: =691
+        Size_box: =150
         Slot_Booked: ="Date"
         Slot_Booked_Text: =date_dp
         Timing: ="Time"
         TImingText: =slot_dp
         Username: =ComboBox1.Selected.DisplayName
         Visible: =varShowPopUptwo
-        Width: =649
-        X: =365
-        Y: =57
+        Width: =820
+        X: =288
+        Y: =33
         ZIndex: =31
 
     Button4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(202, 80, 16, 1)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 120, 212, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+        HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: =Set(popup_select_all,true)
-        PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+        PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+        PressedFill: =RGBA(16, 110, 190, 1)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -1513,12 +1534,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(56, 96, 178, 0.5)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =varShowPopUpFour
             Width: =1364
             X: =2
@@ -1528,12 +1549,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =547
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =varShowPopUpFour
             Width: =640
             X: =374
@@ -1541,7 +1562,7 @@
             ZIndex: =33
 
         Form2 As form:
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(245, 245, 245, 1)
             DataSource: =New_AppointmentsX
             Height: =416
             Item: =LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp)
@@ -1554,7 +1575,7 @@
 
             Email_DataCard3 As typedDataCard.allowedValuesStringEditCard:
                 AllowedValues: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.AllowedValues, Email)
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="Email"
                 Default: =ThisItem.Email
@@ -1574,9 +1595,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -1592,22 +1613,23 @@
 
                 DataCardValue8 As dropdown:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                    ChevronFill: =RGBA(33, 33, 33, 1)
-                    ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                    ChevronHoverFill: =RGBA(33, 33, 33, 1)
-                    Color: =RGBA(51, 51, 51, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     Default: =ComboBox1.Selected.Mail
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(245, 245, 245, 1)
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(212, 212, 212, 1)
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
                     Items: |
                         =Filter(
                              Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
@@ -1617,10 +1639,11 @@
                     PaddingLeft: =12
                     PaddingRight: =5
                     PaddingTop: =5
-                    PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(202, 80, 16, 1)
-                    SelectionFill: =RGBA(202, 80, 16, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SelectionColor: =RGBA(50, 49, 48, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
@@ -1658,9 +1681,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -1675,7 +1698,7 @@
                     ZIndex: =4
 
             Appointment_Date_DataCard2 As typedDataCard.dateEditCard:
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="Appointment_Date"
                 Default: =ThisItem.Appointment_Date
@@ -1695,9 +1718,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -1713,21 +1736,22 @@
 
                 DataCardValue9 As datepicker:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    CalendarHeaderFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-                    Color: =RGBA(51, 51, 51, 1)
+                    CalendarHeaderFill: =RGBA(16, 110, 190, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DefaultDate: =Parent.Default
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
+                    Fill: =RGBA(245, 245, 245, 1)
                     Font: =Font.'Segoe UI'
-                    HoverDateFill: =RGBA(200, 200, 200, 1)
-                    IconBackground: =RGBA(202, 80, 16, 1)
+                    HoverDateFill: =RGBA(184, 187, 184, 1)
+                    IconBackground: =RGBA(0, 120, 212, 1)
                     IsEditable: =true
                     PaddingBottom: =0
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    SelectedDateFill: =RGBA(202, 80, 16, 1)
+                    SelectedDateFill: =RGBA(0, 120, 212, 1)
                     Size: =13
                     StartYear: =1899
                     Tooltip: =Parent.DisplayName
@@ -1766,9 +1790,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -1783,7 +1807,7 @@
                     ZIndex: =4
 
             Department_Name_DataCard2 As typedDataCard.comboBoxEditCard:
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="Department_Name"
                 Default: =ThisItem.Department_Name
@@ -1803,9 +1827,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -1821,31 +1845,32 @@
 
                 DataCardValue10 As combobox:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                    ChevronFill: =RGBA(33, 33, 33, 1)
-                    ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                    ChevronHoverFill: =RGBA(33, 33, 33, 1)
-                    Color: =RGBA(51, 51, 51, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DefaultSelectedItems: =Parent.Default
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(245, 245, 245, 1)
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(212, 212, 212, 1)
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
                     Items: =Choices([@New_AppointmentsX].Department_Name)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(202, 80, 16, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
                     SearchFields: =["Value"]
                     SearchItems: =Choices(New_AppointmentsX.Department_Name,DataCardValue10.SearchText)
-                    SelectionFill: =RGBA(202, 80, 16, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
                     SelectMultiple: =false
                     Size: =13
                     Tooltip: =Parent.DisplayName
@@ -1884,9 +1909,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -1901,7 +1926,7 @@
                     ZIndex: =4
 
             Location_DataCard2 As typedDataCard.comboBoxEditCard:
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="Location"
                 Default: =ThisItem.Location
@@ -1921,9 +1946,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -1939,31 +1964,32 @@
 
                 DataCardValue11 As combobox:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                    ChevronFill: =RGBA(33, 33, 33, 1)
-                    ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                    ChevronHoverFill: =RGBA(33, 33, 33, 1)
-                    Color: =RGBA(51, 51, 51, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DefaultSelectedItems: =Parent.Default
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(245, 245, 245, 1)
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(212, 212, 212, 1)
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
                     Items: =Choices([@New_AppointmentsX].Location)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                    PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(202, 80, 16, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
                     SearchFields: =["Value"]
                     SearchItems: =Choices(New_AppointmentsX.Location,DataCardValue11.SearchText)
-                    SelectionFill: =RGBA(202, 80, 16, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
                     SelectMultiple: =false
                     Size: =13
                     Tooltip: =Parent.DisplayName
@@ -2002,9 +2028,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -2020,7 +2046,7 @@
 
             Start_Time_DataCard3 As typedDataCard.allowedValuesStringEditCard:
                 AllowedValues: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.AllowedValues, Start_Time)
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="Start_Time"
                 Default: =ThisItem.Start_Time
@@ -2040,9 +2066,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -2058,22 +2084,23 @@
 
                 DataCardValue13 As dropdown:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                    ChevronFill: =RGBA(33, 33, 33, 1)
-                    ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                    ChevronHoverFill: =RGBA(33, 33, 33, 1)
-                    Color: =RGBA(51, 51, 51, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     Default: =Parent.Default
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(245, 245, 245, 1)
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(212, 212, 212, 1)
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
                     Items: |-
                         =["12:00 AM", "1:00 AM", "2:00 AM", "3:00 AM", "4:00 AM", "5:00 AM", 
                              "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", 
@@ -2083,10 +2110,11 @@
                     PaddingLeft: =12
                     PaddingRight: =5
                     PaddingTop: =5
-                    PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(202, 80, 16, 1)
-                    SelectionFill: =RGBA(202, 80, 16, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SelectionColor: =RGBA(50, 49, 48, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
@@ -2124,9 +2152,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -2142,7 +2170,7 @@
 
             End_Time_DataCard3 As typedDataCard.allowedValuesStringEditCard:
                 AllowedValues: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.AllowedValues, End_Time)
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="End_Time"
                 Default: =ThisItem.End_Time
@@ -2162,9 +2190,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -2180,22 +2208,23 @@
 
                 DataCardValue15 As dropdown:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    ChevronBackground: =RGBA(255, 255, 255, 1)
-                    ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-                    ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-                    ChevronFill: =RGBA(33, 33, 33, 1)
-                    ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-                    ChevronHoverFill: =RGBA(33, 33, 33, 1)
-                    Color: =RGBA(51, 51, 51, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     Default: =Parent.Default
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(245, 245, 245, 1)
                     Font: =Font.'Segoe UI'
-                    HoverBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(212, 212, 212, 1)
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
                     Items: |-
                         =["12:00 AM", "1:00 AM", "2:00 AM", "3:00 AM", "4:00 AM", "5:00 AM", 
                              "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", 
@@ -2205,10 +2234,11 @@
                     PaddingLeft: =12
                     PaddingRight: =5
                     PaddingTop: =5
-                    PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(202, 80, 16, 1)
-                    SelectionFill: =RGBA(202, 80, 16, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SelectionColor: =RGBA(50, 49, 48, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
@@ -2246,9 +2276,9 @@
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
+                    Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -2267,9 +2297,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 191, 0, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
@@ -2284,17 +2314,18 @@
 
         Button1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(202, 80, 16, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(0, 120, 212, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =48
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |-
                 =SubmitForm(Form2);
                 Patch(
@@ -2309,9 +2340,9 @@
                      });
                 Set(varShowPopUpFour,false);
                 Set(varShowPopUptwo,false)
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -2326,10 +2357,11 @@
 
         Button5 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
@@ -2337,11 +2369,11 @@
             Height: =43
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: =Set(varShowPopUpFour,false)
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -2365,12 +2397,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(56, 96, 178, 0.5)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =varShowPopUpthree
             Width: =1364
             X: =2
@@ -2380,12 +2412,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =125
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =varShowPopUpthree
             Width: =269
             X: =521
@@ -2394,20 +2426,21 @@
 
         Button3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(149, 149, 149, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: =Set(varShowPopUpthree,false)
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -2422,23 +2455,24 @@
 
         Button3_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
             Fill: =RGBA(255, 0, 0, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
+            HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |-
                 =Remove(New_AppointmentsX,LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp));
                 Set(varShowPopUpthree,false);
                 Set(varShowPopUptwo,false)
-            PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedFill: =RGBA(16, 110, 190, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -2469,12 +2503,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(56, 96, 178, 0.3)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =ShowPfive
             Width: =1366
             ZIndex: =23
@@ -2483,12 +2517,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =380
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =ShowPfive
             Width: =635
             X: =365
@@ -2496,19 +2530,19 @@
             ZIndex: =24
 
         Icon3 As icon.CancelBadge:
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(255, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =110
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =ShowPfive
             Width: =191
@@ -2521,9 +2555,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =65
@@ -2536,19 +2570,19 @@
             ZIndex: =26
 
         Icon4 As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Cancel
             OnSelect: =Set(ShowPfive,false)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =ShowPfive
             X: =936
@@ -2566,12 +2600,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(56, 96, 178, 0.3)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =ShowPfour
             Width: =1364
             ZIndex: =19
@@ -2580,12 +2614,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =379
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =ShowPfour
             Width: =692
             X: =351
@@ -2593,19 +2627,19 @@
             ZIndex: =20
 
         Icon1 As icon.CancelBadge:
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(255, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =146
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.CancelBadge
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =ShowPfour
             Width: =214
@@ -2618,9 +2652,9 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =76
@@ -2633,39 +2667,26 @@
             ZIndex: =22
 
         Icon2 As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =51
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Cancel
             OnSelect: =Set(ShowPfour,false)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =ShowPfour
             Width: =43
             X: =1000
             Y: =182
             ZIndex: =28
-
-    Rectangle14 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderThickness: =4
-        Height: =768
-        HoverFill: =RGBA(202, 80, 16, 1)
-        PressedFill: =RGBA(202, 80, 16, 1)
-        Width: =1366
-        ZIndex: =47
 
     Group4 As group:
         Height: =5
@@ -2678,12 +2699,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(166, 166, 166, 0.3)
             FocusedBorderThickness: =4
             Height: =768
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =popup_select_all
             Width: =1364
             ZIndex: =43
@@ -2692,12 +2713,12 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(161, 159, 157, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =544
-            HoverFill: =RGBA(202, 80, 16, 1)
-            PressedFill: =RGBA(202, 80, 16, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =popup_select_all
             Width: =644
             X: =427
@@ -2727,7 +2748,7 @@
                 BorderThickness: =2
                 Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(161, 159, 157, 1)
                 Fill: =RGBA(56, 96, 178, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
@@ -2739,7 +2760,7 @@
 
             "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                 AlignInContainer: =AlignInContainer.SetByContainer
-                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Items: =New_AppointmentsX
                 Layout: =Layout.Vertical
@@ -2752,13 +2773,13 @@
 
                 Title9 As label:
                     Color: =RGBA(50, 49, 48, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     Font: =Font.'Segoe UI'
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
-                    PaddingLeft: =0
+                    PaddingLeft: =12
                     PaddingRight: =0
                     PaddingTop: =0
                     Text: =ThisItem.Appointment_Date
@@ -2769,14 +2790,14 @@
                     ZIndex: =1
 
                 Subtitle8 As label:
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(96, 94, 92, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     Font: =Font.'Segoe UI'
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
-                    PaddingLeft: =0
+                    PaddingLeft: =12
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =12
@@ -2788,14 +2809,14 @@
                     ZIndex: =2
 
                 Body4 As label:
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(96, 94, 92, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
                     Font: =Font.'Segoe UI'
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
                     PaddingBottom: =0
-                    PaddingLeft: =0
+                    PaddingLeft: =12
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =12
@@ -2808,15 +2829,15 @@
 
                 NextArrow8 As icon.ChevronRight:
                     AccessibleLabel: =Self.Tooltip
-                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(166, 166, 166, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
                     Height: =50
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.ChevronRight
                     OnSelect: =Select(Parent)
@@ -2825,7 +2846,7 @@
                     PaddingRight: =16
                     PaddingTop: =16
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="View item details"
                     Width: =50
@@ -2844,7 +2865,7 @@
 
                 Rectangle17 As rectangle:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Fill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+                    Fill: =RGBA(0, 120, 212, 1)
                     Height: =Parent.TemplateHeight - Separator8.Height
                     OnSelect: =Select(Parent)
                     Visible: =ThisItem.IsSelected
@@ -2852,20 +2873,20 @@
                     ZIndex: =6
 
         Icon5 As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(202, 80, 16, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
             Height: =48
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Cancel
             OnSelect: =Set(popup_select_all,false)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
+            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
             Width: =51
@@ -2873,233 +2894,280 @@
             Y: =111
             ZIndex: =46
 
-    Container6 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =768
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Width: =1364
-        ZIndex: =48
+    Group5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =54
 
-        Container9 As groupContainer.verticalAutoLayoutContainer:
+        Rectangle14 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(161, 159, 157, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =768
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =popup_select_all
+            Width: =1366
+            ZIndex: =47
+
+        Container6 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Height: =614
-            LayoutDirection: =LayoutDirection.Vertical
-            LayoutMode: =LayoutMode.Auto
+            Height: =768
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
+            Visible: =popup_select_all
             Width: =1364
-            Y: =153
-            ZIndex: =1
+            ZIndex: =48
 
-    DataTable6 As dataTable.datatable:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(237, 237, 237, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(202, 80, 16, 1)
-        HeadingFont: =Font.'Segoe UI'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =13
-        Height: =609
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(202, 80, 16, 1)
-        InputFill: =RGBA(255, 255, 255, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =If(!IsBlank(varSortDescending), SortByColumns(New_AppointmentsX_Tables,"creda_appointment_date", If(varSortDescending=true, SortOrder.Ascending,SortOrder.Descending)),New_AppointmentsX_Tables)
-        LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(202, 80, 16, 1)
-        PrimaryColor2: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(202, 80, 16, 1), -50%)
-        SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(202, 80, 16, .2)
-        Size: =13
-        Width: =1364
-        X: =0
-        Y: =159
-        ZIndex: =49
+            Container9 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =614
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1364
+                Y: =153
+                ZIndex: =1
 
-        Appointment_Date_Column3 As dataTableColumn.dateTimeColumn:
-            AutoWidth: =false
+        DataTable6 As dataTable.datatable:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.Solid
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(161, 159, 157, 1)
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Appointment_Date"
-            FieldName: ="creda_appointment_date"
-            FieldVariantName: ="dateTimeColumn"
-            Height: =560
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =Text(ThisItem.Appointment_Date,DateTimeFormat.LongDateTime)
-            Width: =218
+            Fill: =RGBA(237, 237, 237, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Normal
+            HeadingColor: =RGBA(255, 255, 255, 1)
+            HeadingFill: =RGBA(0, 120, 212, 1)
+            HeadingFont: =Font.'Segoe UI'
+            HeadingFontWeight: =FontWeight.Normal
+            HeadingSize: =13
+            Height: =609
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            InputFill: =RGBA(245, 245, 245, 1)
+            InvertedColor: =RGBA(255, 255, 255, 1)
+            Items: =If(!IsBlank(varSortDescending), SortByColumns(New_AppointmentsX_Tables,"creda_appointment_date", If(varSortDescending=true, SortOrder.Ascending,SortOrder.Descending)),New_AppointmentsX_Tables)
+            LinkColor: =RGBA(0, 120, 212, 1)
+            PrimaryColor1: =RGBA(0, 120, 212, 1)
+            PrimaryColor2: =RGBA(16, 110, 190, 1)
+            PrimaryColor3: =RGBA(0, 69, 120, 1)
+            SelectedColor: =RGBA(50, 49, 48, 1)
+            SelectedFill: =RGBA(199, 224, 244, 1)
+            Size: =13
+            Visible: =popup_select_all
+            Width: =1364
             X: =0
-            Y: =12
-            ZIndex: =19
+            Y: =159
+            ZIndex: =49
 
-        Department_Name_Column3 As dataTableColumn.complexOptionSetColumn:
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Department_Name"
-            FieldName: ="creda_department_name"
-            FieldVariantName: ="complexOptionSetColumn"
-            Height: =548
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.Department_Name
-            Width: =206
-            X: =0
-            Y: =12
-            ZIndex: =20
+            Appointment_Date_Column3 As dataTableColumn.dateTimeColumn:
+                AutoWidth: =false
+                DisplayMode: =DisplayMode.Edit
+                FieldDisplayName: ="Appointment_Date"
+                FieldName: ="creda_appointment_date"
+                FieldVariantName: ="dateTimeColumn"
+                Height: =560
+                LayoutHeight: =Parent.Height
+                Order: =2
+                Text: =Text(ThisItem.Appointment_Date,DateTimeFormat.LongDateTime)
+                Width: =218
+                X: =0
+                Y: =12
+                ZIndex: =19
 
-        Email_Column3 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Email"
-            FieldName: ="creda_email"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.Email
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =21
+            Department_Name_Column3 As dataTableColumn.complexOptionSetColumn:
+                AutoWidth: =false
+                DisplayMode: =DisplayMode.Edit
+                FieldDisplayName: ="Department_Name"
+                FieldName: ="creda_department_name"
+                FieldVariantName: ="complexOptionSetColumn"
+                Height: =548
+                LayoutHeight: =Parent.Height
+                Order: =4
+                Text: =ThisItem.Department_Name
+                Width: =206
+                X: =0
+                Y: =12
+                ZIndex: =20
 
-        End_Time_Column3 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="End_Time"
-            FieldName: ="creda_end_time"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.End_Time
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =22
+            Email_Column3 As dataTableColumn.textualColumn:
+                DisplayMode: =DisplayMode.Edit
+                FieldDisplayName: ="Email"
+                FieldName: ="creda_email"
+                FieldVariantName: ="textualColumn"
+                Height: =Parent.Height
+                LayoutHeight: =Parent.Height
+                Order: =3
+                Text: =ThisItem.Email
+                Width: =100
+                X: =0
+                Y: =0
+                ZIndex: =21
 
-        Location_Column3 As dataTableColumn.complexOptionSetColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Location"
-            FieldName: ="creda_location"
-            FieldVariantName: ="complexOptionSetColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.Location
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =23
+            End_Time_Column3 As dataTableColumn.textualColumn:
+                DisplayMode: =DisplayMode.Edit
+                FieldDisplayName: ="End_Time"
+                FieldName: ="creda_end_time"
+                FieldVariantName: ="textualColumn"
+                Height: =Parent.Height
+                LayoutHeight: =Parent.Height
+                Order: =5
+                Text: =ThisItem.End_Time
+                Width: =100
+                X: =0
+                Y: =0
+                ZIndex: =22
 
-        Start_Time_Column3 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Start_Time"
-            FieldName: ="creda_start_time"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.Start_Time
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =25
+            Location_Column3 As dataTableColumn.complexOptionSetColumn:
+                DisplayMode: =DisplayMode.Edit
+                FieldDisplayName: ="Location"
+                FieldName: ="creda_location"
+                FieldVariantName: ="complexOptionSetColumn"
+                Height: =Parent.Height
+                LayoutHeight: =Parent.Height
+                Order: =6
+                Text: =ThisItem.Location
+                Width: =100
+                X: =0
+                Y: =0
+                ZIndex: =23
 
-        Status_Column3 As dataTableColumn.complexOptionSetColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Status"
-            FieldName: ="statecode"
-            FieldVariantName: ="complexOptionSetColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =10
-            Text: =ThisItem.Status
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =27
+            Start_Time_Column3 As dataTableColumn.textualColumn:
+                DisplayMode: =DisplayMode.Edit
+                FieldDisplayName: ="Start_Time"
+                FieldName: ="creda_start_time"
+                FieldVariantName: ="textualColumn"
+                Height: =Parent.Height
+                LayoutHeight: =Parent.Height
+                Order: =8
+                Text: =ThisItem.Start_Time
+                Width: =100
+                X: =0
+                Y: =0
+                ZIndex: =25
 
-    Container10 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =156
-        RadiusBottomLeft: =4
-        RadiusBottomRight: =4
-        RadiusTopLeft: =4
-        RadiusTopRight: =4
-        Width: =1366
-        ZIndex: =50
+            Status_Column3 As dataTableColumn.complexOptionSetColumn:
+                DisplayMode: =DisplayMode.Edit
+                FieldDisplayName: ="Status"
+                FieldName: ="statecode"
+                FieldVariantName: ="complexOptionSetColumn"
+                Height: =Parent.Height
+                LayoutHeight: =Parent.Height
+                Order: =10
+                Text: =ThisItem.Status
+                Width: =100
+                X: =0
+                Y: =0
+                ZIndex: =27
 
-        Label9 As label:
-            Align: =Align.Center
+        Container10 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =156
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Visible: =popup_select_all
+            Width: =1366
+            ZIndex: =50
+
+            Label9 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                Fill: =RGBA(56, 96, 178, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =62
+                Size: =25
+                Text: ="View All"
+                Width: =1366
+                ZIndex: =1
+
+        Button6 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(56, 96, 178, 1)
-            FocusedBorderThickness: =4
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(0, 120, 212, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
-            Height: =62
-            Size: =25
-            Text: ="View All"
-            Width: =1366
-            ZIndex: =1
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(16, 110, 190, 1)
+            OnSelect: =excel_connecter.Run()
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(16, 110, 190, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Export to Excel"
+            Visible: =popup_select_all
+            Width: =172
+            X: =1108
+            Y: =88
+            ZIndex: =51
 
-    Button6 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(202, 80, 16, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(202, 80, 16, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(202, 80, 16, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Export to Excel"
-        Width: =172
-        X: =1108
-        Y: =88
-        ZIndex: =51
+        Icon6 As icon.ArrowsUpDown:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =53
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Sort
+            OnSelect: |-
+                =UpdateContext({varSortDescending: !varSortDescending})
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =popup_select_all
+            Width: =50
+            X: =191
+            Y: =79
+            ZIndex: =52
 
-    Icon6 As icon.ArrowsUpDown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(202, 80, 16, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =53
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Sort
-        OnSelect: |-
-            =UpdateContext({varSortDescending: !varSortDescending})
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(202, 80, 16, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =191
-        Y: =79
-        ZIndex: =52
+        Icon7 As icon.Cancel:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+            DisabledColor: =RGBA(225, 223, 221, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(popup_select_all,false)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(16, 110, 190, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =popup_select_all
+            X: =1302
+            ZIndex: =53
 

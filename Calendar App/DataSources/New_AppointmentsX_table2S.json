@@ -6,21 +6,38 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "creda_new_appointmentsx_table2",
+    "MaxGetRowsCount": 500,
     "Name": "New_AppointmentsX_table2S",
     "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
       "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
       "creda_appointment_date": "Appointment_Date",
       "creda_department_name": "Department_Name",
       "creda_email": "Email",
       "creda_end_time": "End_Time",
       "creda_location": "Location",
+      "creda_new_appointmentsx_table2_AsyncOperations": "System Jobs",
+      "creda_new_appointmentsx_table2_BulkDeleteFailures": "Bulk Delete Failures",
+      "creda_new_appointmentsx_table2_DuplicateBaseRecord": "Duplicate Records (creda_new_appointmentsx_table2_DuplicateBaseRecord)",
+      "creda_new_appointmentsx_table2_DuplicateMatchingRecord": "Duplicate Records (creda_new_appointmentsx_table2_DuplicateMatchingRecord)",
+      "creda_new_appointmentsx_table2_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "creda_new_appointmentsx_table2_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "creda_new_appointmentsx_table2_ProcessSession": "Process Sessions",
+      "creda_new_appointmentsx_table2_SyncErrors": "Sync Errors",
       "creda_new_appointmentsx_table2id": "New_AppointmentsX_table2",
       "creda_role": "Role",
       "creda_start_time": "Start_Time",
       "creda_title": "Title",
       "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
       "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
       "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
       "statecode": "Status",
       "statuscode": "Status Reason",
       "timezoneruleversionnumber": "Time Zone Rule Version Number",
@@ -29,6 +46,20 @@
     },
     "PreferredName": "New_AppointmentsX_table2S",
     "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "New_AppointmentsX_table2S (Views)",
+    "Name": "_creda_new_appointmentsx_table2_views",
+    "RelatedEntityName": "New_AppointmentsX_table2S",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1cb82525-1536-4685-a1b1-f110bb2e0dbc": "New_AppointmentsX_table2 Advanced Find View",
+      "6309b2b7-0ec0-425b-86a0-5f1395d8cb12": "Inactive New_AppointmentsX_table2S",
+      "938f9a55-3177-4a16-baf6-c588851054d5": "New_AppointmentsX_table2 Lookup View",
+      "c4810d52-6268-4685-89ca-9ca9d1e6969a": "Active New_AppointmentsX_table2S",
+      "f8f90751-0fbf-4a6d-835f-b2fd6b03b147": "New_AppointmentsX_table2 Associated View"
+    }
   },
   {
     "DisplayName": "Department_Name (New_AppointmentsX_table2S)",
@@ -71,6 +102,46 @@
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "creda_location",
+    "RelatedEntityName": "New_AppointmentsX_table2S",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (New_AppointmentsX_table2S)_1",
+    "Name": "creda_new_appointmentsx_table2_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_table2S"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "New_AppointmentsX_table2S",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (New_AppointmentsX_table2S)_1",
+    "Name": "creda_new_appointmentsx_table2_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_table2S"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
     "RelatedEntityName": "New_AppointmentsX_table2S",
     "Type": "OptionSetInfo"
   },
