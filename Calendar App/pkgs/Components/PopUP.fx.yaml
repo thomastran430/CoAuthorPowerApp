@@ -25,6 +25,7 @@ PopUP As CanvasComponent:
     ZIndex: =1
 
     Rectangle2 As rectangle:
+        BorderColor: =RGBA(0, 18, 107, 1)
         Fill: =RGBA(255, 255, 255, 1)
         Height: =342
         Width: =590
@@ -33,6 +34,10 @@ PopUP As CanvasComponent:
         ZIndex: =1
 
     Icon1_1 As icon.CancelBadge:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =102
         Icon: =Icon.CancelBadge
         Width: =170
@@ -41,7 +46,9 @@ PopUP As CanvasComponent:
         ZIndex: =2
 
     Icon2_2 As icon.Cancel:
-        Color: =RGBA(0, 0, 0, 1)
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(237, 237, 237, 1)
         Height: =52
         Icon: =Icon.Cancel
@@ -53,6 +60,9 @@ PopUP As CanvasComponent:
 
     Label2_1 As label:
         Align: =Align.Center
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =70
         Size: =21
         Text: =PopUP.Message_Text

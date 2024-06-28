@@ -1,0 +1,186 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "creda_new_appointmentsx_tables",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "creda_new_appointmentsx_table",
+    "MaxGetRowsCount": 500,
+    "Name": "New_AppointmentsX_Tables",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "creda_appointment_date": "Appointment_Date",
+      "creda_department_name": "Department_Name",
+      "creda_email": "Email",
+      "creda_end_time": "End_Time",
+      "creda_location": "Location",
+      "creda_new_appointmentsx_table_AsyncOperations": "System Jobs",
+      "creda_new_appointmentsx_table_BulkDeleteFailures": "Bulk Delete Failures",
+      "creda_new_appointmentsx_table_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "creda_new_appointmentsx_table_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "creda_new_appointmentsx_table_ProcessSession": "Process Sessions",
+      "creda_new_appointmentsx_table_SyncErrors": "Sync Errors",
+      "creda_new_appointmentsx_tableid": "New_AppointmentsX_Table",
+      "creda_role": "Role",
+      "creda_start_time": "Start_Time",
+      "creda_title": "Title",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "New_AppointmentsX_Tables",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "New_AppointmentsX_Tables (Views)",
+    "Name": "_creda_new_appointmentsx_table_views",
+    "RelatedEntityName": "New_AppointmentsX_Tables",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "34228f16-3f4e-45eb-b3cc-913b8fbb672d": "New_AppointmentsX_Table Associated View",
+      "5e34da5e-2686-4dbc-93a6-e12f63c0e32f": "New_AppointmentsX_Table Advanced Find View",
+      "74ef5389-d49b-4f8d-ac12-f28c735b807f": "New_AppointmentsX_Table Lookup View",
+      "759689e1-8334-499d-8df5-5669438433fc": "Inactive New_AppointmentsX_Tables",
+      "ef76dbdb-43ec-48ce-a5eb-6454fffa17a5": "Active New_AppointmentsX_Tables"
+    }
+  },
+  {
+    "DisplayName": "Department_Name (New_AppointmentsX_Tables)",
+    "Name": "creda_new_appointmentsx_table_creda_department_name",
+    "OptionSetInfoNameMapping": {
+      "0": "Cardiology",
+      "1": "Pathology",
+      "2": "Surgery",
+      "3": "Choice 2"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "creda_department_name",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_Tables"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "creda_department_name",
+    "RelatedEntityName": "New_AppointmentsX_Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Location (New_AppointmentsX_Tables)",
+    "Name": "creda_new_appointmentsx_table_creda_location",
+    "OptionSetInfoNameMapping": {
+      "0": "New Jersey",
+      "1": "Colorado",
+      "2": "Texas",
+      "3": "Colarado"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "creda_location",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_Tables"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "creda_location",
+    "RelatedEntityName": "New_AppointmentsX_Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (New_AppointmentsX_Tables)_1",
+    "Name": "creda_new_appointmentsx_table_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_Tables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "New_AppointmentsX_Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (New_AppointmentsX_Tables)_1",
+    "Name": "creda_new_appointmentsx_table_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_Tables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "New_AppointmentsX_Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (New_AppointmentsX_Tables)",
+    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_3c8db53a28_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_Tables"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "New_AppointmentsX_Tables",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (New_AppointmentsX_Tables)",
+    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_3c8db53a28_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_Tables"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "New_AppointmentsX_Tables",
+    "Type": "OptionSetInfo"
+  }
+]
