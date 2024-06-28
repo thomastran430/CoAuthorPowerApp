@@ -2509,6 +2509,20 @@
             Y: =235
             ZIndex: =31
 
+    Rectangle14 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =768
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =popup_select_all
+        Width: =1366
+        ZIndex: =46
+
     Group2 As group:
         Height: =5
         Width: =5
@@ -2814,26 +2828,172 @@
             Y: =111
             ZIndex: =50
 
+    Icon6 As icon.ArrowsUpDown:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =43
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Sort
+        OnSelect: |-
+            =UpdateContext({varSortDescending: !varSortDescending})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =popup_select_all
+        Width: =34
+        X: =186
+        Y: =162
+        ZIndex: =55
+
+    DeletePopUp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =55
+
+        Rectangle2_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(161, 159, 157, 1)
+            Fill: =RGBA(11, 77, 133, 70%)
+            FocusedBorderThickness: =4
+            Height: =768
+            HoverFill: =RGBA(11, 77, 133, 70%)
+            PressedFill: =RGBA(11, 77, 133, 70%)
+            Visible: =varShowPopUpthree
+            Width: =1364
+            X: =2
+            ZIndex: =42
+
+        Rectangle8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(161, 159, 157, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =160
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =varShowPopUpthree
+            Width: =321
+            X: =536
+            Y: =265
+            ZIndex: =43
+
+        Button3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(149, 149, 149, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(16, 110, 190, 1)
+            OnSelect: =Set(varShowPopUpthree,false)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(16, 110, 190, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Cancel"
+            Visible: =varShowPopUpthree
+            Width: =106
+            X: =571
+            Y: =351
+            ZIndex: =44
+
+        Button3_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(255, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(16, 110, 190, 1)
+            OnSelect: |-
+                =Remove(New_AppointmentsX,LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp));
+                Set(varShowPopUpthree,false);
+                Set(varShowPopUptwo,false)
+            PressedBorderColor: =RGBA(0, 69, 120, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(16, 110, 190, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Confirm"
+            Visible: =varShowPopUpthree
+            Width: =106
+            X: =701
+            Y: =351
+            ZIndex: =45
+
+        Label13 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =72
+            Size: =20
+            Text: ="Confirm Delete?"
+            Visible: =varShowPopUpthree
+            Width: =316
+            X: =536
+            Y: =274
+            ZIndex: =57
+
+    Icon7 As icon.Cancel:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Cancel
+        OnSelect: =Set(popup_select_all,false)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =popup_select_all
+        X: =1302
+        ZIndex: =56
+
     Group5 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =54
-
-        Rectangle14 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(161, 159, 157, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =768
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =popup_select_all
-            Width: =1366
-            ZIndex: =46
+        ZIndex: =61
 
         Container6 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2875,7 +3035,7 @@
             HeadingSize: =13
             Height: =609
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(153, 201, 238, 1)
             InputFill: =RGBA(245, 245, 245, 1)
             InvertedColor: =RGBA(255, 255, 255, 1)
             Items: =If(!IsBlank(varSortDescending), SortByColumns(New_AppointmentsX_Tables,"creda_appointment_date", If(varSortDescending=true, SortOrder.Ascending,SortOrder.Descending)),New_AppointmentsX_Tables)
@@ -3066,163 +3226,74 @@
             Y: =88
             ZIndex: =54
 
-        Icon6 As icon.ArrowsUpDown:
+        Image3 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =43
+            Height: =64
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Sort
-            OnSelect: |-
-                =UpdateContext({varSortDescending: !varSortDescending})
+            Image: ='Screenshot 2024-06-28 155657'
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
-            Width: =34
-            X: =186
-            Y: =162
-            ZIndex: =55
+            Width: =365
+            ZIndex: =58
 
-        Icon7 As icon.Cancel:
+        Icon8 As icon.Filter:
             BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(0, 120, 212, 1)
             DisabledBorderColor: =RGBA(245, 245, 245, 1)
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
+            Height: =49
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(16, 110, 190, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Cancel
-            OnSelect: =Set(popup_select_all,false)
+            Icon: =Icon.Filter
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
-            X: =1302
-            ZIndex: =56
+            Width: =50
+            X: =858
+            Y: =79
+            ZIndex: =59
 
-    DeletePopUp As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =55
-
-        Rectangle2_3 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(161, 159, 157, 1)
-            Fill: =RGBA(11, 77, 133, 70%)
-            FocusedBorderThickness: =4
-            Height: =768
-            HoverFill: =RGBA(11, 77, 133, 70%)
-            PressedFill: =RGBA(11, 77, 133, 70%)
-            Visible: =varShowPopUpthree
-            Width: =1364
-            X: =2
-            ZIndex: =42
-
-        Rectangle8 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderThickness: =1
-            DisabledFill: =RGBA(161, 159, 157, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =160
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            Visible: =varShowPopUpthree
-            Width: =321
-            X: =536
-            Y: =265
-            ZIndex: =43
-
-        Button3 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
-            Fill: =RGBA(149, 149, 149, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(16, 110, 190, 1)
-            OnSelect: =Set(varShowPopUpthree,false)
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: ="Cancel"
-            Visible: =varShowPopUpthree
-            Width: =106
-            X: =571
-            Y: =351
-            ZIndex: =44
-
-        Button3_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
-            Fill: =RGBA(255, 0, 0, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(16, 110, 190, 1)
-            OnSelect: |-
-                =Remove(New_AppointmentsX,LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp));
-                Set(varShowPopUpthree,false);
-                Set(varShowPopUptwo,false)
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: ="Confirm"
-            Visible: =varShowPopUpthree
-            Width: =106
-            X: =701
-            Y: =351
-            ZIndex: =45
-
-        Label13 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
+        Dropdown1 As dropdown:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            ChevronBackground: =RGBA(245, 245, 245, 1)
+            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+            ChevronFill: =RGBA(50, 49, 48, 1)
+            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+            ChevronHoverFill: =RGBA(50, 49, 48, 1)
             Color: =RGBA(50, 49, 48, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            Fill: =RGBA(245, 245, 245, 1)
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
-            Height: =72
-            Size: =20
-            Text: ="Confirm Delete?"
-            Visible: =varShowPopUpthree
-            Width: =316
-            X: =536
-            Y: =274
-            ZIndex: =57
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(245, 245, 245, 1)
+            Items: =DropDownSample
+            PaddingBottom: =5
+            PaddingLeft: =12
+            PaddingRight: =5
+            PaddingTop: =5
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(50, 49, 48, 1)
+            SelectionFill: =RGBA(0, 120, 212, 1)
+            Size: =13
+            Visible: =popup_select_all
+            X: =529
+            Y: =83
+            ZIndex: =60
 
