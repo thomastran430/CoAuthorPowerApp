@@ -1541,7 +1541,21 @@
         Visible: =varShowPopUptwo
         Width: =610
         X: =390
-        ZIndex: =36
+        ZIndex: =35
+
+    Rectangle14 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(161, 159, 157, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =768
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =popup_select_all
+        Width: =1366
+        ZIndex: =40
 
     EditAppointmentPopup As group:
         Height: =5
@@ -1562,7 +1576,7 @@
             PressedFill: =RGBA(11, 77, 133, 70%)
             Visible: =varShowPopUpFour
             Width: =1366
-            ZIndex: =35
+            ZIndex: =55
 
         Rectangle5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1578,7 +1592,7 @@
             Width: =641
             X: =373
             Y: =44
-            ZIndex: =37
+            ZIndex: =56
 
         Form2 As form:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -1590,7 +1604,7 @@
             Width: =637
             X: =375
             Y: =107
-            ZIndex: =38
+            ZIndex: =57
 
             Email_DataCard3 As typedDataCard.allowedValuesStringEditCard:
                 AllowedValues: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.AllowedValues, Email)
@@ -1603,7 +1617,7 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
                 Required: =false
-                Update: =DataCardValue8.SelectedText.Value
+                Update: =ComboBox2.Selected.Mail
                 Width: =636
                 X: =0
                 Y: =0
@@ -1627,48 +1641,8 @@
                     Width: =(Parent.Width - 60) * 0.4
                     Wrap: =false
                     X: =30
-                    Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
+                    Y: =6
                     ZIndex: =1
-
-                DataCardValue8 As dropdown:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    ChevronBackground: =RGBA(245, 245, 245, 1)
-                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                    ChevronFill: =RGBA(50, 49, 48, 1)
-                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                    Color: =RGBA(50, 49, 48, 1)
-                    Default: =ComboBox1.Selected.Mail
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =Parent.DisplayMode
-                    Fill: =RGBA(245, 245, 245, 1)
-                    Font: =Font.'Segoe UI'
-                    HoverBorderColor: =RGBA(16, 110, 190, 1)
-                    HoverColor: =RGBA(50, 49, 48, 1)
-                    HoverFill: =RGBA(245, 245, 245, 1)
-                    Items: |
-                        =Filter(
-                             Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
-                            "@valuemomentum.com" in Mail 
-                        ).Mail
-                    PaddingBottom: =5
-                    PaddingLeft: =12
-                    PaddingRight: =5
-                    PaddingTop: =5
-                    PressedBorderColor: =RGBA(16, 110, 190, 1)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(0, 120, 212, 1)
-                    SelectionColor: =RGBA(50, 49, 48, 1)
-                    SelectionFill: =RGBA(0, 120, 212, 1)
-                    Size: =13
-                    Tooltip: =Parent.DisplayName
-                    Width: =(Parent.Width - 60) * 0.6
-                    X: =DataCardKey8.X + DataCardKey8.Width
-                    Y: =10
-                    ZIndex: =2
 
                 ErrorMessage8 As label:
                     AutoHeight: =true
@@ -1692,7 +1666,7 @@
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValue8.Y + DataCardValue8.Height
+                    Y: =
                     ZIndex: =3
 
                 StarVisible8 As label:
@@ -1715,6 +1689,47 @@
                     Wrap: =false
                     Y: =DataCardKey8.Y
                     ZIndex: =4
+
+                ComboBox2 As combobox:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ComboBox1.Selected
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayFields: =["City"]
+                    Fill: =RGBA(245, 245, 245, 1)
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
+                    Items: |-
+                        =Filter(
+                            Office365Users.SearchUser({searchTerm: ComboBox2.SearchText}),
+                             "@valuemomentum.com" in Mail 
+                        )
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SearchFields: =["Mail"]
+                    SearchItems: |-
+                        =Search(Filter(
+                            Office365Users.SearchUser({searchTerm: ComboBox2.SearchText}),
+                             "@valuemomentum.com" in Mail 
+                        ),ComboBox2.SearchText,Mail)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
+                    SelectMultiple: =false
+                    Size: =13
+                    Width: =345.6
+                    X: =260
+                    Y: =6
+                    ZIndex: =5
 
             Appointment_Date_DataCard2 As typedDataCard.dateEditCard:
                 BorderColor: =RGBA(245, 245, 245, 1)
@@ -2329,7 +2344,7 @@
             Width: =641
             X: =373
             Y: =44
-            ZIndex: =39
+            ZIndex: =58
 
         Button1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2351,7 +2366,7 @@
                     LookUp(New_AppointmentsX,Email=ComboBox1.Selected.Mail && Appointment_Date=date_dp && Start_Time=start_time_dp && End_Time=end_time_dp),Form2.Updates, 
                      {
                         Appointment_Date: DataCardValue9.SelectedDate,
-                        Email: DataCardValue8.SelectedText.Value,
+                        Email: ComboBox2.Selected.Mail,
                         Department_Name: DataCardValue10.Selected,
                         Location: DataCardValue11.Selected, 
                         Start_Time:DataCardValue13.SelectedText.Value, 
@@ -2372,7 +2387,7 @@
             Width: =183
             X: =605
             Y: =510
-            ZIndex: =40
+            ZIndex: =59
 
         Button5 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2403,7 +2418,7 @@
             Width: =89
             X: =923
             Y: =44
-            ZIndex: =41
+            ZIndex: =60
 
     "'adminsignin(delete)' As group":
         Height: =5
@@ -2508,20 +2523,6 @@
             X: =936
             Y: =235
             ZIndex: =31
-
-    Rectangle14 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(161, 159, 157, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderThickness: =4
-        Height: =768
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =popup_select_all
-        Width: =1366
-        ZIndex: =46
 
     Group2 As group:
         Height: =5
@@ -2641,7 +2642,8 @@
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =false
             Width: =1364
-            ZIndex: =47
+            X: =2
+            ZIndex: =41
 
         Rectangle13 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2657,7 +2659,7 @@
             Width: =644
             X: =427
             Y: =91
-            ZIndex: =48
+            ZIndex: =42
 
         Container4 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2672,7 +2674,7 @@
             Width: =644
             X: =427
             Y: =92
-            ZIndex: =49
+            ZIndex: =43
 
             Label11 As label:
                 Align: =Align.Center
@@ -2826,7 +2828,7 @@
             Width: =51
             X: =1008
             Y: =111
-            ZIndex: =50
+            ZIndex: =44
 
     Icon6 As icon.ArrowsUpDown:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2849,7 +2851,26 @@
         Width: =34
         X: =186
         Y: =162
-        ZIndex: =55
+        ZIndex: =49
+
+    Icon7 As icon.Cancel:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+        DisabledColor: =RGBA(225, 223, 221, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(16, 110, 190, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Cancel
+        OnSelect: =Set(popup_select_all,false)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =RGBA(16, 110, 190, 1)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =popup_select_all
+        X: =1302
+        ZIndex: =50
 
     DeletePopUp As group:
         Height: =5
@@ -2871,7 +2892,7 @@
             Visible: =varShowPopUpthree
             Width: =1364
             X: =2
-            ZIndex: =42
+            ZIndex: =36
 
         Rectangle8 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -2886,7 +2907,7 @@
             Width: =321
             X: =536
             Y: =265
-            ZIndex: =43
+            ZIndex: =37
 
         Button3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2915,7 +2936,7 @@
             Width: =106
             X: =571
             Y: =351
-            ZIndex: =44
+            ZIndex: =38
 
         Button3_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2947,7 +2968,7 @@
             Width: =106
             X: =701
             Y: =351
-            ZIndex: =45
+            ZIndex: =39
 
         Label13 As label:
             Align: =Align.Center
@@ -2967,26 +2988,7 @@
             Width: =316
             X: =536
             Y: =274
-            ZIndex: =57
-
-    Icon7 As icon.Cancel:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-        DisabledColor: =RGBA(225, 223, 221, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(16, 110, 190, 1)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Cancel
-        OnSelect: =Set(popup_select_all,false)
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =RGBA(16, 110, 190, 1)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =popup_select_all
-        X: =1302
-        ZIndex: =56
+            ZIndex: =51
 
     Group5 As group:
         Height: =5
@@ -3004,7 +3006,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1364
-            ZIndex: =51
+            ZIndex: =45
 
             Container9 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -3050,7 +3052,7 @@
             Width: =1364
             X: =0
             Y: =159
-            ZIndex: =52
+            ZIndex: =46
 
             Appointment_Date_Column3 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
@@ -3161,7 +3163,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1366
-            ZIndex: =53
+            ZIndex: =47
 
             Label9 As label:
                 Align: =Align.Center
@@ -3224,7 +3226,7 @@
             Width: =172
             X: =1108
             Y: =88
-            ZIndex: =54
+            ZIndex: =48
 
         Image3 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3241,7 +3243,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
             Width: =365
-            ZIndex: =58
+            ZIndex: =52
 
         Icon8 As icon.Filter:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3262,7 +3264,7 @@
             Width: =50
             X: =858
             Y: =79
-            ZIndex: =59
+            ZIndex: =53
 
         Dropdown1 As dropdown:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -3295,5 +3297,5 @@
             Visible: =popup_select_all
             X: =529
             Y: =83
-            ZIndex: =60
+            ZIndex: =54
 

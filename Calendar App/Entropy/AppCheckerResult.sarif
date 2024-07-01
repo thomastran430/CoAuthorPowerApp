@@ -1087,19 +1087,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Booking Screen'.Form2.Email_DataCard3.DataCardValue8.AccessibleLabel"
+                  "fullyQualifiedName": "'Booking Screen'.Form2.Email_DataCard3.ComboBox2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Booking Screen'.Form2.Email_DataCard3.DataCardValue8.AccessibleLabel",
+                  "fullyQualifiedName": "'Booking Screen'.Form2.Email_DataCard3.ComboBox2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Booking Screen",
-                "type": "'Booking Screen'.Form2.Email_DataCard3.DataCardValue8"
+                "type": "'Booking Screen'.Form2.Email_DataCard3.ComboBox2"
               }
             }
           ],
