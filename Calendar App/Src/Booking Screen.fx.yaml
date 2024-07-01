@@ -1703,7 +1703,7 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayFields: =["City"]
+                    DisplayFields: =["DisplayName"]
                     Fill: =RGBA(245, 245, 245, 1)
                     Font: =Font.'Segoe UI'
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -1717,12 +1717,12 @@
                     PressedBorderColor: =RGBA(16, 110, 190, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(0, 120, 212, 1)
-                    SearchFields: =["Mail"]
+                    SearchFields: =["DisplayName"]
                     SearchItems: |-
                         =Search(Filter(
                             Office365Users.SearchUser({searchTerm: ComboBox2.SearchText}),
                              "@valuemomentum.com" in Mail 
-                        ),ComboBox2.SearchText,Mail)
+                        ),ComboBox2.SearchText,DisplayName)
                     SelectionFill: =RGBA(0, 120, 212, 1)
                     SelectMultiple: =false
                     Size: =13
