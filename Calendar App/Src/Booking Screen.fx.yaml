@@ -1527,7 +1527,7 @@
             =Set(varShowPopUpFour, true);
             Set(varShowPopUptwo,false)
         Email_Text: |-
-            ="Email:"
+            ="User Name:"
         Fill: =RGBA(255, 255, 255, 0)
         Height: =635
         Size_box: =150
