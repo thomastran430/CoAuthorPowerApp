@@ -3177,7 +3177,7 @@
                 Fill: =RGBA(56, 96, 178, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =62
+                Height: =74
                 Size: =25
                 Text: ="View All"
                 Width: =1366
@@ -3193,6 +3193,7 @@
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =60
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =RGBA(16, 110, 190, 1)
@@ -3213,9 +3214,9 @@
             Size: =15
             Text: ="Export to Excel"
             Visible: =popup_select_all
-            Width: =172
-            X: =1108
-            Y: =88
+            Width: =359
+            X: =545
+            Y: =89
             ZIndex: =48
 
         Image3 As image:
@@ -3232,7 +3233,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
-            Width: =365
+            Width: =351
             ZIndex: =52
 
         Icon8 As icon.Filter:
@@ -3250,7 +3251,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =popup_select_all
+            Visible: =false
             Width: =50
             X: =858
             Y: =79
@@ -3284,7 +3285,7 @@
             SelectionColor: =RGBA(50, 49, 48, 1)
             SelectionFill: =RGBA(0, 120, 212, 1)
             Size: =13
-            Visible: =popup_select_all
+            Visible: =false
             X: =529
             Y: =83
             ZIndex: =54

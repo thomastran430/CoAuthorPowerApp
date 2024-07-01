@@ -1,17 +1,17 @@
 {
   "QualifiedValues": [
     {
-      "Kind": "default.cds_cdm_worker_forms",
-      "Namespace": "Workers (Forms)",
-      "Values": {
-        "Information": "9986e9e8-2cb9-4b6e-a0b8-7cb441fd2b7b"
-      }
-    },
-    {
       "Kind": "default.cds_creda_new_appointmentsx_forms",
       "Namespace": "New_AppointmentsXs (Forms)",
       "Values": {
         "Information": "24525ea9-3ef6-4793-83a6-f4b0060ce569"
+      }
+    },
+    {
+      "Kind": "default.cds_creda_new_appointmentsx_table2_forms",
+      "Namespace": "New_AppointmentsX_table2S (Forms)",
+      "Values": {
+        "Information": "e3073e57-a82c-41cc-991d-dea4ab56d4e8"
       }
     },
     {
@@ -22,10 +22,10 @@
       }
     },
     {
-      "Kind": "default.cds_creda_new_appointmentsx_table2_forms",
-      "Namespace": "New_AppointmentsX_table2S (Forms)",
+      "Kind": "default.cds_cdm_worker_forms",
+      "Namespace": "Workers (Forms)",
       "Values": {
-        "Information": "e3073e57-a82c-41cc-991d-dea4ab56d4e8"
+        "Information": "9986e9e8-2cb9-4b6e-a0b8-7cb441fd2b7b"
       }
     }
   ]
