@@ -3025,6 +3025,7 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.Solid
             Color: =RGBA(50, 49, 48, 1)
+            ContentLanguage: =""
             DisabledColor: =RGBA(161, 159, 157, 1)
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(237, 237, 237, 1)
@@ -3197,22 +3198,22 @@
             HoverFill: =RGBA(16, 110, 190, 1)
             OnSelect: |
                 =Set(exportResult, excel_connecter.Run());
-                If(
-                    Not(IsBlank(exportResult.csvfilelink)),
-                    Download(
-                        "data:text/csv;base64," & 
-                        JSON(
-                            Mid(
-                                Substitute(exportResult.csvContent, """", ""),
-                                2,
-                                Len(Substitute(exportResult.csvContent, """", "")) - 2
-                            ),
-                            JSONFormat.IncludeBinaryData
-                        ),
-                        "ExportedData.csv"
-                    ),
-                    Notify("Failed to export data", NotificationType.Error)
-                )
+                //If(
+                    //Not(IsBlank(exportResult.csvfilelink)),
+                    //Download(
+                        //"data:text/csv;base64," & 
+                        //JSON(
+                            //Mid(
+                                //Substitute(exportResult.csvContent, """", ""),
+                                //2,
+                                //Len(Substitute(exportResult.csvContent, """", "")) - 2
+                            //),
+                            //JSONFormat.IncludeBinaryData
+                        //),
+                        //"ExportedData.csv"
+                    //),
+                    //Notify("Failed to export data", NotificationType.Error)
+                //)
             PressedBorderColor: =RGBA(0, 69, 120, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(16, 110, 190, 1)
