@@ -162,6 +162,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "51c195a5-5478-4c0e-a2eb-8a4638156091": {
+          "value": "shared_sharepointonline"
+        },
+        "d1be0f3d-39d1-4c5c-9aa9-f8d58b042244": {
+          "value": "shared_onedriveforbusiness"
+        },
         "workflowDisplayName": {
           "value": "excel_connecter"
         },
@@ -173,6 +179,12 @@
         }
       },
       "parameterHintsV2": {
+        "shared_onedriveforbusiness": {
+          "value": "d1be0f3d-39d1-4c5c-9aa9-f8d58b042244"
+        },
+        "shared_sharepointonline": {
+          "value": "51c195a5-5478-4c0e-a2eb-8a4638156091"
+        },
         "workflowDisplayName": {
           "value": "excel_connecter"
         },
