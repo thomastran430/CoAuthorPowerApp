@@ -185,7 +185,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 216,
+                  "charOffset": 209,
                   "snippet": {
                     "text": ".csvContent"
                   }
@@ -225,7 +225,7 @@
                 },
                 "region": {
                   "charLength": 10,
-                  "charOffset": 193,
+                  "charOffset": 186,
                   "snippet": {
                     "text": "Substitute"
                   }
@@ -265,7 +265,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 304,
+                  "charOffset": 295,
                   "snippet": {
                     "text": ".csvContent"
                   }
@@ -305,7 +305,7 @@
                 },
                 "region": {
                   "charLength": 10,
-                  "charOffset": 281,
+                  "charOffset": 272,
                   "snippet": {
                     "text": "Substitute"
                   }
@@ -344,10 +344,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 339,
-                  "charOffset": 97,
+                  "charLength": 328,
+                  "charOffset": 94,
                   "snippet": {
-                    "text": "Download(\r\n        \"data:text/csv;base64,\" & \r\n        JSON(\r\n            Mid(\r\n                Substitute(exportResult.csvContent, \"\"\"\", \"\"),\r\n                2,\r\n                Len(Substitute(exportResult.csvContent, \"\"\"\", \"\")) - 2\r\n            ),\r\n            JSONFormat.IncludeBinaryData\r\n        ),\r\n        \"ExportedData.csv\"\r\n    )"
+                    "text": "Download(\n        \"data:text/csv;base64,\" & \n        JSON(\n            Mid(\n                Substitute(exportResult.csvContent, \"\"\"\", \"\"),\n                2,\n                Len(Substitute(exportResult.csvContent, \"\"\"\", \"\")) - 2\n            ),\n            JSONFormat.IncludeBinaryData\n        ),\n        \"ExportedData.csv\"\n    )"
                   }
                 }
               },
@@ -937,19 +937,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Booking Screen'.Icon6.AccessibleLabel"
+                  "fullyQualifiedName": "'Booking Screen'.Dropdown1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Booking Screen'.Icon6.AccessibleLabel",
+                  "fullyQualifiedName": "'Booking Screen'.Dropdown1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Booking Screen",
-                "type": "'Booking Screen'.Icon6"
+                "type": "'Booking Screen'.Dropdown1"
               }
             }
           ],
@@ -961,36 +961,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Booking Screen'.Icon6.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Booking Screen'.Icon6.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Booking Screen",
-                "type": "'Booking Screen'.Icon6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1687,6 +1657,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Booking Screen'.Icon6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Booking Screen'.Icon6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Booking Screen",
+                "type": "'Booking Screen'.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Booking Screen'.Icon6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Booking Screen'.Icon6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Booking Screen",
+                "type": "'Booking Screen'.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Booking Screen'.Gallery3.AccessibleLabel"
                 }
               ],
@@ -1970,36 +2000,6 @@
                 "member": "AccessibleLabel",
                 "module": "Booking Screen",
                 "type": "'Booking Screen'.Dropdown_PopUp"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Booking Screen'.Dropdown1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Booking Screen'.Dropdown1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Booking Screen",
-                "type": "'Booking Screen'.Dropdown1"
               }
             }
           ],
