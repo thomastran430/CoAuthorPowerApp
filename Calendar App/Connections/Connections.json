@@ -40,7 +40,7 @@
     "dependents": [],
     "id": "2cdaad84-fee1-4fee-b8dc-b46c9d471f25"
   },
-  "58661a8b-1e00-4432-b846-2b04aca54799": {
+  "51c195a5-5478-4c0e-a2eb-8a4638156091": {
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1693/1.0.1693.3738/sharepointonline/icon.png",
@@ -52,21 +52,7 @@
     "dependents": [
       "d571e04f-9fa6-434b-8e3f-2227d16a83d4"
     ],
-    "id": "58661a8b-1e00-4432-b846-2b04aca54799"
-  },
-  "59c6b7e9-6929-477d-ac0f-6ac194491bf3": {
-    "connectionRef": {
-      "displayName": "OneDrive for Business",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "d571e04f-9fa6-434b-8e3f-2227d16a83d4"
-    ],
-    "id": "59c6b7e9-6929-477d-ac0f-6ac194491bf3"
+    "id": "51c195a5-5478-4c0e-a2eb-8a4638156091"
   },
   "7939d0dc-70f6-4f83-bf64-885d4eb4da95": {
     "connectionRef": {
@@ -156,18 +142,26 @@
     "dependents": [],
     "id": "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee"
   },
+  "d1be0f3d-39d1-4c5c-9aa9-f8d58b042244": {
+    "connectionRef": {
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1689/1.0.1689.3722/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "d571e04f-9fa6-434b-8e3f-2227d16a83d4"
+    ],
+    "id": "d1be0f3d-39d1-4c5c-9aa9-f8d58b042244"
+  },
   "d571e04f-9fa6-434b-8e3f-2227d16a83d4": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1697/1.0.1697.3784/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "58661a8b-1e00-4432-b846-2b04aca54799": {
-          "value": "shared_sharepointonline"
-        },
-        "59c6b7e9-6929-477d-ac0f-6ac194491bf3": {
-          "value": "shared_onedriveforbusiness"
-        },
         "workflowDisplayName": {
           "value": "excel_connecter"
         },
@@ -179,12 +173,6 @@
         }
       },
       "parameterHintsV2": {
-        "shared_onedriveforbusiness": {
-          "value": "59c6b7e9-6929-477d-ac0f-6ac194491bf3"
-        },
-        "shared_sharepointonline": {
-          "value": "58661a8b-1e00-4432-b846-2b04aca54799"
-        },
         "workflowDisplayName": {
           "value": "excel_connecter"
         },
@@ -201,8 +189,8 @@
       "excel_connecter"
     ],
     "dependencies": {
-      "shared_onedriveforbusiness": "59c6b7e9-6929-477d-ac0f-6ac194491bf3",
-      "shared_sharepointonline": "58661a8b-1e00-4432-b846-2b04aca54799"
+      "shared_onedriveforbusiness": "d1be0f3d-39d1-4c5c-9aa9-f8d58b042244",
+      "shared_sharepointonline": "51c195a5-5478-4c0e-a2eb-8a4638156091"
     },
     "dependents": [],
     "id": "d571e04f-9fa6-434b-8e3f-2227d16a83d4"

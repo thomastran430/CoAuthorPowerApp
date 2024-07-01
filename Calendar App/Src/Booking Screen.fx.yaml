@@ -3200,18 +3200,7 @@
                 =Set(exportResult, excel_connecter.Run());
                 If(
                     Not(IsBlank(exportResult.csvfilelink)),
-                    Download(
-                        "data:text/csv;base64," & 
-                        JSON(
-                            Mid(
-                                Substitute(exportResult.csvContent, """", ""),
-                                2,
-                                Len(Substitute(exportResult.csvContent, """", "")) - 2
-                            ),
-                            JSONFormat.IncludeBinaryData
-                        ),
-                        "ExportedData.csv"
-                    ),
+                    Launch(exportResult.csvfilelink),
                     Notify("Failed to export data", NotificationType.Error)
                 )
             PressedBorderColor: =RGBA(0, 69, 120, 1)
