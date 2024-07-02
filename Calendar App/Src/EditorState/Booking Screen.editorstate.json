@@ -6349,6 +6349,14 @@
           "InvariantPropertyName": "Text_Style",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Text\"",
+          "InvariantPropertyName": "Text_Box_Font_Weight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -6438,6 +6446,11 @@
         {
           "Category": "Data",
           "PropertyName": "Text_Style",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Text_Box_Font_Weight",
           "RuleProviderType": "User"
         },
         {

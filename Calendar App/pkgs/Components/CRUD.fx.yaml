@@ -18,6 +18,7 @@ CRUD As CanvasComponent:
     Size_box: =100
     Slot_Booked: ="Text"
     Slot_Booked_Text: ="Text"
+    Text_Box_Font_Weight: ="Text"
     Text_Size: =100
     Text_Style: ="Text"
     TextColor: =RGBA(0, 0, 0, 1)
@@ -96,7 +97,7 @@ CRUD As CanvasComponent:
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =CRUD.Text_Style
-        FontWeight: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Box_Font_Weight
         Height: =44
         Size: =15
         Text: =CRUD.Email_Text
@@ -123,7 +124,7 @@ CRUD As CanvasComponent:
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =CRUD.Text_Style
-        FontWeight: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Box_Font_Weight
         Height: =44
         Size: =15
         Text: =CRUD.Department_Name
@@ -150,7 +151,7 @@ CRUD As CanvasComponent:
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =CRUD.Text_Style
-        FontWeight: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Box_Font_Weight
         Height: =44
         Size: =15
         Text: =CRUD.Slot_Booked
@@ -177,7 +178,7 @@ CRUD As CanvasComponent:
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Font: =CRUD.Text_Style
-        FontWeight: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Box_Font_Weight
         Height: =44
         Size: =15
         Text: =CRUD.Timing

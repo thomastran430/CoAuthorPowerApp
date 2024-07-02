@@ -1538,6 +1538,7 @@
         Slot_Booked: |-
             ="Date:"
         Slot_Booked_Text: =date_dp
+        Text_Box_Font_Weight: =FontWeight.Semibold
         Text_Size: =13
         Text_Style: ="Semibold"
         TextColor: =
