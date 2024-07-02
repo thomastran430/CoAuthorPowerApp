@@ -27,6 +27,11 @@
       "Values": {
         "Information": "9986e9e8-2cb9-4b6e-a0b8-7cb441fd2b7b"
       }
+    },
+    {
+      "Kind": "default.cds_creda_new_appointmentsx_view_all_forms",
+      "Namespace": "New_AppointmentsX_View_Alls (Forms)",
+      "Values": {}
     }
   ]
 }
