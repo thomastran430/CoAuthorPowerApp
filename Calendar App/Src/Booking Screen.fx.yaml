@@ -1,16 +1,12 @@
 "'Booking Screen' As screen":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |
-        =Set(varColumnWidth, Email_Column3_1.Width)
+    OnVisible: |+
+        =Set(varColumnWidth, Email_Column3_1.Width);
+        
 
     Component3_1 As Component3:
-        BackArrowOnSelect: |
-            =Set(test_all_new,false);
-            Set(BackArrowVisible,false);
-            Set(ProfilePicVisible,true);
-            Set(ViewAllVisible,true);
-            Set(heading_visible, true)
-        BackArrowVisible: =BackArrowVisible
+        BackArrowOnSelect: =
+        BackArrowVisible: =false
         IDDisplayText: |-
             =If(
                 IsBlank(ComboBox1.Selected),
@@ -25,7 +21,6 @@
                 ComboBox1.Selected.DisplayName  
             )
         ProfilePicImage: ='924291258'
-        ProfilePicVisible: =ProfilePicVisible
         ZIndex: =1
 
     Button4 As button:
@@ -44,10 +39,7 @@
         OnSelect: |
             =//Set(popup_select_all,true)
             Set(test_all_new,true);
-            Set(BackArrowVisible, true);
-            Set(ProfilePicVisible, false);
-            Set(ViewAllVisible,false);
-            Set(heading_visible, false)
+            Set(GroupVisible,false)
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -57,7 +49,7 @@
         RadiusTopRight: =0
         Size: =15
         Text: ="View All"
-        Visible: =ViewAllVisible
+        Visible: =GroupVisible
         X: =1194
         Y: =100
         ZIndex: =2
@@ -381,25 +373,6 @@
         X: =642
         Y: =8
         ZIndex: =6
-
-    Email_Label As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(50, 49, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =36
-        Size: =13
-        Text: ="User"
-        Visible: =heading_visible
-        Width: =240
-        X: =617
-        Y: =103
-        ZIndex: =7
 
     Form_Container As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -1171,96 +1144,6 @@
             Y: =33
             ZIndex: =5
 
-    Radio2 As radio:
-        BorderColor: =RGBA(50, 49, 48, 1)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(50, 49, 48, 1)
-        Default: ="Yours"
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisplayMode: |
-            =If(
-                IsBlank(LookUp(Admin_Login_Cred, UserName = Office365Users.MyProfile().Mail && Role = "Admin")), 
-                DisplayMode.Disabled,
-                DisplayMode.Edit
-            )
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =66
-        HoverColor: =RGBA(50, 49, 48, 1)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Items: =["Yours","Others"]
-        Layout: =Layout.Horizontal
-        OnChange: |
-            =Reset(ComboBox1)
-            //If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
-        PaddingBottom: =5
-        PaddingTop: =5
-        PressedColor: =RGBA(50, 49, 48, 1)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        RadioBorderColor: =RGBA(50, 49, 48, 1)
-        RadioSelectionFill: =RGBA(0, 120, 212, 1)
-        RadioSize: =30
-        Size: =13
-        Visible: =heading_visible
-        Width: =264
-        X: =324
-        Y: =103
-        ZIndex: =10
-
-    ComboBox1 As combobox:
-        BorderColor: =RGBA(245, 245, 245, 1)
-        ChevronBackground: =RGBA(245, 245, 245, 1)
-        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-        ChevronFill: =RGBA(50, 49, 48, 1)
-        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-        ChevronHoverFill: =RGBA(50, 49, 48, 1)
-        Color: =RGBA(50, 49, 48, 1)
-        DefaultSelectedItems: |-
-            =If(
-              Radio2.Selected.Value = "Yours",
-              Office365Users.MyProfile(),
-              Blank()
-            )
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        DisplayFields: =["DisplayName","Mail"]
-        DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
-        Fill: =If(Radio2.Selected.Value = "Yours", ColorValue("White"),RGBA(245, 245, 245, 1))
-        Font: =Font.'Segoe UI'
-        Height: =36
-        HoverBorderColor: =RGBA(16, 110, 190, 1)
-        HoverColor: =RGBA(50, 49, 48, 1)
-        HoverFill: =RGBA(245, 245, 245, 1)
-        Items: |-
-            =//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
-            Filter(
-                Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
-                 "@valuemomentum.com" in Mail 
-            )
-        PressedBorderColor: =RGBA(16, 110, 190, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["DisplayName","Mail"]
-        SearchItems: |-
-            =Search(//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
-            Filter(
-                Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
-                 "@valuemomentum.com" in Mail 
-            ),ComboBox1.SearchText,DisplayName,Mail)
-        SelectionFill: =RGBA(0, 120, 212, 1)
-        SelectMultiple: =false
-        Size: =13
-        Template: =ListItemTemplate.Double
-        Visible: =heading_visible
-        Width: =434
-        X: =700
-        Y: =103
-        ZIndex: =11
-
     Rectangle2_4 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -1514,24 +1397,6 @@
             X: =469
             Y: =224
             ZIndex: =22
-
-    Label10 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(50, 49, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Size: =13
-        Text: ="Whose appointment are you editing?"
-        Visible: =heading_visible
-        Width: =321
-        X: =17
-        Y: =103
-        ZIndex: =23
 
     PopUP_1 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
@@ -3337,6 +3202,171 @@
         X: =390
         ZIndex: =69
 
+    Button7 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 120, 212, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(16, 110, 190, 1)
+        OnSelect: |-
+            =Set(test_all_new,false);
+            Set(GroupVisible,true)
+        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(16, 110, 190, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Back"
+        Visible: =test_all_new
+        Width: =90
+        X: =17
+        Y: =102
+        ZIndex: =70
+
+    Group7 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =70
+
+        Email_Label As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            Size: =13
+            Text: ="Employee"
+            Visible: =GroupVisible
+            Width: =240
+            X: =617
+            Y: =103
+            ZIndex: =7
+
+        Radio2 As radio:
+            BorderColor: =RGBA(50, 49, 48, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            Default: ="Yours"
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisplayMode: |
+                =If(
+                    IsBlank(LookUp(Admin_Login_Cred, UserName = Office365Users.MyProfile().Mail && Role = "Admin")), 
+                    DisplayMode.Disabled,
+                    DisplayMode.Edit
+                )
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =66
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Items: =["Yours","Others"]
+            Layout: =Layout.Horizontal
+            OnChange: |
+                =Reset(ComboBox1)
+                //If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
+            PaddingBottom: =5
+            PaddingTop: =5
+            PressedColor: =RGBA(50, 49, 48, 1)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadioBorderColor: =RGBA(50, 49, 48, 1)
+            RadioSelectionFill: =RGBA(0, 120, 212, 1)
+            RadioSize: =30
+            Size: =13
+            Visible: =GroupVisible
+            Width: =264
+            X: =324
+            Y: =103
+            ZIndex: =10
+
+        ComboBox1 As combobox:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            ChevronBackground: =RGBA(245, 245, 245, 1)
+            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+            ChevronFill: =RGBA(50, 49, 48, 1)
+            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(50, 49, 48, 1)
+            DefaultSelectedItems: |-
+                =If(
+                  Radio2.Selected.Value = "Yours",
+                  Office365Users.MyProfile(),
+                  Blank()
+                )
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            DisplayFields: =["DisplayName","Mail"]
+            DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
+            Fill: =If(Radio2.Selected.Value = "Yours", ColorValue("White"),RGBA(245, 245, 245, 1))
+            Font: =Font.'Segoe UI'
+            Height: =36
+            HoverBorderColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(245, 245, 245, 1)
+            Items: |-
+                =//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
+                Filter(
+                    Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
+                     "@valuemomentum.com" in Mail 
+                )
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SearchFields: =["DisplayName","Mail"]
+            SearchItems: |-
+                =Search(//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
+                Filter(
+                    Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
+                     "@valuemomentum.com" in Mail 
+                ),ComboBox1.SearchText,DisplayName,Mail)
+            SelectionFill: =RGBA(0, 120, 212, 1)
+            SelectMultiple: =false
+            Size: =13
+            Template: =ListItemTemplate.Double
+            Visible: =GroupVisible
+            Width: =434
+            X: =730
+            Y: =103
+            ZIndex: =11
+
+        Label10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Size: =13
+            Text: ="Whose appointment are you editing?"
+            Visible: =GroupVisible
+            Width: =321
+            X: =17
+            Y: =103
+            ZIndex: =23
+
     Group6 As group:
         Height: =5
         Width: =5
@@ -3650,7 +3680,7 @@
             Text: ="Export To Excel"
             Visible: =test_all_new
             Width: =285
-            X: =1017
+            X: =1069
             Y: =102
             ZIndex: =68
 
