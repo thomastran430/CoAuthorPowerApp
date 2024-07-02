@@ -4,7 +4,11 @@
         =Set(varColumnWidth, Email_Column3_1.Width)
 
     Component3_1 As Component3:
-        BackArrowOnSelect: =
+        BackArrowOnSelect: |
+            =Set(test_all_new,false);
+            Set(BackArrowVisible,false);
+            Set(ProfilePicVisible,true);
+            Set(ViewAllVisible,true)
         BackArrowVisible: =BackArrowVisible
         IDDisplayText: |-
             =If(
@@ -20,7 +24,7 @@
                 ComboBox1.Selected.DisplayName  
             )
         ProfilePicImage: ='924291258'
-        ProfilePicVisible: =false
+        ProfilePicVisible: =ProfilePicVisible
         ZIndex: =1
 
     Button4 As button:
@@ -36,11 +40,12 @@
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
-        OnSelect: |-
+        OnSelect: |
             =//Set(popup_select_all,true)
             Set(test_all_new,true);
             Set(BackArrowVisible, true);
-            Set(ProfilePicVisible, false)
+            Set(ProfilePicVisible, false);
+            Set(ViewAllVisible,false)
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -50,6 +55,7 @@
         RadiusTopRight: =0
         Size: =15
         Text: ="View All"
+        Visible: =ViewAllVisible
         X: =1194
         Y: =100
         ZIndex: =2
@@ -3330,27 +3336,6 @@
         Y: =40
         ZIndex: =72
 
-        Image4 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =64
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =image_vm
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//test_all_new
-                false
-            Width: =276
-            X: =738
-            Y: =6
-            ZIndex: =62
-
         DataTable6_1 As dataTable.datatable:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.Solid
@@ -3385,9 +3370,7 @@
             SelectedColor: =RGBA(50, 49, 48, 1)
             SelectedFill: =RGBA(199, 224, 244, 1)
             Size: =13
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =1364
             X: =2
             Y: =159
@@ -3500,9 +3483,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width-50
             Y: =160
@@ -3527,9 +3508,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width-Icon9_1.Width
             Y: =158
@@ -3555,9 +3534,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width-Icon9_2.Width
             Y: =160
@@ -3582,9 +3559,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width-Icon9_2.Width
             Y: =164
@@ -3609,9 +3584,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =59
             X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width-Icon9_4.Width
             Y: =156
@@ -3632,9 +3605,7 @@
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =59
             X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width+Location_Column3_1.Width-Icon9_4.Width
             Y: =162
@@ -3669,9 +3640,7 @@
             RadiusTopRight: =0
             Size: =15
             Text: ="Export To Excel"
-            Visible: |-
-                =//test_all_new
-                false
+            Visible: =test_all_new
             Width: =285
             X: =1017
             Y: =102
