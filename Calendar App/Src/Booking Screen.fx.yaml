@@ -1,6 +1,7 @@
 "'Booking Screen' As screen":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =
+    OnVisible: |
+        =Set(varColumnWidth, Email_Column3_1.Width)
 
     Button4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -3469,20 +3470,6 @@
                 Y: =0
                 ZIndex: =25
 
-            Status_Column3_1 As dataTableColumn.complexOptionSetColumn:
-                DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Status"
-                FieldName: ="statecode"
-                FieldVariantName: ="complexOptionSetColumn"
-                Height: =Parent.Height
-                LayoutHeight: =Parent.Height
-                Order: =10
-                Text: =ThisItem.Status
-                Width: =100
-                X: =0
-                Y: =0
-                ZIndex: =27
-
         Icon9 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(255, 255, 255, 1)
@@ -3505,7 +3492,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
             Width: =59
-            X: =166
+            X: =Appointment_Date_Column3_1.Width-50
             Y: =160
             ZIndex: =65
 
@@ -3530,8 +3517,8 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
             Width: =59
-            X: =345
-            Y: =160
+            X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width-Icon9_1.Width
+            Y: =158
             ZIndex: =66
 
         Icon9_2 As icon.ArrowsUpDown:
@@ -3556,8 +3543,8 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
             Width: =59
-            X: =563
-            Y: =156
+            X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width-Icon9_2.Width
+            Y: =160
             ZIndex: =67
 
         Icon9_3 As icon.ArrowsUpDown:
@@ -3581,8 +3568,8 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
             Width: =59
-            X: =738
-            Y: =158
+            X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width-Icon9_2.Width
+            Y: =164
             ZIndex: =68
 
         Icon9_4 As icon.ArrowsUpDown:
@@ -3606,8 +3593,8 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
             Width: =59
-            X: =936
-            Y: =158
+            X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width-Icon9_4.Width
+            Y: =156
             ZIndex: =69
 
         Icon9_5 As icon.ArrowsUpDown:
@@ -3627,8 +3614,8 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
             Width: =59
-            X: =1112
-            Y: =160
+            X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width+Location_Column3_1.Width-Icon9_4.Width
+            Y: =162
             ZIndex: =70
 
         Button8 As button:
