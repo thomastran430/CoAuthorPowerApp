@@ -306,7 +306,7 @@
                 =If(
                     IsBlank(ComboBox1.Selected),
                     "City",
-                    ComboBox1.Selected.OfficeLocation & " (" & ComboBox1.Selected.Department & ")"
+                    ComboBox1.Selected.OfficeLocation & " " & ComboBox1.Selected.Department & ""
                 )
             Width: =392
             X: =973
@@ -3321,12 +3321,37 @@
             ZIndex: =54
 
     Component2_1 As Component2:
-        Back_Arrow_OnSelect: =Set(test_all,false)
-        Visible: =test_all
+        Back_Arrow_OnSelect: =
+        Display_Name_Text_box_Size: =500
+        Display_What_Text: =ComboBox1.Selected.DisplayName
+        TB1_Pos_X: =170
+        TB1_Y_Pos: =-60
+        TB2_Pos_X: =Parent.Width-130
+        TB2_Y_Pos: =-60
+        Text_Box_1_Height: =200
+        Text_Box_1_width: =700
+        Text_Box1_Font_Color: =Color.White
+        Text_Box2_Display_what: =ComboBox1.Selected.Department
+        Text_Box2_Font_Color: =Color.White
+        Text_Box2_Width: =130
+        Visible: =true
         ZIndex: =62
 
-    Component2_2 As Component2:
-        Back_Arrow_OnSelect: =Set(test_all,false)
-        Visible: =test_all
+    Image4 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =64
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =image_vm
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =276
+        X: =738
+        Y: =6
         ZIndex: =63
 

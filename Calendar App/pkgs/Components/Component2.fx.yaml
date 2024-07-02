@@ -5,7 +5,7 @@ Component2 As CanvasComponent:
     Display_Name_Text_box_Size: =100
     Display_What_Text: ="Text"
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =640
+    Height: =Max(App.Height, App.MinScreenHeight)
     Image_dp: =SampleImage
     Image_dp_height: =100
     Image_dp_pos: =100
@@ -13,15 +13,19 @@ Component2 As CanvasComponent:
     Image_Height: =100
     Image_Position: =100
     Image_Width: =100
+    TB1_Pos_X: =100
+    TB1_Y_Pos: =100
+    TB2_Pos_X: =100
+    TB2_Y_Pos: =100
     Text_Box_1_Height: =100
     Text_Box_1_width: =100
     Text_Box_2_Height: =100
-    Text_Box_2_Position: ="Text"
+    Text_Box_2_Position: =100
     Text_Box1_Font_Color: =RGBA(0, 0, 0, 1)
     Text_Box2_Display_what: ="Text"
     Text_Box2_Font_Color: =RGBA(0, 0, 0, 1)
     Text_Box2_Size: =100
-    Text_Box2_Width: ="Text"
+    Text_Box2_Width: =100
     Width: =Max(App.Width, App.MinScreenWidth)
     X: =0
     Y: =0
@@ -40,14 +44,14 @@ Component2 As CanvasComponent:
 
         Label4_1 As label:
             BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =50
+            Height: =Component2.Text_Box_1_Height
             Size: =21
-            Text: ="Text"
-            Width: =164
-            X: =115
-            Y: =15
+            Text: =Component2.Display_What_Text
+            Width: =Component2.Text_Box_1_width
+            X: =Component2.TB1_Pos_X
+            Y: =Component2.TB1_Y_Pos
             ZIndex: =1
 
         Image2_1 As image:
@@ -61,16 +65,16 @@ Component2 As CanvasComponent:
             Y: =40
             ZIndex: =2
 
-        Label6_1 As label:
+        Text_Box_2 As label:
             BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 0, 0, 1)
+            Color: =Component2.Text_Box2_Font_Color
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =56
+            Height: =Component2.Text_Box_1_Height
             Size: =21
-            Text: ="Text"
-            Width: =124
-            X: =436
-            Y: =12
+            Text: =Component2.Text_Box2_Display_what
+            Width: =Component2.Text_Box2_Width
+            X: =Component2.TB2_Pos_X
+            Y: =Component2.TB2_Y_Pos
             ZIndex: =3
 
         Image3_1 As image:
@@ -97,7 +101,7 @@ Component2 As CanvasComponent:
     Container4_1 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =488
+        Height: =Parent.Height
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
