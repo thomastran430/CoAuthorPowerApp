@@ -3406,7 +3406,7 @@
             Appointment_Date_Column3_1 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
                 DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Appointment_Date"
+                FieldDisplayName: ="Appointment Date"
                 FieldName: ="creda_appointment_date"
                 FieldVariantName: ="dateTimeColumn"
                 Height: =560
@@ -3421,7 +3421,7 @@
             Department_Name_Column3_1 As dataTableColumn.complexOptionSetColumn:
                 AutoWidth: =false
                 DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Department_Name"
+                FieldDisplayName: ="Department Name"
                 FieldName: ="creda_department_name"
                 FieldVariantName: ="complexOptionSetColumn"
                 Height: =548
@@ -3435,7 +3435,7 @@
 
             Email_Column3_1 As dataTableColumn.textualColumn:
                 DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Email"
+                FieldDisplayName: ="Name"
                 FieldName: ="creda_email"
                 FieldVariantName: ="textualColumn"
                 Height: =Parent.Height
@@ -3450,7 +3450,7 @@
 
             End_Time_Column3_1 As dataTableColumn.textualColumn:
                 DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="End_Time"
+                FieldDisplayName: ="End Time"
                 FieldName: ="creda_end_time"
                 FieldVariantName: ="textualColumn"
                 Height: =Parent.Height
@@ -3478,7 +3478,7 @@
 
             Start_Time_Column3_1 As dataTableColumn.textualColumn:
                 DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Start_Time"
+                FieldDisplayName: ="Start Time"
                 FieldName: ="creda_start_time"
                 FieldVariantName: ="textualColumn"
                 Height: =Parent.Height
