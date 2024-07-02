@@ -18,6 +18,9 @@ CRUD As CanvasComponent:
     Size_box: =100
     Slot_Booked: ="Text"
     Slot_Booked_Text: ="Text"
+    Text_Size: =100
+    Text_Style: ="Text"
+    TextColor: =RGBA(0, 0, 0, 1)
     Timing: ="Text"
     TImingText: ="Text"
     Username: ="Text"
@@ -56,18 +59,18 @@ CRUD As CanvasComponent:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(56, 96, 178, 1)
+        Fill: =RGBA(255, 0, 0, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =54
+        Height: =36
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
         OnSelect: =CRUD.D_Btn_Onclick()
         Size: =24
         Text: ="Delete"
-        Width: =188
-        X: =87
-        Y: =480
+        Width: =179
+        X: =102
+        Y: =512
         ZIndex: =3
 
     E_Btn As button:
@@ -77,22 +80,23 @@ CRUD As CanvasComponent:
         Fill: =RGBA(56, 96, 178, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =54
+        Height: =36
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
         OnSelect: =CRUD.Ebtn_Click()
         Size: =24
         Text: ="Edit"
-        Width: =188
-        X: =360
-        Y: =480
+        Width: =179
+        X: =328
+        Y: =512
         ZIndex: =4
 
     Label1_1 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
+        Font: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Style
         Height: =44
         Size: =15
         Text: =CRUD.Email_Text
@@ -118,7 +122,8 @@ CRUD As CanvasComponent:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
+        Font: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Style
         Height: =44
         Size: =15
         Text: =CRUD.Department_Name
@@ -144,7 +149,8 @@ CRUD As CanvasComponent:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
+        Font: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Style
         Height: =44
         Size: =15
         Text: =CRUD.Slot_Booked
@@ -170,7 +176,8 @@ CRUD As CanvasComponent:
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =Font.'Segoe UI'
+        Font: =CRUD.Text_Style
+        FontWeight: =CRUD.Text_Style
         Height: =44
         Size: =15
         Text: =CRUD.Timing

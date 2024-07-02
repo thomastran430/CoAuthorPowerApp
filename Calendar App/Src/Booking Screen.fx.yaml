@@ -1534,6 +1534,9 @@
         Slot_Booked: |-
             ="Date:"
         Slot_Booked_Text: =date_dp
+        Text_Size: =13
+        Text_Style: ="Bold"
+        TextColor: =
         Timing: |-
             ="Time:"
         TImingText: =slot_dp
@@ -3093,7 +3096,8 @@
                 Height: =Parent.Height
                 LayoutHeight: =Parent.Height
                 Order: =3
-                Text: =ThisItem.Email
+                Text: |
+                    =Left(ThisItem.Email, Find("@", ThisItem.Email) - 1)
                 Width: =100
                 X: =0
                 Y: =0
