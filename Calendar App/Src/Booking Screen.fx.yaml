@@ -1974,7 +1974,7 @@
                 DataField: ="Location"
                 Default: =ThisItem.Location
                 DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,'Location')
+                DisplayName: =DataSourceInfo([@New_AppointmentsX],DataSourceInfo.DisplayName,Location)
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
                 Required: =false
@@ -3306,23 +3306,6 @@
         X: =40
         Y: =40
         ZIndex: =72
-
-        Component2_1 As Component2:
-            Back_Arrow_OnSelect: =Set(test_all_new,false)
-            Display_Name_Text_box_Size: =500
-            Display_What_Text: =ComboBox1.Selected.DisplayName
-            TB1_Pos_X: =170
-            TB1_Y_Pos: =-60
-            TB2_Pos_X: =Parent.Width-130
-            TB2_Y_Pos: =-60
-            Text_Box_1_Height: =200
-            Text_Box_1_width: =700
-            Text_Box1_Font_Color: =Color.White
-            Text_Box2_Display_what: =ComboBox1.Selected.Department
-            Text_Box2_Font_Color: =Color.White
-            Text_Box2_Width: =130
-            Visible: =test_all_new
-            ZIndex: =62
 
         Image4 As image:
             BorderColor: =RGBA(0, 0, 0, 0)

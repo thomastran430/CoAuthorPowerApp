@@ -52,7 +52,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "PopUP",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 225,
+        "PublishOrderIndex": 0,
         "Rules": [
           {
             "Category": "Design",
@@ -225,7 +225,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "PopUP",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 226,
+        "PublishOrderIndex": 1,
         "Rules": [
           {
             "Category": "Design",
@@ -430,7 +430,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "PopUP",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 227,
+        "PublishOrderIndex": 2,
         "Rules": [
           {
             "Category": "Design",
@@ -673,7 +673,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "PopUP",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 228,
+        "PublishOrderIndex": 3,
         "Rules": [
           {
             "Category": "Data",
@@ -1019,7 +1019,7 @@
       },
       "PopUp_Cancel"
     ],
-    "LastModifiedTimestamp": "638555374018100649",
+    "LastModifiedTimestamp": "638555368820017386",
     "Name": "PopUP",
     "Rules": [
       {
@@ -1298,7 +1298,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638555374018100649",
+  "LastModifiedTimestamp": "638555368820017386",
   "Name": "52a7f14b9e1b4f609bc7614b5e1e5394",
   "OverridableProperties": {},
   "SourceLibraryId": "a9c72686-4a32-42df-a3e6-c5b47fb82267",
