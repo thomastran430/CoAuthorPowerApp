@@ -1009,7 +1009,7 @@
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(0, 69, 120, 1)
+            Color: =RGBA(50, 86, 160, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
@@ -1027,6 +1027,7 @@
             BorderColor: =
             BorderStyle: =BorderStyle.None
             BorderThickness: =0
+            Color: =RGBA(50, 86, 160, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(161, 159, 157, 1)
             DisabledFill: =RGBA(242, 242, 241, 0)
@@ -1063,6 +1064,7 @@
             BorderColor: =
             BorderStyle: =BorderStyle.None
             BorderThickness: =0
+            Color: =RGBA(50, 86, 160, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(161, 159, 157, 1)
             DisabledFill: =RGBA(242, 242, 241, 0)
@@ -1535,7 +1537,7 @@
             ="Date:"
         Slot_Booked_Text: =date_dp
         Text_Size: =13
-        Text_Style: ="Bold"
+        Text_Style: ="Semibold"
         TextColor: =
         Timing: |-
             ="Time:"
@@ -2983,7 +2985,7 @@
             DisabledColor: =RGBA(161, 159, 157, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Bold
+            FontWeight: =FontWeight.Semibold
             Height: =72
             Size: =20
             Text: ="Confirm Delete?"
