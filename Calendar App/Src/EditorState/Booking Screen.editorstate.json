@@ -20,7 +20,7 @@
       "MetaDataIDKey": "",
       "Name": "adminsignin(delete)",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 79,
+      "ParentIndex": 78,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -80,7 +80,7 @@
       "MetaDataIDKey": "",
       "Name": "Appointment_Date_Column3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6349,6 +6349,14 @@
           "InvariantPropertyName": "Text_Style",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Text\"",
+          "InvariantPropertyName": "Text_Box_Font_Weight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -6438,6 +6446,11 @@
         {
           "Category": "Data",
           "PropertyName": "Text_Style",
+          "RuleProviderType": "User"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Text_Box_Font_Weight",
           "RuleProviderType": "User"
         },
         {
@@ -11423,7 +11436,7 @@
       "MetaDataIDKey": "",
       "Name": "DeletePopUp",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 78,
+      "ParentIndex": 77,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11746,7 +11759,7 @@
       "MetaDataIDKey": "",
       "Name": "Department_Name_Column3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12670,7 +12683,7 @@
       "MetaDataIDKey": "",
       "Name": "EditAppointmentPopup",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 72,
+      "ParentIndex": 71,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12736,7 +12749,7 @@
       "MetaDataIDKey": "",
       "Name": "Email_Column3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13369,7 +13382,7 @@
       "MetaDataIDKey": "",
       "Name": "End_Time_Column3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16517,7 +16530,7 @@
       "MetaDataIDKey": "",
       "Name": "Group1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 73,
+      "ParentIndex": 72,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16569,7 +16582,7 @@
       "MetaDataIDKey": "",
       "Name": "Group2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 74,
+      "ParentIndex": 73,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16621,7 +16634,7 @@
       "MetaDataIDKey": "",
       "Name": "Group3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 71,
+      "ParentIndex": 70,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16673,7 +16686,7 @@
       "MetaDataIDKey": "",
       "Name": "Group4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 77,
+      "ParentIndex": 76,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16725,7 +16738,7 @@
       "MetaDataIDKey": "",
       "Name": "Group5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 75,
+      "ParentIndex": 74,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16777,7 +16790,7 @@
       "MetaDataIDKey": "",
       "Name": "Group6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 76,
+      "ParentIndex": 75,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25513,7 +25526,7 @@
       "MetaDataIDKey": "",
       "Name": "Location_Column3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32226,7 +32239,7 @@
       "MetaDataIDKey": "",
       "Name": "Start_Time_Column3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34274,7 +34287,7 @@
       "MetaDataIDKey": "",
       "Name": "Status_Column3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
