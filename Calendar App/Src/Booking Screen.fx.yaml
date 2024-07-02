@@ -1189,7 +1189,7 @@
         DisabledFill: =RGBA(242, 242, 241, 0)
         DisplayFields: =["DisplayName","Mail"]
         DisplayMode: =If(Radio2.Selected.Value = "Yours", DisplayMode.View, DisplayMode.Edit)
-        Fill: =RGBA(245, 245, 245, 1)
+        Fill: =If(Radio2.Selected.Value = "Yours", ColorValue("White"),RGBA(245, 245, 245, 1))
         Font: =Font.'Segoe UI'
         Height: =36
         HoverBorderColor: =RGBA(16, 110, 190, 1)
