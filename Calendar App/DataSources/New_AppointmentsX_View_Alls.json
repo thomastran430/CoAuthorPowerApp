@@ -6,8 +6,10 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "creda_new_appointmentsx_view_all",
+    "MaxGetRowsCount": 500,
     "Name": "New_AppointmentsX_View_Alls",
     "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
       "cal_appointmentdate": "Appointment Date",
       "cal_departmentname": "Department Name",
       "cal_email": "Email",
@@ -16,11 +18,24 @@
       "cal_role": "Role",
       "cal_starttime": "Start Time",
       "cal_title": "Title",
+      "createdby": "Created By",
       "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "creda_new_appointmentsx_view_all_AsyncOperations": "System Jobs",
+      "creda_new_appointmentsx_view_all_BulkDeleteFailures": "Bulk Delete Failures",
+      "creda_new_appointmentsx_view_all_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "creda_new_appointmentsx_view_all_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "creda_new_appointmentsx_view_all_ProcessSession": "Process Sessions",
+      "creda_new_appointmentsx_view_all_SyncErrors": "Sync Errors",
       "creda_new_appointmentsx_view_allid": "New_AppointmentsX_View_All",
       "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
       "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
       "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
       "statecode": "Status",
       "statuscode": "Status Reason",
       "timezoneruleversionnumber": "Time Zone Rule Version Number",
@@ -29,6 +44,20 @@
     },
     "PreferredName": "New_AppointmentsX_View_Alls",
     "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "New_AppointmentsX_View_Alls (Views)",
+    "Name": "_creda_new_appointmentsx_view_all_views",
+    "RelatedEntityName": "New_AppointmentsX_View_Alls",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "567fbb64-d0f8-4221-9b4e-81db7c58c921": "Active New_AppointmentsX_View_Alls",
+      "835b410d-6dad-475a-a893-48266a2b2158": "New_AppointmentsX_View_All Advanced Find View",
+      "947a49b7-8730-4a30-9bee-4823a366db10": "New_AppointmentsX_View_All Associated View",
+      "aae2b502-ee8d-4f4a-b3a1-75c9eb4f9a90": "Inactive New_AppointmentsX_View_Alls",
+      "d4415f01-dd93-456d-9491-f78d75c37885": "New_AppointmentsX_View_All Lookup View"
+    }
   },
   {
     "DisplayName": "Department Name (New_AppointmentsX_View_Alls)",
@@ -71,6 +100,46 @@
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "cal_location",
+    "RelatedEntityName": "New_AppointmentsX_View_Alls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (New_AppointmentsX_View_Alls)_1",
+    "Name": "creda_new_appointmentsx_view_all_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_View_Alls"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "New_AppointmentsX_View_Alls",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (New_AppointmentsX_View_Alls)_1",
+    "Name": "creda_new_appointmentsx_view_all_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "New_AppointmentsX_View_Alls"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
     "RelatedEntityName": "New_AppointmentsX_View_Alls",
     "Type": "OptionSetInfo"
   },
