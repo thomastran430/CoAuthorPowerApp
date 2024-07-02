@@ -8,7 +8,8 @@
             =Set(test_all_new,false);
             Set(BackArrowVisible,false);
             Set(ProfilePicVisible,true);
-            Set(ViewAllVisible,true)
+            Set(ViewAllVisible,true);
+            Set(heading_visible, true)
         BackArrowVisible: =BackArrowVisible
         IDDisplayText: |-
             =If(
@@ -45,7 +46,8 @@
             Set(test_all_new,true);
             Set(BackArrowVisible, true);
             Set(ProfilePicVisible, false);
-            Set(ViewAllVisible,false)
+            Set(ViewAllVisible,false);
+            Set(heading_visible, false)
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -392,6 +394,7 @@
         Height: =36
         Size: =13
         Text: ="Email Address"
+        Visible: =heading_visible
         Width: =240
         X: =617
         Y: =103
@@ -1199,6 +1202,7 @@
         RadioSelectionFill: =RGBA(0, 120, 212, 1)
         RadioSize: =30
         Size: =13
+        Visible: =heading_visible
         Width: =264
         X: =324
         Y: =98
@@ -1250,6 +1254,7 @@
         SelectMultiple: =false
         Size: =13
         Template: =ListItemTemplate.Double
+        Visible: =heading_visible
         Width: =434
         X: =760
         Y: =103
@@ -1520,6 +1525,7 @@
         Font: =Font.'Segoe UI'
         Size: =13
         Text: ="Whose appointment are you editing?"
+        Visible: =heading_visible
         Width: =321
         X: =17
         Y: =103
@@ -1550,37 +1556,6 @@
         Y: =143
         ZIndex: =35
 
-    CRUD_1 As CRUD:
-        CRUD_Cancel: =Set(varShowPopUptwo, false)
-        D_Btn_Onclick: |-
-            =Set(varShowPopUpthree,true);
-            Set(varShowPopUptwo,false)
-        Department: =department_dp.Value
-        Department_Name: |-
-            ="Department:"
-        Ebtn_Click: |-
-            =Set(varShowPopUpFour, true);
-            Set(varShowPopUptwo,false)
-        Email_Text: |-
-            ="User Name:"
-        Fill: =RGBA(255, 255, 255, 0)
-        Height: =635
-        Size_box: =150
-        Slot_Booked: |-
-            ="Date:"
-        Slot_Booked_Text: =date_dp
-        Text_Box_Font_Weight: =FontWeight.Semibold
-        Text_Style: ="Semibold"
-        TextColor: =
-        Timing: |-
-            ="Time:"
-        TImingText: =slot_dp
-        Username: =ComboBox1.Selected.DisplayName
-        Visible: =varShowPopUptwo
-        Width: =610
-        X: =390
-        ZIndex: =36
-
     Rectangle14 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -1593,7 +1568,7 @@
         PressedFill: =RGBA(0, 120, 212, 1)
         Visible: =popup_select_all
         Width: =1366
-        ZIndex: =41
+        ZIndex: =40
 
     EditAppointmentPopup As group:
         Height: =5
@@ -1614,7 +1589,7 @@
             PressedFill: =RGBA(11, 77, 133, 70%)
             Visible: =varShowPopUpFour
             Width: =1366
-            ZIndex: =56
+            ZIndex: =55
 
         Rectangle5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1630,7 +1605,7 @@
             Width: =641
             X: =373
             Y: =44
-            ZIndex: =57
+            ZIndex: =56
 
         Form2 As form:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -1642,7 +1617,7 @@
             Width: =637
             X: =375
             Y: =107
-            ZIndex: =58
+            ZIndex: =57
 
             Email_DataCard3 As typedDataCard.allowedValuesStringEditCard:
                 AllowedValues: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.AllowedValues, Email)
@@ -2382,7 +2357,7 @@
             Width: =641
             X: =373
             Y: =44
-            ZIndex: =59
+            ZIndex: =58
 
         Button1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2425,7 +2400,7 @@
             Width: =183
             X: =605
             Y: =510
-            ZIndex: =60
+            ZIndex: =59
 
         Button5 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2456,7 +2431,7 @@
             Width: =89
             X: =923
             Y: =44
-            ZIndex: =61
+            ZIndex: =60
 
     "'adminsignin(delete)' As group":
         Height: =5
@@ -2681,7 +2656,7 @@
             Visible: =false
             Width: =1364
             X: =2
-            ZIndex: =42
+            ZIndex: =41
 
         Rectangle13 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2697,7 +2672,7 @@
             Width: =644
             X: =427
             Y: =91
-            ZIndex: =43
+            ZIndex: =42
 
         Container4 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2712,7 +2687,7 @@
             Width: =644
             X: =427
             Y: =92
-            ZIndex: =44
+            ZIndex: =43
 
             Label11 As label:
                 Align: =Align.Center
@@ -2866,7 +2841,7 @@
             Width: =51
             X: =1008
             Y: =111
-            ZIndex: =45
+            ZIndex: =44
 
     Icon6 As icon.ArrowsUpDown:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2889,7 +2864,7 @@
         Width: =34
         X: =186
         Y: =162
-        ZIndex: =50
+        ZIndex: =49
 
     Icon7 As icon.Cancel:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -2908,7 +2883,7 @@
         PressedFill: =RGBA(0, 0, 0, 0)
         Visible: =popup_select_all
         X: =1302
-        ZIndex: =51
+        ZIndex: =50
 
     DeletePopUp As group:
         Height: =5
@@ -2930,7 +2905,7 @@
             Visible: =varShowPopUpthree
             Width: =1364
             X: =2
-            ZIndex: =37
+            ZIndex: =36
 
         Rectangle8 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -2945,7 +2920,7 @@
             Width: =321
             X: =536
             Y: =265
-            ZIndex: =38
+            ZIndex: =37
 
         Button3 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -2974,7 +2949,7 @@
             Width: =106
             X: =571
             Y: =351
-            ZIndex: =39
+            ZIndex: =38
 
         Button3_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3006,7 +2981,7 @@
             Width: =106
             X: =701
             Y: =351
-            ZIndex: =40
+            ZIndex: =39
 
         Label13 As label:
             Align: =Align.Center
@@ -3026,7 +3001,7 @@
             Width: =316
             X: =536
             Y: =274
-            ZIndex: =52
+            ZIndex: =51
 
     Group5 As group:
         Height: =5
@@ -3044,7 +3019,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1364
-            ZIndex: =46
+            ZIndex: =45
 
             Container9 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -3091,7 +3066,7 @@
             Width: =1364
             X: =0
             Y: =159
-            ZIndex: =47
+            ZIndex: =46
 
             Appointment_Date_Column3 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
@@ -3203,7 +3178,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1366
-            ZIndex: =48
+            ZIndex: =47
 
             Label9 As label:
                 Align: =Align.Center
@@ -3256,7 +3231,7 @@
             Width: =359
             X: =545
             Y: =89
-            ZIndex: =49
+            ZIndex: =48
 
         Image3 As image:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3273,7 +3248,7 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =popup_select_all
             Width: =351
-            ZIndex: =53
+            ZIndex: =52
 
         Icon8 As icon.Filter:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3294,7 +3269,7 @@
             Width: =50
             X: =858
             Y: =79
-            ZIndex: =54
+            ZIndex: =53
 
         Dropdown1 As dropdown:
             BorderColor: =RGBA(245, 245, 245, 1)
@@ -3327,7 +3302,38 @@
             Visible: =false
             X: =529
             Y: =83
-            ZIndex: =55
+            ZIndex: =54
+
+    CRUD_1 As CRUD:
+        CRUD_Cancel: =Set(varShowPopUptwo, false)
+        D_Btn_Onclick: |-
+            =Set(varShowPopUpthree,true);
+            Set(varShowPopUptwo,false)
+        Department: =department_dp.Value
+        Department_Name: |-
+            ="Department:"
+        Ebtn_Click: |-
+            =Set(varShowPopUpFour, true);
+            Set(varShowPopUptwo,false)
+        Email_Text: |-
+            ="User Name:"
+        Fill: =RGBA(255, 255, 255, 0)
+        Height: =635
+        Size_box: =150
+        Slot_Booked: |-
+            ="Date:"
+        Slot_Booked_Text: =date_dp
+        Text_Box_Font_Weight: =FontWeight.Semibold
+        Text_Style: ="Semibold"
+        TextColor: =
+        Timing: |-
+            ="Time:"
+        TImingText: =slot_dp
+        Username: =ComboBox1.Selected.DisplayName
+        Visible: =varShowPopUptwo
+        Width: =610
+        X: =390
+        ZIndex: =69
 
     Group6 As group:
         Height: =5
@@ -3374,7 +3380,7 @@
             Width: =1364
             X: =2
             Y: =159
-            ZIndex: =63
+            ZIndex: =61
 
             Appointment_Date_Column3_1 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
@@ -3487,7 +3493,7 @@
             Width: =59
             X: =Appointment_Date_Column3_1.Width-50
             Y: =160
-            ZIndex: =64
+            ZIndex: =62
 
         Icon9_1 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3512,7 +3518,7 @@
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width-Icon9_1.Width
             Y: =158
-            ZIndex: =65
+            ZIndex: =63
 
         Icon9_2 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3538,7 +3544,7 @@
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width-Icon9_2.Width
             Y: =160
-            ZIndex: =66
+            ZIndex: =64
 
         Icon9_3 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3563,7 +3569,7 @@
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width-Icon9_2.Width
             Y: =164
-            ZIndex: =67
+            ZIndex: =65
 
         Icon9_4 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3588,7 +3594,7 @@
             Width: =59
             X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width-Icon9_4.Width
             Y: =156
-            ZIndex: =68
+            ZIndex: =66
 
         Icon9_5 As icon.ArrowsUpDown:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3609,7 +3615,7 @@
             Width: =59
             X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width+Location_Column3_1.Width-Icon9_4.Width
             Y: =162
-            ZIndex: =69
+            ZIndex: =67
 
         Button8 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3644,5 +3650,5 @@
             Width: =285
             X: =1017
             Y: =102
-            ZIndex: =70
+            ZIndex: =68
 

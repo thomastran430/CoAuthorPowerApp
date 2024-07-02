@@ -13,7 +13,7 @@ CRUD As CanvasComponent:
     Department_Name: ="Text"
     E_Btn_Visibility: =true
     Email_Text: ="Text"
-    Fill: =RGBA(237, 237, 237, 1)
+    Fill: =RGBA(0, 0, 0, 0)
     Height: =640
     Size_box: =100
     Slot_Booked: ="Text"
@@ -25,7 +25,7 @@ CRUD As CanvasComponent:
     Timing: ="Text"
     TImingText: ="Text"
     Username: ="Text"
-    Width: =640
+    Width: =567
     X: =0
     Y: =0
     ZIndex: =1
