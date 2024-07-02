@@ -391,9 +391,10 @@
         DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Height: =36
         Size: =13
-        Text: ="Email Address"
+        Text: ="User"
         Visible: =heading_visible
         Width: =240
         X: =617
@@ -1205,7 +1206,7 @@
         Visible: =heading_visible
         Width: =264
         X: =324
-        Y: =98
+        Y: =103
         ZIndex: =10
 
     ComboBox1 As combobox:
@@ -1256,7 +1257,7 @@
         Template: =ListItemTemplate.Double
         Visible: =heading_visible
         Width: =434
-        X: =760
+        X: =700
         Y: =103
         ZIndex: =11
 
@@ -1523,6 +1524,7 @@
         DisabledColor: =RGBA(161, 159, 157, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Size: =13
         Text: ="Whose appointment are you editing?"
         Visible: =heading_visible
