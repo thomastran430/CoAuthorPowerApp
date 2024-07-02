@@ -26,6 +26,7 @@
       "Appointment_Date": "Appointment_Date",
       "Author": "Created By",
       "Author#Claims": "Created By Claims",
+      "Booked_By": "Booked_By",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
       "Department_Name": "Department_Name",
