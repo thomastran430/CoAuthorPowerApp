@@ -1,0 +1,71 @@
+Component3 As CanvasComponent:
+    BackArrowOnSelect: ="Text"
+    BackArrowVisible: =true
+    Fill: =RGBA(50, 86, 160, 1)
+    Height: =87
+    IDDisplayText: ="Text"
+    LogoImage: =SampleImage
+    NameDisplayText: ="Text"
+    ProfilePicImage: =SampleImage
+    ProfilePicVisible: =true
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    IDDisplay As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        Height: =87
+        Size: =20
+        Text: =Component3.IDDisplayText
+        Width: =392
+        X: =973
+        ZIndex: =1
+
+    BackArrow As arrow.backArrow:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =87
+        OnSelect: =Component3.BackArrowOnSelect
+        Visible: =Component3.BackArrowVisible
+        Width: =87
+        X: =1
+        ZIndex: =2
+
+    ProfilePic As image:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =87
+        Image: =Component3.ProfilePicImage
+        Width: =87
+        ZIndex: =3
+
+    Logo As image:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =71
+        Image: =Component3.LogoImage
+        Width: =253
+        X: =642
+        Y: =8
+        ZIndex: =4
+
+    NameDisplay As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        Height: =87
+        Size: =20
+        Text: =Component3.NameDisplayText
+        Width: =559
+        X: =88
+        ZIndex: =5
+

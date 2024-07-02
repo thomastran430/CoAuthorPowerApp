@@ -3,10 +3,6 @@
   "EntityName": "New_AppointmentsX_View_Alls",
   "environmentVariableName": "",
   "InstanceUrl": "https://vmmdev.crm.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "creda_new_appointmentsx_view_alls",
-    "logicalName": "creda_new_appointmentsx_view_all"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://vmmdev.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('creda_new_appointmentsx_view_all')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
