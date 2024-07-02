@@ -21,6 +21,7 @@
             )
         ProfilePicImage: ='924291258'
         ProfilePicVisible: =false
+        ZIndex: =1
 
     Button4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)

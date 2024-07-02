@@ -296,36 +296,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CRUD.Icon3_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CRUD.Icon3_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CRUD",
-                "type": "CRUD.Icon3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "CRUD.Icon3_1.TabIndex"
                 }
               ],
@@ -349,26 +319,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "PopUP.Icon2_2.AccessibleLabel"
+                  "fullyQualifiedName": "CRUD.Icon3_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "PopUP.Icon2_2.AccessibleLabel",
+                  "fullyQualifiedName": "CRUD.Icon3_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "PopUP",
-                "type": "PopUP.Icon2_2"
+                "module": "CRUD",
+                "type": "CRUD.Icon3_1"
               }
             }
           ],
@@ -379,7 +349,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -409,26 +379,26 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Component2.Arrow1.AccessibleLabel"
+                  "fullyQualifiedName": "PopUP.Icon2_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Component2.Arrow1.AccessibleLabel",
+                  "fullyQualifiedName": "PopUP.Icon2_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Component2",
-                "type": "Component2.Arrow1"
+                "module": "PopUP",
+                "type": "PopUP.Icon2_2"
               }
             }
           ],
@@ -439,7 +409,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -469,6 +439,36 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Component2.Arrow1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Component2.Arrow1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Component2",
+                "type": "Component2.Arrow1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 5
         },
         {
@@ -499,7 +499,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -529,7 +529,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -559,7 +559,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -589,7 +589,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -619,7 +619,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -649,7 +649,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -679,7 +679,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -709,7 +709,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -739,7 +739,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -769,7 +769,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -799,7 +799,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -829,7 +829,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -859,7 +859,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -889,7 +889,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -919,7 +919,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -949,7 +949,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -979,7 +979,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1009,7 +1009,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1039,7 +1039,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1069,7 +1069,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1099,7 +1099,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1129,7 +1129,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1159,7 +1159,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1189,7 +1189,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1219,7 +1219,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1249,7 +1249,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1279,7 +1279,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1309,7 +1309,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1339,7 +1339,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1369,7 +1369,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1399,7 +1399,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1429,7 +1429,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1459,7 +1459,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1489,7 +1489,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1519,7 +1519,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1549,7 +1549,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1579,7 +1579,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1609,7 +1609,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1639,7 +1639,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1669,7 +1669,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1699,7 +1699,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1729,7 +1729,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1759,7 +1759,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1789,7 +1789,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1819,7 +1819,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1849,7 +1849,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1879,7 +1879,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1909,7 +1909,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1939,7 +1939,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1969,7 +1969,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1999,7 +1999,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2029,7 +2029,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2059,7 +2059,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2089,7 +2089,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2119,7 +2119,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2149,7 +2149,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2179,7 +2179,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2209,6 +2209,36 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Component3.BackArrow.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Component3.BackArrow.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Component3",
+                "type": "Component3.BackArrow"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
         },
         {
@@ -2239,36 +2269,6 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Component3.BackArrow.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Component3.BackArrow.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Component3",
-                "type": "Component3.BackArrow"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 5
         },
         {
@@ -2680,23 +2680,6 @@
               }
             },
             {
-              "id": "acc-AccessibleLabelNeeded",
-              "messageStrings": {
-                "issue": {
-                  "text": "Missing accessible label"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Edit the accessible label property to describe the item."
-                ],
-                "level": "Medium",
-                "primaryCategory": "accessibility",
-                "whyFix": "If there's no accessible text, people who can’t see the screen won't understand what’s in images and controls."
-              }
-            },
-            {
               "id": "acc-TabIndexShouldBeDefinedForInteractiveControl",
               "messageStrings": {
                 "issue": {
@@ -2711,6 +2694,23 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "People who use the keyboard with your app will not be able to access this element without a tab stop."
+              }
+            },
+            {
+              "id": "acc-AccessibleLabelNeeded",
+              "messageStrings": {
+                "issue": {
+                  "text": "Missing accessible label"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Edit the accessible label property to describe the item."
+                ],
+                "level": "Medium",
+                "primaryCategory": "accessibility",
+                "whyFix": "If there's no accessible text, people who can’t see the screen won't understand what’s in images and controls."
               }
             },
             {
