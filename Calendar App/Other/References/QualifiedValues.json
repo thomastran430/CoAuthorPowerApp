@@ -22,17 +22,17 @@
       }
     },
     {
-      "Kind": "default.cds_cdm_worker_forms",
-      "Namespace": "Workers (Forms)",
-      "Values": {
-        "Information": "9986e9e8-2cb9-4b6e-a0b8-7cb441fd2b7b"
-      }
-    },
-    {
       "Kind": "default.cds_creda_new_appointmentsx_view_all_forms",
       "Namespace": "New_AppointmentsX_View_Alls (Forms)",
       "Values": {
         "Information": "479a43ad-1a53-445b-828d-fde7ee857861"
+      }
+    },
+    {
+      "Kind": "default.cds_cdm_worker_forms",
+      "Namespace": "Workers (Forms)",
+      "Values": {
+        "Information": "9986e9e8-2cb9-4b6e-a0b8-7cb441fd2b7b"
       }
     }
   ]
