@@ -3508,9 +3508,9 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =40
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             OnSelect: |+
@@ -3524,7 +3524,7 @@
             Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width-50
-            Y: =160
+            Y: =165
             ZIndex: =62
 
         Icon9_1 As icon.ArrowsUpDown:
@@ -3534,9 +3534,9 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =40
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             OnSelect: |-
@@ -3549,7 +3549,7 @@
             Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width-Icon9_1.Width
-            Y: =158
+            Y: =165
             ZIndex: =63
 
         Icon9_2 As icon.ArrowsUpDown:
@@ -3559,9 +3559,9 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =40
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             OnSelect: |+
@@ -3575,7 +3575,7 @@
             Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width-Icon9_2.Width
-            Y: =160
+            Y: =165
             ZIndex: =64
 
         Icon9_3 As icon.ArrowsUpDown:
@@ -3585,9 +3585,9 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =40
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             OnSelect: |
@@ -3600,7 +3600,7 @@
             Visible: =test_all_new
             Width: =59
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width-Icon9_2.Width
-            Y: =164
+            Y: =165
             ZIndex: =65
 
         Icon9_4 As icon.ArrowsUpDown:
@@ -3610,9 +3610,9 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =40
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             OnSelect: |
@@ -3624,8 +3624,8 @@
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
             Width: =59
-            X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width-Icon9_4.Width
-            Y: =156
+            X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width-Icon9_2.Width
+            Y: =165
             ZIndex: =66
 
         Icon9_5 As icon.ArrowsUpDown:
@@ -3635,9 +3635,9 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =40
+            Height: =30
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
+            HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -3646,7 +3646,7 @@
             Visible: =test_all_new
             Width: =59
             X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width+Location_Column3_1.Width-Icon9_4.Width
-            Y: =162
+            Y: =165
             ZIndex: =67
 
         Button8 As button:
