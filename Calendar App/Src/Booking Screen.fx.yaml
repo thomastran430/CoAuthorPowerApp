@@ -3255,8 +3255,8 @@
             Text: ="Employee"
             Visible: =GroupVisible
             Width: =240
-            X: =647
-            Y: =103
+            X: =635
+            Y: =101
             ZIndex: =7
 
         Radio2 As radio:
