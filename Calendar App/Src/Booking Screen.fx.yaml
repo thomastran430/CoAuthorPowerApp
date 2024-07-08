@@ -15,11 +15,12 @@
             )
         LogoImage: =VMLOGO
         NameDisplayText: |-
-            =If(
-                IsBlank(ComboBox1.Selected),
-                "Select a user...",
-                ComboBox1.Selected.DisplayName  
-            )
+            =//If(
+                //IsBlank(ComboBox1.Selected),
+                //"Select a user...",
+                //ComboBox1.Selected.DisplayName  
+            //)
+            Office365Users.MyProfile().DisplayName
         ProfilePicImage: ='924291258'
         ZIndex: =1
 
@@ -1517,7 +1518,7 @@
                     Height: =34
                     PaddingLeft: =0
                     Size: =13
-                    Text: =Parent.DisplayName
+                    Text: ="Employee"
                     Width: =(Parent.Width - 60) * 0.4
                     Wrap: =false
                     X: =30
@@ -1579,7 +1580,7 @@
                     ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                     ChevronHoverFill: =RGBA(50, 49, 48, 1)
                     Color: =RGBA(50, 49, 48, 1)
-                    Default: =ComboBox1.Selected
+                    DefaultSelectedItems: =ComboBox1.Selected
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
@@ -3256,7 +3257,7 @@
             Visible: =GroupVisible
             Width: =240
             X: =635
-            Y: =101
+            Y: =103
             ZIndex: =7
 
         Radio2 As radio:
