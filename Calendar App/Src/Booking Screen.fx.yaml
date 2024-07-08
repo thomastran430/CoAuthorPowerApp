@@ -3508,7 +3508,7 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =30
+            Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -3522,7 +3522,7 @@
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
-            Width: =59
+            Width: =55
             X: =Appointment_Date_Column3_1.Width-50
             Y: =165
             ZIndex: =62
@@ -3534,7 +3534,7 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =30
+            Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -3547,7 +3547,7 @@
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
-            Width: =59
+            Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width-Icon9_1.Width
             Y: =165
             ZIndex: =63
@@ -3559,7 +3559,7 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =30
+            Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -3573,7 +3573,7 @@
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
-            Width: =59
+            Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width-Icon9_2.Width
             Y: =165
             ZIndex: =64
@@ -3585,7 +3585,7 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =30
+            Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -3598,7 +3598,7 @@
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
-            Width: =59
+            Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width-Icon9_2.Width
             Y: =165
             ZIndex: =65
@@ -3610,7 +3610,7 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =30
+            Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -3623,7 +3623,7 @@
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
-            Width: =59
+            Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width-Icon9_2.Width
             Y: =165
             ZIndex: =66
@@ -3635,7 +3635,7 @@
             DisabledColor: =RGBA(225, 223, 221, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =30
+            Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -3644,7 +3644,7 @@
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =test_all_new
-            Width: =59
+            Width: =55
             X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width+Location_Column3_1.Width-Icon9_4.Width
             Y: =165
             ZIndex: =67
