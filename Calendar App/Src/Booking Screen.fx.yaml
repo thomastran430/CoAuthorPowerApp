@@ -3255,7 +3255,7 @@
             Text: ="Employee"
             Visible: =GroupVisible
             Width: =240
-            X: =617
+            X: =647
             Y: =103
             ZIndex: =7
 

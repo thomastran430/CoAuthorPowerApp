@@ -116,13 +116,13 @@
     "Id": "e433b646-8b7c-4ebc-b413-ffeaa51b4fa8",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "Calendar",
+    "Name": "Appointment_Booking",
     "OriginatingVersion": "1.341",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "Calendar",
+    "AppName": "Appointment_Booking",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
