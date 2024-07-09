@@ -3626,9 +3626,9 @@
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
             OnSelect: |
-                =Set(varSortColumn, "creda_start_time");
+                =Set(varSortColumn, "creda_end_time");
                 Set(varSortDescending, false);
-                If(varSortColumn = "creda_start_time", Set(varSortDescending, !varSortDescending), Set(varSortColumn, "creda_start_time"); Set(varSortDescending, false))
+                If(varSortColumn = "creda_end_time", Set(varSortDescending, !varSortDescending), Set(varSortColumn, "creda_end_time"); Set(varSortDescending, false))
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -3675,6 +3675,10 @@
             HoverColor: =RGBA(255, 255, 0, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Sort
+            OnSelect: |
+                =Set(varSortColumn, "creda_location");
+                Set(varSortDescending, false);
+                If(varSortColumn = "creda_location", Set(varSortDescending, !varSortDescending), Set(varSortColumn, "creda_location"); Set(varSortDescending, false))
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =RGBA(16, 110, 190, 1)
             PressedFill: =RGBA(0, 0, 0, 0)
