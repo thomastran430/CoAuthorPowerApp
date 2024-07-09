@@ -20,6 +20,8 @@
       "creda_location": "Location",
       "creda_new_appointmentsx_table_AsyncOperations": "System Jobs",
       "creda_new_appointmentsx_table_BulkDeleteFailures": "Bulk Delete Failures",
+      "creda_new_appointmentsx_table_connections1": "Connections (creda_new_appointmentsx_table_connections1)",
+      "creda_new_appointmentsx_table_connections2": "Connections (creda_new_appointmentsx_table_connections2)",
       "creda_new_appointmentsx_table_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
       "creda_new_appointmentsx_table_PrincipalObjectAttributeAccesses": "Field Sharing",
       "creda_new_appointmentsx_table_ProcessSession": "Process Sessions",
