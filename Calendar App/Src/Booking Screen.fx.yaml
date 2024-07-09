@@ -3429,13 +3429,15 @@
             HoverFill: =RGBA(153, 201, 238, 1)
             InputFill: =RGBA(245, 245, 245, 1)
             InvertedColor: =RGBA(255, 255, 255, 1)
-            Items: |-
+            Items: |+
                 =//If(!IsBlank(varSortDescending), SortByColumns(New_AppointmentsX_Tables,"creda_appointment_date", If(varSortDescending=true, SortOrder.Ascending,SortOrder.Descending)),New_AppointmentsX_Tables)
                 SortByColumns(
                     New_AppointmentsX_Tables,
                     varSortColumn,
-                    If(varSortDescending, SortOrder.Descending, SortOrder.Ascending)
+                If(varSortDescending, SortOrder.Descending, SortOrder.Ascending)
                 )
+                
+                
             LinkColor: =RGBA(0, 120, 212, 1)
             PrimaryColor1: =RGBA(0, 120, 212, 1)
             PrimaryColor2: =RGBA(16, 110, 190, 1)
@@ -3467,7 +3469,7 @@
             Department_Name_Column3_1 As dataTableColumn.complexOptionSetColumn:
                 AutoWidth: =false
                 DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Department Name"
+                FieldDisplayName: ="Department"
                 FieldName: ="creda_department_name"
                 FieldVariantName: ="complexOptionSetColumn"
                 Height: =548
