@@ -35,11 +35,12 @@
         BackArrowOnSelect: =
         BackArrowVisible: =false
         IDDisplayText: |-
-            =If(
-                IsBlank(ComboBox1.Selected),
-                "City",
-                ComboBox1.Selected.OfficeLocation & " " & ComboBox1.Selected.Department & ""
-            )
+            =//If(
+                //IsBlank(ComboBox1.Selected),
+                //"City",
+                //ComboBox1.Selected.OfficeLocation & " " & ComboBox1.Selected.Department & ""
+            //)
+            Office365Users.MyProfile().Department
         LogoImage: =VMLOGO
         NameDisplayText: |-
             =//If(
