@@ -5,6 +5,32 @@
         =Set(varColumnWidth, Email_Column3_1.Width);
         
 
+    Button4_1 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |
+            =//Set(popup_select_all,true)
+            Set(test_all_new_view,true);
+            Set(GroupVisible,false)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =15
+        Text: ="View All"
+        Visible: =GroupVisible
+        X: =1177
+        Y: =103
+        ZIndex: =1
+
     Component3_1 As Component3:
         BackArrowOnSelect: =
         BackArrowVisible: =false
@@ -23,7 +49,7 @@
             //)
             Office365Users.MyProfile().DisplayName
         ProfilePicImage: ='924291258'
-        ZIndex: =1
+        ZIndex: =2
 
     Og_View_All As button:
         BorderColor: =App.Theme.Colors.Primary
@@ -51,7 +77,7 @@
             false
         X: =1194
         Y: =100
-        ZIndex: =2
+        ZIndex: =3
 
     "Gallery6 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         BorderColor: =App.Theme.Colors.Darker40
@@ -64,7 +90,7 @@
         TemplateSize: =116
         Width: =1366
         Y: =246
-        ZIndex: =3
+        ZIndex: =4
 
         Title10 As label:
             Color: =RGBA(50, 49, 48, 1)
@@ -171,7 +197,7 @@
         Width: =609
         X: =374
         Y: =174
-        ZIndex: =4
+        ZIndex: =5
 
         Title3 As label:
             Color: =RGBA(50, 49, 48, 1)
@@ -276,7 +302,7 @@
         RadiusTopRight: =4
         Visible: =false
         Width: =1366
-        ZIndex: =5
+        ZIndex: =6
 
         Label10_1 As label:
             BorderColor: =App.Theme.Colors.Darker40
@@ -333,7 +359,7 @@
         Width: =253
         X: =642
         Y: =8
-        ZIndex: =6
+        ZIndex: =7
 
     Form_Container As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -345,7 +371,7 @@
         RadiusTopRight: =4
         Width: =541
         Y: =156
-        ZIndex: =8
+        ZIndex: =9
 
         Date_Label_1 As label:
             BorderColor: =App.Theme.Colors.Darker40
@@ -691,7 +717,7 @@
         Width: =823
         X: =541
         Y: =156
-        ZIndex: =9
+        ZIndex: =10
 
         "WeekdaysGallery As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
             BorderColor: =App.Theme.Colors.Darker40
@@ -1053,7 +1079,7 @@
         Visible: =lcl_popuptwo Or varShowPopUptwo
         Width: =1364
         X: =2
-        ZIndex: =13
+        ZIndex: =14
 
     Group3 As group:
         Height: =5
@@ -1068,7 +1094,7 @@
             Height: =768
             Visible: =varShowPopUp
             Width: =1366
-            ZIndex: =12
+            ZIndex: =13
 
         PopUp_Window As rectangle:
             BorderColor: =RGBA(255, 255, 255, 1)
@@ -1078,7 +1104,7 @@
             Width: =726
             X: =288
             Y: =168
-            ZIndex: =14
+            ZIndex: =15
 
         PopUp_Title_Bar As label:
             Align: =Align.Center
@@ -1093,7 +1119,7 @@
             Width: =726
             X: =288
             Y: =128
-            ZIndex: =15
+            ZIndex: =16
 
         Label_You_Info As label:
             Align: =Align.Center
@@ -1108,7 +1134,7 @@
             Width: =474
             X: =386
             Y: =174
-            ZIndex: =16
+            ZIndex: =17
 
         Label_Email_PopUp_Label As label:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1120,7 +1146,7 @@
             Visible: =varShowPopUp
             X: =323
             Y: =225
-            ZIndex: =17
+            ZIndex: =18
 
         Label_Dropdown_PopUp As label:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1132,7 +1158,7 @@
             Visible: =varShowPopUp
             X: =315
             Y: =309
-            ZIndex: =18
+            ZIndex: =19
 
         Dropdown_PopUp As dropdown:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1155,7 +1181,7 @@
             Visible: =varShowPopUp
             X: =465
             Y: =309
-            ZIndex: =19
+            ZIndex: =20
 
         Continue_Btn_PopUp As button:
             BorderColor: =App.Theme.Colors.Primary
@@ -1189,7 +1215,7 @@
             Visible: =varShowPopUp
             X: =713
             Y: =457
-            ZIndex: =20
+            ZIndex: =21
 
         Cancel_Btn_PopUp As button:
             BorderColor: =App.Theme.Colors.Primary
@@ -1212,7 +1238,7 @@
             Visible: =varShowPopUp
             X: =427
             Y: =457
-            ZIndex: =21
+            ZIndex: =22
 
         TextInput3 As text:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1237,7 +1263,7 @@
             Visible: =varShowPopUp
             X: =469
             Y: =224
-            ZIndex: =22
+            ZIndex: =23
 
     PopUP_1 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
@@ -1248,7 +1274,7 @@
         Visible: =lcl_popup
         X: =343
         Y: =71
-        ZIndex: =34
+        ZIndex: =35
 
     PopUP_2 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
@@ -1262,7 +1288,7 @@
         Width: =636
         X: =407
         Y: =143
-        ZIndex: =35
+        ZIndex: =36
 
     Rectangle14 As rectangle:
         BorderColor: =App.Theme.Colors.Darker40
@@ -1270,7 +1296,7 @@
         Height: =768
         Visible: =popup_select_all
         Width: =1366
-        ZIndex: =40
+        ZIndex: =41
 
     EditAppointmentPopup As group:
         Height: =5
@@ -1287,7 +1313,7 @@
             PressedFill: =RGBA(11, 77, 133, 70%)
             Visible: =varShowPopUpFour
             Width: =1366
-            ZIndex: =55
+            ZIndex: =56
 
         Rectangle5 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1299,7 +1325,7 @@
             Width: =641
             X: =373
             Y: =44
-            ZIndex: =56
+            ZIndex: =57
 
         Form2 As form:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1311,7 +1337,7 @@
             Width: =637
             X: =375
             Y: =107
-            ZIndex: =57
+            ZIndex: =58
 
             Email_DataCard3 As typedDataCard.allowedValuesStringEditCard:
                 AllowedValues: =DataSourceInfo([@New_AppointmentsX], DataSourceInfo.AllowedValues, Email)
@@ -1896,7 +1922,7 @@
             Width: =641
             X: =373
             Y: =44
-            ZIndex: =58
+            ZIndex: =59
 
         Button1 As button:
             BorderColor: =App.Theme.Colors.Primary
@@ -1934,7 +1960,7 @@
             Width: =183
             X: =605
             Y: =510
-            ZIndex: =59
+            ZIndex: =60
 
         Button5 As button:
             BorderColor: =App.Theme.Colors.Primary
@@ -1964,7 +1990,7 @@
             Width: =89
             X: =923
             Y: =44
-            ZIndex: =60
+            ZIndex: =61
 
     "'adminsignin(delete)' As group":
         Height: =5
@@ -1986,7 +2012,7 @@
             Height: =768
             Visible: =ShowPfive
             Width: =1366
-            ZIndex: =28
+            ZIndex: =29
 
         Rectangle6 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
@@ -1996,7 +2022,7 @@
             Width: =635
             X: =365
             Y: =233
-            ZIndex: =29
+            ZIndex: =30
 
         Icon3 As icon.CancelBadge:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2009,7 +2035,7 @@
             Width: =191
             X: =568
             Y: =336
-            ZIndex: =30
+            ZIndex: =31
 
         Label2 As label:
             Align: =Align.Center
@@ -2024,7 +2050,7 @@
             Width: =592
             X: =390
             Y: =467
-            ZIndex: =31
+            ZIndex: =32
 
         Icon4 As icon.Cancel:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2036,7 +2062,7 @@
             Visible: =ShowPfive
             X: =936
             Y: =235
-            ZIndex: =32
+            ZIndex: =33
 
     Group2 As group:
         Height: =5
@@ -2051,7 +2077,7 @@
             Height: =768
             Visible: =ShowPfour
             Width: =1364
-            ZIndex: =24
+            ZIndex: =25
 
         Rectangle3 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2061,7 +2087,7 @@
             Width: =692
             X: =351
             Y: =183
-            ZIndex: =25
+            ZIndex: =26
 
         Icon1 As icon.CancelBadge:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2074,7 +2100,7 @@
             Width: =214
             X: =579
             Y: =264
-            ZIndex: =26
+            ZIndex: =27
 
         Label1 As label:
             Align: =Align.Center
@@ -2089,7 +2115,7 @@
             Width: =612
             X: =402
             Y: =437
-            ZIndex: =27
+            ZIndex: =28
 
         Icon2 As icon.Cancel:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2103,7 +2129,7 @@
             Width: =43
             X: =1000
             Y: =182
-            ZIndex: =33
+            ZIndex: =34
 
     Group4 As group:
         Height: =5
@@ -2119,7 +2145,7 @@
             Visible: =false
             Width: =1364
             X: =2
-            ZIndex: =41
+            ZIndex: =42
 
         Rectangle13 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2129,7 +2155,7 @@
             Width: =644
             X: =427
             Y: =91
-            ZIndex: =42
+            ZIndex: =43
 
         Container4 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -2144,7 +2170,7 @@
             Width: =644
             X: =427
             Y: =92
-            ZIndex: =43
+            ZIndex: =44
 
             Label11 As label:
                 Align: =Align.Center
@@ -2278,7 +2304,7 @@
             Width: =51
             X: =1008
             Y: =111
-            ZIndex: =44
+            ZIndex: =45
 
     Icon6 As icon.ArrowsUpDown:
         BorderColor: =App.Theme.Colors.Darker40
@@ -2294,7 +2320,7 @@
         Width: =34
         X: =186
         Y: =162
-        ZIndex: =49
+        ZIndex: =50
 
     Icon7 As icon.Cancel:
         BorderColor: =App.Theme.Colors.Darker40
@@ -2305,7 +2331,7 @@
         OnSelect: =Set(popup_select_all,false)
         Visible: =popup_select_all
         X: =1302
-        ZIndex: =50
+        ZIndex: =51
 
     DeletePopUp As group:
         Height: =5
@@ -2323,7 +2349,7 @@
             Visible: =varShowPopUpthree
             Width: =1364
             X: =2
-            ZIndex: =36
+            ZIndex: =37
 
         Rectangle8 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -2336,7 +2362,7 @@
             Width: =321
             X: =536
             Y: =265
-            ZIndex: =37
+            ZIndex: =38
 
         Button3 As button:
             BorderColor: =App.Theme.Colors.Primary
@@ -2360,7 +2386,7 @@
             Width: =106
             X: =571
             Y: =351
-            ZIndex: =38
+            ZIndex: =39
 
         Button3_1 As button:
             BorderColor: =App.Theme.Colors.Primary
@@ -2387,7 +2413,7 @@
             Width: =106
             X: =701
             Y: =351
-            ZIndex: =39
+            ZIndex: =40
 
         Label13 As label:
             Align: =Align.Center
@@ -2403,7 +2429,7 @@
             Width: =316
             X: =536
             Y: =274
-            ZIndex: =51
+            ZIndex: =52
 
     Group5 As group:
         Height: =5
@@ -2421,7 +2447,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1364
-            ZIndex: =45
+            ZIndex: =46
 
             Container9 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -2468,7 +2494,7 @@
             Width: =1364
             X: =0
             Y: =159
-            ZIndex: =46
+            ZIndex: =47
 
             Appointment_Date_Column3 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
@@ -2580,7 +2606,7 @@
             RadiusTopRight: =4
             Visible: =popup_select_all
             Width: =1366
-            ZIndex: =47
+            ZIndex: =48
 
             Label9 As label:
                 Align: =Align.Center
@@ -2624,7 +2650,7 @@
             Width: =359
             X: =545
             Y: =89
-            ZIndex: =48
+            ZIndex: =49
 
         Image3 As image:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2634,7 +2660,7 @@
             Image: ='Screenshot 2024-06-28 155657'
             Visible: =popup_select_all
             Width: =351
-            ZIndex: =52
+            ZIndex: =53
 
         Icon8 As icon.Filter:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2647,7 +2673,7 @@
             Width: =50
             X: =858
             Y: =79
-            ZIndex: =53
+            ZIndex: =54
 
         Dropdown1 As dropdown:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2670,7 +2696,7 @@
             Visible: =false
             X: =529
             Y: =83
-            ZIndex: =54
+            ZIndex: =55
 
     CRUD_1 As CRUD:
         CRUD_Cancel: =Set(varShowPopUptwo, false)
@@ -2701,32 +2727,6 @@
         Visible: =varShowPopUptwo
         Width: =610
         X: =390
-        ZIndex: =69
-
-    Button7 As button:
-        BorderColor: =App.Theme.Colors.Primary
-        DisabledBorderColor: =RGBA(244, 244, 244, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =App.Theme.Colors.Primary
-        Font: =App.Theme.Font
-        FontWeight: =FontWeight.Semibold
-        Height: =43
-        HoverBorderColor: =App.Theme.Colors.Darker10
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =App.Theme.Colors.Darker10
-        OnSelect: |-
-            =Set(test_all_new,false);
-            Set(GroupVisible,true)
-        PressedBorderColor: =App.Theme.Colors.Darker40
-        PressedColor: =Self.Color
-        PressedFill: =App.Theme.Colors.Darker40
-        Size: =15
-        Text: ="Back"
-        Visible: =test_all_new
-        Width: =90
-        X: =17
-        Y: =102
         ZIndex: =70
 
     Group7 As group:
@@ -2749,7 +2749,7 @@
             Width: =240
             X: =635
             Y: =103
-            ZIndex: =7
+            ZIndex: =8
 
         Radio2 As radio:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2777,7 +2777,7 @@
             Width: =264
             X: =324
             Y: =103
-            ZIndex: =10
+            ZIndex: =11
 
         ComboBox1 As combobox:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2825,7 +2825,7 @@
             Width: =434
             X: =730
             Y: =103
-            ZIndex: =11
+            ZIndex: =12
 
         Label10 As label:
             BorderColor: =App.Theme.Colors.Darker40
@@ -2839,7 +2839,33 @@
             Width: =321
             X: =17
             Y: =103
-            ZIndex: =23
+            ZIndex: =24
+
+    Button7 As button:
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |-
+            =Set(test_all_new,false);
+            Set(GroupVisible,true)
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =15
+        Text: ="Back"
+        Visible: =test_all_new
+        Width: =90
+        X: =17
+        Y: =102
+        ZIndex: =71
 
     Group6 As group:
         Height: =5
@@ -2888,7 +2914,7 @@
             Width: =1364
             X: =2
             Y: =159
-            ZIndex: =61
+            ZIndex: =62
 
             Appointment_Date_Column3_1 As dataTableColumn.dateTimeColumn:
                 AutoWidth: =false
@@ -2994,7 +3020,7 @@
             Width: =55
             X: =Appointment_Date_Column3_1.Width-50
             Y: =165
-            ZIndex: =62
+            ZIndex: =63
 
         Icon9_1 As icon.ArrowsUpDown:
             BorderColor: =App.Theme.Colors.Darker40
@@ -3012,7 +3038,7 @@
             Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width-Icon9_1.Width
             Y: =165
-            ZIndex: =63
+            ZIndex: =64
 
         Icon9_2 As icon.ArrowsUpDown:
             BorderColor: =App.Theme.Colors.Darker40
@@ -3031,7 +3057,7 @@
             Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width-Icon9_2.Width
             Y: =165
-            ZIndex: =64
+            ZIndex: =65
 
         Icon9_3 As icon.ArrowsUpDown:
             BorderColor: =App.Theme.Colors.Darker40
@@ -3049,7 +3075,7 @@
             Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width-Icon9_2.Width
             Y: =165
-            ZIndex: =65
+            ZIndex: =66
 
         Icon9_4 As icon.ArrowsUpDown:
             BorderColor: =App.Theme.Colors.Darker40
@@ -3067,7 +3093,7 @@
             Width: =55
             X: =Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Department_Name_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width-Icon9_2.Width
             Y: =165
-            ZIndex: =66
+            ZIndex: =67
 
         Icon9_5 As icon.ArrowsUpDown:
             BorderColor: =App.Theme.Colors.Darker40
@@ -3085,7 +3111,7 @@
             Width: =55
             X: =Department_Name_Column3_1.Width+Appointment_Date_Column3_1.Width+Email_Column3_1.Width+Start_Time_Column3_1.Width+End_Time_Column3_1.Width+Location_Column3_1.Width-Icon9_4.Width
             Y: =165
-            ZIndex: =67
+            ZIndex: =68
 
         Button8 As button:
             BorderColor: =App.Theme.Colors.Primary
@@ -3115,33 +3141,7 @@
             Width: =285
             X: =1069
             Y: =102
-            ZIndex: =68
-
-    Button4_1 As button:
-        BorderColor: =App.Theme.Colors.Primary
-        DisabledBorderColor: =RGBA(244, 244, 244, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =App.Theme.Colors.Primary
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =App.Theme.Font
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =App.Theme.Colors.Darker10
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =App.Theme.Colors.Darker10
-        OnSelect: |
-            =//Set(popup_select_all,true)
-            Set(test_all_new_view,true);
-            Set(GroupVisible,false)
-        PressedBorderColor: =App.Theme.Colors.Darker40
-        PressedColor: =Self.Color
-        PressedFill: =App.Theme.Colors.Darker40
-        Size: =15
-        Text: ="View All"
-        Visible: =GroupVisible
-        X: =1137
-        Y: =99
-        ZIndex: =76
+            ZIndex: =69
 
     Group9 As group:
         Height: =5
@@ -3156,7 +3156,7 @@
             Visible: =test_all_new_view
             Width: =1366
             Yposition: =Component3_1.Height
-            ZIndex: =71
+            ZIndex: =72
 
         ButtonCanvas1 As Button:
             DisplayMode: =DisplayMode.Edit
@@ -3177,7 +3177,7 @@
             Width: =285
             X: =1067
             Y: =103
-            ZIndex: =72
+            ZIndex: =73
 
         ButtonCanvas2 As Button:
             DisplayMode: =DisplayMode.Edit
@@ -3311,7 +3311,7 @@
             Width: =605
             X: =407
             Y: =103
-            ZIndex: =77
+            ZIndex: =76
 
         Rectangle7 As rectangle:
             BorderColor: =App.Theme.Colors.Darker40
@@ -3320,5 +3320,5 @@
             Visible: =test_all_new_view
             Width: ='Booking Screen'.Width
             Y: =173
-            ZIndex: =78
+            ZIndex: =77
 
