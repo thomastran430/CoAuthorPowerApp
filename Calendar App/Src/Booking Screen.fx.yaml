@@ -2753,9 +2753,10 @@
             ZIndex: =8
 
         Radio2 As radio:
-            BorderColor: =App.Theme.Colors.Darker40
+            BorderColor: =RGBA(0, 0, 0, 0)
             Color: =RGBA(0, 0, 0, 1)
             Default: ="Yours"
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisplayMode: |
                 =If(
                     IsBlank(LookUp(Admin_Login_Cred, UserName = Office365Users.MyProfile().Mail && Role = "Admin")), 
@@ -2770,7 +2771,7 @@
             OnChange: |
                 =Reset(ComboBox1)
                 //If(Radio2.Selected.Value="Others",Set(varShowPopUpThree,true),Set(varShowPopUpThree,false))
-            RadioBorderColor: =App.Theme.Colors.Primary
+            RadioBorderColor: =
             RadioSelectionFill: =App.Theme.Colors.Primary
             RadioSize: =30
             Size: =13
