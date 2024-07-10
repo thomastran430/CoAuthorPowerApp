@@ -1,6 +1,6 @@
 Log_In_page As screen:
     Fill: =RGBA(39, 113, 194, 1)
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: =Set(labeltxt,false)
 
     form_1 As groupContainer.manualLayoutContainer:
@@ -17,27 +17,20 @@ Log_In_page As screen:
         ZIndex: =2
 
         Input_Password_1 As text:
-            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderColor: =App.Theme.Colors.Darker40
             BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(0, 0, 0, 1)
             Default: =
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
+            Font: =App.Theme.Font
             Height: =51
             HintText: ="Enter Your Password"
-            HoverBorderColor: =RGBA(16, 110, 190, 1)
-            HoverColor: =RGBA(50, 49, 48, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedBorderColor: =RGBA(0, 120, 212, 1)
-            PressedColor: =RGBA(50, 49, 48, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             Size: =13
             Width: =479
             X: =21
@@ -45,28 +38,21 @@ Log_In_page As screen:
             ZIndex: =1
 
         Input_UserName_1 As text:
-            BorderColor: =RGBA(245, 245, 245, 1)
+            BorderColor: =App.Theme.Colors.Darker40
             BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(0, 0, 0, 1)
             Default: =
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
+            Font: =App.Theme.Font
             Height: =52
             HintText: ="Enter Your Username"
-            HoverBorderColor: =RGBA(16, 110, 190, 1)
-            HoverColor: =RGBA(50, 49, 48, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =App.Theme.Colors.Lighter70
             OnSelect: =Set(labeltxt,false)
-            PressedBorderColor: =RGBA(0, 120, 212, 1)
-            PressedColor: =RGBA(50, 49, 48, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
             Size: =13
             Width: =479
             X: =21
@@ -74,19 +60,18 @@ Log_In_page As screen:
             ZIndex: =2
 
         Sign_In_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
-            Fill: =RGBA(0, 120, 212, 1)
+            BorderColor: =App.Theme.Colors.Primary
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =App.Theme.Colors.Primary
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
+            Font: =App.Theme.Font
             FontWeight: =FontWeight.Semibold
             Height: =52
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =App.Theme.Colors.Darker10
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =RGBA(16, 110, 190, 1)
+            HoverFill: =App.Theme.Colors.Darker10
             OnSelect: |-
                 =Set(userrolevalue,LookUp(Admin_Login_Cred,UserName=Input_UserName_1.Text And Password=Input_Password_1.Text).Role);
                 If(IsBlankOrError(userrolevalue),
@@ -102,13 +87,9 @@ Log_In_page As screen:
                 Reset(Input_UserName_1);
                 Reset(Input_Password_1);
                 Set(UserName,Input_UserName_1.Text);
-            PressedBorderColor: =RGBA(0, 69, 120, 1)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(16, 110, 190, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =App.Theme.Colors.Darker40
             Size: =15
             Text: ="Sign In"
             Width: =284
@@ -117,14 +98,10 @@ Log_In_page As screen:
             ZIndex: =3
 
         Label3_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             Height: =90
             Size: =50
             Text: ="Sign In"
@@ -134,21 +111,13 @@ Log_In_page As screen:
             ZIndex: =5
 
         Icon2_1 As icon.View:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Color: =RGBA(0, 120, 212, 1)
-            DisabledBorderColor: =RGBA(245, 245, 245, 1)
-            DisabledColor: =RGBA(225, 223, 221, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =App.Theme.Colors.Darker30
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =42
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(16, 110, 190, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.View
             PaddingRight: =5
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =RGBA(16, 110, 190, 1)
-            PressedFill: =RGBA(0, 0, 0, 0)
             Width: =28
             X: =472
             Y: =323
@@ -156,14 +125,10 @@ Log_In_page As screen:
 
         Label6 As label:
             Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
+            BorderColor: =App.Theme.Colors.Darker40
             Color: =RGBA(255, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
             Size: =13
             Text: ="Incorrect User Name and Password"
             Visible: =labeltxt
@@ -173,14 +138,10 @@ Log_In_page As screen:
             ZIndex: =7
 
     Label5 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(50, 49, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
         Size: =13
         Text: ="Dayaasaagar"
         X: =153

@@ -1,0 +1,22 @@
+Component4 As CanvasComponent:
+    box_height: =100
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Max(App.Height, App.MinScreenHeight)-200
+    Width: =1364
+    X: =0
+    Y: =0
+    Yposition: =100
+    ZIndex: =5
+
+    Container6_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Component4.box_height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1364
+        Y: =Component4.Yposition
+        ZIndex: =1
+
