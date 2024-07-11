@@ -3371,6 +3371,7 @@
                     ZIndex: =1
 
                     Label7 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3384,6 +3385,7 @@
                         ZIndex: =1
 
                     Label14 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3396,6 +3398,7 @@
                         ZIndex: =2
 
                     Label15 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3408,6 +3411,7 @@
                         ZIndex: =3
 
                     Label16 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3420,6 +3424,7 @@
                         ZIndex: =4
 
                     Label17 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3432,6 +3437,7 @@
                         ZIndex: =5
 
                     Label18 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3444,6 +3450,7 @@
                         ZIndex: =6
 
                     Label19 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3458,6 +3465,7 @@
                         ZIndex: =7
 
                     Label20 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3470,6 +3478,7 @@
                         ZIndex: =8
 
                     Label21 As label:
+                        Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -3511,7 +3520,7 @@
                         Fill: =RGBA(39, 113, 194, 1)
                         Font: =App.Theme.Font
                         Size: =17
-                        Text: ="Text"
+                        Text: ="Date"
                         Width: =Label14.Width
                         X: =Label22.X+Label22.Width
                         Y: =9
@@ -3525,7 +3534,7 @@
                         Fill: =RGBA(39, 113, 194, 1)
                         Font: =App.Theme.Font
                         Size: =17
-                        Text: ="Text"
+                        Text: ="Dept"
                         Width: =Label15.Width
                         X: =Label22_1.X+Label22_1.Width
                         Y: =9
@@ -3539,7 +3548,7 @@
                         Fill: =RGBA(39, 113, 194, 1)
                         Font: =App.Theme.Font
                         Size: =17
-                        Text: ="Text"
+                        Text: ="Location"
                         Width: =Label16.Width
                         X: =Label22_2.X+Label22_2.Width
                         Y: =9
@@ -3553,7 +3562,7 @@
                         Fill: =RGBA(39, 113, 194, 1)
                         Font: =App.Theme.Font
                         Size: =17
-                        Text: ="Text"
+                        Text: ="Start Time"
                         Width: =Label17.Width
                         X: =Label22_3.X+Label22_3.Width
                         Y: =9
@@ -3567,7 +3576,7 @@
                         Fill: =RGBA(39, 113, 194, 1)
                         Font: =App.Theme.Font
                         Size: =17
-                        Text: ="Text"
+                        Text: ="End Time"
                         Width: =Label18.Width
                         X: =Label23.X+Label23.Width
                         Y: =9
@@ -3581,7 +3590,7 @@
                         Fill: =RGBA(39, 113, 194, 1)
                         Font: =App.Theme.Font
                         Size: =17
-                        Text: ="Text"
+                        Text: ="Email"
                         Width: =Label19.Width
                         X: =Label24.X+Label24.Width
                         Y: =9
@@ -3595,7 +3604,7 @@
                         Fill: =RGBA(39, 113, 194, 1)
                         Font: =App.Theme.Font
                         Size: =17
-                        Text: ="Text"
+                        Text: ="Booked By"
                         Width: =Label21.Width
                         X: =Label23_1.X+Label23_1.Width
                         Y: =9
