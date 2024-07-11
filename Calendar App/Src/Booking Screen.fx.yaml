@@ -3186,7 +3186,7 @@
             OnSelect: |-
                 =Set(test_all_new_view,false);
                 Set(GroupVisible,true)
-            Text: ="back"
+            Text: ="Back"
             Visible: =test_all_new_view
             Width: =90
             X: =17
@@ -3333,6 +3333,7 @@
         Component4_2 As Component4:
             box_height: ='Booking Screen'.Height
             Height: =768
+            Visible: =false
             ZIndex: =78
 
         Container7 As groupContainer.horizontalAutoLayoutContainer:
@@ -3344,6 +3345,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
+            Visible: =false
             Width: =1354
             Y: =183
             ZIndex: =79
