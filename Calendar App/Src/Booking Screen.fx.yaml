@@ -3501,6 +3501,190 @@
                         Y: =19
                         ZIndex: =9
 
+                Fullname As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    Size: =17
+                    Text: ="Full Name"
+                    Width: =Label7.Width
+                    X: =15
+                    Y: =9
+                    ZIndex: =2
+
+                Datez As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    Size: =17
+                    Text: ="Date"
+                    Width: =Label14.Width
+                    X: =Fullname.X+Fullname.Width
+                    Y: =9
+                    ZIndex: =3
+
+                Dept As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: |
+                        =
+                        If(
+                            varSortColumn = "Dept",
+                            If(varSortDescending,
+                                Set(varSortColumn, ""); Set(varResetSort, true),
+                                Set(varSortDescending, true)
+                            ),
+                            Set(varSortColumn, "Dept");
+                            Set(varSortDescending, false);
+                            Set(varResetSort, false)
+                        )
+                    Size: =17
+                    Text: ="Dept"
+                    Width: =Label15.Width
+                    X: =Datez.X+Datez.Width
+                    Y: =9
+                    ZIndex: =4
+
+                Loc As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: |
+                        =
+                        If(
+                            varSortColumn = "Loc",
+                            If(varSortDescending,
+                                Set(varSortColumn, ""); Set(varResetSort, true),
+                                Set(varSortDescending, true)
+                            ),
+                            Set(varSortColumn, "Loc");
+                            Set(varSortDescending, false);
+                            Set(varResetSort, false)
+                        )
+                    Size: =17
+                    Text: ="Location"
+                    Width: =Label16.Width
+                    X: =Dept.X+Dept.Width
+                    Y: =9
+                    ZIndex: =5
+
+                stime As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: |
+                        =
+                        If(
+                            varSortColumn = "stime",
+                            If(varSortDescending,
+                                Set(varSortColumn, ""); Set(varResetSort, true),
+                                Set(varSortDescending, true)
+                            ),
+                            Set(varSortColumn, "stime");
+                            Set(varSortDescending, false);
+                            Set(varResetSort, false)
+                        )
+                    Size: =17
+                    Text: ="Start Time"
+                    Width: =Label17.Width
+                    X: =Loc.X+Loc.Width
+                    Y: =9
+                    ZIndex: =6
+
+                etime As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: |
+                        =
+                        If(
+                            varSortColumn = "etime",
+                            If(varSortDescending,
+                                Set(varSortColumn, ""); Set(varResetSort, true),
+                                Set(varSortDescending, true)
+                            ),
+                            Set(varSortColumn, "etime");
+                            Set(varSortDescending, false);
+                            Set(varResetSort, false)
+                        )
+                    Size: =17
+                    Text: ="End Time"
+                    Width: =Label18.Width
+                    X: =stime.X+stime.Width
+                    Y: =9
+                    ZIndex: =7
+
+                emailz As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: |
+                        =
+                        If(
+                            varSortColumn = "emailz",
+                            If(varSortDescending,
+                                Set(varSortColumn, ""); Set(varResetSort, true),
+                                Set(varSortDescending, true)
+                            ),
+                            Set(varSortColumn, "emailz");
+                            Set(varSortDescending, false);
+                            Set(varResetSort, false)
+                        )
+                    Size: =17
+                    Text: ="Email"
+                    Width: =Label19.Width
+                    X: =etime.X+etime.Width
+                    Y: =9
+                    ZIndex: =8
+
+                bookedbyz As label:
+                    Align: =Align.Center
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(39, 113, 194, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: |
+                        =
+                        If(
+                            varSortColumn = "bookedbyz",
+                            If(varSortDescending,
+                                Set(varSortColumn, ""); Set(varResetSort, true),
+                                Set(varSortDescending, true)
+                            ),
+                            Set(varSortColumn, "bookedbyz");
+                            Set(varSortDescending, false);
+                            Set(varResetSort, false)
+                        )
+                    Size: =17
+                    Text: ="Booked By"
+                    Width: =Label21.Width
+                    X: =emailz.X+emailz.Width
+                    Y: =9
+                    ZIndex: =9
+
                 Icon10 As icon.ArrowsUpDown:
                     BorderColor: =App.Theme.Colors.Darker40
                     Color: =App.Theme.Colors.Darker30
@@ -3509,13 +3693,15 @@
                     Height: =34
                     Icon: =Icon.Sort
                     OnSelect: |
-                        = If(
-                            varSortColumn = "Fullname",
+                        = 
+                         Set(Full_Name,Text("Full_Name"));
+                         If(
+                            varSortColumn = Full_Name,
                             If(varSortDescending,
                                 Set(varSortColumn, ""); Set(varResetSort, true),
                                 Set(varSortDescending, true)
                             ),
-                            Set(varSortColumn, "Fullname");
+                            Set(varSortColumn, Full_Name);
                             Set(varSortDescending, false);
                             Set(varResetSort, false)
                         )
@@ -3523,197 +3709,6 @@
                     X: =276
                     Y: =15
                     ZIndex: =10
-
-                Group10 As group:
-                    Height: =5
-                    Width: =5
-                    X: =40
-                    Y: =40
-                    ZIndex: =10
-
-                    Fullname As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        Size: =17
-                        Text: ="Full Name"
-                        Width: =Label7.Width
-                        X: =15
-                        Y: =9
-                        ZIndex: =2
-
-                    Datez As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        Size: =17
-                        Text: ="Date"
-                        Width: =Label14.Width
-                        X: =Fullname.X+Fullname.Width
-                        Y: =9
-                        ZIndex: =3
-
-                    Dept As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        OnSelect: |
-                            =
-                            If(
-                                varSortColumn = "Dept",
-                                If(varSortDescending,
-                                    Set(varSortColumn, ""); Set(varResetSort, true),
-                                    Set(varSortDescending, true)
-                                ),
-                                Set(varSortColumn, "Dept");
-                                Set(varSortDescending, false);
-                                Set(varResetSort, false)
-                            )
-                        Size: =17
-                        Text: ="Dept"
-                        Width: =Label15.Width
-                        X: =Datez.X+Datez.Width
-                        Y: =9
-                        ZIndex: =4
-
-                    Loc As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        OnSelect: |
-                            =
-                            If(
-                                varSortColumn = "Loc",
-                                If(varSortDescending,
-                                    Set(varSortColumn, ""); Set(varResetSort, true),
-                                    Set(varSortDescending, true)
-                                ),
-                                Set(varSortColumn, "Loc");
-                                Set(varSortDescending, false);
-                                Set(varResetSort, false)
-                            )
-                        Size: =17
-                        Text: ="Location"
-                        Width: =Label16.Width
-                        X: =Dept.X+Dept.Width
-                        Y: =9
-                        ZIndex: =5
-
-                    stime As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        OnSelect: |
-                            =
-                            If(
-                                varSortColumn = "stime",
-                                If(varSortDescending,
-                                    Set(varSortColumn, ""); Set(varResetSort, true),
-                                    Set(varSortDescending, true)
-                                ),
-                                Set(varSortColumn, "stime");
-                                Set(varSortDescending, false);
-                                Set(varResetSort, false)
-                            )
-                        Size: =17
-                        Text: ="Start Time"
-                        Width: =Label17.Width
-                        X: =Loc.X+Loc.Width
-                        Y: =9
-                        ZIndex: =6
-
-                    etime As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        OnSelect: |
-                            =
-                            If(
-                                varSortColumn = "etime",
-                                If(varSortDescending,
-                                    Set(varSortColumn, ""); Set(varResetSort, true),
-                                    Set(varSortDescending, true)
-                                ),
-                                Set(varSortColumn, "etime");
-                                Set(varSortDescending, false);
-                                Set(varResetSort, false)
-                            )
-                        Size: =17
-                        Text: ="End Time"
-                        Width: =Label18.Width
-                        X: =stime.X+stime.Width
-                        Y: =9
-                        ZIndex: =7
-
-                    emailz As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        OnSelect: |
-                            =
-                            If(
-                                varSortColumn = "emailz",
-                                If(varSortDescending,
-                                    Set(varSortColumn, ""); Set(varResetSort, true),
-                                    Set(varSortDescending, true)
-                                ),
-                                Set(varSortColumn, "emailz");
-                                Set(varSortDescending, false);
-                                Set(varResetSort, false)
-                            )
-                        Size: =17
-                        Text: ="Email"
-                        Width: =Label19.Width
-                        X: =etime.X+etime.Width
-                        Y: =9
-                        ZIndex: =8
-
-                    bookedbyz As label:
-                        Align: =Align.Center
-                        BorderColor: =App.Theme.Colors.Darker40
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        Fill: =RGBA(39, 113, 194, 1)
-                        Font: =App.Theme.Font
-                        OnSelect: |
-                            =
-                            If(
-                                varSortColumn = "bookedbyz",
-                                If(varSortDescending,
-                                    Set(varSortColumn, ""); Set(varResetSort, true),
-                                    Set(varSortDescending, true)
-                                ),
-                                Set(varSortColumn, "bookedbyz");
-                                Set(varSortDescending, false);
-                                Set(varResetSort, false)
-                            )
-                        Size: =17
-                        Text: ="Booked By"
-                        Width: =Label21.Width
-                        X: =emailz.X+emailz.Width
-                        Y: =9
-                        ZIndex: =9
 
                 Icon10_1 As icon.ArrowsUpDown:
                     BorderColor: =App.Theme.Colors.Darker40
@@ -3723,14 +3718,14 @@
                     Height: =34
                     Icon: =Icon.Sort
                     OnSelect: |
-                        =
+                        =Set(Appointment_Date,Text(Appointment_Date));
                         If(
-                            varSortColumn = "Datez",
+                            varSortColumn = Appointment_Date,
                             If(varSortDescending,
                                 Set(varSortColumn, ""); Set(varResetSort, true),
                                 Set(varSortDescending, true)
                             ),
-                            Set(varSortColumn, "Datez");
+                            Set(varSortColumn, Appointment_Date);
                             Set(varSortDescending, false);
                             Set(varResetSort, false)
                         )
