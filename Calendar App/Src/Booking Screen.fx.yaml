@@ -3153,6 +3153,7 @@
         DropShadow: =DropShadow.Light
         Height: =585
         LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -3164,7 +3165,7 @@
         Container8 As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             LayoutMinHeight: =100
-            LayoutMinWidth: =250
+            LayoutMinWidth: =Gallery1.Width
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -3179,7 +3180,7 @@
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =71
-                Width: =1354
+                Width: =3000
                 Y: =8
                 ZIndex: =1
 
@@ -3191,6 +3192,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Full_Name
+                    Width: =320
                     X: =20
                     Y: =20
                     ZIndex: =1
@@ -3203,7 +3205,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Appointment_Date
-                    X: =158
+                    X: =Label7.X+Label7.Width
                     Y: =20
                     ZIndex: =2
 
@@ -3215,7 +3217,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Department_Name.Value
-                    X: =276
+                    X: =Label14.X+Label14.Width
                     Y: =20
                     ZIndex: =3
 
@@ -3227,7 +3229,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Location.Value
-                    X: =396
+                    X: =Label15.X+Label15.Width
                     Y: =20
                     ZIndex: =4
 
@@ -3239,7 +3241,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Start_Time
-                    X: =500
+                    X: =Label16.X+Label16.Width
                     Y: =20
                     ZIndex: =5
 
@@ -3251,7 +3253,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.End_Time
-                    X: =678
+                    X: =Label17.X+Label17.Width
                     Y: =20
                     ZIndex: =6
 
@@ -3264,8 +3266,8 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Email
-                    Width: =340
-                    X: =942
+                    Width: =390
+                    X: =Label18.X+Label18.Width
                     Y: =20
                     ZIndex: =7
 
@@ -3277,7 +3279,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Appointment_Date
-                    X: =1305
+                    X: =Label19.X+Label19.Width
                     Y: =14
                     ZIndex: =8
 
@@ -3289,7 +3291,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Booked_By
-                    X: =1406
+                    X: =Label20.X+Label20.Width
                     Y: =14
                     ZIndex: =9
 
