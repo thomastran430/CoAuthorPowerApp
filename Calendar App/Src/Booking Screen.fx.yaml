@@ -3175,13 +3175,13 @@
             Gallery1 As gallery.galleryVertical:
                 BorderColor: =App.Theme.Colors.Darker40
                 DelayItemLoading: =true
-                Height: =574
+                Height: =498
                 Items: =New_AppointmentsX
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =71
                 Width: =3000
-                Y: =8
+                Y: =75
                 ZIndex: =1
 
                 Label7 As label:
@@ -3266,7 +3266,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Email
-                    Width: =390
+                    Width: =400
                     X: =Label18.X+Label18.Width
                     Y: =20
                     ZIndex: =7
@@ -3291,9 +3291,99 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Booked_By
+                    Width: =390
                     X: =Label20.X+Label20.Width
                     Y: =14
                     ZIndex: =9
+
+            Label22 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Full Name"
+                Width: =Label7.Width
+                X: =18
+                Y: =9
+                ZIndex: =2
+
+            Label22_1 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Text"
+                X: =Label22.X+Label22.Width
+                Y: =9
+                ZIndex: =3
+
+            Label22_2 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Text"
+                X: =Label22_1.X+Label22_1.Width
+                Y: =9
+                ZIndex: =4
+
+            Label22_3 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Text"
+                X: =Label22_2.X+Label22_2.Width
+                Y: =9
+                ZIndex: =5
+
+            Label23 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Text"
+                X: =Label22_3.X+Label22_3.Width
+                Y: =9
+                ZIndex: =6
+
+            Label24 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Text"
+                X: =Label23.X+Label23.Width
+                Y: =9
+                ZIndex: =7
+
+            Label23_1 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Text"
+                X: =Label24.X+Label24.Width
+                Y: =9
+                ZIndex: =8
+
+            Label26 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Size: =13
+                Text: ="Text"
+                X: =Label23_1.X+Label23_1.Width
+                Y: =9
+                ZIndex: =9
 
     Group9 As group:
         Height: =5
