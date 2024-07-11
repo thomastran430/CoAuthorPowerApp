@@ -50,6 +50,7 @@
             //)
             Office365Users.MyProfile().DisplayName
         ProfilePicImage: ='924291258'
+        ProfilePicVisible: =false
         ZIndex: =2
 
     Og_View_All As button:
@@ -3322,6 +3323,13 @@
             Width: ='Booking Screen'.Width
             Y: =173
             ZIndex: =77
+
+    "'Hamburger Menu_1' As 'Hamburger Menu'":
+        GalleryItems: |-
+            =Table({Title: "Appointment Booking"},{Title: "View All Items"},{Title: "Nurse Info Form"},{Title:"View All Nurse Information"})
+        IconPositionX: =10
+        IconPositionY: =10
+        ZIndex: =80
 
     Group8 As group:
         Height: =5

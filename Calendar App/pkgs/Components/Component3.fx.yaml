@@ -71,6 +71,6 @@ Component3 As CanvasComponent:
         Size: =20
         Text: =Component3.NameDisplayText
         Width: =559
-        X: =88
+        X: =94
         ZIndex: =5
 
