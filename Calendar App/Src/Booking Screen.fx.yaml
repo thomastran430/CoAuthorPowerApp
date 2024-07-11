@@ -3144,6 +3144,155 @@
             Y: =102
             ZIndex: =69
 
+    Component4_2 As Component4:
+        box_height: ='Booking Screen'.Height
+        Height: =768
+        ZIndex: =78
+
+    Container7 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =585
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1354
+        Y: =183
+        ZIndex: =79
+
+        Container8 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =1
+
+            Gallery1 As gallery.galleryVertical:
+                BorderColor: =App.Theme.Colors.Darker40
+                DelayItemLoading: =true
+                Height: =574
+                Items: =New_AppointmentsX
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =71
+                Width: =1354
+                Y: =8
+                ZIndex: =1
+
+                Label7 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Full_Name
+                    X: =20
+                    Y: =20
+                    ZIndex: =1
+
+                Label14 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Appointment_Date
+                    X: =158
+                    Y: =20
+                    ZIndex: =2
+
+                Label15 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Department_Name.Value
+                    X: =276
+                    Y: =20
+                    ZIndex: =3
+
+                Label16 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Location.Value
+                    X: =396
+                    Y: =20
+                    ZIndex: =4
+
+                Label17 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Start_Time
+                    X: =500
+                    Y: =20
+                    ZIndex: =5
+
+                Label18 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.End_Time
+                    X: =678
+                    Y: =20
+                    ZIndex: =6
+
+                Label19 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    Height: =28
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Email
+                    Width: =340
+                    X: =942
+                    Y: =20
+                    ZIndex: =7
+
+                Label20 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Appointment_Date
+                    X: =1305
+                    Y: =14
+                    ZIndex: =8
+
+                Label21 As label:
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =App.Theme.Font
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Booked_By
+                    X: =1406
+                    Y: =14
+                    ZIndex: =9
+
     Group9 As group:
         Height: =5
         Width: =5
