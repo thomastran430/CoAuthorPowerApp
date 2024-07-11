@@ -2516,6 +2516,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varResetSort"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varResetSort",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varResetSort",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Booking Screen'"
                 }
               ],

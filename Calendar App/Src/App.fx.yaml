@@ -3,7 +3,10 @@ App As appinfo:
     Formulas: =
     OnStart: |-
         =Set(varCurrentDate,Date(Year(Today()),Month(Today()),1));
-        Set(GroupVisible,true)
+        Set(GroupVisible,true);
+        Set(varSortColumn, "");
+        Set(varSortDescending, false);
+        Set(varResetSort, false);
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

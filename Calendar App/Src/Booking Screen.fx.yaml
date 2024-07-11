@@ -3520,7 +3520,7 @@
                     Y: =40
                     ZIndex: =10
 
-                    Label22 As label:
+                    Fullname As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3534,7 +3534,7 @@
                         Y: =9
                         ZIndex: =2
 
-                    Label22_1 As label:
+                    Datez As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3544,11 +3544,11 @@
                         Size: =17
                         Text: ="Date"
                         Width: =Label14.Width
-                        X: =Label22.X+Label22.Width
+                        X: =Fullname.X+Fullname.Width
                         Y: =9
                         ZIndex: =3
 
-                    Label22_2 As label:
+                    Dept As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3558,11 +3558,11 @@
                         Size: =17
                         Text: ="Dept"
                         Width: =Label15.Width
-                        X: =Label22_1.X+Label22_1.Width
+                        X: =Datez.X+Datez.Width
                         Y: =9
                         ZIndex: =4
 
-                    Label22_3 As label:
+                    Loc As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3572,11 +3572,11 @@
                         Size: =17
                         Text: ="Location"
                         Width: =Label16.Width
-                        X: =Label22_2.X+Label22_2.Width
+                        X: =Dept.X+Dept.Width
                         Y: =9
                         ZIndex: =5
 
-                    Label23 As label:
+                    stime As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3586,11 +3586,11 @@
                         Size: =17
                         Text: ="Start Time"
                         Width: =Label17.Width
-                        X: =Label22_3.X+Label22_3.Width
+                        X: =Loc.X+Loc.Width
                         Y: =9
                         ZIndex: =6
 
-                    Label24 As label:
+                    etime As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3600,11 +3600,11 @@
                         Size: =17
                         Text: ="End Time"
                         Width: =Label18.Width
-                        X: =Label23.X+Label23.Width
+                        X: =stime.X+stime.Width
                         Y: =9
                         ZIndex: =7
 
-                    Label23_1 As label:
+                    emailz As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3614,11 +3614,11 @@
                         Size: =17
                         Text: ="Email"
                         Width: =Label19.Width
-                        X: =Label24.X+Label24.Width
+                        X: =etime.X+etime.Width
                         Y: =9
                         ZIndex: =8
 
-                    Label26 As label:
+                    bookedbyz As label:
                         Align: =Align.Center
                         BorderColor: =App.Theme.Colors.Darker40
                         Color: =RGBA(255, 255, 255, 1)
@@ -3628,7 +3628,7 @@
                         Size: =17
                         Text: ="Booked By"
                         Width: =Label21.Width
-                        X: =Label23_1.X+Label23_1.Width
+                        X: =emailz.X+emailz.Width
                         Y: =9
                         ZIndex: =9
 
