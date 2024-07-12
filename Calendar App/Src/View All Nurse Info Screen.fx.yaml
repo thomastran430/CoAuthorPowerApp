@@ -47,3 +47,126 @@
         IconPositionY: =10
         ZIndex: =2
 
+    Table1 As Table.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        Height: =572
+        Items: =Nurse_Information
+        onCellValueChange: =false
+        onFilter: =false
+        onNavigate: =false
+        onRowSelect: =false
+        onSave: =false
+        OnSelect: =false
+        Width: =1366
+        X: =0
+        Y: =179
+        ZIndex: =3
+
+        "'Date of Birth1' As PowerAppsOneGridTemplate_dataField.textualColumn":
+            FieldDisplayName: ="Date of Birth"
+            FieldName: ="DateofBirth"
+            FieldType: ="D"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =2
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        Email1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+            FieldDisplayName: ="Email"
+            FieldName: ="Email"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =3
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        "'Phone Number1' As PowerAppsOneGridTemplate_dataField.textualColumn":
+            FieldDisplayName: ="Phone Number"
+            FieldName: ="PhoneNumber"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =4
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        "'Emergency Contact Name1' As PowerAppsOneGridTemplate_dataField.textualColumn":
+            FieldDisplayName: ="Emergency Contact Name"
+            FieldName: ="EmergencyContactName"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =5
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        "'Emergency Contact Relationship1' As PowerAppsOneGridTemplate_dataField.textualColumn":
+            FieldDisplayName: ="Emergency Contact Relationship"
+            FieldName: ="EmergencyContactRelationship"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =6
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        Education1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+            FieldDisplayName: ="Education"
+            FieldName: ="Education"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =7
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        Licenses1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+            FieldDisplayName: ="Licenses"
+            FieldName: ="Licenses"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =8
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        "'Work History1' As PowerAppsOneGridTemplate_dataField.textualColumn":
+            FieldDisplayName: ="Work History"
+            FieldName: ="WorkHistory"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =9
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        Name1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="{Name}"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =10
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =10
+
