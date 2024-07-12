@@ -61,7 +61,7 @@
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             HoverFill: =RGBA(0, 18, 107, 1)
-            OnSelect: =
+            OnSelect: =Navigate(ThisItem.Screen)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0

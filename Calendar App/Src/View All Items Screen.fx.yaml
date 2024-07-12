@@ -26,7 +26,23 @@
 
     "'Hamburger Menu_2' As 'Hamburger Menu'":
         GalleryItems: |-
-            =Table({Title: "Appointment Booking"},{Title: "View All Items", Visible: "test_all_new_view"},{Title: "Nurse Info Form"},{Title:"View All Nurse Information"})
+            =Table(
+                {
+                    Title: "Appointment Booking",
+                    Screen: 'Booking Screen'
+                },
+                {
+                    Title: "View All Items",
+                    Screen: 'View All Items Screen'
+                },
+                {   Title: "Nurse Info Form",         
+                    Screen: 'Nurse Info Form Screen'
+            },
+                {   Title: "View All Nurse Information",
+                    Screen: 'View All Nurse Info Screen'
+            
+                }
+            )
         IconPositionX: =10
         IconPositionY: =10
         ZIndex: =2

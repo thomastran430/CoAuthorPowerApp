@@ -21,20 +21,16 @@
           "New_AppointmentsX": {
             "tableName": "31031914-8ff3-443f-b3c9-26f739763169"
           },
-          "Nurse_Appointments": {
-            "tableName": "9d6fecb4-8c89-425f-88f8-ff9b214cab33"
-          },
-          "Patient_Data": {
-            "tableName": "9d6fecb4-8c89-425f-88f8-ff9b214cab33"
+          "Nurse_Information": {
+            "tableName": "564dc169-4172-4eba-aad6-96214a1d1399"
           }
         }
       }
     },
     "dataSources": [
-      "Patient_Data",
       "Admin_Login_Cred",
-      "Nurse_Appointments",
-      "New_AppointmentsX"
+      "New_AppointmentsX",
+      "Nurse_Information"
     ],
     "dependencies": {},
     "dependents": [],
@@ -215,8 +211,7 @@
     },
     "datasets": {},
     "dataSources": [
-      "Office365Users",
-      "Office365Users_1"
+      "Office365Users"
     ],
     "dependencies": {},
     "dependents": [],
@@ -236,9 +231,7 @@
       "parameterHintsV2": {}
     },
     "datasets": {},
-    "dataSources": [
-      "Office365Outlook"
-    ],
+    "dataSources": [],
     "dependencies": {},
     "dependents": [
       "84ec9e15-c26b-4fac-bd23-1f59b96ad9ee",
