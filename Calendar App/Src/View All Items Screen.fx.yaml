@@ -22,7 +22,7 @@
             Office365Users.MyProfile().DisplayName
         ProfilePicImage: ='924291258'
         ProfilePicVisible: =false
-        ZIndex: =1
+        ZIndex: =6
 
     "'Hamburger Menu_2' As 'Hamburger Menu'":
         GalleryItems: |-
@@ -45,5 +45,170 @@
             )
         IconPositionX: =10
         IconPositionY: =10
-        ZIndex: =2
+        ZIndex: =7
+
+    Group9_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        Component4_3 As Component4:
+            box_height: ='Booking Screen'.Height-Component3_1.Height
+            Height: =768
+            Visible: =true
+            Width: =1366
+            Yposition: =Component3_1.Height
+            ZIndex: =1
+
+        ButtonCanvas1_1 As Button:
+            DisplayMode: =DisplayMode.Edit
+            Height: =43
+            OnSelect: |-
+                =Set(exportResult, excel_connecter.Run());
+                If(
+                    Not(IsBlank(exportResult.csvfilelink)),
+                    Launch(exportResult.csvfilelink),
+                    Notify("Failed to export data", NotificationType.Error)
+                )
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Text: ="Export to Excel"
+            Visible: =true
+            Width: =285
+            X: =1067
+            Y: =103
+            ZIndex: =2
+
+        Table5_1 As Table.pcfdataset:
+            DisplayMode: =DisplayMode.Edit
+            Height: =579
+            Items: =New_AppointmentsX
+            onCellValueChange: =false
+            onFilter: =false
+            onNavigate: =false
+            onRowSelect: =false
+            onSave: =false
+            OnSelect: =false
+            Visible: =true
+            Width: =1359
+            X: =7
+            Y: =174
+            ZIndex: =3
+
+            Email5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+                FieldDisplayName: ="Email"
+                FieldName: ="Email"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Height: =100
+                Order: =3
+                Width: =0
+                X: =0
+                Y: =0
+                ZIndex: =29
+
+            Appointment_Date5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+                FieldDisplayName: ="Appointment_Date"
+                FieldName: ="Appointment_Date"
+                FieldType: ="D"
+                FieldVariantName: ="textualColumn"
+                HeaderText: ="Appointment Date"
+                Height: =100
+                Order: =4
+                Width: =0
+                X: =0
+                Y: =0
+                ZIndex: =30
+
+            Department_Name5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+                FieldDisplayName: ="Department_Name"
+                FieldName: ="Department_Name"
+                FieldType: ="E"
+                FieldVariantName: ="textualColumn"
+                HeaderText: ="Department Name"
+                Height: =100
+                Order: =5
+                Width: =0
+                X: =0
+                Y: =0
+                ZIndex: =31
+
+            Location5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+                FieldDisplayName: ="Location"
+                FieldName: ="Location"
+                FieldType: ="E"
+                FieldVariantName: ="textualColumn"
+                Height: =100
+                Order: =6
+                Width: =0
+                X: =0
+                Y: =0
+                ZIndex: =32
+
+            Start_Time5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+                FieldDisplayName: ="Start_Time"
+                FieldName: ="Start_Time"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                HeaderText: ="Start Time"
+                Height: =100
+                Order: =7
+                Width: =0
+                X: =0
+                Y: =0
+                ZIndex: =33
+
+            End_Time5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+                FieldDisplayName: ="End_Time"
+                FieldName: ="End_Time"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                HeaderText: ="End Time"
+                Height: =100
+                Order: =8
+                Width: =0
+                X: =0
+                Y: =0
+                ZIndex: =34
+
+            Full_Name1_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+                FieldDisplayName: ="Full_Name"
+                FieldName: ="FullName"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                HeaderText: ="Name"
+                Height: =100
+                Order: =2
+                Width: =0
+                X: =0
+                Y: =0
+                ZIndex: =38
+
+        TextCanvas1_1 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Height: =72
+            PaddingBottom: =5
+            PaddingLeft: =20
+            PaddingRight: =5
+            PaddingTop: =5
+            Size: =40
+            Text: ="View All Appointments"
+            Visible: =true
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =605
+            X: =407
+            Y: =103
+            ZIndex: =4
+
+        Rectangle7_1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =App.Theme.Colors.Primary
+            Height: =4
+            Width: ='Booking Screen'.Width
+            Y: =173
+            ZIndex: =5
 
