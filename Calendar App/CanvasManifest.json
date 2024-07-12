@@ -135,6 +135,9 @@
   },
   "ScreenOrder": [
     "Booking Screen",
-    "Log_In_page"
+    "Log_In_page",
+    "View All Items Screen",
+    "Nurse Info Form Screen",
+    "View All Nurse Info Screen"
   ]
 }

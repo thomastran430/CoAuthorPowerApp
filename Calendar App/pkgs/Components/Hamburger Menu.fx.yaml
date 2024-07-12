@@ -1,7 +1,25 @@
 "'Hamburger Menu' As CanvasComponent":
     Fill: =RGBA(0, 0, 0, 0)
     GalleryItems: |-
-        =Table({Title: "SampleText"},{Title: "SampleText"},{Title: "SampleText"},{Title:"SampleText"})
+        =Table(
+            {
+                Title: "SampleText",
+                Screen: App.ActiveScreen
+            },
+            {
+                Title: "SampleText",
+                Screen: App.ActiveScreen
+            },
+            {
+                Title: "SampleText",
+                Screen: App.ActiveScreen
+            },
+            {
+                Title: "SampleText",
+                Screen: App.ActiveScreen
+            }
+        )
+    GalleryOnSelect: =
     Height: =400
     IconPositionX: =100
     IconPositionY: =100
@@ -25,6 +43,7 @@
         Items: ='Hamburger Menu'.GalleryItems
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ThisItem.Screen)
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =80
@@ -42,7 +61,7 @@
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             HoverFill: =RGBA(0, 18, 107, 1)
-            OnSelect: =Select(Parent)
+            OnSelect: =
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0

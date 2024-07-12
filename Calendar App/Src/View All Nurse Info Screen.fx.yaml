@@ -1,0 +1,33 @@
+"'View All Nurse Info Screen' As screen":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Component3_4 As Component3:
+        BackArrowOnSelect: =
+        BackArrowVisible: =false
+        IDDisplayText: |-
+            =//If(
+                //IsBlank(ComboBox1.Selected),
+                //"City",
+                //ComboBox1.Selected.OfficeLocation & " " & ComboBox1.Selected.Department & ""
+            //)
+            Office365Users.MyProfile().Department
+        LogoImage: =VMLOGO
+        NameDisplayText: |-
+            =//If(
+                //IsBlank(ComboBox1.Selected),
+                //"Select a user...",
+                //ComboBox1.Selected.DisplayName  
+            //)
+            Office365Users.MyProfile().DisplayName
+        ProfilePicImage: ='924291258'
+        ProfilePicVisible: =false
+        ZIndex: =1
+
+    "'Hamburger Menu_4' As 'Hamburger Menu'":
+        GalleryItems: |-
+            =Table({Title: "Appointment Booking"},{Title: "View All Items", Visible: "test_all_new_view"},{Title: "Nurse Info Form"},{Title:"View All Nurse Information"})
+        IconPositionX: =10
+        IconPositionY: =10
+        ZIndex: =2
+
