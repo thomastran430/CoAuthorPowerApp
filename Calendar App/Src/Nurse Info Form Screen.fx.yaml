@@ -688,3 +688,13 @@
                 Y: =DataCardKey16_1.Y
                 ZIndex: =4
 
+    ButtonCanvas3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =54
+        OnSelect: =Patch(
+        Text: ="Submit"
+        Width: =160
+        X: =152
+        Y: =464
+        ZIndex: =4
+

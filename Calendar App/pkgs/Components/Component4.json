@@ -73,7 +73,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Component4",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 335,
+        "PublishOrderIndex": 344,
         "Rules": [
           {
             "Category": "Design",
