@@ -136,7 +136,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
-            Update: =DataCardValue2_1.SelectedDate
+            Update: =Input_DOB.SelectedDate
             Width: =363
             X: =1
             Y: =0
@@ -153,7 +153,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue2_1 As 'Date picker'":
+            "Input_DOB As 'Date picker'":
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
                 DisplayMode: =Parent.DisplayMode
                 EndDate: =Date(Year(Today())+100, 12, 31)
@@ -174,7 +174,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue2_1.Y + DataCardValue2_1.Height
+                Y: =Input_DOB.Y + Input_DOB.Height
                 ZIndex: =3
 
             StarVisible2_1 As Text:
@@ -199,7 +199,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Email)
             Required: =false
-            Update: =DataCardValue3_1.Value
+            Update: =Input_Email.Value
             Width: =363
             X: =2
             Y: =0
@@ -216,7 +216,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue3_1 As 'Text input'":
+            "Input_Email As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -237,7 +237,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                Y: =Input_Email.Y + Input_Email.Height
                 ZIndex: =3
 
             StarVisible3_1 As Text:
@@ -262,7 +262,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, PhoneNumber)
             Required: =false
-            Update: =DataCardValue4_1.Value
+            Update: =Input_Phone.Value
             Width: =363
             X: =0
             Y: =1
@@ -279,7 +279,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue4_1 As 'Text input'":
+            "Input_Phone As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -300,7 +300,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue4_1.Y + DataCardValue4_1.Height
+                Y: =Input_Phone.Y + Input_Phone.Height
                 ZIndex: =3
 
             StarVisible4_1 As Text:
@@ -325,7 +325,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactName)
             Required: =false
-            Update: =DataCardValue5_1.Value
+            Update: =Input_Emergency.Value
             Width: =363
             X: =1
             Y: =1
@@ -342,7 +342,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue5_1 As 'Text input'":
+            "Input_Emergency As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -363,7 +363,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue5_1.Y + DataCardValue5_1.Height
+                Y: =Input_Emergency.Y + Input_Emergency.Height
                 ZIndex: =3
 
             StarVisible5_1 As Text:
@@ -388,7 +388,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactRelationship)
             Required: =false
-            Update: =DataCardValue6_1.Value
+            Update: =Input_Emergency_Contact.Value
             Width: =363
             X: =2
             Y: =1
@@ -405,7 +405,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue6_1 As 'Text input'":
+            "Input_Emergency_Contact As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -426,7 +426,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue6_1.Y + DataCardValue6_1.Height
+                Y: =Input_Emergency_Contact.Y + Input_Emergency_Contact.Height
                 ZIndex: =3
 
             StarVisible6_1 As Text:
@@ -451,7 +451,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactPhoneNumber)
             Required: =false
-            Update: =DataCardValue7_1.Value
+            Update: =Input_Emergency_Contact_Phone.Value
             Width: =363
             X: =0
             Y: =2
@@ -468,7 +468,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue7_1 As 'Text input'":
+            "Input_Emergency_Contact_Phone As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -489,7 +489,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue7_1.Y + DataCardValue7_1.Height
+                Y: =Input_Emergency_Contact_Phone.Y + Input_Emergency_Contact_Phone.Height
                 ZIndex: =3
 
             StarVisible7_1 As Text:
@@ -514,7 +514,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Education)
             Required: =false
-            Update: =DataCardValue8_1.Value
+            Update: =Education.Value
             Width: =363
             X: =1
             Y: =2
@@ -531,7 +531,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue8_1 As 'Text input'":
+            "Education As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -552,7 +552,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue8_1.Y + DataCardValue8_1.Height
+                Y: =Education.Y + Education.Height
                 ZIndex: =3
 
             StarVisible12_1 As Text:
@@ -577,7 +577,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Licenses)
             Required: =false
-            Update: =DataCardValue12_1.Value
+            Update: =Licenses.Value
             Width: =363
             X: =2
             Y: =2
@@ -594,7 +594,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue12_1 As 'Text input'":
+            "Licenses As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -615,7 +615,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue12_1.Y + DataCardValue12_1.Height
+                Y: =Licenses.Y + Licenses.Height
                 ZIndex: =3
 
             StarVisible14_1 As Text:
@@ -640,7 +640,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, WorkHistory)
             Required: =false
-            Update: =DataCardValue14_1.Value
+            Update: =workhistory.Value
             Width: =363
             X: =0
             Y: =3
@@ -657,7 +657,7 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue14_1 As 'Text input'":
+            "workhistory As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
@@ -678,7 +678,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
+                Y: =workhistory.Y + workhistory.Height
                 ZIndex: =3
 
             StarVisible16_1 As Text:
@@ -695,7 +695,23 @@
     ButtonCanvas3 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =78
-        OnSelect: =Patch(
+        OnSelect: |
+            =Patch(
+                Nurse_Information,
+                Defaults(Nurse_Information),
+                {
+                    //Name:DataCardKey1_1.Text,
+                    'Date of Birth': Input_DOB.SelectedDate,
+                    Email:Input_Email.Value,
+                    'Phone Number': Input_Phone.Value,
+                    'Emergency Contact Name': Input_Emergency.Value,
+                    'Emergency Contact Relationship': Input_Emergency.Value,
+                    'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
+                    Education: Education.Value,
+                    Licenses: Licenses.Value,
+                    'Work History': workhistory.Value
+                }
+            )
         Text: ="Submit"
         Width: =262
         X: =152
