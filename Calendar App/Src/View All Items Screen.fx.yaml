@@ -2,7 +2,8 @@
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
-        =UpdateContext({showMenu: false})
+        =//UpdateContext({showMenu: false})
+        Set(ShowGallery,false)
 
     Component3_2 As Component3:
         BackArrowOnSelect: =
