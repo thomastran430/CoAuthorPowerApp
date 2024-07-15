@@ -62,7 +62,7 @@
             HoverFill: =RGBA(0, 18, 107, 1)
             OnSelect: |-
                 =Navigate(ThisItem.Screen);
-                Set(ShowGallery,true)
+                Set(ShowGallery,false)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0

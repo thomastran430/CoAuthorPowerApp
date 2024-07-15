@@ -180,7 +180,7 @@
       "Name": "Back_Arrow_OnSelect",
       "PropertyDataTypeKey": "Void",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "618",
+        "PropertyScopeRuleNamespaceKey": "664",
         "PropertyScopeRulesKey": []
       },
       "Tooltip": "A custom property",
