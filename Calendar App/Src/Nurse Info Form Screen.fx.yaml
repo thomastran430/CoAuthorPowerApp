@@ -1,6 +1,8 @@
 "'Nurse Info Form Screen' As screen":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =UpdateContext({showMenu: false})
 
     Component3_3 As Component3:
         BackArrowOnSelect: =
@@ -43,8 +45,10 @@
             
                 }
             )
+        iconclick: =
         IconPositionX: =10
         IconPositionY: =10
+        Visible: =showMenu
         ZIndex: =2
 
     Form1_1 As form.PowerApps_CoreControls_Form:
@@ -690,11 +694,23 @@
 
     ButtonCanvas3 As Button:
         DisplayMode: =DisplayMode.Edit
-        Height: =54
+        Height: =78
         OnSelect: =Patch(
         Text: ="Submit"
-        Width: =160
+        Width: =262
         X: =152
         Y: =464
         ZIndex: =4
+
+    Icon11_2 As icon.Hamburger:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =Color.White
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Hamburger
+        OnSelect: |-
+            =UpdateContext({showMenu: !showMenu})
+        X: =7
+        Y: =12
+        ZIndex: =5
 

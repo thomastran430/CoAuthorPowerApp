@@ -1,6 +1,8 @@
 "'View All Nurse Info Screen' As screen":
     Fill: =Color.White
     LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =UpdateContext({showMenu: false})
 
     Component3_4 As Component3:
         BackArrowOnSelect: =
@@ -43,8 +45,10 @@
             
                 }
             )
+        iconclick: =
         IconPositionX: =10
         IconPositionY: =10
+        Visible: =showMenu
         ZIndex: =2
 
     Table1 As Table.pcfdataset:
@@ -169,4 +173,16 @@
             X: =0
             Y: =0
             ZIndex: =10
+
+    Icon11_3 As icon.Hamburger:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =Color.White
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Hamburger
+        OnSelect: |-
+            =UpdateContext({showMenu: !showMenu})
+        X: =7
+        Y: =12
+        ZIndex: =4
 

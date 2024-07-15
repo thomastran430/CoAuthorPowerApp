@@ -1,4 +1,7 @@
 "'Hamburger Menu' As CanvasComponent":
+    iconclick():
+        ThisProperty:
+            Default: =
     Fill: =RGBA(0, 0, 0, 0)
     GalleryItems: |-
         =Table(
@@ -23,6 +26,7 @@
     Height: =400
     IconPositionX: =100
     IconPositionY: =100
+    showmenu: =true
     Width: =400
     X: =0
     Y: =0
@@ -32,7 +36,9 @@
         BorderColor: =RGBA(0, 18, 107, 1)
         Fill: =RGBA(56, 96, 178, 1)
         Height: =Parent.Height
-        Visible: =ShowGallery
+        Visible: |-
+            =//ShowGallery
+            true
         Width: =Parent.Width
         ZIndex: =1
 
@@ -47,7 +53,9 @@
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =80
-        Visible: =ShowGallery
+        Visible: |-
+            =//ShowGallery
+            true
         Width: =Parent.Width
         Y: =80
         ZIndex: =2
@@ -79,7 +87,9 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.Hamburger
-        OnSelect: =Set(ShowGallery,!ShowGallery)
+        OnSelect: |
+            =//Set(ShowGallery,!ShowGallery)
+            true
         Width: =75
         X: ='Hamburger Menu'.IconPositionX
         Y: ='Hamburger Menu'.IconPositionY
