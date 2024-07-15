@@ -3,8 +3,7 @@
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =Set(varColumnWidth, Email_Column3_1.Width);
-        
-        UpdateContext({showMenu: false})
+        //UpdateContext({showMenu: false})
 
     Button4_1 As button:
         BorderColor: =App.Theme.Colors.Primary
@@ -3344,10 +3343,9 @@
             
                 }
             )
-        iconclick: =
         IconPositionX: =10
         IconPositionY: =10
-        Visible: =showMenu
+        Visible: =true
         ZIndex: =80
 
     Group8 As group:
@@ -3822,16 +3820,4 @@
                     X: =1164
                     Y: =9
                     ZIndex: =16
-
-    Icon11 As icon.Hamburger:
-        BorderColor: =App.Theme.Colors.Darker40
-        Color: =Color.White
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.Hamburger
-        OnSelect: |-
-            =UpdateContext({showMenu: !showMenu})
-        X: =7
-        Y: =12
-        ZIndex: =81
 

@@ -27,31 +27,6 @@
         ProfilePicVisible: =false
         ZIndex: =1
 
-    "'Hamburger Menu_4' As 'Hamburger Menu'":
-        GalleryItems: |-
-            =Table(
-                {
-                    Title: "Appointment Booking",
-                    Screen: 'Booking Screen'
-                },
-                {
-                    Title: "View All Items",
-                    Screen: 'View All Items Screen'
-                },
-                {   Title: "Nurse Info Form",         
-                    Screen: 'Nurse Info Form Screen'
-            },
-                {   Title: "View All Nurse Information",
-                    Screen: 'View All Nurse Info Screen'
-            
-                }
-            )
-        iconclick: =
-        IconPositionX: =10
-        IconPositionY: =10
-        Visible: =showMenu
-        ZIndex: =2
-
     Table1 As Table.pcfdataset:
         DisplayMode: =DisplayMode.Edit
         Height: =572
@@ -175,15 +150,27 @@
             Y: =0
             ZIndex: =10
 
-    Icon11_3 As icon.Hamburger:
-        BorderColor: =App.Theme.Colors.Darker40
-        Color: =Color.White
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.Hamburger
-        OnSelect: |-
-            =UpdateContext({showMenu: !showMenu})
-        X: =7
-        Y: =12
+    "'Hamburger Menu_4' As 'Hamburger Menu'":
+        GalleryItems: |-
+            =Table(
+                {
+                    Title: "Appointment Booking",
+                    Screen: 'Booking Screen'
+                },
+                {
+                    Title: "View All Items",
+                    Screen: 'View All Items Screen'
+                },
+                {   Title: "Nurse Info Form",         
+                    Screen: 'Nurse Info Form Screen'
+            },
+                {   Title: "View All Nurse Information",
+                    Screen: 'View All Nurse Info Screen'
+            
+                }
+            )
+        IconPositionX: =10
+        IconPositionY: =10
+        Visible: =true
         ZIndex: =4
 

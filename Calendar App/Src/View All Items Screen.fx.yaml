@@ -3,7 +3,7 @@
     LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: |-
         =//UpdateContext({showMenu: false})
-        Set(ShowGallery,false)
+        //Set(ShowGallery,false)
 
     Component3_2 As Component3:
         BackArrowOnSelect: =
@@ -46,23 +46,12 @@
             
                 }
             )
-        iconclick: =
         IconPositionX: =10
         IconPositionY: =10
-        Visible: =showMenu
+        Visible: |-
+            =//
+            true
         ZIndex: =7
-
-    Icon11_1 As icon.Hamburger:
-        BorderColor: =App.Theme.Colors.Darker40
-        Color: =Color.White
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.Hamburger
-        OnSelect: |-
-            =UpdateContext({showMenu: !showMenu})
-        X: =19
-        Y: =11
-        ZIndex: =8
 
     Group9_1 As group:
         Height: =5
