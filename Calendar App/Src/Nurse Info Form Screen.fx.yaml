@@ -50,7 +50,11 @@
     Form1_1 As form.PowerApps_CoreControls_Form:
         BorderColor: =App.Theme.Colors.Darker40
         DataSource: =Nurse_Information
+        DefaultMode: =FormMode.New
+        Fill: =RGBA(71, 158, 245, 1)
+        Height: =548
         UseFluentV9Cards: =true
+        Width: =1090
         X: =106
         Y: =144
         ZIndex: =3
@@ -67,7 +71,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Title)
             Required: =false
             Update: =DataCardValue1_1.Value
-            Width: =266
+            Width: =363
             X: =0
             Y: =0
             ZIndex: =4
@@ -129,7 +133,7 @@
             Height: =70
             Required: =false
             Update: =DataCardValue2_1.SelectedDate
-            Width: =266
+            Width: =363
             X: =1
             Y: =0
             ZIndex: =4
@@ -192,7 +196,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Email)
             Required: =false
             Update: =DataCardValue3_1.Value
-            Width: =266
+            Width: =363
             X: =2
             Y: =0
             ZIndex: =4
@@ -255,7 +259,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, PhoneNumber)
             Required: =false
             Update: =DataCardValue4_1.Value
-            Width: =266
+            Width: =363
             X: =0
             Y: =1
             ZIndex: =4
@@ -318,7 +322,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactName)
             Required: =false
             Update: =DataCardValue5_1.Value
-            Width: =266
+            Width: =363
             X: =1
             Y: =1
             ZIndex: =4
@@ -381,7 +385,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactRelationship)
             Required: =false
             Update: =DataCardValue6_1.Value
-            Width: =266
+            Width: =363
             X: =2
             Y: =1
             ZIndex: =4
@@ -444,7 +448,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactPhoneNumber)
             Required: =false
             Update: =DataCardValue7_1.Value
-            Width: =266
+            Width: =363
             X: =0
             Y: =2
             ZIndex: =4
@@ -507,7 +511,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Education)
             Required: =false
             Update: =DataCardValue8_1.Value
-            Width: =266
+            Width: =363
             X: =1
             Y: =2
             ZIndex: =4
@@ -570,7 +574,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Licenses)
             Required: =false
             Update: =DataCardValue12_1.Value
-            Width: =266
+            Width: =363
             X: =2
             Y: =2
             ZIndex: =4
@@ -633,7 +637,7 @@
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, WorkHistory)
             Required: =false
             Update: =DataCardValue14_1.Value
-            Width: =266
+            Width: =363
             X: =0
             Y: =3
             ZIndex: =4
