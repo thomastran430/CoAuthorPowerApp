@@ -689,7 +689,8 @@
                         'Work History': workhistory.Value
                     }
                 ),
-                Notify("Record with this VMID already exists.", NotificationType.Warning)
+                //Notify("Record with this VMID already exists.", NotificationType.Warning)
+                UpdateContext({lcl_popuptwo:true})
             )
         Text: ="Submit"
         Width: =262
@@ -748,4 +749,15 @@
         X: =495
         Y: =360
         ZIndex: =6
+
+    PopUP_3 As PopUP:
+        Fill: =RGBA(237, 237, 237, 0)
+        LB_On_Select: ="Text"
+        Message_Text: ="Registration with VMID already exists!!"
+        PopUp_Cancel: |-
+            =UpdateContext({lcl_popuptwo:false})
+        Visible: =lcl_popuptwo
+        X: =363
+        Y: =40
+        ZIndex: =7
 
