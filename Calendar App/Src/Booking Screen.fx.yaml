@@ -5,7 +5,7 @@
         =Set(varColumnWidth, Email_Column3_1.Width);
         //UpdateContext({showMenu: false})
 
-    Button4_1 As button:
+    "'view all 2' As button":
         BorderColor: =App.Theme.Colors.Primary
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -26,7 +26,9 @@
         PressedFill: =App.Theme.Colors.Darker40
         Size: =15
         Text: ="View All"
-        Visible: =GroupVisible
+        Visible: |-
+            =//GroupVisible 
+            false
         X: =1177
         Y: =103
         ZIndex: =1

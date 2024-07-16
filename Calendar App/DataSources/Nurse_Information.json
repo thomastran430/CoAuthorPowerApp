@@ -41,6 +41,7 @@
       "OData__ColorTag": "Color Tag",
       "PhoneNumber": "Phone Number",
       "Title": "Title",
+      "VMID": "VMID",
       "WorkHistory": "Work History"
     },
     "DatasetName": "https://vmivsp.sharepoint.com/sites/BD.ALL.HootDynamics",
