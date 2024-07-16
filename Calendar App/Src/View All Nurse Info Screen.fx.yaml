@@ -47,7 +47,7 @@
             FieldType: ="D"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =2
+            Order: =3
             Width: =0
             X: =0
             Y: =0
@@ -59,7 +59,7 @@
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =3
+            Order: =4
             Width: =0
             X: =0
             Y: =0
@@ -71,7 +71,7 @@
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =4
+            Order: =5
             Width: =0
             X: =0
             Y: =0
@@ -83,7 +83,7 @@
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =5
+            Order: =6
             Width: =0
             X: =0
             Y: =0
@@ -95,7 +95,7 @@
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =6
+            Order: =7
             Width: =0
             X: =0
             Y: =0
@@ -107,7 +107,7 @@
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =7
+            Order: =8
             Width: =0
             X: =0
             Y: =0
@@ -119,7 +119,7 @@
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =8
+            Order: =9
             Width: =0
             X: =0
             Y: =0
@@ -131,7 +131,7 @@
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Height: =100
-            Order: =9
+            Order: =10
             Width: =0
             X: =0
             Y: =0
@@ -148,6 +148,18 @@
             X: =0
             Y: =0
             ZIndex: =10
+
+        VMID1 As PowerAppsOneGridTemplate_dataField.textualColumn:
+            FieldDisplayName: ="VMID"
+            FieldName: ="VMID"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Height: =100
+            Order: =2
+            Width: =0
+            X: =0
+            Y: =0
+            ZIndex: =11
 
     "'Hamburger Menu_4' As 'Hamburger Menu'":
         GalleryItems: |-

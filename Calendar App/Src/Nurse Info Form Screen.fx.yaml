@@ -671,21 +671,25 @@
         DisplayMode: =DisplayMode.Edit
         Height: =78
         OnSelect: |
-            =Patch(
-                Nurse_Information,
-                Defaults(Nurse_Information),
-                {
-                    //Name:DataCardKey1_1.Text,
-                    'Date of Birth': Input_DOB.SelectedDate,
-                    Email:Input_Email.Value,
-                    'Phone Number': Input_Phone.Value,
-                    'Emergency Contact Name': Input_Emergency.Value,
-                    'Emergency Contact Relationship': Input_Emergency.Value,
-                    'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
-                    Education: Education.Value,
-                    Licenses: Licenses.Value,
-                    'Work History': workhistory.Value
-                }
+            =If(
+                IsBlank(LookUp(Nurse_Information, VMID = Office365Users.MyProfile().Department)),
+                Patch(
+                    Nurse_Information,
+                    Defaults(Nurse_Information),
+                    {
+                        VMID: Office365Users.MyProfile().Department,
+                        'Date of Birth': Input_DOB.SelectedDate,
+                        Email: Input_Email.Value,
+                        'Phone Number': Input_Phone.Value,
+                        'Emergency Contact Name': Input_Emergency.Value,
+                        'Emergency Contact Relationship': Input_Emergency.Value,
+                        'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
+                        Education: Education.Value,
+                        Licenses: Licenses.Value,
+                        'Work History': workhistory.Value
+                    }
+                ),
+                Notify("Record with this VMID already exists.", NotificationType.Warning)
             )
         Text: ="Submit"
         Width: =262
@@ -718,4 +722,30 @@
             =//showMenu
             true
         ZIndex: =4
+
+    Label20 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(214, 221, 224, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: =Office365Users.MyProfile().Department
+        Width: =310
+        X: =496
+        Y: =398
+        ZIndex: =5
+
+    Label22 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="VMID"
+        X: =495
+        Y: =360
+        ZIndex: =6
 
