@@ -855,6 +855,69 @@
                 Y: =DataCardKey3.Y
                 ZIndex: =4
 
+        "'Phone Number_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PhoneNumber"
+            Default: =ThisItem.'Phone Number'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Phone Number')
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Phone Number')
+            Required: =false
+            Update: =DataCardValue4.Value
+            Width: =436
+            X: =0
+            Y: =1
+            ZIndex: =9
+
+            DataCardKey4 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue4 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                ZIndex: =2
+
+            ErrorMessage4 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible4 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey4.Y
+                ZIndex: =4
+
         "'Emergency Contact Name_DataCard1' As typedDataCard.fluentV9TextualEditCard":
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
@@ -981,132 +1044,6 @@
                 Y: =DataCardKey6.Y
                 ZIndex: =4
 
-        Licenses_DataCard1 As typedDataCard.fluentV9TextualEditCard:
-            BorderColor: =App.Theme.Colors.Darker40
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Licenses"
-            Default: =ThisItem.Licenses
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Licenses)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Licenses)
-            Required: =false
-            Update: =DataCardValue12.Value
-            Width: =436
-            X: =2
-            Y: =2
-            ZIndex: =9
-
-            DataCardKey14 As Text:
-                DisplayMode: =DisplayMode.Edit
-                Height: =22
-                Text: =Parent.DisplayName
-                Weight: ='TextCanvas.Weight'.Semibold
-                Width: =Parent.Width - 48
-                Wrap: =false
-                X: =24
-                Y: =10
-                ZIndex: =1
-
-            "DataCardValue12 As 'Text input'":
-                AccessibleLabel: =Parent.DisplayName
-                DisplayMode: =Parent.DisplayMode
-                Height: =32
-                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                Required: =Parent.Required
-                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                Value: =Parent.Default
-                Width: =Parent.Width - 48
-                X: =24
-                Y: =DataCardKey14.Y + DataCardKey14.Height + 4
-                ZIndex: =2
-
-            ErrorMessage14 As Text:
-                DisplayMode: =DisplayMode.Edit
-                Height: =30
-                Text: =Parent.Error
-                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                Width: =Parent.Width - 48
-                Wrap: =true
-                X: =24
-                Y: =DataCardValue12.Y + DataCardValue12.Height
-                ZIndex: =3
-
-            StarVisible14 As Text:
-                Align: ='TextCanvas.Align'.Center
-                DisplayMode: =DisplayMode.Edit
-                Height: =30
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                X: =0
-                Y: =DataCardKey14.Y
-                ZIndex: =4
-
-        "'Phone Number_DataCard1' As typedDataCard.fluentV9TextualEditCard":
-            BorderColor: =App.Theme.Colors.Darker40
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="PhoneNumber"
-            Default: =ThisItem.'Phone Number'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Phone Number')
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Phone Number')
-            Required: =false
-            Update: =DataCardValue4.Value
-            Width: =436
-            X: =0
-            Y: =1
-            ZIndex: =9
-
-            DataCardKey4 As Text:
-                DisplayMode: =DisplayMode.Edit
-                Height: =22
-                Text: =Parent.DisplayName
-                Weight: ='TextCanvas.Weight'.Semibold
-                Width: =Parent.Width - 48
-                Wrap: =false
-                X: =24
-                Y: =10
-                ZIndex: =1
-
-            "DataCardValue4 As 'Text input'":
-                AccessibleLabel: =Parent.DisplayName
-                DisplayMode: =Parent.DisplayMode
-                Height: =32
-                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                Required: =Parent.Required
-                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                Value: =Parent.Default
-                Width: =Parent.Width - 48
-                X: =24
-                Y: =DataCardKey4.Y + DataCardKey4.Height + 4
-                ZIndex: =2
-
-            ErrorMessage4 As Text:
-                DisplayMode: =DisplayMode.Edit
-                Height: =30
-                Text: =Parent.Error
-                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                Width: =Parent.Width - 48
-                Wrap: =true
-                X: =24
-                Y: =DataCardValue4.Y + DataCardValue4.Height
-                ZIndex: =3
-
-            StarVisible4 As Text:
-                Align: ='TextCanvas.Align'.Center
-                DisplayMode: =DisplayMode.Edit
-                Height: =30
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                X: =0
-                Y: =DataCardKey4.Y
-                ZIndex: =4
-
         "'Emergency Contact Phone Number_DataCard1' As typedDataCard.fluentV9TextualEditCard":
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
@@ -1231,6 +1168,69 @@
                 Width: =30
                 X: =0
                 Y: =DataCardKey12.Y
+                ZIndex: =4
+
+        Licenses_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Licenses"
+            Default: =ThisItem.Licenses
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Licenses)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Licenses)
+            Required: =false
+            Update: =DataCardValue12.Value
+            Width: =436
+            X: =2
+            Y: =2
+            ZIndex: =9
+
+            DataCardKey14 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue12 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey14.Y + DataCardKey14.Height + 4
+                ZIndex: =2
+
+            ErrorMessage14 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue12.Y + DataCardValue12.Height
+                ZIndex: =3
+
+            StarVisible14 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey14.Y
                 ZIndex: =4
 
         "'Work History_DataCard1' As typedDataCard.fluentV9TextualEditCard":
