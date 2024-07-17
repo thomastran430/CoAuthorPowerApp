@@ -1,7 +1,7 @@
 [
   {
     "HasLibraryLogicalName": true,
-    "InstanceCount": 3,
+    "InstanceCount": 4,
     "LibraryId": "a9c72686-4a32-42df-a3e6-c5b47fb82267",
     "LibraryLogicalName": "creda_popup_83b0d",
     "LibraryVersion": "2024-07-17T06:03:00Z",
@@ -61,7 +61,7 @@
   },
   {
     "HasLibraryLogicalName": true,
-    "InstanceCount": 1,
+    "InstanceCount": 2,
     "LibraryId": "a9c72686-4a32-42df-a3e6-c5b47fb82267",
     "LibraryLogicalName": "creda_popup_83b0d",
     "LibraryVersion": "2024-07-17T06:03:00Z",

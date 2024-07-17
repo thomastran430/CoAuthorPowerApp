@@ -1412,3 +1412,40 @@
             true
         ZIndex: =10
 
+    ButtonCanvas4_1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Font: =Font.'Segoe UI'
+        FontSize: =25
+        Height: =72
+        OnSelect: |
+            =If(
+                Not(IsBlank(LookUp(Nurse_Information, VMID = Office365Users.MyProfile().Department))),
+                SubmitForm(Form1_2); 
+                UpdateContext({lclpopuptfour:true});ResetForm(Form1_2),
+                UpdateContext({lcl_popupfive:true})
+            )
+        Text: ="Update"
+        Width: =206
+        X: =668
+        Y: =425
+        ZIndex: =11
+
+    Component6_2 As Component6:
+        cancel_btn: |-
+            =UpdateContext({lclpopuptfour:false})
+        text: ="Record Updated"
+        Visible: =lclpopuptfour
+        X: =413
+        ZIndex: =12
+
+    PopUP_4 As PopUP:
+        Fill: =RGBA(237, 237, 237, 0)
+        LB_On_Select: ="Text"
+        Message_Text: ="Record does not exist create a record first!"
+        PopUp_Cancel: |-
+            =UpdateContext({lcl_popupfive:false})
+        Visible: =lcl_popupfive
+        X: =376
+        Y: =40
+        ZIndex: =13
+
