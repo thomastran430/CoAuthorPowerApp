@@ -43,9 +43,9 @@
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="DateofBirth"
-            Default: =ThisItem.'Date of Birth'
+            Default: =ThisItem.DOB
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Date of Birth')
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,DOB)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
@@ -231,12 +231,12 @@
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="EmergencyContactName"
-            Default: =ThisItem.'Emergency Contact Name'
+            Default: =ThisItem.Emergency_Contact_Name
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Emergency Contact Name')
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Emergency_Contact_Name)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Emergency Contact Name')
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Emergency_Contact_Name)
             Required: =false
             Update: =Input_Emergency.Value
             Width: =363
@@ -605,32 +605,6 @@
                 Y: =DataCardKey16_1.Y
                 ZIndex: =4
 
-    "'Hamburger Menu_3' As 'Hamburger Menu'":
-        GalleryItems: |-
-            =Table(
-                {
-                    Title: "Appointment Booking",
-                    Screen: 'Booking Screen'
-                },
-                {
-                    Title: "View All Items",
-                    Screen: 'View All Items Screen'
-                },
-                {   Title: "Nurse Info Form",         
-                    Screen: 'Nurse Info Form Screen'
-            },
-                {   Title: "View All Nurse Information",
-                    Screen: 'View All Nurse Info Screen'
-            
-                }
-            )
-        IconPositionX: =10
-        IconPositionY: =10
-        Visible: |-
-            =//showMenu
-            true
-        ZIndex: =3
-
     PopUP_3 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
         LB_On_Select: ="Text"
@@ -640,7 +614,7 @@
         Visible: =lcl_popuptwo
         X: =363
         Y: =40
-        ZIndex: =4
+        ZIndex: =3
 
     Form1_2 As form.PowerApps_CoreControls_Form:
         BorderColor: =App.Theme.Colors.Darker40
@@ -652,7 +626,7 @@
         Width: =1308
         X: =30
         Y: =109
-        ZIndex: =5
+        ZIndex: =4
 
         Name_DataCard1 As typedDataCard.fluentV9TextualViewCard:
             BorderColor: =App.Theme.Colors.Darker40
@@ -660,7 +634,7 @@
             DataField: ="{Name}"
             Default: =ThisItem.Name
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'{Name}')
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Name)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
@@ -759,9 +733,9 @@
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="DateofBirth"
-            Default: =ThisItem.'Date of Birth'
+            Default: =ThisItem.DOB
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,DateofBirth)
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,DOB)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
@@ -884,12 +858,12 @@
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
             DataField: ="EmergencyContactName"
-            Default: =ThisItem.'Emergency Contact Name'
+            Default: =ThisItem.Emergency_Contact_Name
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,EmergencyContactName)
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Emergency_Contact_Name)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactName)
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Emergency_Contact_Name)
             Required: =false
             Update: =DataCardValue5.Value
             Width: =436
@@ -949,10 +923,10 @@
             DataField: ="EmergencyContactRelationship"
             Default: =ThisItem.'Emergency Contact Relationship'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,EmergencyContactRelationship)
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Emergency Contact Relationship')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactRelationship)
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Emergency Contact Relationship')
             Required: =false
             Update: =DataCardValue6.Value
             Width: =436
@@ -1075,10 +1049,10 @@
             DataField: ="PhoneNumber"
             Default: =ThisItem.'Phone Number'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,PhoneNumber)
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Phone Number')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, PhoneNumber)
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Phone Number')
             Required: =false
             Update: =DataCardValue4.Value
             Width: =436
@@ -1138,10 +1112,10 @@
             DataField: ="EmergencyContactPhoneNumber"
             Default: =ThisItem.'Emergency Contact Phone Number'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,EmergencyContactPhoneNumber)
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Emergency Contact Phone Number')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactPhoneNumber)
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Emergency Contact Phone Number')
             Required: =false
             Update: =DataCardValue7.Value
             Width: =436
@@ -1264,10 +1238,10 @@
             DataField: ="WorkHistory"
             Default: =ThisItem.'Work History'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,WorkHistory)
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Work History')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, WorkHistory)
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Work History')
             Required: =false
             Update: =DataCardValue14.Value
             Width: =436
@@ -1333,7 +1307,7 @@
         Width: =394
         X: =927
         Y: =149
-        ZIndex: =6
+        ZIndex: =5
 
     Label22 As label:
         BorderColor: =App.Theme.Colors.Darker40
@@ -1345,7 +1319,7 @@
         Text: ="VMID"
         X: =927
         Y: =109
-        ZIndex: =7
+        ZIndex: =6
 
     ButtonCanvas3 As Button:
         DisplayMode: =DisplayMode.Edit
@@ -1360,10 +1334,10 @@
                     Defaults(Nurse_Information),
                     {
                         VMID: Office365Users.MyProfile().Department,
-                        'Date of Birth': Input_DOB.SelectedDate,
+                        DOB: Input_DOB.SelectedDate,
                         Email: Input_Email.Value,
                         'Phone Number': Input_Phone.Value,
-                        'Emergency Contact Name': Input_Emergency.Value,
+                        Emergency_Contact_Name: Input_Emergency.Value,
                         'Emergency Contact Relationship': Input_Emergency.Value,
                         'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
                         Education: Education.Value,
@@ -1378,35 +1352,63 @@
         Width: =262
         X: =54
         Y: =420
-        ZIndex: =8
+        ZIndex: =7
 
     ButtonCanvas4 As Button:
         DisplayMode: =DisplayMode.Edit
+        Font: =Font.'Segoe UI'
+        FontSize: =25
         Height: =72
         OnSelect: |
             =If(
                 IsBlank(LookUp(Nurse_Information, VMID = Office365Users.MyProfile().DisplayName)),
+                SubmitForm(Form1_2); 
                 Patch(
                     Nurse_Information,
-                    Defaults(Nurse_Information),
+                    LookUp(Nurse_Information, ID = Form1_2.LastSubmit.ID),
                     {
-                        VMID: Office365Users.MyProfile().Department,
-                        'Date of Birth': Input_DOB.SelectedDate,
-                        Email: Input_Email.Value,
-                        'Phone Number': Input_Phone.Value,
-                        'Emergency Contact Name': Input_Emergency.Value,
-                        'Emergency Contact Relationship': Input_Emergency.Value,
-                        'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
-                        Education: Education.Value,
-                        Licenses: Licenses.Value,
-                        'Work History': workhistory.Value
+                        VMID:Office365Users.MyProfile().Department
                     }
-                ); ResetForm(Form1_2),
+                ); UpdateContext({lclpopupthree:true});ResetForm(Form1_2),
                 UpdateContext({lcl_popuptwo:true})
             )
         Text: ="Submit"
         Width: =206
-        X: =363
-        Y: =430
+        X: =333
+        Y: =425
+        ZIndex: =8
+
+    Component6_1 As Component6:
+        cancel_btn: |-
+            =UpdateContext({lclpopupthree:false})
+        text: ="Submitted !!"
+        Visible: =lclpopupthree
+        X: =411
         ZIndex: =9
+
+    "'Hamburger Menu_3' As 'Hamburger Menu'":
+        GalleryItems: |-
+            =Table(
+                {
+                    Title: "Appointment Booking",
+                    Screen: 'Booking Screen'
+                },
+                {
+                    Title: "View All Appointments",
+                    Screen: 'View All Items Screen'
+                },
+                {   Title: "Nurse Info Form",         
+                    Screen: 'Nurse Info Form Screen'
+            },
+                {   Title: "View All Nurse Information",
+                    Screen: 'View All Nurse Info Screen'
+            
+                }
+            )
+        IconPositionX: =10
+        IconPositionY: =10
+        Visible: |-
+            =//showMenu
+            true
+        ZIndex: =10
 
