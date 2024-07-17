@@ -33,6 +33,7 @@
         Fill: =RGBA(71, 158, 245, 1)
         Height: =548
         UseFluentV9Cards: =true
+        Visible: =false
         Width: =1090
         X: =106
         Y: =144
@@ -352,6 +353,69 @@
                 Y: =DataCardKey6_1.Y
                 ZIndex: =4
 
+        "'Emergency Contact Phone Number_DataCard1_1' As typedDataCard.fluentV9TextualEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="EmergencyContactPhoneNumber"
+            Default: =ThisItem.'Emergency Contact Phone Number'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Emergency Contact Phone Number')
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Emergency Contact Phone Number')
+            Required: =false
+            Update: =Input_Emergency_Contact_Phone.Value
+            Width: =363
+            X: =2
+            Y: =1
+            ZIndex: =4
+
+            DataCardKey7_1 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "Input_Emergency_Contact_Phone As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage7_1 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =Input_Emergency_Contact_Phone.Y + Input_Emergency_Contact_Phone.Height
+                ZIndex: =3
+
+            StarVisible7_1 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey7_1.Y
+                ZIndex: =4
+
         Education_DataCard1_1 As typedDataCard.fluentV9TextualEditCard:
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
@@ -478,69 +542,6 @@
                 Y: =DataCardKey14_1.Y
                 ZIndex: =4
 
-        "'Emergency Contact Phone Number_DataCard1_1' As typedDataCard.fluentV9TextualEditCard":
-            BorderColor: =App.Theme.Colors.Darker40
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="EmergencyContactPhoneNumber"
-            Default: =ThisItem.'Emergency Contact Phone Number'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'Emergency Contact Phone Number')
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =70
-            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, 'Emergency Contact Phone Number')
-            Required: =false
-            Update: =Input_Emergency_Contact_Phone.Value
-            Width: =363
-            X: =2
-            Y: =1
-            ZIndex: =4
-
-            DataCardKey7_1 As Text:
-                DisplayMode: =DisplayMode.Edit
-                Height: =22
-                Text: =Parent.DisplayName
-                Weight: ='TextCanvas.Weight'.Semibold
-                Width: =Parent.Width - 48
-                Wrap: =false
-                X: =24
-                Y: =10
-                ZIndex: =1
-
-            "Input_Emergency_Contact_Phone As 'Text input'":
-                AccessibleLabel: =Parent.DisplayName
-                DisplayMode: =Parent.DisplayMode
-                Height: =32
-                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                Required: =Parent.Required
-                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                Value: =Parent.Default
-                Width: =Parent.Width - 48
-                X: =24
-                Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 4
-                ZIndex: =2
-
-            ErrorMessage7_1 As Text:
-                DisplayMode: =DisplayMode.Edit
-                Height: =30
-                Text: =Parent.Error
-                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
-                Width: =Parent.Width - 48
-                Wrap: =true
-                X: =24
-                Y: =Input_Emergency_Contact_Phone.Y + Input_Emergency_Contact_Phone.Height
-                ZIndex: =3
-
-            StarVisible7_1 As Text:
-                Align: ='TextCanvas.Align'.Center
-                DisplayMode: =DisplayMode.Edit
-                Height: =30
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                X: =0
-                Y: =DataCardKey7_1.Y
-                ZIndex: =4
-
         "'Work History_DataCard1_1' As typedDataCard.fluentV9TextualEditCard":
             BorderColor: =App.Theme.Colors.Darker40
             BorderStyle: =BorderStyle.Solid
@@ -604,37 +605,6 @@
                 Y: =DataCardKey16_1.Y
                 ZIndex: =4
 
-    ButtonCanvas3 As Button:
-        DisplayMode: =DisplayMode.Edit
-        Height: =78
-        OnSelect: |
-            =If(
-                IsBlank(LookUp(Nurse_Information, VMID = Office365Users.MyProfile().Department)),
-                Patch(
-                    Nurse_Information,
-                    Defaults(Nurse_Information),
-                    {
-                        VMID: Office365Users.MyProfile().Department,
-                        'Date of Birth': Input_DOB.SelectedDate,
-                        Email: Input_Email.Value,
-                        'Phone Number': Input_Phone.Value,
-                        'Emergency Contact Name': Input_Emergency.Value,
-                        'Emergency Contact Relationship': Input_Emergency.Value,
-                        'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
-                        Education: Education.Value,
-                        Licenses: Licenses.Value,
-                        'Work History': workhistory.Value
-                    }
-                ),
-                //Notify("Record with this VMID already exists.", NotificationType.Warning)
-                UpdateContext({lcl_popuptwo:true})
-            )
-        Text: ="Submit"
-        Width: =262
-        X: =152
-        Y: =464
-        ZIndex: =3
-
     "'Hamburger Menu_3' As 'Hamburger Menu'":
         GalleryItems: |-
             =Table(
@@ -659,33 +629,7 @@
         Visible: |-
             =//showMenu
             true
-        ZIndex: =4
-
-    Label20 As label:
-        BorderColor: =App.Theme.Colors.Darker40
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(214, 221, 224, 1)
-        Font: =App.Theme.Font
-        FontWeight: =FontWeight.Semibold
-        Size: =13
-        Text: =Office365Users.MyProfile().Department
-        Width: =310
-        X: =128
-        Y: =398
-        ZIndex: =5
-
-    Label22 As label:
-        BorderColor: =App.Theme.Colors.Darker40
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Font: =App.Theme.Font
-        FontWeight: =FontWeight.Semibold
-        Size: =13
-        Text: ="VMID"
-        X: =127
-        Y: =360
-        ZIndex: =6
+        ZIndex: =3
 
     PopUP_3 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
@@ -696,5 +640,773 @@
         Visible: =lcl_popuptwo
         X: =363
         Y: =40
+        ZIndex: =4
+
+    Form1_2 As form.PowerApps_CoreControls_Form:
+        BorderColor: =App.Theme.Colors.Darker40
+        DataSource: =Nurse_Information
+        DefaultMode: =FormMode.New
+        Fill: =RGBA(180, 214, 250, 1)
+        Height: =509
+        UseFluentV9Cards: =true
+        Width: =1308
+        X: =30
+        Y: =109
+        ZIndex: =5
+
+        Name_DataCard1 As typedDataCard.fluentV9TextualViewCard:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Name}"
+            Default: =ThisItem.Name
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,'{Name}')
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Width: =436
+            X: =1
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey17 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue16 As 'Text input'":
+                DisplayMode: =DisplayMode.View
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey17.Y + DataCardKey17.Height + 4
+                ZIndex: =2
+
+        Title_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Title)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Title)
+            Required: =false
+            Update: =DataCardValue1.Value
+            Visible: =false
+            Width: =436
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+            DataCardKey1 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue1 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage1 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+        "'Date of Birth_DataCard1' As typedDataCard.fluentV9DateEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DateofBirth"
+            Default: =ThisItem.'Date of Birth'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,DateofBirth)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =DataCardValue2.SelectedDate
+            Width: =436
+            X: =1
+            Y: =0
+            ZIndex: =9
+
+            DataCardKey2 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue2 As 'Date picker'":
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                DisplayMode: =Parent.DisplayMode
+                EndDate: =Date(Year(Today())+100, 12, 31)
+                Height: =32
+                SelectedDate: =Parent.Default
+                StartDate: =Date(1900, 1, 1)
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                ZIndex: =2
+
+            ErrorMessage2 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey2.Y
+                ZIndex: =4
+
+        Email_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Email"
+            Default: =ThisItem.Email
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Email)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Email)
+            Required: =false
+            Update: =DataCardValue3.Value
+            Width: =436
+            X: =2
+            Y: =0
+            ZIndex: =9
+
+            DataCardKey3 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue3 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 4
+                ZIndex: =2
+
+            ErrorMessage3 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible3 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey3.Y
+                ZIndex: =4
+
+        "'Emergency Contact Name_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="EmergencyContactName"
+            Default: =ThisItem.'Emergency Contact Name'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,EmergencyContactName)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactName)
+            Required: =false
+            Update: =DataCardValue5.Value
+            Width: =436
+            X: =1
+            Y: =1
+            ZIndex: =9
+
+            DataCardKey5 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue5 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 4
+                ZIndex: =2
+
+            ErrorMessage5 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible5 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+        "'Emergency Contact Relationship_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="EmergencyContactRelationship"
+            Default: =ThisItem.'Emergency Contact Relationship'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,EmergencyContactRelationship)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactRelationship)
+            Required: =false
+            Update: =DataCardValue6.Value
+            Width: =436
+            X: =2
+            Y: =1
+            ZIndex: =9
+
+            DataCardKey6 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue6 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 4
+                ZIndex: =2
+
+            ErrorMessage6 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible6 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+        Licenses_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Licenses"
+            Default: =ThisItem.Licenses
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Licenses)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Licenses)
+            Required: =false
+            Update: =DataCardValue12.Value
+            Width: =436
+            X: =2
+            Y: =2
+            ZIndex: =9
+
+            DataCardKey14 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue12 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey14.Y + DataCardKey14.Height + 4
+                ZIndex: =2
+
+            ErrorMessage14 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue12.Y + DataCardValue12.Height
+                ZIndex: =3
+
+            StarVisible14 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey14.Y
+                ZIndex: =4
+
+        "'Phone Number_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PhoneNumber"
+            Default: =ThisItem.'Phone Number'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,PhoneNumber)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, PhoneNumber)
+            Required: =false
+            Update: =DataCardValue4.Value
+            Width: =436
+            X: =0
+            Y: =1
+            ZIndex: =9
+
+            DataCardKey4 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue4 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                ZIndex: =2
+
+            ErrorMessage4 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible4 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey4.Y
+                ZIndex: =4
+
+        "'Emergency Contact Phone Number_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="EmergencyContactPhoneNumber"
+            Default: =ThisItem.'Emergency Contact Phone Number'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,EmergencyContactPhoneNumber)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, EmergencyContactPhoneNumber)
+            Required: =false
+            Update: =DataCardValue7.Value
+            Width: =436
+            X: =0
+            Y: =2
+            ZIndex: =9
+
+            DataCardKey7 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue7 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 4
+                ZIndex: =2
+
+            ErrorMessage7 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+            StarVisible7 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey7.Y
+                ZIndex: =4
+
+        Education_DataCard1 As typedDataCard.fluentV9TextualEditCard:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Education"
+            Default: =ThisItem.Education
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Education)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Education)
+            Required: =false
+            Update: =DataCardValue8.Value
+            Width: =436
+            X: =1
+            Y: =2
+            ZIndex: =9
+
+            DataCardKey12 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue8 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey12.Y + DataCardKey12.Height + 4
+                ZIndex: =2
+
+            ErrorMessage12 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue8.Y + DataCardValue8.Height
+                ZIndex: =3
+
+            StarVisible12 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey12.Y
+                ZIndex: =4
+
+        "'Work History_DataCard1' As typedDataCard.fluentV9TextualEditCard":
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="WorkHistory"
+            Default: =ThisItem.'Work History'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,WorkHistory)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, WorkHistory)
+            Required: =false
+            Update: =DataCardValue14.Value
+            Width: =436
+            X: =0
+            Y: =3
+            ZIndex: =9
+
+            DataCardKey16 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =22
+                Text: =Parent.DisplayName
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - 48
+                Wrap: =false
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue14 As 'Text input'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                Height: =32
+                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Required: =Parent.Required
+                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey16.Y + DataCardKey16.Height + 4
+                ZIndex: =2
+
+            ErrorMessage16 As Text:
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue14.Y + DataCardValue14.Height
+                ZIndex: =3
+
+            StarVisible16 As Text:
+                Align: ='TextCanvas.Align'.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+    Label20 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(214, 221, 224, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: =Office365Users.MyProfile().Department
+        Width: =394
+        X: =927
+        Y: =149
+        ZIndex: =6
+
+    Label22 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="VMID"
+        X: =927
+        Y: =109
         ZIndex: =7
+
+    ButtonCanvas3 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Font: =Font.'Segoe UI'
+        FontSize: =25
+        Height: =82
+        OnSelect: |
+            =If(
+                IsBlank(LookUp(Nurse_Information, VMID = Office365Users.MyProfile().Department)),
+                Patch(
+                    Nurse_Information,
+                    Defaults(Nurse_Information),
+                    {
+                        VMID: Office365Users.MyProfile().Department,
+                        'Date of Birth': Input_DOB.SelectedDate,
+                        Email: Input_Email.Value,
+                        'Phone Number': Input_Phone.Value,
+                        'Emergency Contact Name': Input_Emergency.Value,
+                        'Emergency Contact Relationship': Input_Emergency.Value,
+                        'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
+                        Education: Education.Value,
+                        Licenses: Licenses.Value,
+                        'Work History': workhistory.Value
+                    }
+                ),
+                UpdateContext({lcl_popuptwo:true})
+            )
+        Text: ="Submit"
+        Visible: =false
+        Width: =262
+        X: =54
+        Y: =420
+        ZIndex: =8
+
+    ButtonCanvas4 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =72
+        OnSelect: |
+            =If(
+                IsBlank(LookUp(Nurse_Information, VMID = Office365Users.MyProfile().DisplayName)),
+                Patch(
+                    Nurse_Information,
+                    Defaults(Nurse_Information),
+                    {
+                        VMID: Office365Users.MyProfile().Department,
+                        'Date of Birth': Input_DOB.SelectedDate,
+                        Email: Input_Email.Value,
+                        'Phone Number': Input_Phone.Value,
+                        'Emergency Contact Name': Input_Emergency.Value,
+                        'Emergency Contact Relationship': Input_Emergency.Value,
+                        'Emergency Contact Phone Number': Input_Emergency_Contact_Phone.Value,
+                        Education: Education.Value,
+                        Licenses: Licenses.Value,
+                        'Work History': workhistory.Value
+                    }
+                ); ResetForm(Form1_2),
+                UpdateContext({lcl_popuptwo:true})
+            )
+        Text: ="Submit"
+        Width: =206
+        X: =363
+        Y: =430
+        ZIndex: =9
 
