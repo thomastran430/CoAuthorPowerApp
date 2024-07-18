@@ -634,7 +634,7 @@
             DataField: ="{Name}"
             Default: =ThisItem.Name
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,Name)
+            DisplayName: =DataSourceInfo([@Nurse_Information],DataSourceInfo.DisplayName,VMID)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
@@ -656,8 +656,13 @@
 
             "DataCardValue16 As 'Text input'":
                 DisplayMode: =DisplayMode.View
+                Font: =Font.'Segoe UI'
+                FontColor: =RGBA(0, 0, 0, 1)
+                FontSize: =14
+                FontWeight: =FontWeight.Semibold
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
+                Placeholder: =Office365Users.MyProfile().Department
                 ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
                 Value: =Parent.Default
                 Width: =Parent.Width - 48
@@ -758,6 +763,7 @@
 
             "DataCardValue2 As 'Date picker'":
                 AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                Appearance: ='DatePickerCanvas.Appearance'.FilledLighter
                 DisplayMode: =Parent.DisplayMode
                 EndDate: =Date(Year(Today())+100, 12, 31)
                 Height: =32
@@ -802,7 +808,7 @@
             Height: =70
             MaxLength: =DataSourceInfo([@Nurse_Information], DataSourceInfo.MaxLength, Email)
             Required: =false
-            Update: =DataCardValue3.Value
+            Update: =ComboBox2_1.Selected.Mail
             Width: =436
             X: =2
             Y: =0
@@ -820,19 +826,6 @@
                 Y: =10
                 ZIndex: =1
 
-            "DataCardValue3 As 'Text input'":
-                AccessibleLabel: =Parent.DisplayName
-                DisplayMode: =Parent.DisplayMode
-                Height: =32
-                Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
-                Required: =Parent.Required
-                ValidationState: =If(IsBlank(Parent.Error), "None", "Error")
-                Value: =Parent.Default
-                Width: =Parent.Width - 48
-                X: =24
-                Y: =DataCardKey3.Y + DataCardKey3.Height + 4
-                ZIndex: =2
-
             ErrorMessage3 As Text:
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
@@ -841,7 +834,7 @@
                 Width: =Parent.Width - 48
                 Wrap: =true
                 X: =24
-                Y: =DataCardValue3.Y + DataCardValue3.Height
+                Y: =ComboBox2_1.Y + ComboBox2_1.Height
                 ZIndex: =3
 
             StarVisible3 As Text:
@@ -854,6 +847,50 @@
                 X: =0
                 Y: =DataCardKey3.Y
                 ZIndex: =4
+
+            ComboBox2_1 As combobox:
+                BorderColor: =App.Theme.Colors.Darker40
+                ChevronBackground: =App.Theme.Colors.Darker10
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =App.Theme.Colors.Darker10
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                Color: =RGBA(53, 61, 63, 1)
+                DefaultSelectedItems: =
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(106, 122, 127, 1)
+                DisabledFill: =RGBA(106, 122, 127, 1)
+                DisplayFields: =["Mail"]
+                DisplayMode: |-
+                    =If(
+                        IsBlank(LookUp(Admin_Login_Cred, UserName = Office365Users.MyProfile().Mail && Role = "Admin")), 
+                        DisplayMode.View,
+                        DisplayMode.Edit
+                    )
+                Font: =App.Theme.Font
+                Height: =32
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =App.Theme.Colors.Lighter70
+                Items: |-
+                    =Filter(
+                        Office365Users.SearchUser({searchTerm: ComboBox2_1.SearchText}),
+                         "@valuemomentum.com" in Mail 
+                    )
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =App.Theme.Colors.Darker30
+                SearchFields: =["Mail"]
+                SearchItems: |-
+                    =Search(Filter(
+                        Office365Users.SearchUser({searchTerm: ComboBox2_1.SearchText}),
+                         "@valuemomentum.com" in Mail 
+                    ),ComboBox2_1.SearchText,Mail)
+                SelectionFill: =App.Theme.Colors.Primary
+                SelectMultiple: =false
+                Size: =13
+                Width: =388
+                X: =24
+                Y: =30
+                ZIndex: =6
 
         "'Phone Number_DataCard1' As typedDataCard.fluentV9TextualEditCard":
             BorderColor: =App.Theme.Colors.Darker40
@@ -885,6 +922,7 @@
 
             "DataCardValue4 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -948,6 +986,7 @@
 
             "DataCardValue5 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -1011,6 +1050,8 @@
 
             "DataCardValue6 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
+                BasePaletteColor: =RGBA(255, 255, 1, 1)
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -1074,6 +1115,7 @@
 
             "DataCardValue7 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -1137,6 +1179,7 @@
 
             "DataCardValue8 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -1200,6 +1243,8 @@
 
             "DataCardValue12 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
+                BasePaletteColor: =
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -1381,14 +1426,6 @@
         Y: =425
         ZIndex: =8
 
-    Component6_1 As Component6:
-        cancel_btn: |-
-            =UpdateContext({lclpopupthree:false})
-        text: ="Submitted !!"
-        Visible: =lclpopupthree
-        X: =411
-        ZIndex: =9
-
     "'Hamburger Menu_3' As 'Hamburger Menu'":
         GalleryItems: |-
             =Table(
@@ -1413,7 +1450,7 @@
         Visible: |-
             =//showMenu
             true
-        ZIndex: =10
+        ZIndex: =9
 
     ButtonCanvas4_1 As Button:
         DisplayMode: =DisplayMode.Edit
@@ -1431,7 +1468,7 @@
         Width: =206
         X: =668
         Y: =425
-        ZIndex: =11
+        ZIndex: =10
 
     Component6_2 As Component6:
         cancel_btn: |-
@@ -1439,7 +1476,7 @@
         text: ="Record Updated"
         Visible: =lclpopuptfour
         X: =413
-        ZIndex: =12
+        ZIndex: =11
 
     PopUP_4 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
@@ -1450,5 +1487,13 @@
         Visible: =lcl_popupfive
         X: =376
         Y: =40
+        ZIndex: =12
+
+    Component6_1 As Component6:
+        cancel_btn: |-
+            =UpdateContext({lclpopupthree:false})
+        text: ="Submitted !!"
+        Visible: =lclpopupthree
+        X: =411
         ZIndex: =13
 
