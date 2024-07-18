@@ -8,7 +8,7 @@ Component6 As CanvasComponent:
     Width: =640
     X: =0
     Y: =0
-    ZIndex: =1
+    ZIndex: =7
 
     Rectangle1_1 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 1)
