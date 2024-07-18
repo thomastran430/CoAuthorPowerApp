@@ -28,7 +28,7 @@
 
     Table1 As Table.pcfdataset:
         DisplayMode: =DisplayMode.Edit
-        Height: =572
+        Height: =640
         Items: =Nurse_Information
         onCellValueChange: =false
         onFilter: =false
@@ -38,7 +38,7 @@
         OnSelect: =false
         Width: =1366
         X: =0
-        Y: =179
+        Y: =110
         ZIndex: =3
 
         "'Date of Birth1' As PowerAppsOneGridTemplate_dataField.textualColumn":
