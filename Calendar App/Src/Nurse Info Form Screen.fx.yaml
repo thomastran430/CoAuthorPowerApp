@@ -625,7 +625,7 @@
         UseFluentV9Cards: =true
         Width: =1308
         X: =30
-        Y: =109
+        Y: =199
         ZIndex: =4
 
         Name_DataCard1 As typedDataCard.fluentV9TextualViewCard:
@@ -1356,8 +1356,8 @@
         Size: =13
         Text: =Office365Users.MyProfile().Department
         Width: =380
-        X: =927
-        Y: =144
+        X: =925
+        Y: =227
         ZIndex: =5
 
     Label22 As label:
@@ -1367,10 +1367,10 @@
         Font: =App.Theme.Font
         FontWeight: =FontWeight.Semibold
         Height: =22
-        Size: =13
+        Size: =10
         Text: ="VMID"
         X: =925
-        Y: =122
+        Y: =208
         ZIndex: =6
 
     ButtonCanvas3 As Button:
@@ -1430,32 +1430,6 @@
         Y: =420
         ZIndex: =8
 
-    "'Hamburger Menu_3' As 'Hamburger Menu'":
-        GalleryItems: |-
-            =Table(
-                {
-                    Title: "Appointment Booking",
-                    Screen: 'Booking Screen'
-                },
-                {
-                    Title: "View All Appointments",
-                    Screen: 'View All Items Screen'
-                },
-                {   Title: "Nurse Info Form",         
-                    Screen: 'Nurse Info Form Screen'
-            },
-                {   Title: "View All Nurse Information",
-                    Screen: 'View All Nurse Info Screen'
-            
-                }
-            )
-        IconPositionX: =10
-        IconPositionY: =10
-        Visible: |-
-            =//showMenu
-            true
-        ZIndex: =9
-
     ButtonCanvas4_1 As Button:
         DisplayMode: =DisplayMode.Edit
         Font: =Font.'Segoe UI'
@@ -1482,6 +1456,38 @@
         X: =413
         ZIndex: =11
 
+    "'Hamburger Menu_3' As 'Hamburger Menu'":
+        GalleryItems: |-
+            =Table(
+                {
+                    Title: "Appointment Booking",
+                    Screen: 'Booking Screen',
+                    MenuIcon : Icon.Home
+                },
+                {
+                    Title: "View All Appointments",
+                    Screen: 'View All Items Screen',
+                    MenuIcon : Icon.ListScrollWatchlist
+                },
+                {   Title: "Nurse Info Form",         
+                    Screen: 'Nurse Info Form Screen',
+                    MenuIcon : Icon.Person
+            },
+                {   Title: "View All Nurse Information",
+                    Screen: 'View All Nurse Info Screen',
+                    MenuIcon : Icon.People
+            
+                }
+            )
+        Height: =360
+        IconPositionX: =10
+        IconPositionY: =10
+        Visible: |-
+            =//showMenu
+            true
+        Width: =340
+        ZIndex: =12
+
     PopUP_4 As PopUP:
         Fill: =RGBA(237, 237, 237, 0)
         LB_On_Select: ="Text"
@@ -1500,4 +1506,20 @@
         Visible: =lclpopupthree
         X: =411
         ZIndex: =13
+
+    TextCanvas1_2 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =77
+        PaddingBottom: =5
+        PaddingLeft: =20
+        PaddingRight: =5
+        PaddingTop: =5
+        Size: =40
+        Text: ="Nurse Information Form"
+        Visible: =true
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =517
+        X: =424
+        Y: =104
+        ZIndex: =14
 

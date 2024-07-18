@@ -2751,7 +2751,7 @@
             Text: ="Employee"
             Visible: =GroupVisible
             Width: =240
-            X: =635
+            X: =750
             Y: =103
             ZIndex: =8
 
@@ -2779,7 +2779,7 @@
             Size: =13
             Visible: =GroupVisible
             Width: =264
-            X: =324
+            X: =430
             Y: =99
             ZIndex: =11
 
@@ -2827,7 +2827,7 @@
             Template: =ListItemTemplate.Double
             Visible: =GroupVisible
             Width: =434
-            X: =730
+            X: =850
             Y: =103
             ZIndex: =12
 
@@ -2841,7 +2841,7 @@
             Text: ="Whose appointment are you editing?"
             Visible: =GroupVisible
             Width: =321
-            X: =17
+            X: =105
             Y: =103
             ZIndex: =24
 
@@ -3331,23 +3331,29 @@
             =Table(
                 {
                     Title: "Appointment Booking",
-                    Screen: 'Booking Screen'
+                    Screen: 'Booking Screen',
+                    MenuIcon : Icon.Home
                 },
                 {
                     Title: "View All Appointments",
-                    Screen: 'View All Items Screen'
+                    Screen: 'View All Items Screen',
+                    MenuIcon : Icon.ListScrollWatchlist
                 },
                 {   Title: "Nurse Info Form",         
-                    Screen: 'Nurse Info Form Screen'
+                    Screen: 'Nurse Info Form Screen',
+                    MenuIcon : Icon.Person
             },
                 {   Title: "View All Nurse Information",
-                    Screen: 'View All Nurse Info Screen'
+                    Screen: 'View All Nurse Info Screen',
+                    MenuIcon : Icon.People
             
                 }
             )
+        Height: =360
         IconPositionX: =10
         IconPositionY: =10
         Visible: =true
+        Width: =340
         ZIndex: =80
 
     Group8 As group:
