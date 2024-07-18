@@ -61,7 +61,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -183,7 +183,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -300,7 +300,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonCanvas4_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7951,7 +7951,7 @@
       "MetaDataIDKey": "",
       "Name": "Form1_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8091,7 +8091,7 @@
       "MetaDataIDKey": "",
       "Name": "Form1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9091,7 +9091,7 @@
       "MetaDataIDKey": "",
       "Name": "Label20",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9382,7 +9382,7 @@
       "MetaDataIDKey": "",
       "Name": "Label22",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12844,7 +12844,7 @@
       "MetaDataIDKey": "",
       "Name": "TextCanvas1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
