@@ -655,6 +655,7 @@
                 ZIndex: =1
 
             "DataCardValue16 As 'Text input'":
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
                 DisplayMode: =DisplayMode.View
                 Font: =Font.'Segoe UI'
                 FontColor: =RGBA(0, 0, 0, 1)
@@ -1308,6 +1309,7 @@
 
             "DataCardValue14 As 'Text input'":
                 AccessibleLabel: =Parent.DisplayName
+                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
                 DisplayMode: =Parent.DisplayMode
                 Height: =32
                 Mode: ="'TextInputCanvas.Mode'.TextInputModeSingleLine"
@@ -1345,7 +1347,7 @@
         BorderColor: =App.Theme.Colors.Darker40
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(214, 221, 224, 1)
+        Fill: =RGBA(255, 255, 255, 1)
         Font: =App.Theme.Font
         FontWeight: =FontWeight.Semibold
         Height: =32

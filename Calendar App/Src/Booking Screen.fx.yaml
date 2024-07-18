@@ -3334,7 +3334,7 @@
                     Screen: 'Booking Screen'
                 },
                 {
-                    Title: "View All Items",
+                    Title: "View All Appointments",
                     Screen: 'View All Items Screen'
                 },
                 {   Title: "Nurse Info Form",         
