@@ -31,25 +31,31 @@
             =Table(
                 {
                     Title: "Appointment Booking",
-                    Screen: 'Booking Screen'
+                    Screen: 'Booking Screen',
+                    MenuIcon : Icon.Home
                 },
                 {
                     Title: "View All Items",
-                    Screen: 'View All Items Screen'
+                    Screen: 'View All Items Screen',
+                    MenuIcon : Icon.ListScrollWatchlist
                 },
                 {   Title: "Nurse Info Form",         
-                    Screen: 'Nurse Info Form Screen'
+                    Screen: 'Nurse Info Form Screen',
+                    MenuIcon : Icon.Person
             },
                 {   Title: "View All Nurse Information",
-                    Screen: 'View All Nurse Info Screen'
+                    Screen: 'View All Nurse Info Screen',
+                    MenuIcon : Icon.People
             
                 }
             )
+        Height: =360
         IconPositionX: =10
         IconPositionY: =10
         Visible: |-
             =//
             true
+        Width: =340
         ZIndex: =7
 
     Group9_1 As group:

@@ -1389,32 +1389,6 @@
         X: =411
         ZIndex: =9
 
-    "'Hamburger Menu_3' As 'Hamburger Menu'":
-        GalleryItems: |-
-            =Table(
-                {
-                    Title: "Appointment Booking",
-                    Screen: 'Booking Screen'
-                },
-                {
-                    Title: "View All Appointments",
-                    Screen: 'View All Items Screen'
-                },
-                {   Title: "Nurse Info Form",         
-                    Screen: 'Nurse Info Form Screen'
-            },
-                {   Title: "View All Nurse Information",
-                    Screen: 'View All Nurse Info Screen'
-            
-                }
-            )
-        IconPositionX: =10
-        IconPositionY: =10
-        Visible: |-
-            =//showMenu
-            true
-        ZIndex: =10
-
     ButtonCanvas4_1 As Button:
         DisplayMode: =DisplayMode.Edit
         Font: =Font.'Segoe UI'
@@ -1431,7 +1405,7 @@
         Width: =206
         X: =668
         Y: =425
-        ZIndex: =11
+        ZIndex: =10
 
     Component6_2 As Component6:
         cancel_btn: |-
@@ -1439,6 +1413,38 @@
         text: ="Record Updated"
         Visible: =lclpopuptfour
         X: =413
+        ZIndex: =11
+
+    "'Hamburger Menu_3' As 'Hamburger Menu'":
+        GalleryItems: |-
+            =Table(
+                {
+                    Title: "Appointment Booking",
+                    Screen: 'Booking Screen',
+                    MenuIcon : Icon.Home
+                },
+                {
+                    Title: "View All Items",
+                    Screen: 'View All Items Screen',
+                    MenuIcon : Icon.ListScrollWatchlist
+                },
+                {   Title: "Nurse Info Form",         
+                    Screen: 'Nurse Info Form Screen',
+                    MenuIcon : Icon.Person
+            },
+                {   Title: "View All Nurse Information",
+                    Screen: 'View All Nurse Info Screen',
+                    MenuIcon : Icon.People
+            
+                }
+            )
+        Height: =360
+        IconPositionX: =10
+        IconPositionY: =10
+        Visible: |-
+            =//showMenu
+            true
+        Width: =340
         ZIndex: =12
 
     PopUP_4 As PopUP:
