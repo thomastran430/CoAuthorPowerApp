@@ -28,7 +28,7 @@
 
     Table1 As Table.pcfdataset:
         DisplayMode: =DisplayMode.Edit
-        Height: =640
+        Height: =562
         Items: =Nurse_Information
         onCellValueChange: =false
         onFilter: =false
@@ -38,7 +38,7 @@
         OnSelect: =false
         Width: =1366
         X: =0
-        Y: =110
+        Y: =187
         ZIndex: =3
 
         "'Date of Birth1' As PowerAppsOneGridTemplate_dataField.textualColumn":
@@ -170,7 +170,7 @@
                     MenuIcon : Icon.Home
                 },
                 {
-                    Title: "View All Items",
+                    Title: "View All Appointments",
                     Screen: 'View All Items Screen',
                     MenuIcon : Icon.ListScrollWatchlist
                 },
@@ -190,4 +190,20 @@
         Visible: =true
         Width: =340
         ZIndex: =4
+
+    TextCanvas1_3 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =72
+        PaddingBottom: =5
+        PaddingLeft: =20
+        PaddingRight: =5
+        PaddingTop: =5
+        Size: =40
+        Text: ="View All Nurse Information"
+        Visible: =true
+        Weight: ='TextCanvas.Weight'.Semibold
+        Width: =570
+        X: =398
+        Y: =101
+        ZIndex: =5
 

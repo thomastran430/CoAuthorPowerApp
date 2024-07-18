@@ -180,7 +180,7 @@
       "Name": "Back_Arrow_OnSelect",
       "PropertyDataTypeKey": "Void",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "822",
+        "PropertyScopeRuleNamespaceKey": "454",
         "PropertyScopeRulesKey": []
       },
       "Tooltip": "A custom property",
@@ -231,7 +231,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638568571763046773",
+  "LastModifiedTimestamp": "638569137792906012",
   "Name": "dd7107d3e3024d18a18c8bc830c0cf68",
   "OverridableProperties": {},
   "SourceLibraryId": "a9c72686-4a32-42df-a3e6-c5b47fb82267",

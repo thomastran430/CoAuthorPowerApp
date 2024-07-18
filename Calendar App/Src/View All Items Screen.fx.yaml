@@ -35,7 +35,7 @@
                     MenuIcon : Icon.Home
                 },
                 {
-                    Title: "View All Items",
+                    Title: "View All Appointments",
                     Screen: 'View All Items Screen',
                     MenuIcon : Icon.ListScrollWatchlist
                 },
