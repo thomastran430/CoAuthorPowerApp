@@ -26,7 +26,6 @@
             }
         )
     Height: =400
-    IconImage: =SampleImage
     IconPositionX: =100
     IconPositionY: =100
     Width: =400
