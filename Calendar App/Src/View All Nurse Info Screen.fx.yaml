@@ -46,11 +46,8 @@
             FieldName: ="DateofBirth"
             FieldType: ="D"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =3
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =2
 
         Email1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -58,11 +55,8 @@
             FieldName: ="Email"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =4
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =3
 
         "'Phone Number1' As PowerAppsOneGridTemplate_dataField.textualColumn":
@@ -70,11 +64,8 @@
             FieldName: ="PhoneNumber"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =5
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =4
 
         "'Emergency Contact Name1' As PowerAppsOneGridTemplate_dataField.textualColumn":
@@ -82,11 +73,8 @@
             FieldName: ="EmergencyContactName"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =6
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =5
 
         "'Emergency Contact Relationship1' As PowerAppsOneGridTemplate_dataField.textualColumn":
@@ -94,11 +82,8 @@
             FieldName: ="EmergencyContactRelationship"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =7
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =6
 
         Education1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -106,11 +91,8 @@
             FieldName: ="Education"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =8
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =7
 
         Licenses1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -118,11 +100,8 @@
             FieldName: ="Licenses"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =9
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =8
 
         "'Work History1' As PowerAppsOneGridTemplate_dataField.textualColumn":
@@ -130,11 +109,8 @@
             FieldName: ="WorkHistory"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =10
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =9
 
         Name1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -142,11 +118,8 @@
             FieldName: ="{Name}"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =10
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =10
 
         VMID1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -154,11 +127,8 @@
             FieldName: ="VMID"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
-            Height: =100
             Order: =2
             Width: =0
-            X: =0
-            Y: =0
             ZIndex: =11
 
     "'Hamburger Menu_4' As 'Hamburger Menu'":

@@ -282,16 +282,6 @@
     "OverridableProperties": {},
     "Version": "2.5.1"
   },
-  "pcfDataField": {
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/pcfDataField",
-    "IsComponentTemplate": false,
-    "IsPcfControl": false,
-    "IsWidgetTemplate": false,
-    "LastModifiedTimestamp": "0",
-    "Name": "pcfDataField",
-    "Version": "1.5.0"
-  },
   "PowerAppsOneGridTemplate_dataField": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,

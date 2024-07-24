@@ -115,11 +115,8 @@
                 FieldName: ="Email"
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
-                Height: =100
                 Order: =3
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =29
 
             Appointment_Date5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -128,11 +125,8 @@
                 FieldType: ="D"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Appointment Date"
-                Height: =100
                 Order: =4
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =30
 
             Department_Name5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -141,11 +135,8 @@
                 FieldType: ="E"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Department Name"
-                Height: =100
                 Order: =5
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =31
 
             Location5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -153,11 +144,8 @@
                 FieldName: ="Location"
                 FieldType: ="E"
                 FieldVariantName: ="textualColumn"
-                Height: =100
                 Order: =6
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =32
 
             Start_Time5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -166,11 +154,8 @@
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Start Time"
-                Height: =100
                 Order: =7
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =33
 
             End_Time5_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -179,11 +164,8 @@
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="End Time"
-                Height: =100
                 Order: =8
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =34
 
             Full_Name1_1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -192,11 +174,8 @@
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Name"
-                Height: =100
                 Order: =2
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =38
 
         TextCanvas1_1 As Text:

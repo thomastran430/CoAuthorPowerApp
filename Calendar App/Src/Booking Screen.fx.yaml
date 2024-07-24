@@ -1437,10 +1437,7 @@
                     PressedFill: =App.Theme.Colors.Darker30
                     SearchFields: =["DisplayName"]
                     SearchItems: |-
-                        =Search(Filter(
-                            Office365Users.SearchUser({searchTerm: ComboBox2.SearchText}),
-                             "@valuemomentum.com" in Mail 
-                        ),ComboBox2.SearchText,DisplayName)
+                        =Search(Filter(Office365Users.SearchUser({searchTerm:ComboBox2.SearchText}),"@valuemomentum.com" in Mail),ComboBox2.SearchText,DisplayName)
                     SelectionFill: =App.Theme.Colors.Primary
                     SelectMultiple: =false
                     Size: =13
@@ -2816,11 +2813,7 @@
             PressedFill: =App.Theme.Colors.Darker30
             SearchFields: =["DisplayName","Mail"]
             SearchItems: |-
-                =Search(//Office365Users.SearchUser({searchTerm: ComboBox1.SearchText})
-                Filter(
-                    Office365Users.SearchUser({searchTerm: ComboBox1.SearchText}),
-                     "@valuemomentum.com" in Mail 
-                ),ComboBox1.SearchText,DisplayName,Mail)
+                =Search(Filter(Office365Users.SearchUser({searchTerm:ComboBox1.SearchText}),"@valuemomentum.com" in Mail),ComboBox1.SearchText,DisplayName,Mail)
             SelectionFill: =App.Theme.Colors.Primary
             SelectMultiple: =false
             Size: =13
@@ -3217,11 +3210,8 @@
                 FieldName: ="Email"
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
-                Height: =100
                 Order: =3
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =29
 
             Appointment_Date5 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -3230,11 +3220,8 @@
                 FieldType: ="D"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Appointment Date"
-                Height: =100
                 Order: =4
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =30
 
             Department_Name5 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -3243,11 +3230,8 @@
                 FieldType: ="E"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Department Name"
-                Height: =100
                 Order: =5
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =31
 
             Location5 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -3255,11 +3239,8 @@
                 FieldName: ="Location"
                 FieldType: ="E"
                 FieldVariantName: ="textualColumn"
-                Height: =100
                 Order: =6
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =32
 
             Start_Time5 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -3268,11 +3249,8 @@
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Start Time"
-                Height: =100
                 Order: =7
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =33
 
             End_Time5 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -3281,11 +3259,8 @@
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="End Time"
-                Height: =100
                 Order: =8
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =34
 
             Full_Name1 As PowerAppsOneGridTemplate_dataField.textualColumn:
@@ -3294,11 +3269,8 @@
                 FieldType: ="s"
                 FieldVariantName: ="textualColumn"
                 HeaderText: ="Name"
-                Height: =100
                 Order: =2
                 Width: =0
-                X: =0
-                Y: =0
                 ZIndex: =38
 
         TextCanvas1 As Text:
